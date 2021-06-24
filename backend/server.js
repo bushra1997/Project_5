@@ -8,7 +8,7 @@ app.use("/role",roleRouter);
 
 
 // router middleware
-
+const roleRouter = require('./routers/routes/role');
 
 
 //built-in middlewares
