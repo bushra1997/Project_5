@@ -4,7 +4,7 @@ const db = require('./db/db');
 const app = express();
 
 //routers
-
+app.use("/role",roleRouter);
 
 
 // router middleware
