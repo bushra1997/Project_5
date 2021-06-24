@@ -2,13 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./db/db');
 const app = express();
+app.use(express.json());
 
 //routers
-app.use("/role",roleRouter);
-
+const roleRouter = require('./routers/routes/role');
 
 // router middleware
-const roleRouter = require('./routers/routes/role');
+app.use("/role",roleRouter);
 
 
 //built-in middlewares
