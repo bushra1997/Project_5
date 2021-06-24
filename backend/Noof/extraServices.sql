@@ -1,6 +1,0 @@
-  
-CREATE TABLE extraServices(
-id INT AUTO_INCREMENT NOT NULL,
-serviseName VARCHAR(255),
-PRIMARY KEY (id)
-);

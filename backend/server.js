@@ -6,9 +6,12 @@ app.use(express.json());
 
 //routers
 const roleRouter = require('./routers/routes/role');
+const sliderRouter = require('./routers/routes/slider');
+
 
 // router middleware
 app.use("/role",roleRouter);
+app.use("/slider",sliderRouter)
 
 
 //built-in middlewares
