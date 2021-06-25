@@ -13,6 +13,19 @@ const CreateNewFavorate=(req,res)=>{
 
 }
 
+const DeleteFavorate=(req,res)=>{
+
+  const {id} = req.body;
+  const query = `DELETE FROM favorite WHERE id=(?) `;
+  const data = [id];
+  db.query(query, data, (err, result) => {
+      if (err) throw err;
+  console.log('RESULT: ', result);
+  res.json(result)
+    });
+
+}
+
 module.exports = {
-    CreateNewFavorate
+    CreateNewFavorate,DeleteFavorate
   };
