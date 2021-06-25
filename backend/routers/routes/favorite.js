@@ -1,7 +1,8 @@
 const express = require("express");
-const {CreateNewFavorate} =require("../controllers/favorite");
 const favoriteRouter = express.Router();
+const {CreateNewFavorate,DeleteFavorate} =require("../controllers/favorite");
 
 favoriteRouter.post("/",CreateNewFavorate);
+favoriteRouter.delete("/",DeleteFavorate);
 
 module.exports = favoriteRouter;
