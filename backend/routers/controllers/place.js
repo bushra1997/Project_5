@@ -21,8 +21,10 @@ const getAllPlaces = (req, res) => {
 
 const updatePlaceById = (req, res) => {
   const id = req.params.id;
-  `UPDATE place SET name=?,description=?,img=?,capacity=?,city=?,address=?,availability=?, WHERE id =? `;
-  connection.query(query, id, (err, result) => {
+  const { name, description,img,capacity,city, address,availability} = req.body;
+  const data =[name, description,img,capacity,city, address,availability]
+  const query=`UPDATE place SET name=?,description=?,img=?,capacity=?,city=?,address=?,availability=? WHERE id =${id} `;
+  connection.query(query, data, (err, result) => {
     if (err) throw err;
     res.json(result);
   });
