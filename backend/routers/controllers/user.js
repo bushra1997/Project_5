@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
 const { check, validationResult } = require("express-validator");
 
-const CreateNewUser = (req, res) => {
+const CreateNewUser = async(req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const alert = errors.array();
