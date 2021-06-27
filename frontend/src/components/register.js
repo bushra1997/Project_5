@@ -28,8 +28,16 @@ const newUsers= ()=>{
     })
 }
     return (
+        <>
         <div>
-            
+           <input type="text" placeholder ="First name here"/>
+           <input type="text" placeholder ="Last name here"/>
+           <input type="text" placeholder ="Age here"/>
+           <input type="text" placeholder ="Country here"/>
+           <input type="text" placeholder ="Email here"/>
+           <input type="text" placeholder ="Password here"/>
+           
         </div>
+        </>
     )
 }
