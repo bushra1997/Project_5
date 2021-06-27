@@ -33,8 +33,8 @@ const updatePlaceById = (req, res) => {
 const deletePlaceById = (req, res) => {
   const id = req.params.id;
   const query = `DELETE FROM place 
-    WHERE id =? `;
-  db.query(query, id, (err, result) => {
+    WHERE id =${id} `;
+    connection.query(query, id, (err, result) => {
     if (err) throw err;
     res.json(result);
   });
@@ -44,7 +44,7 @@ const getPlaceById = (req, res) => {
     const id = req.params.id;
     const query = `SELECT * FROM place 
       WHERE id =? `;
-    db.query(query, id, (err, result) => {
+      connection.query(query, id, (err, result) => {
       if (err) throw err;
       res.json(result);
     });

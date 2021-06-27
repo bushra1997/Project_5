@@ -20,7 +20,7 @@ app.use("/favorite", favoriteRouter);
 app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
-app.use( placeRouter);
+app.use(placeRouter);
 //built-in middlewares
 app.use(express.json());
 
