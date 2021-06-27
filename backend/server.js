@@ -13,6 +13,8 @@ const sliderRouter = require("./routers/routes/slider");
 const favoriteRouter = require("./routers/routes/favorite");
 const userRouter = require("./routers/routes/user");
 const ratingRouter = require("./routers/routes/rating");
+const loginRouter = require("./routers/routes/login");
+const placeRouter = require("./routers/routes/place");
 
 // router middleware
 app.use("/role", roleRouter);
@@ -20,7 +22,8 @@ app.use("/slider", sliderRouter);
 app.use("/favorite", favoriteRouter);
 app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
-
+app.use("/login", loginRouter);
+app.use(placeRouter);
 //built-in middlewares
 app.use(express.json());
 
