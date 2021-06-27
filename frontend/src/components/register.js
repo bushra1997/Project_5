@@ -30,13 +30,25 @@ const newUsers= ()=>{
     return (
         <>
         <div>
-           <input type="text" placeholder ="First name here"/>
-           <input type="text" placeholder ="Last name here"/>
-           <input type="text" placeholder ="Age here"/>
-           <input type="text" placeholder ="Country here"/>
-           <input type="text" placeholder ="Email here"/>
-           <input type="text" placeholder ="Password here"/>
-           
+           <input type="text" placeholder ="First name here" onChange={(e)=>{
+                   setFirstName(e.target.value)
+           }}/>
+           <input type="text" placeholder ="Last name here" onChange={(e)=>{
+               setLastName (e.target.value)
+           }}/>
+           <input type="text" placeholder ="Age here" onChange={(e)=>{
+               setAge(e.target.value)
+           }}/>
+           <input type="text" placeholder ="Country here" onChange={(e)=>{
+               setCountry (e.target.value)
+           }}/>
+           <input type="text" placeholder ="Email here" onChange={(e)=>{
+               setEmail (e.target.value)
+           }}/>
+           <input type="text" placeholder ="Password here" onChange={(e)=>{
+               setPassword (e.target.value)
+           }}/>
+           <button onClick={newUsers}>Sign Up</button>
         </div>
         </>
     )
