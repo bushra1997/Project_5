@@ -1,8 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Link, Route } from "react-router-dom";
+import Register from './components/Register';
 
 const App = () => {
-	return <div className="App">App component</div>;
+
+	return (<>
+	<Link to ='/register'>register</Link>
+	<App/>
+	<Route path="/register" component={Register} />
+	</>)
 };
 
 export default App;
