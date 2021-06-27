@@ -11,7 +11,22 @@ const [country, setCountry] = useState('')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
-
+const newUsers= ()=>{
+    axios.post('http://localhost:5000/user',{
+        firstName,
+        lastName,
+        age,
+        country,
+        email,
+        password
+    }).then((result)=>{
+        if(result.data){
+            history.push('.login')
+        }
+    }).catch((err)=>{
+        console.log(err);
+    })
+}
     return (
         <div>
             
