@@ -1,9 +1,8 @@
 import {React,useState} from "react";
 import axios from 'axios';
-import React from 'react';
-
+import { useHistory } from "react-router-dom";
 export default function Register() {
-
+const history = useHistory();
 const [firstName, setFirstName] = useState('')
 const [lastName, setLastName] = useState('')
 const [age, setAge] = useState(0)
