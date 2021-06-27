@@ -9,7 +9,7 @@ const [age, setAge] = useState(0)
 const [country, setCountry] = useState('')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
-const [role, setRole] = useState('')
+const [role_id, setRole_id] = useState(1)
 const [error, setError] = useState(false)
 const newUsers= ()=>{
     axios.post('http://localhost:5000/user',{
@@ -19,8 +19,9 @@ const newUsers= ()=>{
         country,
         email,
         password,
-        role
+        role_id
     }).then((result)=>{
+        console.log(result.data);
         if(result.data){
             history.push('./login')
         }
