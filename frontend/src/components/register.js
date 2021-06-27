@@ -10,7 +10,8 @@ const [age, setAge] = useState(0)
 const [country, setCountry] = useState('')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
-
+const [role, setRole] = useState('')
+const [error, setError] = useState(false)
 const newUsers= ()=>{
     axios.post('http://localhost:5000/user',{
         firstName,
@@ -18,10 +19,11 @@ const newUsers= ()=>{
         age,
         country,
         email,
-        password
+        password,
+        role
     }).then((result)=>{
         if(result.data){
-            history.push('.login')
+            history.push('./login')
         }
     }).catch((err)=>{
         console.log(err);
@@ -49,6 +51,14 @@ const newUsers= ()=>{
                setPassword (e.target.value)
            }}/>
            <button onClick={newUsers}>Sign Up</button>
+           <p>Do you have an account ?
+               <span
+               onClick={
+                   history.push('./login')
+               }>Login</span>
+           </p>
+
+           {error?(<div>Some Thing Wrong Try Again!</div>):null}
         </div>
         </>
     )
