@@ -89,28 +89,4 @@ export default function Login() {
   );
 }
 {
-  /* <div className="container m-4">
-  <form>
-    <label> Email address:</label>
-    <input
-      type="email"
-      className="form-control"
-      onChange={(e) => {
-        setEmail(e.target.value.toLowerCase());
-      }}
-    />
-    <label> Password:</label>
-    <input
-      type="password"
-      className="form-control"
-      onChange={(e) => {
-        setPassword(e.target.value);
-      }}
-    />
-  </form>
-  <button type="submit" className="btn btn-primary" onClick={submit}>
-    {" "}
-    Login
-  </button>
-</div> */
 }

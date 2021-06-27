@@ -51,10 +51,10 @@ const newUsers= ()=>{
            }}/>
            <button onClick={newUsers}>Sign Up</button>
            <p>Do you have an account ?
-               <span
+               {/* <span
                onClick={
                    history.push('./login')
-               }>Login</span>
+               }>Login</span> */}
            </p>
 
            {error?(<div>Some Thing Wrong Try Again!</div>):null}
