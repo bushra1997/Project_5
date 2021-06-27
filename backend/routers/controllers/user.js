@@ -1,7 +1,6 @@
 const db = require("../../db/db");
 const bcrypt = require("bcrypt");
-const bodyParser = require("body-parser");
-const { check, validationResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 
 const CreateNewUser = async (req, res) => {
   const errors = validationResult(req);
@@ -18,10 +17,10 @@ const CreateNewUser = async (req, res) => {
     const data = [firstName, lastName, age, country, email, password, role_id];
     db.query(query, data, (err, result) => {
       if (err) {
-        res.json(err);
-        return;
+         res.status(400).json(err);
+          return;
       }
-      res.json(result);
+      res.status(201).json(result);
     });
   }
 };
