@@ -10,7 +10,7 @@ const login = async (req, res) => {
 
   db.query(query, data, async (err, result) => {
     if (!result[0]) {
-      return res.json("the email dosnt exist");
+      return res.status(404).json("the email dosnt exist");
     }
     const confirm = await bcrypt.compare(password, result[0].password);
     if (confirm) {
@@ -29,7 +29,7 @@ const login = async (req, res) => {
           user: result[0],
         });
     } else {
-      res.json("The password is not correct").status(403);
+      res.status(403).json("The password is not correct");
     }
   });
 };

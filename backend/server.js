@@ -7,6 +7,12 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//built-in middlewares
+app.use(express.json());
+
+//third-party middleware
+app.use(cors());
+
 //routers
 const roleRouter = require("./routers/routes/role");
 const sliderRouter = require("./routers/routes/slider");
@@ -24,11 +30,6 @@ app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
 app.use(placeRouter);
-//built-in middlewares
-app.use(express.json());
-
-//third-party middleware
-app.use(cors());
 
 //app routers
 
