@@ -13,7 +13,7 @@ const Navigation = () => {
   const [search, setSearch] = useState(false);
 
   return (
-    <>
+    <div className="Nav">
       <ul>
         <li>
           <Link to="/Logo">Logo</Link>
@@ -21,17 +21,20 @@ const Navigation = () => {
         <li>
           <Link to="/login">Login</Link>
         </li>
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
       </ul>
 
       <Navbar bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="#home">places</Navbar.Brand>
           <Nav className="me-auhometo">
-            <Nav.Link href="Weddings">Weddings</Nav.Link>
-            <Nav.Link href="BirthDayParty">BirthDayParty</Nav.Link>
-            <Nav.Link href="Funerals">Funerals</Nav.Link>
-            <Nav.Link href="DinnerParty">DinnerParty</Nav.Link>
-            <Nav.Link href="Meeting">Meeting</Nav.Link>
+            <Nav.Link as={Link} to="/weddings">Weddings</Nav.Link>
+            <Nav.Link as={Link} to="/birthDayParty">BirthDayParty</Nav.Link>
+            <Nav.Link as={Link} to="/funerals">Funerals</Nav.Link>
+            <Nav.Link as={Link} to="/dinnerParty">DinnerParty</Nav.Link>
+            <Nav.Link as={Link} to="/meeting">Meeting</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -48,7 +51,7 @@ const Navigation = () => {
           </Button>
         </InputGroup>
       </div>
-    </>
+    </div>
   );
 };
 

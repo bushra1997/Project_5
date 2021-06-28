@@ -4,22 +4,24 @@
   box-sizing: border-box;
 }
 
-.container {
+.container1 {
   background-image: url("https://www.furneauxlodge.co.nz/media/cpnge1zn/aerial-of-furneaux-lodge.jpg");
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-image: url("https://www.furneauxlodge.co.nz/media/ttihchyk/furneaux-lodge-cooks-cottage-deck-view.jpg"); */
 }
 
 .form-center {
+  margin-top: 10rem;
   background: white;
   width: 300px;
   height: 400px;
-  margin: auto;
-  margin-top: 190px;
   border: 1px solid green;
   box-shadow: 0px 0px 9px 0px;
 }
