@@ -1,44 +1,84 @@
-import React from "react";
-import {Route,Link } from "react-router-dom";
-import Sections from "../sections/index";
-
+import React, { useState } from "react";
+import { Route, Link, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { InputGroup, Button, FormControl,Navbar,Nav,Container } from "react-bootstrap";
+import "./navigation.css" 
 const Navigation = () => {
+  const [search, setSearch] = useState(false);
+ 
+//   const MoveToWeddings = () => {
+// 	console.log("ppppp")
+//    // useHistory.push("/Logo");
+//  };
+//   const moveToBirthDayParty = () => {
+//     useHistory.push("/BirthDayParty");
+//   };
+//   const moveToFunerals = () => {
+//     useHistory.push("/Funerals");
+//   };
+//   const moveToDinnerParty = () => {
+//     useHistory.push("/DinnerParty");
+//   };
+//   const moveToMeeting = () => {
+//     useHistory.push("/Meeting");
+//   };
+
+  const searchClick = () => {};
+
   return (
     <>
+      <ul>
+        <li>
+          <Link to="/Logo">Logo</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+      </ul>
+      {/* <Route path="/weddings" render={()=><Navigation func={ moveToWeddings}/>}/> */}
+      {/* <Route path="/weddings" component={MoveToWeddings}/> */}
+
+
+
+
+	  
+  <Navbar bg="primary" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home">places</Navbar.Brand>
+    <Nav className="me-auhometo">
+      <Nav.Link href="Weddings">Weddings</Nav.Link>
+      <Nav.Link href="BirthDayParty">BirthDayParty</Nav.Link>
+      <Nav.Link href="Funerals">Funerals</Nav.Link>
+      <Nav.Link href="DinnerParty">DinnerParty</Nav.Link>
+      <Nav.Link href="Meeting">Meeting</Nav.Link>
+    </Nav>
+    </Container>
+  </Navbar>
+
+  
+
+
+
+
+
+
+
       
-        <ul>
-          <li>
-            <Link to="/Logo">Logo</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/Search">Search</Link>
-          </li>
-          
 
-        </ul>
-		<select name="places" id="places">
-        <option Weddings="volvo">Weddings</option>
-        <option BirthDayParty="saab">BirthDayParty</option>
-        <option Funerals="opel">Funerals</option>
-        <option DinnerParty="audi">DinnerParty</option>
-        <option Meeting="audi">Meeting</option>
-      </select>
-
-		
-          
+      <div className="search">
+        <InputGroup className="mb-3">
+          <FormControl
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <Button variant="warning" id="button-addon2">
+            Button
+          </Button>
+        </InputGroup>
+      </div>
     </>
   );
 };
 
 export default Navigation;
-{/* <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route> */}
