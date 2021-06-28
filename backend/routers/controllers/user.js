@@ -2,6 +2,7 @@ const db = require("../../db/db");
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
+
 const CreateNewUser = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
