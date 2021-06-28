@@ -8,7 +8,8 @@ import Funerals from "./components/Funerals/index";
 import DinnerParty from "./components/birthDayPart";
 import Meeting from "./components/meeting";
 import Login from "./components/auth/login/Login";
-import Register from "./components/Register";
+import Register from "./components/register";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/birthDayParty" component={BirthDayParty} />
         <Route path="/funerals" component={Funerals} />
         <Route path="/dinnerParty" component={DinnerParty} />
+        <Route path="/footer" component={Footer} />
         <Route path="/meeting" component={Meeting} />
       </Switch>
     </>
