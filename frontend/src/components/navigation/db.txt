@@ -1,0 +1,17 @@
+"name":"Ammon halls Wedding North Hashmi",
+"description":"The hall is more than wonderful, very spacious",
+   "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gigglesnhugs.com%2F2018%2F09%2Ffun-birthday-places-2%2F&psig=AOvVaw3n91f0VtZ7Uy6mebVQnLHM&ust=1624988536941000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCKCzhpbwuvECFQAAAAAdAAAAABAD",
+   "capacity":"1-100",
+   "city":"Ammon",
+   "address":"Ammon",
+   "availability":"available"
+
+
+   "name":"Grand Ballrooms",
+"description":"The hall is more than wonderful, very spacious",
+   "img":"https://www.arabiaweddings.com/ar/amman/wedding-halls/%D9%82%D8%A7%D8%B9%D8%A7%D8%AA-%D8%AC%D8%B1%D8%A7%D9%86%D8%AF-%D9%84%D9%84%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA",
+   "capacity":"1-200",
+   "city":"Ammon",
+   "address":"Al-Muqablain - Al-Hurriya Street",
+   "availability":"available"
+}

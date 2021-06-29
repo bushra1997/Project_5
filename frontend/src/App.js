@@ -10,7 +10,6 @@ import Meeting from "./components/meeting";
 import Login from "./components/auth/login/Login";
 import Register from "./components/register";
 import Footer from "./components/footer";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
   return (
