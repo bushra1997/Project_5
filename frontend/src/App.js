@@ -16,7 +16,6 @@ const App = () => {
   return (
     <>
       <Navigation />
-
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
