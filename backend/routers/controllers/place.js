@@ -64,6 +64,20 @@ const getPlaceByType = (req, res) => {
     });
   };
 
+const getPlaceByTypeImg = (req, res) => {
+    const type = req.params.type;
+    const query = `SELECT img ,description,city,address
+    FROM place 
+    INNER JOIN occasions
+    ON  place.id = occasions.place_id
+    WHERE type = ?;
+    `;
+      connection.query(query, [type], (err, result) => {
+      if (err) throw err;
+      res.json(result);
+    });
+  };
+
 module.exports = {
   CreateNewPlace,
   getAllPlaces,
@@ -71,4 +85,5 @@ module.exports = {
   deletePlaceById,
   getPlaceById,
   getPlaceByType,
+  getPlaceByTypeImg,
 };
