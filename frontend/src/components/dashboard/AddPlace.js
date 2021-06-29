@@ -20,8 +20,6 @@ export default function AddPlace() {
             address,
             availability,
             capacity
-
-
     }).then((result)=>{
         console.log(result.data);
      
@@ -55,10 +53,7 @@ export default function AddPlace() {
                setCapacity(e.target.value)
             }}/>
             <button onClick={newPlace}>Add</button>
-            
-           {/* <button>Add</button> 
-           <button>Update</button> 
-           <button>Delete</button>  */}
+         
         </div>
         </>
     )
