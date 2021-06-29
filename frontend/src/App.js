@@ -16,7 +16,7 @@ const App = () => {
   return (
     <>
       <Navigation />
-      <Footer />
+
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
@@ -28,6 +28,7 @@ const App = () => {
         <Route path="/dinnerParty" component={DinnerParty} />
         <Route path="/meeting" component={Meeting} />
       </Switch>
+      <Footer />
     </>
   );
 };
