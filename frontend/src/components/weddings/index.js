@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
+import "./wedding.css"
 const Weddings = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
@@ -18,11 +19,12 @@ const Weddings = () => {
 
   return (
     <>
+    <div className="cont">
       {images &&
         images.map((e, i) => {
           return (
-            <Card key={i}>
-              <Card.Img variant="top" src={e.img} style={{ height: "200px" }} />
+            <Card key={i} >
+              <Card.Img  src={e.img}  style={{width:"600px" ,height:"200px"}}/>
               <Card.Body>
                 <Card.Text>
                   {e.description}
@@ -35,6 +37,7 @@ const Weddings = () => {
             </Card>
           );
         })}
+        </div>
     </>
   );
 };
