@@ -50,10 +50,25 @@ const getPlaceById = (req, res) => {
     });
   };
 
+const getPlaceByType = (req, res) => {
+    const type = req.params.type;
+    const query = `SELECT *
+    FROM place 
+    INNER JOIN occasions
+    ON  place.id = occasions.place_id
+    WHERE type = ?;
+    `;
+      connection.query(query, [type], (err, result) => {
+      if (err) throw err;
+      res.json(result);
+    });
+  };
+
 module.exports = {
   CreateNewPlace,
   getAllPlaces,
   updatePlaceById,
   deletePlaceById,
-  getPlaceById
+  getPlaceById,
+  getPlaceByType,
 };

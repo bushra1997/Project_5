@@ -1,0 +1,43 @@
+.search > .input-group {
+  width: 40%;
+}
+
+
+.Nav{
+  display: flex;
+  flex-direction: row;
+  width:  100%;
+  height: 50px;
+}
+
+.header{
+width: 90%;
+height: 100%;
+justify-content: center;
+margin: auto;
+text-align: center;
+font-weight: bolder;
+font-size: 1.5rem;
+padding-top: 10px;
+}
+
+.header1{
+justify-content: center;
+align-content: space-around;
+}
+
+.lower{
+  width: 100%;
+ display: flex;
+ flex-direction: row;
+  
+}
+
+.bg-primary {
+  background-color: #636363!important;
+}
+.searchButton {
+  margin: 0;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
