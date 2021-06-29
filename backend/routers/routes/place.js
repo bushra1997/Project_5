@@ -5,5 +5,5 @@ placeRouter.post("/place", CreateNewPlace);
 placeRouter.get("/places", getAllPlaces);
 placeRouter.put("/places/:id",updatePlaceById);
 placeRouter.delete("/places/:id",deletePlaceById);
-placeRouter.get("/places/:id",getPlaceById);
+placeRouter.post("/places/:id",getPlaceById);
 module.exports = placeRouter;
