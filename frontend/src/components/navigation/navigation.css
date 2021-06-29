@@ -1,0 +1,11 @@
+.search > .input-group {
+  width: 40%;
+}
+
+
+.Nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:  100%;
+}

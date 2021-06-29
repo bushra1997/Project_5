@@ -4,7 +4,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
-import "./../../auth/login/login.css";
+import "./login.css";
 
 export default function Login() {
   const history = useHistory();
@@ -39,7 +39,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="container">
+      <div className="container1">
         <div className="form-center">
           <form>
             <div className="field">
