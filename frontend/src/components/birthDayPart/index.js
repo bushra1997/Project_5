@@ -15,10 +15,10 @@ const BirthDayParty = () => {
           <Card.Text>{place.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>{place.capacity}</ListGroupItem>
-          <ListGroupItem>{place.city}</ListGroupItem>
-          <ListGroupItem>{place.address}</ListGroupItem>
-          <ListGroupItem>{place.availability}</ListGroupItem>
+          <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
+          <ListGroupItem>city: {place.city}</ListGroupItem>
+          <ListGroupItem>address: {place.address}</ListGroupItem>
+          <ListGroupItem>availability: {place.availability}</ListGroupItem>
         </ListGroup>
       </Card>
     );
