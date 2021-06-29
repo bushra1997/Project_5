@@ -46,7 +46,7 @@ const Navigation = () => {
             aria-label="Search for place"
             aria-describedby="basic-addon2"
           />
-          <Button variant="warning" id="button-addon2">
+          <Button className="searchButton" variant="outline-primary" id="button-addon2">
             Button
           </Button>
         </InputGroup>
