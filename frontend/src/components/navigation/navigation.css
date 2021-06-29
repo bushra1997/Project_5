@@ -36,3 +36,8 @@ align-content: space-around;
 .bg-primary {
   background-color: #636363!important;
 }
+.searchButton {
+  margin: 0;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
