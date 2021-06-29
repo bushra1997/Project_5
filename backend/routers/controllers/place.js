@@ -44,7 +44,7 @@ const getPlaceById = (req, res) => {
     const id = req.params.id;
     const query = `SELECT * FROM place 
       WHERE id =? `;
-      connection.query(query, id, (err, result) => {
+      connection.query(query, [id], (err, result) => {
       if (err) throw err;
       res.json(result);
     });

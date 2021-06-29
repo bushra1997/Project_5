@@ -7,12 +7,10 @@ export default function Dashboard() {
 const addPlace =()=>{
     history.push("./addPlace")
 }
-const editPlace =()=>{
-    history.push("./")
+const editAndDeletePlace =()=>{
+    history.push("./editAndDeletePlace")
 }
-const deletePlace =()=>{
-    history.push("./")
-}
+
 
 
 
@@ -22,8 +20,8 @@ const deletePlace =()=>{
       <div>
       
         <button onClick={addPlace}>Add</button>
-       <button onClick={editPlace}>Edit</button>
-       <button onClick={deletePlace}>Delete</button>
+       <button onClick={editAndDeletePlace}>Edit And Delete</button>
+       
       </div>
     </>
   );
