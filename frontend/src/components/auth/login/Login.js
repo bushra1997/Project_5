@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import "./login.css";
 
+
+
 export default function Login() {
   const history = useHistory();
   const [loginError, setLoginError] = useState("form-control is-valid");
@@ -29,7 +31,7 @@ export default function Login() {
 
         if ("the email dosnt exist" !== err.response.data) {
           setLoginError1("form-control is-valid");
-          // setLoginError(true);
+          setLoginError("form-control is-invalid");
         } else {
           setLoginError1("form-control is-invalid");
           setLoginError("form-control is-invalid");
@@ -39,6 +41,8 @@ export default function Login() {
 
   return (
     <>
+    
+       
       <div className="container1">
         <div className="form-center">
           <form>
