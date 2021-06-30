@@ -25,9 +25,7 @@ const BirthDayParty = () => {
 
   return (
     <>
-      <div className="birthDayPartyPlace">
-        <ShowPlaces places={places} />
-      </div>
+      <div className="places">{showPlaces()}</div>
     </>
   );
 };
