@@ -28,6 +28,7 @@ const BirthDayParty = () => {
     return places.map((place) => (
       <div key={place.id}>
         <ShowCard place={place} />
+        {console.log(place,"7777")}
       </div>
     ));
   };
