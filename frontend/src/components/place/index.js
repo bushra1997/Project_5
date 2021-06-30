@@ -6,7 +6,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
-
+const history =useHistory();
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/${id}`)
@@ -76,11 +76,17 @@ export default function Place() {
     ));
   };
 
+  const booking = () => {
+    history.push("/booking")
+};
+
   return (
     <>
       <div className="places">{showPlaces()}</div>
       <button onClick={addToFav}>Add To Favorite </button>
       <button onClick={deleteFromFav}>delete From Favorite </button>
+      <button onClick={booking}>Book now</button>
+
     </>
   );
 }
