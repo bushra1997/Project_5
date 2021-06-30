@@ -5,12 +5,14 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 export default function Place() {
   const { id } = useParams();
+  const [place_id, setPlace_id] = useState("");
+
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/${id}`)
       .then((result) => {
         if (result.status == 200) {
-          console.log(result.data);
+          setPlace_id(result.data[0].id);
           setPlaces(result.data);
         }
       })
@@ -38,25 +40,32 @@ export default function Place() {
       </Card>
     );
   };
-const addToFav= ()=>{
-    axios.post(`http://localhost:5000/favorite`,{
-    
-    }).then((result)=>{
 
-    }).catch((err)=>{
+  const addToFav = () => {
+    axios
+      .post(`http://localhost:5000/favorite`, {
+        place_id,
+      })
+      .then((result) => {
+        result.json();
+      })
+      .catch((err) => {
         console.log(err);
-    })
-}
+      });
+  };
 
-const deleteFromFav= ()=>{
-    axios.delete(`http://localhost:5000/favorite`,{
-       
-    }).then((result)=>{
-        
-    }).catch((err)=>{
+  const deleteFromFav = () => {
+    axios
+      .delete(`http://localhost:5000/favorite/${place_id}`, {
+        place_id,
+      })
+      .then((result) => {
+        result.json();
+      })
+      .catch((err) => {
         console.log(err);
-    })
-}
+      });
+  };
 
   const showPlaces = () => {
     return places.map((place) => (

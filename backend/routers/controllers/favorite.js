@@ -10,8 +10,8 @@ const CreateNewFavorate = (req, res) => {
   });
 };
 const DeleteFavorate = (req, res) => {
-  const { id } = req.body;
-  const query = `DELETE FROM favorite WHERE id=(?) `;
+  const id = req.params.id;
+  const query = `DELETE FROM favorite WHERE place_id=(?) `;
   const data = [id];
   db.query(query, data, (err, result) => {
     if (err) throw err;
