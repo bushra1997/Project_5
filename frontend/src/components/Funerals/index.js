@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./funerals.css";
-import ShowPlaces from "../showPlaces";
+import ShowPlaces from "../showPlaces/index";
 
 const Funerals = () => {
   const history = useHistory();
