@@ -7,7 +7,7 @@ import Funerals from "./components/Funerals/index";
 import DinnerParty from "./components/birthDayPart";
 import Meeting from "./components/meeting";
 import Login from "./components/auth/login/Login";
-import Register from './components/Register';
+import Register from './components/register';
 import Dashboard from "./components/dashboard/Dashboard"
 import AddPlace from "./components/dashboard/AddPlace"
 import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace"
