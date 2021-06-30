@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 export default function Favorite() {
     const [favorites, setFavorites] = useState([]);
@@ -33,6 +35,7 @@ export default function Favorite() {
       axios
         .get(`http://localhost:5000/favorite`)
         .then((result) => {
+            console.log(result.data)
           if (result.status == 200) {
             setFavorites(result.data);
           }
