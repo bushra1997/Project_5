@@ -7,11 +7,12 @@ import Funerals from "./components/Funerals/index";
 import DinnerParty from "./components/birthDayPart";
 import Meeting from "./components/meeting";
 import Login from "./components/auth/login/Login";
-import Register from './components/register';
+import Register from './components/Register';
 import Dashboard from "./components/dashboard/Dashboard"
 import AddPlace from "./components/dashboard/AddPlace"
 import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace"
 import Footer from "./components/footer";
+import Place from "./components/place";
 const App = () => {
   return (
     <>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/funerals" component={Funerals} />
         <Route path="/dinnerParty" component={DinnerParty} />
         <Route path="/meeting" component={Meeting} />
+        <Route path="/place/:id" component={Place} />
       </Switch>
       <Footer />
     </>
