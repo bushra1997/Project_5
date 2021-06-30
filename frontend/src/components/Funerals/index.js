@@ -34,7 +34,7 @@ const Funerals = () => {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:5000/places/funerals `)
+      .get(`http://localhost:5000/places/type/funerals`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);
