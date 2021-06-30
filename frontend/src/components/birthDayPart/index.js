@@ -34,7 +34,7 @@ const BirthDayParty = () => {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:5000/places/birthDayParty`)
+      .get(`http://localhost:5000/places/type/birthDayParty`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

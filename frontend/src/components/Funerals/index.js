@@ -13,6 +13,7 @@ const Funerals = () => {
 
 
   const ShowCard = ({ place }) => {
+    console.log(place,"place");
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={place.img} />
@@ -29,14 +30,19 @@ const Funerals = () => {
       </Card>
     );
   };
+  const getPlaceById =({place}) =>{
+    history.push(`places/type/${place.id}`);
+    console.log(place,"oooo")
+  }
 
-  const showPlaces = () => {
-    return places.map((place) => (
-      <div key={place.id}>
-        <ShowCard place={place} />
-      </div>
-    ));
-  };
+  // const showPlaces = () => {
+  //   return places.map((place) => (
+  //     <div key={place.id} >
+  //       <ShowCard place={place} onClick={getPlaceById}/>
+  //     </div>
+  //   ));
+  // };
+  
 
   useEffect(() => {
     axios
@@ -51,16 +57,20 @@ const Funerals = () => {
       });
   }, []);
 
-  const getPlaceById =() =>{
-    history.push(`places/type/${id}`);
-  }
+  
   return (
     <>
-    <div className="places" onClick={getPlaceById}>
-      {showPlaces()}
+    <div className="placse" onClick={getPlaceById}>
+      {places.map((place) => {
+          return (
+            <div key={place.id} >
+        <ShowCard place={place} />
       </div>
+          );
+        })}
+        </div>
     </>
-  );
+  ) 
 };
 
 export default Funerals;
