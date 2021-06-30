@@ -2,11 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { setToken} from './../../reducers/login/index';
 export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
 const history =useHistory();
+
+const state = useSelector((state) => {
+    // specify which state to subscribe to (state tree => reducer => state name )
+    return {
+      token: state.token.token,
+    };
+  });
+console.log(token)
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/${id}`)
