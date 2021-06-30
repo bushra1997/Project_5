@@ -4,10 +4,24 @@ import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 export default function Place() {
-    const {id}=useParams();
-const [places, setPlaces] = useState([])
+  const { id } = useParams();
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/places/${id}`)
+      .then((result) => {
+        if (result.status == 200) {
+          console.log(result.data);
+          setPlaces(result.data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-const ShowPlace = ({ place }) => {
+  const [places, setPlaces] = useState([]);
+
+  const ShowPlace = ({ place }) => {
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={place.img} />
@@ -24,7 +38,7 @@ const ShowPlace = ({ place }) => {
       </Card>
     );
   };
-  
+
   const showPlaces = () => {
     return places.map((place) => (
       <div key={place.id}>
@@ -34,30 +48,9 @@ const ShowPlace = ({ place }) => {
     ));
   };
 
-
-  useEffect(() => {
-    axios
-      .post(`http://localhost:5000/places/${id}`)
-      .then((result) => {
-        if (result.status == 200) {
-            setPlaces(result.data);
-            console.log(result.data);
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-      });
-  }, []);
-
-
   return (
     <>
-    <div className="places">
-      {showPlaces()}
-      </div>
+      <div className="places">{showPlaces()}</div>
     </>
   );
-
-
-
 }
