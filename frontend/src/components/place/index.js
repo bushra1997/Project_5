@@ -9,13 +9,13 @@ export default function Place() {
   const [place_id, setPlace_id] = useState("");
 const history =useHistory();
 
-const state = useSelector((state) => {
-    // specify which state to subscribe to (state tree => reducer => state name )
-    return {
-      token: state.token.token,
-    };
-  });
-console.log(token)
+// const state = useSelector((state) => {
+//     // specify which state to subscribe to (state tree => reducer => state name )
+//     return {
+//       token: state.token.token,
+//     };
+//   });
+//console.log(token)
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/${id}`)

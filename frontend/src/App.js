@@ -13,6 +13,7 @@ import AddPlace from "./components/dashboard/AddPlace"
 import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace"
 import Footer from "./components/footer";
 import Place from "./components/place";
+import Favorite from "./components/favorite";
 const App = () => {
   return (
     <>
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/dinnerParty" component={DinnerParty} />
         <Route path="/meeting" component={Meeting} />
         <Route path="/places/:id" component={Place} />
+        <Route path="/favorite" component={Favorite} />
       </Switch>
       <Footer />
     </>
