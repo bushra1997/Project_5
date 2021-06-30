@@ -38,7 +38,13 @@ export default function Place() {
       </Card>
     );
   };
+const addToFav= ()=>{
+    axios.post(`http://localhost:5000/favorite`,{
+        place_id
+    }).then((result)=>{
 
+    })
+}
   const showPlaces = () => {
     return places.map((place) => (
       <div key={place.id}>
@@ -51,6 +57,8 @@ export default function Place() {
   return (
     <>
       <div className="places">{showPlaces()}</div>
+      <button onClick={addToFav}>AddToFavorite </button>
+      <button onClick={deleteFromFav}>deleteFromFavorite </button>
     </>
   );
 }
