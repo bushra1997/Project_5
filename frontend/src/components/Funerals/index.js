@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useHistory,useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./funerals.css"
 
+
+
 const Funerals = () => {
+  const history = useHistory();
   const [places, setPlaces] = useState([]);
+  const { id } = useParams();
+
 
   const ShowCard = ({ place }) => {
     return (
@@ -45,9 +51,12 @@ const Funerals = () => {
       });
   }, []);
 
+  const getPlaceById =() =>{
+    history.push(`places/type/${id}`);
+  }
   return (
     <>
-    <div className="places">
+    <div className="places" onClick={getPlaceById}>
       {showPlaces()}
       </div>
     </>
