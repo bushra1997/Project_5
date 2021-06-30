@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory,useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import "./funerals.css"
+import "./funerals.css";
 import ShowPlaces from "../showPlaces";
-
-
 
 const Funerals = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
   const { id } = useParams();
-
-  
 
   useEffect(() => {
     axios
@@ -23,20 +19,17 @@ const Funerals = () => {
         }
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
       });
   }, []);
 
-  
   return (
     <>
-    <div className="funeralsPlace" >
-      <ShowPlaces places={places}/>
+      <div className="funeralsPlace">
+        <ShowPlaces places={places} />
       </div>
     </>
   );
 };
 
 export default Funerals;
-
-
