@@ -30,7 +30,7 @@ const Funerals = () => {
   
   return (
     <>
-    <div className="places" >
+    <div className="funeralsPlace" >
       <ShowPlaces places={places}/>
       </div>
     </>
