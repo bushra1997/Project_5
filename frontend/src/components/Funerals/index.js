@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import "./birthDayPart.css"
+import "./funerals.css"
 
 const Funerals = () => {
   const [places, setPlaces] = useState([]);
