@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 export default function Place() {
+    const {id}=useParams();
 const [places, setPlaces] = useState([])
 
 const ShowPlace = ({ place }) => {
@@ -22,10 +24,12 @@ const ShowPlace = ({ place }) => {
       </Card>
     );
   };
+  
   const showPlaces = () => {
     return places.map((place) => (
       <div key={place.id}>
         <ShowPlace place={place} />
+        {console.log(places)}
       </div>
     ));
   };
@@ -33,7 +37,7 @@ const ShowPlace = ({ place }) => {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:5000/places/1`)
+      .post(`http://localhost:5000/places/${id}`)
       .then((result) => {
         if (result.status == 200) {
             setPlaces(result.data);
