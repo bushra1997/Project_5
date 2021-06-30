@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import "./birthDayPart.css"
+import "./birthDayPart.css";
 
 const BirthDayParty = () => {
   const [places, setPlaces] = useState([]);
@@ -41,18 +41,15 @@ const BirthDayParty = () => {
         }
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
       });
   }, []);
 
   return (
     <>
-    <div className="places">
-      {showPlaces()}
-      </div>
+      <div className="places">{showPlaces()}</div>
     </>
   );
 };
 
 export default BirthDayParty;
-
