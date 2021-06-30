@@ -29,4 +29,5 @@ const DeleteFavorate = (req, res) => {
 module.exports = {
   CreateNewFavorate,
   DeleteFavorate,
+  allFavorite,
 };
