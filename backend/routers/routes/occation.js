@@ -3,6 +3,6 @@ const { CreateNewOccation} = require("./../controllers/occation");
 
 const occationRouter = express.Router();
 
-occationRouter .post("/", CreateNewOccation);
+occationRouter.post("/", CreateNewOccation);
 
 module.exports = occationRouter ;
