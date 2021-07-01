@@ -25,8 +25,9 @@ const BirthDayParty = () => {
 
   return (
     <>
-      <div className="places">{showPlaces()}</div>
-    </>
+<div className="funeralsPlace">
+        <ShowPlaces places={places} />
+      </div>    </>
   );
 };
 
