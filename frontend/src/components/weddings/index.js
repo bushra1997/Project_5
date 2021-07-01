@@ -1,44 +1,35 @@
 import React, { useState, useEffect } from "react";
-import Hamburger from "hamburger-react";
 import axios from "axios";
-import Card from "react-bootstrap/Card";
-import "./wedding.css"
+import { useHistory, useParams } from "react-router-dom";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import "./wedding.css";
+import ShowPlaces from "../showPlaces";
+
 const Weddings = () => {
-  const [images, setImages] = useState([]);
+  const history = useHistory();
+  const [places, setPlaces] = useState([]);
+  const { id } = useParams();
+
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/images/weddings`)
+      .get(`http://localhost:5000/places/type/weddings`)
       .then((result) => {
         if (result.status == 200) {
-          setImages(result.data);
+          setPlaces(result.data);
         }
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
-  console.log(images);
 
   return (
     <>
-    <div className="cont">
-      {images &&
-        images.map((e, i) => {
-          return (
-            <Card key={i} >
-              <Card.Img  src={e.img}  style={{width:"600px" ,height:"200px"}}/>
-              <Card.Body>
-                <Card.Text>
-                  {e.description}
-
-                  {e.city}
-
-                  {e.address}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          );
-        })}
-        </div>
+      <div className="weddingsPlace">
+        <ShowPlaces places={places} />
+      </div>
     </>
   );
 };
+
 export default Weddings;
