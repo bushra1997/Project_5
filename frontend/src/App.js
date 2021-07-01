@@ -14,6 +14,8 @@ import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace";
 import Footer from "./components/footer";
 import Index from "./components/home/index"
 import { useSelector } from "react-redux";
+import Place from "./components/place";
+import Favorite from "./components/favorite";
 const App = () => {
   const token =useSelector((state)=>{
 
@@ -40,6 +42,8 @@ const App = () => {
         <Route path="/funerals" component={Funerals} />
         <Route path="/dinnerParty" component={DinnerParty} />
         <Route path="/meeting" component={Meeting} />
+        <Route path="/places/:id" component={Place} />
+        <Route path="/favorite" component={Favorite} />
       </Switch>
       <Footer />
     </>
