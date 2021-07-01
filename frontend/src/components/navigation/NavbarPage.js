@@ -14,7 +14,7 @@ import { Route, Link, useHistory } from "react-router-dom";
 const NavBar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
 
-  const toggleNavbar = () => setCollapsed(!collapsed);
+  
   const jad = () => {
     if (!collapsed) {
       setCollapsed(true);

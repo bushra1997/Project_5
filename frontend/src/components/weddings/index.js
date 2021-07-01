@@ -9,7 +9,6 @@ const Weddings = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
   const { id } = useParams();
-
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/type/weddings`)
@@ -22,7 +21,6 @@ const Weddings = () => {
         console.log(err);
       });
   }, []);
-
   return (
     <>
       <div className="weddingsPlace">
