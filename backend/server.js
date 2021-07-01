@@ -21,15 +21,18 @@ const userRouter = require("./routers/routes/user");
 const ratingRouter = require("./routers/routes/rating");
 const loginRouter = require("./routers/routes/login");
 const placeRouter = require("./routers/routes/place");
+const occationRouter = require("./routers/routes/occation");
 
 // router middleware
 app.use("/role", roleRouter);
 app.use("/slider", sliderRouter);
-app.use("/favorite", favoriteRouter);
+app.use("/", favoriteRouter);
 app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
 app.use(placeRouter);
+app.use("/occation",occationRouter);
+
 //app routers
 
 const PORT = process.env.PORT || 5000;

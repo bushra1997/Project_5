@@ -6,6 +6,6 @@ placeRouter.get("/places", getAllPlaces);
 placeRouter.put("/places/:id",updatePlaceById);
 placeRouter.delete("/places/:id",deletePlaceById);
 placeRouter.get("/places/:id",getPlaceById);
-placeRouter.post("/places/:type",getPlaceByType);
+placeRouter.get("/places/type/:type",getPlaceByType);
 placeRouter.get("/images/:type",getPlaceByTypeImg);
 module.exports = placeRouter;
