@@ -7,12 +7,24 @@ import Funerals from "./components/Funerals/index";
 import DinnerParty from "./components/birthDayPart";
 import Meeting from "./components/meeting";
 import Login from "./components/auth/login/Login";
-import Register from './components/register';
-import Dashboard from "./components/dashboard/Dashboard"
-import AddPlace from "./components/dashboard/AddPlace"
-import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace"
+import Register from './components/auth/signUp/register';
+import Dashboard from "./components/dashboard/Dashboard";
+import AddPlace from "./components/dashboard/AddPlace";
+import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace";
 import Footer from "./components/footer";
+import Index from "./components/home/index"
+import { useSelector } from "react-redux";
 const App = () => {
+  const token =useSelector((state)=>{
+
+    return {
+
+      token:state.token.token,
+      user:state.token.user
+    }
+
+  });
+  console.log("tooooooken",token);
   return (
     <>
       <Navigation />
@@ -21,6 +33,7 @@ const App = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/addPlace" component={AddPlace} />
+        <Route exact path="/home" component={Index} />
         <Route exact path="/editAndDeletePlace" component={EditAndDeletePlace} />
         <Route path="/weddings" component={Weddings} />
         <Route path="/birthDayParty" component={BirthDayParty} />

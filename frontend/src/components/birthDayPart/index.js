@@ -2,8 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./birthDayPart.css"
-
+import { useSelector } from "react-redux";
 const BirthDayParty = () => {
+
+  
+  const token =useSelector((state)=>{
+
+    return {
+
+      token:state.token.token,
+      user:state.token.user
+    }
+
+  });
+  console.log("tooooookenkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",token);
   const [places, setPlaces] = useState([]);
 
   const ShowCard = ({ place }) => {

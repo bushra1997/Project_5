@@ -3,7 +3,21 @@ import Hamburger from "hamburger-react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import "./wedding.css"
+import { useSelector } from "react-redux";
 const Weddings = () => {
+
+  const token =useSelector((state)=>{
+
+    return {
+
+      token:state.token.token,
+      user:state.token.user
+    }
+
+  });
+  console.log("tooooooken",token);
+
+
   const [images, setImages] = useState([]);
   useEffect(() => {
     axios
@@ -15,7 +29,7 @@ const Weddings = () => {
       })
       .catch((err) => {});
   }, []);
-  console.log(images);
+  
 
   return (
     <>
