@@ -1,0 +1,23 @@
+.dMain{
+    display:flex;
+    margin: auto;
+    flex-direction:column;
+    width: 600px;
+    height: 200px;
+    /* margin-top: 50px; */
+}
+
+.formAddPlace{
+    display:flex;
+    margin: auto;
+    flex-direction:column;
+    width: 400px;
+    height: 100px;
+}
+.main-div{
+    display:flex;
+    margin: auto;
+    flex-direction:column;
+    width: 400px;
+    height: 100px;
+}

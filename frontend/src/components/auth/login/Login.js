@@ -22,7 +22,8 @@ export default function Login() {
       .then((result) => {
         if (result.status == 200) {
           console.log(result.data);
-          dispatch(setToken(result.data.token));
+          dispatch(setToken({token:result.data.token, user: result.data.user}));
+
           history.push("/home");
         }
       })
