@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import Hamburger from "hamburger-react";
 import { Route, Link, useHistory } from "react-router-dom";
+import "./navigation.css"
 
 const NavBar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
