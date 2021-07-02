@@ -78,6 +78,18 @@ const getPlaceByTypeImg = (req, res) => {
     });
   };
 
+  const getAllPlacesImg = (req, res) => {
+   
+    const query = `SELECT img
+    FROM place` ;
+    
+      connection.query(query,(err, result) => {
+      if (err) throw err;
+      res.json(result);
+      console.log(result);
+    });
+  };
+
 module.exports = {
   CreateNewPlace,
   getAllPlaces,
@@ -86,4 +98,5 @@ module.exports = {
   getPlaceById,
   getPlaceByType,
   getPlaceByTypeImg,
+  getAllPlacesImg,
 };

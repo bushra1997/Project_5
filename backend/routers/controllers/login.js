@@ -28,6 +28,7 @@ const login = async (req, res) => {
           message: "valid login",
           user: result[0],
         });
+
     } else {
       res.status(403).json("The password is not correct");
     }

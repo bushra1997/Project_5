@@ -26,7 +26,7 @@ const occationRouter = require("./routers/routes/occation");
 // router middleware
 app.use("/role", roleRouter);
 app.use("/slider", sliderRouter);
-app.use("/favorite", favoriteRouter);
+app.use("/", favoriteRouter);
 app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
