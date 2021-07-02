@@ -14,13 +14,16 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const dispatch = useDispatch();
+  
+
+ 
 
   const submit = () => {
     axios
       .post("http://localhost:5000/login", { email, password })
       .then((result) => {
         if (result.status == 200) {
-          console.log(result.data);
+          console.log("kkkkkkkkkkkkkkkkkkkkkkk",result.data);
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
           );
@@ -32,11 +35,14 @@ export default function Login() {
             localStorage.setItem("role", role );
             history.push("/dashboard");
           } else {
-            history.push("/home");
+            history.push("/placeIndex");
           }
+          
+
         }
       })
       .catch((err) => {
+        console.log("error =====>",err.message); 
         console.log("the email dosnt exist" === err.response.data);
 
         if ("the email dosnt exist" !== err.response.data) {

@@ -26,8 +26,22 @@ const DeleteFavorate = (req, res) => {
     res.json(result);
   });
 };
+
+const checkFavorite =(res,req)=>{
+  const { place_id, user_id } = req.body;
+  const query = `SELECT * FROM favorite WHERE place_id =(?) AND user_id =(?)`;
+  const data = [ place_id,user_id];
+  db.query(query, data, (err, result) => {
+    if (err) throw err;
+    console.log("Errorrrrrrrrrrrrrrrrrrrrrrrrrr",err.message);
+    res.status(404).json(result);
+  });
+  
+}
+
 module.exports = {
   CreateNewFavorate,
   DeleteFavorate,
   allFavorite,
+  checkFavorite,
 };
