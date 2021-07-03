@@ -24,6 +24,12 @@ const NavBar = (props) => {
     }
   };
 
+  const signOut=()=>{
+
+
+    
+  }
+
   return (
     <>
     <div>
@@ -54,7 +60,7 @@ const NavBar = (props) => {
               </Link>
             </NavItem>
             <NavItem>
-              <Link exact to="/login">
+              <Link onClick={signOut} exact to="/login">
                 Signout
               </Link>
             </NavItem>
