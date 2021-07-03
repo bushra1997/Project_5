@@ -25,6 +25,7 @@ const App = () => {
     };
   });
   console.log(token.user);
+  console.log(token.token);
   return (
     <>
       <Navigation />

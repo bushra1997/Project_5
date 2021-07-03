@@ -1,9 +1,8 @@
-
 USE project_5;
 
 CREATE TABLE roles (
     id INT AUTO_INCREMENT NOT NULL,
-    role VARCHAR(255),
+    role VARCHAR(255) UNIQUE NOT NULL,
     is_deleted TINYINT DEFAULT 0,
     PRIMARY KEY (id)
 );
@@ -16,8 +15,8 @@ CREATE TABLE users(
     country VARCHAR(255),
     email VARCHAR(255) UNIQUE,
     password VARCHAR(255),
-    role_id INT,
-    FOREIGN KEY (role_id) REFERENCES roles(id),
+    role_type VARCHAR(255),
+    FOREIGN KEY (role_type) REFERENCES roles(role),
     is_deleted TINYINT DEFAULT 0,
     PRIMARY KEY (id)
 );
