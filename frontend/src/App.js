@@ -16,7 +16,6 @@ import Index from "./components/home/index";
 import { useSelector } from "react-redux";
 import Place from "./components/place";
 import Favorite from "./components/favorite";
-import PlaceIndex from "./components/place/placeIndex";
 const App = () => {
   const token = useSelector((state) => {
     return {
@@ -51,7 +50,6 @@ const App = () => {
         <Route path="/meeting" component={Meeting} />
         <Route path="/places/:id/:id" component={Place} />
         <Route path="/favorite" component={Favorite} />
-        <Route path="/placeIndex" component={PlaceIndex} />
       </Switch>
       <Footer />
       </div>
