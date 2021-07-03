@@ -25,7 +25,9 @@ export default function Login() {
         if (result.status == 200) {
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
-          );
+            );
+          localStorage.setItem("token", result.data.token);
+          localStorage.setItem("role", result.data.user.role_type);
          if(result.data.user.role_type==="Admin"){
 
            history.push("/dashboard");

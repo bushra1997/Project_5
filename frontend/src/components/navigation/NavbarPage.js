@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap";
 import Hamburger from "hamburger-react";
-import { Route, Link, useHistory } from "react-router-dom";
-import "./navigation.css"
+import {Link} from "react-router-dom";
+import "./navigation.css";
+import { useDispatch } from "react-redux";
+import {setTokenout} from "./../../reducers/signout/signout"
+
 
 const NavBar = (props) => {
+  const dispatch = useDispatch();
   const [collapsed, setCollapsed] = useState(true);
 
   
@@ -26,9 +28,9 @@ const NavBar = (props) => {
 
   const signOut=()=>{
 
-
+    dispatch(setTokenout({ token: "", user: {} }));
     
-  }
+  };
 
   return (
     <>
