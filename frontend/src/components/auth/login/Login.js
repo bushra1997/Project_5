@@ -20,25 +20,23 @@ export default function Login() {
 
   const submit = () => {
     axios
-      .post("http://localhost:5000/login", { email, password })
+      .post("http://localhost:5000/login", { email,password})
       .then((result) => {
         if (result.status == 200) {
-          console.log("kkkkkkkkkkkkkkkkkkkkkkk",result.data);
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
           );
-          
-          localStorage.setItem("token", result.data.token);
-          console.log(result.data.user.role_id);
-          if (result.data.user.role_id=== 2) {
-            setRole("Admin");
-            localStorage.setItem("role", role );
-            history.push("/dashboard");
-          } else {
-            history.push("/placeIndex");
-          }
-          
+         if(result.data.user.role_type==="Admin"){
 
+           history.push("/dashboard");
+           
+          }
+          else{
+            
+            history.push("/home");
+
+         }
+         
         }
       })
       .catch((err) => {

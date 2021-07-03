@@ -28,18 +28,22 @@ const App = () => {
   console.log(token.token);
   return (
     <>
+    {token.user.role_type==="Admin"?(
+       <Switch>
+
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/addPlace" component={AddPlace} />
+          <Route exact path="/editAndDeletePlace" component={EditAndDeletePlace}/>
+
+       </Switch>  
+    
+  ):(
+    <div>
       <Navigation />
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/addPlace" component={AddPlace} />
         <Route exact path="/home" component={Index} />
-        <Route
-          exact
-          path="/editAndDeletePlace"
-          component={EditAndDeletePlace}
-        />
         <Route path="/weddings" component={Weddings} />
         <Route path="/birthDayParty" component={BirthDayParty} />
         <Route path="/funerals" component={Funerals} />
@@ -50,7 +54,10 @@ const App = () => {
         <Route path="/placeIndex" component={PlaceIndex} />
       </Switch>
       <Footer />
-    </>
+      </div>
+  )}
+      </>
+    
   );
 };
 
