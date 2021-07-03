@@ -10,7 +10,7 @@ const NavBar = (props) => {
   const dispatch = useDispatch();
   const [collapsed, setCollapsed] = useState(true);
 
-  const jad = () => {
+  const NavIcon = () => {
     if (!collapsed) {
       setCollapsed(true);
     } else {
@@ -28,7 +28,7 @@ const NavBar = (props) => {
     <>
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand onClick={jad} className="mr-auto">
+          <NavbarBrand onClick={NavIcon} className="mr-auto">
             <Hamburger
               size={20}
               duration={0.6}

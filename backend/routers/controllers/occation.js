@@ -10,5 +10,5 @@ const CreateNewOccation = (req, res) => {
   });
 };
 module.exports = {
-    CreateNewOccation,
-  };
+  CreateNewOccation,
+};

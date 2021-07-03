@@ -1,27 +1,22 @@
 const initialState = {
-    tokenout: "",
-    user:{},
-  };
+  tokenout: "",
+  user: {},
+};
 
-  const tokenOut = (state = initialState, {type, payload}) => {
-    
-    switch (type) {
-        case 'SET_LOGOUT':
-          return { tokenout: payload.tokenout, user: payload.user};
+const tokenOut = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case "SET_LOGOUT":
+      return { tokenout: payload.tokenout, user: payload.user };
 
-          default:
-      
-              return state;
+    default:
+      return state;
   }
+};
 
-}
-
-
-export const setTokenout=(tokenout)=>{
-
-    return {
-        type:'SET_LOGOUT',
-        payload: tokenout
-    }
-}
+export const setTokenout = (tokenout) => {
+  return {
+    type: "SET_LOGOUT",
+    payload: tokenout,
+  };
+};
 export default tokenOut;

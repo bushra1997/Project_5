@@ -21,7 +21,7 @@ export default function Place() {
   const [user_id, setUser_id] = useState("");
   const [rating_id, setRating_id] = useState("1");
   const [added, setAdded] = useState(false);
-  
+
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -37,16 +37,14 @@ export default function Place() {
         setImage(result.data[0].img);
         setDescription(result.data[0].description);
         setName(result.data[0].name);
-        setCapacity(result.data[0].capacity)
-        setCity(result.data[0].city)
-        setAddress(result.data[0].address)
+        setCapacity(result.data[0].capacity);
+        setCity(result.data[0].city);
+        setAddress(result.data[0].address);
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
-
- 
 
   const addToFavorite = () => {
     axios
@@ -81,48 +79,43 @@ export default function Place() {
         <Card style={{ width: "41rem" }}>
           <Card.Img variant="top" src={image} />
           <Card.Body>
-            <Card.Title><h2>{name}</h2></Card.Title>
-            <Card.Text><h6>{description}</h6></Card.Text>
-            <Card.Text><h6>Capacity: {capasity}</h6> </Card.Text>
-            <Card.Text><h6>City: {city}</h6> </Card.Text>
-            <Card.Text><h6>Address: {address}</h6> </Card.Text>
+            <Card.Title>
+              <h2>{name}</h2>
+            </Card.Title>
+            <Card.Text>
+              <h6>{description}</h6>
+            </Card.Text>
+            <Card.Text>
+              <h6>Capacity: {capasity}</h6>{" "}
+            </Card.Text>
+            <Card.Text>
+              <h6>City: {city}</h6>{" "}
+            </Card.Text>
+            <Card.Text>
+              <h6>Address: {address}</h6>{" "}
+            </Card.Text>
             {!added ? (
-          <AiOutlineHeart
-            className="icon-heart"
-            icon="heart"
-            id="add-favorite"
-            size={40} 
-            color="red"
-            onClick={addToFavorite}
-          />
-        ) : (
-          <AiFillHeart
-            icon="heart"
-            id="delete-fav"
-            size={40} 
-            color="red"
-            onClick={deleteFavorite}
-          />
-        )}
+              <AiOutlineHeart
+                className="icon-heart"
+                icon="heart"
+                id="add-favorite"
+                size={40}
+                color="red"
+                onClick={addToFavorite}
+              />
+            ) : (
+              <AiFillHeart
+                icon="heart"
+                id="delete-fav"
+                size={40}
+                color="red"
+                onClick={deleteFavorite}
+              />
+            )}
           </Card.Body>
         </Card>
       </div>
-      <div className="buttons-holder">
-       
-      </div>
+      <div className="buttons-holder"></div>
     </div>
   );
 }
-
-// {!notAdded ? (
-//   <Button variant="primary" onClick={deleteFavorite}>Delete from favorite</Button>
-// ) : (
-//   <Button variant="primary" onClick={addToFavorite}>Add to favorite</Button>
-// )}
-
-// {!added ? (
-//   <Button variant="primary" onClick={addToFavorite}>Add to favorite</Button>
-// ) : (
-//   <Button variant="primary" onClick={deleteFavorite}>Delete from favorite</Button>
-// )}
-//       <Button variant="primary">Book now</Button>
