@@ -1,7 +1,7 @@
 * {
-  padding: 0!important;
-  margin: 0!important;
-  box-sizing: border-box!important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 .element.style {
   cursor: pointer;
@@ -11,7 +11,7 @@
   user-select: none;
   width: 48px;
   transform: rotate(-90deg);
-  left: 6.3rem!important;
+  left: 6.3rem !important;
 }
 .App {
   text-align: center;

@@ -8,7 +8,6 @@ import {
   ControlLabel,
 } from "react-bootstrap";
 import "./dashboard.css";
-
 export default function AddPlace() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -17,7 +16,6 @@ export default function AddPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
-
   const newPlace = (e) => {
     e.preventDefault();
     axios
@@ -118,10 +116,6 @@ export default function AddPlace() {
               }}
             />
           </Form.Group>
-
-          
-          
-
           <Button variant="primary" type="submit">
             Submit
           </Button>

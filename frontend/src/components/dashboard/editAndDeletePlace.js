@@ -8,7 +8,6 @@ import {
   ControlLabel,
 } from "react-bootstrap";
 import "./dashboard.css";
-
 export default function EditPlace() {
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
@@ -18,7 +17,6 @@ export default function EditPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
-
   const search = (e) => {
     e.preventDefault();
     axios
@@ -37,7 +35,6 @@ export default function EditPlace() {
         console.log(err);
       });
   };
-
   const update = (e) => {
     e.preventDefault();
     axios
@@ -58,7 +55,6 @@ export default function EditPlace() {
         console.log(err);
       });
   };
-
   const Delete = (e) => {
     e.preventDefault();
     axios

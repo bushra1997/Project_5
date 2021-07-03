@@ -33,7 +33,7 @@ export default function Register() {
   };
   return (
     <>
-      <div >
+      <div>
         <input
           type="text"
           placeholder="First name here"

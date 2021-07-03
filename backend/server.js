@@ -3,7 +3,7 @@ const cors = require("cors");
 const db = require("./db/db");
 const app = express();
 app.use(express.json());
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -31,7 +31,7 @@ app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
 app.use(placeRouter);
-app.use("/occation",occationRouter);
+app.use("/occation", occationRouter);
 
 //app routers
 

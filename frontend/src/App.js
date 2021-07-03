@@ -27,35 +27,35 @@ const App = () => {
   console.log(token.token);
   return (
     <>
-    {token.user.role_type==="Admin"?(
-       <Switch>
-
+      {token.user.role_type === "Admin" ? (
+        <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/addPlace" component={AddPlace} />
-          <Route exact path="/editAndDeletePlace" component={EditAndDeletePlace}/>
-
-       </Switch>  
-    
-  ):(
-    <div>
-      <Navigation />
-      <Switch>
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/home" component={Index} />
-        <Route path="/weddings" component={Weddings} />
-        <Route path="/birthDayParty" component={BirthDayParty} />
-        <Route path="/funerals" component={Funerals} />
-        <Route path="/dinnerParty" component={DinnerParty} />
-        <Route path="/meeting" component={Meeting} />
-        <Route path="/places/:id/:id" component={Place} />
-        <Route path="/favorite" component={Favorite} />
-      </Switch>
-      <Footer />
-      </div>
-  )}
-      </>
-    
+          <Route
+            exact
+            path="/editAndDeletePlace"
+            component={EditAndDeletePlace}
+          />
+        </Switch>
+      ) : (
+        <div>
+          <Navigation />
+          <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/home" component={Index} />
+            <Route path="/weddings" component={Weddings} />
+            <Route path="/birthDayParty" component={BirthDayParty} />
+            <Route path="/funerals" component={Funerals} />
+            <Route path="/dinnerParty" component={DinnerParty} />
+            <Route path="/meeting" component={Meeting} />
+            <Route path="/places/:id/:id" component={Place} />
+            <Route path="/favorite" component={Favorite} />
+          </Switch>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

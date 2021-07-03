@@ -8,13 +8,12 @@
   background-image: url("https://www.furneauxlodge.co.nz/media/cpnge1zn/aerial-of-furneaux-lodge.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center ;
+  background-position: center;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("https://www.furneauxlodge.co.nz/media/ttihchyk/furneaux-lodge-cooks-cottage-deck-view.jpg"); */
 }
 
 .form-center {
