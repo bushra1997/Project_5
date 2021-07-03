@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./showPlaces.css"
 
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 

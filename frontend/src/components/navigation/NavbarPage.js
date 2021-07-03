@@ -30,7 +30,7 @@ const NavBar = (props) => {
       <Navbar color="faded" light>
         <NavbarBrand onClick={jad} className="mr-auto">
           <Hamburger
-            size={35}
+            size={20}
             duration={0.6}
             hideOutline={false}
             easing="ease-in"
