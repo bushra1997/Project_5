@@ -95,10 +95,10 @@ export default function Place() {
           <Card.Img variant="top" src={image} />
           <Card.Body>
             <Card.Title><h2>{name}</h2></Card.Title>
-            <Card.Text><h4>{description}</h4></Card.Text>
-            <Card.Text><h4>Capacity: {capasity}</h4> </Card.Text>
-            <Card.Text><h4>City: {city}</h4> </Card.Text>
-            <Card.Text><h4>Address: {address}</h4> </Card.Text>
+            <Card.Text><h6>{description}</h6></Card.Text>
+            <Card.Text><h6>Capacity: {capasity}</h6> </Card.Text>
+            <Card.Text><h6>City: {city}</h6> </Card.Text>
+            <Card.Text><h6>Address: {address}</h6> </Card.Text>
             {!added ? (
           <AiOutlineHeart
             className="icon-heart"
