@@ -19,7 +19,7 @@ export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
   const [user_id, setUser_id] = useState("");
-  const [rating_id, setRating_id] = useState("");
+  const [rating_id, setRating_id] = useState("1");
   const [added, setAdded] = useState(false);
   
   const token = useSelector((state) => {
@@ -30,7 +30,6 @@ export default function Place() {
   });
   useEffect(() => {
     setUser_id(token.user.id);
-    setRating_id("1");
     setPlace_id(id);
     axios
       .get(`http://localhost:5000/places/${id}`)
@@ -47,21 +46,9 @@ export default function Place() {
       });
   }, []);
 
-  const check = () => {
-    let place_ide = 3;
-    let user_ide = 19;
-    axios
-      .get("http://localhost:5000/favorite/check", { place_ide, user_ide })
-      .then((result) => {
-        console.log("rrrrrrrrrrrrrrrrrrrr", result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+ 
 
   const addToFavorite = () => {
-    check();
     axios
       .post("http://localhost:5000/favorite", { place_id, user_id, rating_id })
       .then((result) => {
