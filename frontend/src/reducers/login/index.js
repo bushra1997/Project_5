@@ -13,12 +13,10 @@ const initialState = {
       
               return state;
   }
-
 }
 
 
 export const setToken=(token)=>{
-
     return {
         type:'SET_LOGING',
         payload: token
