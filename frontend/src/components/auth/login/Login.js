@@ -14,10 +14,6 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const dispatch = useDispatch();
-  
-
- 
-
   const submit = () => {
     axios
       .post("http://localhost:5000/login", { email,password})
@@ -26,6 +22,7 @@ export default function Login() {
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
           );
+          localStorage.setItem("token", result.data.token);
          if(result.data.user.role_type==="Admin"){
 
            history.push("/dashboard");
@@ -36,13 +33,9 @@ export default function Login() {
             history.push("/home");
 
          }
-         
         }
       })
       .catch((err) => {
-        console.log("error =====>",err.message); 
-        console.log("the email dosnt exist" === err.response.data);
-
         if ("the email dosnt exist" !== err.response.data) {
           setLoginError1("form-control is-valid");
           setLoginError("form-control is-invalid");

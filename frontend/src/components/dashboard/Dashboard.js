@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import {useHistory} from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./dashboard.css"
 
 export default function Dashboard() {
  const history=useHistory();
@@ -17,10 +19,10 @@ const editAndDeletePlace =()=>{
 
   return (
     <>
-      <div>
+      <div className="dMain">
       
-        <button onClick={addPlace}>Add</button>
-       <button onClick={editAndDeletePlace}>Edit And Delete</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onClick={addPlace}>Add</button>
+       <button type="button" class="btn btn-primary btn-lg btn-block" onClick={editAndDeletePlace}>Modify/Delete</button>
        
       </div>
     </>
