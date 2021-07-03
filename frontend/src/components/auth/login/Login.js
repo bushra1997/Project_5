@@ -14,35 +14,26 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const dispatch = useDispatch();
-  
-
- 
 
   const submit = () => {
     axios
-      .post("http://localhost:5000/login", { email,password})
+      .post("http://localhost:5000/login", { email, password })
       .then((result) => {
         if (result.status == 200) {
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
-            );
+          );
           localStorage.setItem("token", result.data.token);
           localStorage.setItem("role", result.data.user.role_type);
-         if(result.data.user.role_type==="Admin"){
-
-           history.push("/dashboard");
-           
-          }
-          else{
-            
+          if (result.data.user.role_type === "Admin") {
+            history.push("/dashboard");
+          } else {
             history.push("/home");
-
-         }
-         
+          }
         }
       })
       .catch((err) => {
-        console.log("error =====>",err.message); 
+        console.log("error =====>", err.message);
         console.log("the email dosnt exist" === err.response.data);
 
         if ("the email dosnt exist" !== err.response.data) {
