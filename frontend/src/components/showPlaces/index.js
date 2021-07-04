@@ -24,7 +24,9 @@ const ShowPlaces = ({ places }) => {
   };
 
   const showPlaces = () => {
+    console.log(places)
     return places.map((place) => (
+  
       <Link to={`/places/${place.type}/${place.place_id}`}>
         {console.log("place",place)}
         {console.log(place.id)}

@@ -3,17 +3,16 @@ import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./booking.css";
-import ShowPlaces from "../showPlaces";
 
 const Booking = () => {
     console.log("asma");
   const { id } = useParams();
+  console.log(id);
   const [placeOne, setPlaceOne] = useState({})
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/places/${id}`)
-      console.log("lllll",id)
       .then((result) => {
         if (result.status == 200) {
             setPlaceOne(result.data[0]);
@@ -27,9 +26,9 @@ const Booking = () => {
       });
   }, []);
 
-  return (
-  <div> <ShowPlaces placeOne={placeOne} /></div>
-  )
+  return <div>{placeOne.name}</div>
+  
+  
 
   
 };
