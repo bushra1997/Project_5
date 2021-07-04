@@ -46,6 +46,58 @@ export default function Index() {
           <button className="btn btn-success">Read more</button>
         </div>
       </section>
+      <section>
+        <div className="container">
+          <h1  className="text-center">Highlights</h1>
+          <div className="row">
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-success">
+                    Show more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-success">
+                    Show more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-success">
+                    Show more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
