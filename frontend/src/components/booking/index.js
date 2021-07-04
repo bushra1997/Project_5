@@ -22,7 +22,7 @@ const Booking = () => {
   const [phoneNumber, setPhoneNumber] = useState();
   const [done, setDone] = useState(false);
 
-  const history = useHistory()
+  const history = useHistory();
 
   const token = useSelector((state) => {
     return {
@@ -41,7 +41,6 @@ const Booking = () => {
           setCountry(token.user.country);
           setEmail(token.user.email);
           console.log(";llllllllllllllllll", result.data[0]);
-          // console.log(place[0],"mmmmmmmmmmmmmmm")
         }
       })
       .catch((err) => {
@@ -49,65 +48,87 @@ const Booking = () => {
       });
   }, []);
 
-  const booked = () =>{
-      
+  const booked = () => {
     setDone(true);
-      
-  }
+  };
 
-  const Back =()=>{
-      history.push("/home")
-  }
+  const Back = () => {
+    history.push("/home");
+  };
 
   return (
     <>
-     {!done?<div className="formBook">
-        <Form onSubmit={Booking}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{place.name}</Form.Label>
-          </Form.Group>
+      {!done ? (
+        <div className="formBook">
+          <Form onSubmit={Booking}>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{place.name}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{place.city}</Form.Label>
-          </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{place.city}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{place.address}</Form.Label>
-          </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{place.address}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{firstName}</Form.Label>
-          </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{firstName}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{country}</Form.Label>
-          </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{country}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>{email}</Form.Label>
-          </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>{email}</Form.Label>
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Phone Number</Form.Label>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Phone Number</Form.Label>
 
-            <Form.Control
-              type="text"
-              placeholder="your phone number here"
-              onChange={(e) => {
-                setPhoneNumber(e.target.value);
-              }}
-            />
-          </Form.Group>
+              <Form.Control
+                type="text"
+                placeholder="your phone number here"
+                onChange={(e) => {
+                  setPhoneNumber(e.target.value);
+                }}
+              />
+            </Form.Group>
 
-          <Button variant="primary" onClick={booked}>
-          confirmation
-          </Button>
-        </Form>
-      </div>:<div><p>ALL IS GOOD</p>
-      <button  onClick={Back}>
-          Back to HomePage
-          </button>
-          </div>}
+            <Button variant="primary" onClick={booked}>
+              confirmation
+            </Button>
+          </Form>
+        </div>
+      ) : (
+        <div>
+          <p>ALL IS GOOD</p>
+          <button onClick={Back}>Back to HomePage</button>
+        </div>
+      )}
     </>
   );
 };
