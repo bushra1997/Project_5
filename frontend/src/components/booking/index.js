@@ -20,6 +20,9 @@ const Booking = () => {
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState();
+  const [done, setDone] = useState(false);
+
+  const history = useHistory()
 
   const token = useSelector((state) => {
     return {
@@ -46,9 +49,19 @@ const Booking = () => {
       });
   }, []);
 
+  const booked = () =>{
+      
+    setDone(true);
+      
+  }
+
+  const Back =()=>{
+      history.push("/home")
+  }
+
   return (
     <>
-      <div className="formBook">
+     {!done?<div className="formBook">
         <Form onSubmit={Booking}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>{place.name}</Form.Label>
@@ -78,7 +91,7 @@ const Booking = () => {
             <Form.Label>Phone Number</Form.Label>
 
             <Form.Control
-              as="textarea"
+              type="text"
               placeholder="your phone number here"
               onChange={(e) => {
                 setPhoneNumber(e.target.value);
@@ -86,11 +99,15 @@ const Booking = () => {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="primary" onClick={booked}>
+          confirmation
           </Button>
         </Form>
-      </div>
+      </div>:<div><p>ALL IS GOOD</p>
+      <button  onClick={Back}>
+          Back to HomePage
+          </button>
+          </div>}
     </>
   );
 };
