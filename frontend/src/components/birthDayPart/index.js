@@ -4,7 +4,6 @@ import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./birthDayPart.css";
 import ShowPlaces from "../showPlaces";
-
 const BirthDayParty = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
@@ -25,7 +24,9 @@ const BirthDayParty = () => {
 
   return (
     <>
-      <div className="places">{showPlaces()}</div>
+      <div className="funeralsPlace">
+        <ShowPlaces places={places} />
+      </div>{" "}
     </>
   );
 };

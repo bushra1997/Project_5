@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./showPlaces.css";
 
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
@@ -24,7 +25,7 @@ const ShowPlaces = ({ places }) => {
 
   const showPlaces = () => {
     return places.map((place) => (
-      <Link to={`/places/${place.type}/${place.id}`}>
+      <Link to={`/places/${place.type}/${place.place_id}`}>
         <div key={place.id}>
           <ShowCard place={place} />
         </div>

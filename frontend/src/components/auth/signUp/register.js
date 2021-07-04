@@ -9,7 +9,7 @@ export default function Register() {
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role_id, setRole_id] = useState(1);
+  const [role_type, setRole_type] = useState("User");
   const [error, setError] = useState(false);
   const newUsers = () => {
     axios
@@ -20,10 +20,9 @@ export default function Register() {
         country,
         email,
         password,
-        role_id,
+        role_type,
       })
       .then((result) => {
-        console.log(result.data);
         if (result.data) {
           history.push("./login");
         }
@@ -34,7 +33,7 @@ export default function Register() {
   };
   return (
     <>
-      <div >
+      <div>
         <input
           type="text"
           placeholder="First name here"

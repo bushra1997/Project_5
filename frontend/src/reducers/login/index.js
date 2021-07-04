@@ -1,24 +1,24 @@
 const initialState = {
     token: "",
+    user:{},
   };
 
   const token = (state = initialState, {type, payload}) => {
-
+    
     switch (type) {
-        case 'SET_TOKEN':
-          return { token : payload };
+        case 'SET_LOGING':
+          return { token: payload.token, user: payload.user};
 
           default:
       
               return state;
   }
-
 }
 
-export const setToken=(token)=>{
 
+export const setToken=(token)=>{
     return {
-        type:'SET_TOKEN',
+        type:'SET_LOGING',
         payload: token
     }
 }

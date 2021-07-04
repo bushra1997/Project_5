@@ -2,100 +2,120 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useDispatch, useSelector } from 'react-redux';
-import { setToken} from './../../reducers/login/index';
+import { useSelector } from "react-redux";
+import { setToken } from "./../../reducers/login/index";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
+import "./place.css";
+import { AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 export default function Place() {
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
+  const [name, setName] = useState("");
+  const [capasity, setCapacity] = useState("");
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
-const history =useHistory();
+  const [user_id, setUser_id] = useState("");
+  const [rating_id, setRating_id] = useState("1");
+  const [added, setAdded] = useState(false);
 
-// const state = useSelector((state) => {
-//     // specify which state to subscribe to (state tree => reducer => state name )
-//     return {
-//       token: state.token.token,
-//     };
-//   });
-//console.log(token)
+  const token = useSelector((state) => {
+    return {
+      token: state.token.token,
+      user: state.token.user,
+    };
+  });
   useEffect(() => {
+    setUser_id(token.user.id);
+    setPlace_id(id);
     axios
       .get(`http://localhost:5000/places/${id}`)
       .then((result) => {
-        if (result.status == 200) {
-          setPlace_id(result.data[0].id);
-          setPlaces(result.data);
-        }
+        setImage(result.data[0].img);
+        setDescription(result.data[0].description);
+        setName(result.data[0].name);
+        setCapacity(result.data[0].capacity);
+        setCity(result.data[0].city);
+        setAddress(result.data[0].address);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
       });
   }, []);
 
-  const [places, setPlaces] = useState([]);
-
-  const ShowPlace = ({ place }) => {
-    return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={place.img} />
-        <Card.Body>
-          <Card.Title>{place.name}</Card.Title>
-          <Card.Text>{place.description}</Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
-          <ListGroupItem>city: {place.city}</ListGroupItem>
-          <ListGroupItem>address: {place.address}</ListGroupItem>
-          <ListGroupItem>availability: {place.availability}</ListGroupItem>
-        </ListGroup>
-      </Card>
-    );
-  };
-
-  const addToFav = () => {
+  const addToFavorite = () => {
     axios
-      .post(`http://localhost:5000/favorite`, {
-        place_id,
-      })
+      .post("http://localhost:5000/favorite", { place_id, user_id, rating_id })
       .then((result) => {
-        result.json();
+        console.log(result);
+        setAdded(true);
       })
+
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const deleteFromFav = () => {
+  const deleteFavorite = () => {
     axios
       .delete(`http://localhost:5000/favorite/${place_id}`, {
         place_id,
       })
       .then((result) => {
-        result.json();
+        console.log(result);
+        setAdded(false);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const showPlaces = () => {
-    return places.map((place) => (
-      <div key={place.id}>
-        <ShowPlace place={place} />
-        {console.log(places)}
-      </div>
-    ));
-  };
-
-  const booking = () => {
-    history.push("/booking")
-};
-
   return (
-    <>
-      <div className="places">{showPlaces()}</div>
-      <button onClick={addToFav}>Add To Favorite </button>
-      <button onClick={deleteFromFav}>delete From Favorite </button>
-      <button onClick={booking}>Book now</button>
-
-    </>
+    <div className="main-place">
+      <div className="place-holder">
+        <Card style={{ width: "41rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>
+              <h2>{name}</h2>
+            </Card.Title>
+            <Card.Text>
+              <h6>{description}</h6>
+            </Card.Text>
+            <Card.Text>
+              <h6>Capacity: {capasity}</h6>{" "}
+            </Card.Text>
+            <Card.Text>
+              <h6>City: {city}</h6>{" "}
+            </Card.Text>
+            <Card.Text>
+              <h6>Address: {address}</h6>{" "}
+            </Card.Text>
+            {!added ? (
+              <AiOutlineHeart
+                className="icon-heart"
+                icon="heart"
+                id="add-favorite"
+                size={40}
+                color="red"
+                onClick={addToFavorite}
+              />
+            ) : (
+              <AiFillHeart
+                icon="heart"
+                id="delete-fav"
+                size={40}
+                color="red"
+                onClick={deleteFavorite}
+              />
+            )}
+          </Card.Body>
+        </Card>
+      </div>
+      <div className="buttons-holder"></div>
+    </div>
   );
 }
