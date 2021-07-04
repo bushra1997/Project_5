@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="Nav">
         <div className="header">
           <Link className="logo-link" exact to="/home">
-            Ocassions App
+            Occasions App
           </Link>
         </div>
         <div className="header1">
