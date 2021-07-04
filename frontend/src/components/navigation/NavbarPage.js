@@ -7,6 +7,7 @@ import { useDispatch,useSelector } from "react-redux";
 
 
 const NavBar = () => {
+  const dispatch = useDispatch();
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -15,6 +16,7 @@ const NavBar = () => {
   });
 
   const exist = token.token;
+  setOut
 
 
   const [collapsed, setCollapsed] = useState(true);
