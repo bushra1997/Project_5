@@ -2,7 +2,11 @@ const db = require("../../db/db");
 
 const allFavorite = (req, res) => {
   const user_id= req.params.id;
-  const query = `SELECT * FROM favorite WHERE user_id =(?)`;
+  const query = `SELECT *
+  FROM place 
+  INNER JOIN favorite
+  ON  place.id = favorite.place_id
+  WHERE user_id =(?);`;
   db.query(query,user_id,(err, result) => {
     if (err) throw err;
     res.json(result);
@@ -38,6 +42,7 @@ const checkFavorite = (res, req) => {
     res.status(404).json(result);
   });
 };
+
 
 module.exports = {
   CreateNewFavorate,
