@@ -36,8 +36,14 @@ export default function Index() {
     <>
       <section>
         <div className="container text-center">
-        <h1>Our Vision</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptates officia culpa magnam recusandae accusamus. Ut, voluptas velit quasi, dolorum excepturi incidunt animi veritatis corporis corrupti adipisci dolore. Cumque, necessitatibus.</p>
+          <h1>Our Vision</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+            voluptates officia culpa magnam recusandae accusamus. Ut, voluptas
+            velit quasi, dolorum excepturi incidunt animi veritatis corporis
+            corrupti adipisci dolore. Cumque, necessitatibus.
+          </p>
+          <button className="btn btn-success">Read more</button>
         </div>
       </section>
     </>
