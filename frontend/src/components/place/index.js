@@ -21,6 +21,7 @@ export default function Place() {
   const [user_id, setUser_id] = useState("");
   const [rating_id, setRating_id] = useState("1");
   const [added, setAdded] = useState(false);
+  const history = useHistory()
 
   const token = useSelector((state) => {
     return {
@@ -77,6 +78,10 @@ export default function Place() {
       });
   };
 
+  const booking = () =>{
+    history.push(`/booking/${id}`)
+  }
+
   return (
     <div className="main-place">
       <div className="place-holder">
@@ -99,6 +104,7 @@ export default function Place() {
               <h6>Address: {address}</h6>{" "}
             </Card.Text>
             <div>
+            <button onClick={booking}>Book</button>
             {!added ? (
               <AiOutlineHeart
                 className="icon-heart"
