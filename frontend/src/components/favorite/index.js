@@ -1,53 +1,45 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useSelector } from "react-redux";
+
 
 export default function Favorite() {
-  const [favorites, setFavorites] = useState([]);
+  const [favorateCard, setFavorateCard] = useState([])
+  const [id, setId] = useState("");
 
-  const ShowCard = ({ place }) => {
-    return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={place.img} />
-        <Card.Body>
-          <Card.Title>{place.name}</Card.Title>
-          <Card.Text>{place.description}</Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
-          <ListGroupItem>city: {place.city}</ListGroupItem>
-          <ListGroupItem>address: {place.address}</ListGroupItem>
-          <ListGroupItem>availability: {place.availability}</ListGroupItem>
-        </ListGroup>
-      </Card>
-    );
-  };
-
-  const showPlaces = () => {
-    return favorites.map((place) => (
-      <div key={place.id}>
-        <ShowCard place={place} />
-      </div>
-    ));
-  };
-
+  const token = useSelector((state) => {
+    return {
+      token: state.token.token,
+      user: state.token.user,
+    };
+  });
+  
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/favorite`)
-      .then((result) => {
-        console.log(result.data);
-        if (result.status == 200) {
-          setFavorites(result.data);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+    setId(token.user.id);
+    axios.get(`http://localhost:5000/favorite/${id}`)
+    .then((result)=>{
+      setFavorateCard(result.data)
+    })
+  }, [])
+ 
+  console.log(id);
+  
+  
   return (
-    <>
-      <div className="places">{showPlaces()}</div>
-    </>
+    
+    <div className="favorite-container">
+    {favorateCard.map((e,i)=>{
+
+      return (
+        <>
+         <div key={i} className="favorate-card">jad</div>
+
+        </>
+        )
+      })}
+
+    </div>
+    
   );
 }

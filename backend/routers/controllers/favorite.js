@@ -1,8 +1,9 @@
 const db = require("../../db/db");
 
 const allFavorite = (req, res) => {
-  const query = `SELECT * FROM favorite`;
-  db.query(query, (err, result) => {
+  const user_id= req.params.id;
+  const query = `SELECT * FROM favorite WHERE user_id =(?)`;
+  db.query(query,user_id,(err, result) => {
     if (err) throw err;
     res.json(result);
   });

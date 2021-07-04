@@ -10,8 +10,10 @@ const initialState = {
           return { token: payload.token, user: payload.user};
 
           default:
-      
+    
               return state;
+
+            
   }
 }
 
