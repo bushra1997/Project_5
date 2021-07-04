@@ -25,8 +25,7 @@ const App = () => {
       user: state.token.user,
     };
   });
-  console.log(token.user);
-  console.log(token.token);
+
   return (
     <>
       {token.user.role_type === "Admin" ? (
