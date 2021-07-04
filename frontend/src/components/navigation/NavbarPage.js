@@ -4,6 +4,7 @@ import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
 import { useDispatch, useSelector } from "react-redux";
+import { setOut } from "../../reducers/login/index";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,6 @@ const NavBar = () => {
   });
 
   const exist = token.token;
-  setOut;
 
   const [collapsed, setCollapsed] = useState(true);
 
@@ -28,7 +28,7 @@ const NavBar = () => {
   };
 
   const signOut = () => {
-    dispatch(setToken({ token: "", user: {} }));
+    dispatch(setOut({ token: "", user: {} }));
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
