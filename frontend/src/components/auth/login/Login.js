@@ -80,7 +80,7 @@ export default function Login() {
                 }}
               />
             </div>
-            <Link className="signIn text-center">Dosn't have account?<br/>Sign up Now</Link>
+            <Link className="signIn text-center" exact to="/register">Dosn't have account?<br/>Sign up Now</Link>
           </form>
           <div className="btn-submit">
             <button
