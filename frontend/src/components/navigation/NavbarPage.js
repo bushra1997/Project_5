@@ -30,8 +30,11 @@ const NavBar = () => {
   };
 
   const signOut = () => {
+    dispatch(
+      setToken({ token: "", user: {} })
+    );
     localStorage.setItem("token", "");
-    localStorage.setItem("role", "");
+    localStorage.setItem("role", {});
   };
 
   return (
