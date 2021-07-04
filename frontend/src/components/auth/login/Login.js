@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import "./login.css";
 import { Link } from "react-router-dom";
 
-
 export default function Login() {
   const history = useHistory();
   const [loginError, setLoginError] = useState("form-control is-valid");
@@ -80,7 +79,11 @@ export default function Login() {
                 }}
               />
             </div>
-            <Link className="signIn text-center" exact to="/register">Dosn't have account?<br/>Sign up Now</Link>
+            <Link className="signIn text-center" exact to="/register">
+              Dosn't have account?
+              <br />
+              Sign up Now
+            </Link>
           </form>
           <div className="btn-submit">
             <button

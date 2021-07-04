@@ -3,8 +3,7 @@ import { Collapse, Navbar, NavbarBrand, Nav, NavItem } from "reactstrap";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
-import { useDispatch,useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -16,8 +15,7 @@ const NavBar = () => {
   });
 
   const exist = token.token;
-  setOut
-
+  setOut;
 
   const [collapsed, setCollapsed] = useState(true);
 
@@ -30,9 +28,7 @@ const NavBar = () => {
   };
 
   const signOut = () => {
-    dispatch(
-      setToken({ token: "", user: {} })
-    );
+    dispatch(setToken({ token: "", user: {} }));
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
@@ -56,16 +52,19 @@ const NavBar = () => {
                   Home
                 </Link>
               </NavItem>
-             {!exist?<NavItem>
-                <Link exact to="/login">
-                  Login
-                </Link>
-              </NavItem>:
-              <NavItem>
-                <Link onClick={signOut} exact to="/login">
-                  Signout
-                </Link>
-              </NavItem>}
+              {!exist ? (
+                <NavItem>
+                  <Link exact to="/login">
+                    Login
+                  </Link>
+                </NavItem>
+              ) : (
+                <NavItem>
+                  <Link onClick={signOut} exact to="/login">
+                    Signout
+                  </Link>
+                </NavItem>
+              )}
               <NavItem>
                 <Link exact to="/profile">
                   Profile
