@@ -4,10 +4,8 @@ import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
 import { useDispatch } from "react-redux";
-import { setTokenout } from "./../../reducers/signout/signout";
 
-const NavBar = (props) => {
-  const dispatch = useDispatch();
+const NavBar = () => {
   const [collapsed, setCollapsed] = useState(true);
 
   const NavIcon = () => {
@@ -19,7 +17,6 @@ const NavBar = (props) => {
   };
 
   const signOut = () => {
-    dispatch(setTokenout({ token: "", user: {} }));
     localStorage.setItem("token", "");
     localStorage.setItem("role", "");
   };

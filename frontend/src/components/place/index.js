@@ -41,11 +41,15 @@ export default function Place() {
         setCapacity(result.data[0].capacity);
         setCity(result.data[0].city);
         setAddress(result.data[0].address);
+        
+        console.log("this is the token =>",token);
+        
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
+  
 
   const addToFavorite = () => {
     axios
@@ -99,8 +103,8 @@ export default function Place() {
             <Card.Text>
               <h6>Address: {address}</h6>{" "}
             </Card.Text>
+            <div>
             <button onClick={booking}>Book</button>
-
             {!added ? (
               <AiOutlineHeart
                 className="icon-heart"
@@ -108,6 +112,8 @@ export default function Place() {
                 id="add-favorite"
                 size={40}
                 color="red"
+                
+                en    
                 onClick={addToFavorite}
               />
             ) : (
@@ -116,9 +122,11 @@ export default function Place() {
                 id="delete-fav"
                 size={40}
                 color="red"
+                en
                 onClick={deleteFavorite}
               />
             )}
+            </div>
           </Card.Body>
         </Card>
       </div>
