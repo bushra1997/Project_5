@@ -12,6 +12,7 @@ const allFavorite = (req, res) => {
     res.json(result);
   });
 };
+
 const CreateNewFavorate = (req, res) => {
   const { place_id, user_id, rating_id } = req.body;
   const query = `INSERT INTO favorite (place_id,user_id,rating_id) VALUES (?,?,?)`;
@@ -32,17 +33,15 @@ const DeleteFavorate = (req, res) => {
   });
 };
 
-const checkFavorite = (res, req) => {
+const checkFavorite = (req,res) => {
   const { place_id, user_id } = req.body;
-  const query = `SELECT * FROM favorite WHERE place_id =(?) AND user_id =(?)`;
+  const query = `SELECT * FROM favorite WHERE place_id =? AND user_id =?`;
   const data = [place_id, user_id];
   db.query(query, data, (err, result) => {
     if (err) throw err;
-    console.log("Errorrrrrrrrrrrrrrrrrrrrrrrrrr", err.message);
     res.status(404).json(result);
   });
 };
-
 
 module.exports = {
   CreateNewFavorate,
