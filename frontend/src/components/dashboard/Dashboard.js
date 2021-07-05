@@ -23,6 +23,8 @@ export default function Dashboard() {
   return (
     <>
       <div className="dMain">
+        <button type="button" class="btn btn-primary btn-lg btn-block" onClick={addPlace}>Add</button>
+       <button type="button" class="btn btn-primary btn-lg btn-block" onClick={editAndDeletePlace}>Modify/Delete</button>
         <button
           type="button"
           class="btn btn-primary btn-lg btn-block"

@@ -3,10 +3,9 @@ import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { setToken } from "./../../reducers/login/index";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
 import "./place.css";
+import Rating from "./Raiting"
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 export default function Place() {
@@ -104,6 +103,7 @@ export default function Place() {
               <h6>Address: {address}</h6>{" "}
             </Card.Text>
             <div>
+              <Rating/>
             <button onClick={booking}>Book</button>
             {!added ? (
               <AiOutlineHeart
