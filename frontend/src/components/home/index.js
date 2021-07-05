@@ -25,7 +25,7 @@ export default function Index() {
           data-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active drk">
               <img
                 src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 class="d-block"
