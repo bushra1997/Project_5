@@ -98,56 +98,67 @@ export default function Index() {
       </section>
       <section>
         <div className="container">
-          <h1>How Occasion can help</h1>
-          <div className="row">
+          <h1 className="text-center">How Occasion can help</h1>
+          <div className="row" style={{ padding: "2.5% 0%" }}>
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="image">
-                <img src="https://i1.wp.com/www.getoccasion.com/wp-content/uploads/2019/09/11-img_20190903_000305x.jpg?resize=500%2C598&ssl=1" />
+                <img
+                  style={{ width: "80%" }}
+                  src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <h4>
+                  <span className="fa-li">
                     <i class="fas fa-user-plus"></i>
-                    <span>Turn more website visits into bookings</span>
-                  </h4>
-                  <p>
-                    Your new calendar is so irresistible it turns your website
-                    into a booking machine.
-                  </p>
+                  </span>
+                  <div className="container">
+                    <h4>Turn more website visits into bookings</h4>
+                    <p>
+                      Your new calendar is so irresistible it turns your website
+                      into a booking machine.
+                    </p>
+                  </div>
                 </li>
                 <li class="list-group-item">
-                  <h4>
+                  <span className="fa-li">
                     <i class="fas fa-wallet"></i>
-                    <span>Get bookings directly from Facebook and Google</span>
-                  </h4>
-                  <p>
-                    Your events automatically show up on Facebook and Google so
-                    even more customers can find you.
-                  </p>
+                  </span>
+                  <div className="container">
+                    <h4>Get bookings directly from Facebook and Google</h4>
+                    <p>
+                      Your events automatically show up on Facebook and Google
+                      so even more customers can find you.
+                    </p>
+                  </div>
                 </li>
                 <li class="list-group-item">
-                  <h4>
+                  <span className="fa-li">
                     <i class="fas fa-mail-bulk"></i>
-                    <span>
+                  </span>
+                  <div className="container">
+                    <h4>
                       Drive more repeat bookings with built-in marketing tools
-                    </span>
-                  </h4>
-                  <p>
-                    Automated emails and other marketing tools make customers
-                    come back for more without you having to lift a finger.
-                  </p>
+                    </h4>
+                    <p>
+                      Automated emails and other marketing tools make customers
+                      come back for more without you having to lift a finger.
+                    </p>
+                  </div>
                 </li>
                 <li class="list-group-item">
-                  <h4>
+                  <span className="fa-li">
                     <i class="fas fa-clock"></i>
-                    <span>Cut down your time spent on admin</span>
-                  </h4>
-                  <p>
-                    Spend less time on the phone or with clunky tools and more
-                    time with your growing customer base.
-                  </p>
+                  </span>
+                  <div className="container">
+                    <h4>Cut down your time spent on admin</h4>
+                    <p>
+                      Spend less time on the phone or with clunky tools and more
+                      time with your growing customer base.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
