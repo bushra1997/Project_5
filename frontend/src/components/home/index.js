@@ -28,56 +28,50 @@ export default function Index() {
             <div class="carousel-item active">
               <img
                 src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block w-100"
+                class="d-block"
                 alt="..."
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="d-block"
                 alt="..."
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="d-block"
                 alt="..."
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="d-block "
                 alt="..."
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                class="d-block"
                 alt="..."
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                class="d-block"
                 alt="..."
               />
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item drk">
               <img
-                src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
-"
-                class="d-block w-100"
+                src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                class="d-block"
                 alt="..."
               />
             </div>
@@ -212,14 +206,14 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <div className="container">
           <h1>Companies that trust Occasion to attract more bookings</h1>
           <div className="row">
             
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

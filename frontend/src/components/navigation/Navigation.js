@@ -7,7 +7,7 @@ import { Route, Link, useHistory } from "react-router-dom";
 const Navigation = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
         <Link className="navbar-brand" exact to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
