@@ -50,9 +50,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-// export default function Profile() {
-//     return (
-//
-//     )
-// }
