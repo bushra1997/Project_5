@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import axios from "axios";
+import { useHistory} from "react-router-dom";
 import {
   Form,
   Button,
@@ -16,6 +17,7 @@ export default function AddPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
+  const history = useHistory()
   const newPlace = (e) => {
     e.preventDefault();
     axios
@@ -36,6 +38,10 @@ export default function AddPlace() {
         console.log(err.message);
       });
   };
+
+  const home = () =>{
+    history.push("/dashboard")
+  }
   return (
     <>
       <div className="formAddPlace">
@@ -118,6 +124,9 @@ export default function AddPlace() {
           </Form.Group>
           <Button variant="primary" type="submit">
             Submit
+          </Button>
+          <Button variant="primary" onClick={home}>
+           Home
           </Button>
         </Form>
       </div>
