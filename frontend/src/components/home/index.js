@@ -33,22 +33,53 @@ export default function Index() {
               />
             </div>
             <div class="carousel-item">
-              <img src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-" class="d-block w-100" alt="..." />
+              <img
+                src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-" class="d-block w-100" alt="..." />
+              <img
+                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-" class="d-block w-100" alt="..." />
+              <img
+                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="..." />
+              <img
+                src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="..." />
+              <img
+                src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
           <a
@@ -182,7 +213,12 @@ export default function Index() {
         </div>
       </section>
       <section>
-
+        <div className="container">
+          <h1>Companies that trust Occasion to attract more bookings</h1>
+          <div className="row">
+            
+          </div>
+        </div>
       </section>
     </>
   );

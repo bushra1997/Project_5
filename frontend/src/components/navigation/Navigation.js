@@ -7,51 +7,9 @@ import { Route, Link, useHistory } from "react-router-dom";
 const Navigation = () => {
   return (
     <>
-      {/* <div className="Nav">
-        <div className="header">
-          <Link className="logo-link" exact to="/home">
-            Occasions App
-          </Link>
-        </div>
-        <div className="header1">
-          <NavBar />
-        </div>
-      </div>
-      <div class="container">
-        <Link class="btn btn-1" to="/weddings">
-          <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-          </svg>
-          Weddings
-        </Link>
-        <Link class="btn btn-1" to="/birthDayParty">
-          <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-          </svg>
-          BD Party
-        </Link>
-        <Link class="btn btn-1" to="/funerals">
-          <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-          </svg>
-          Funerals{" "}
-        </Link>
-        <Link class="btn btn-1" to="/dinnerParty">
-          <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-          </svg>
-          Dinner Party
-        </Link>
-        <Link class="btn btn-1" to="/meeting">
-          <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-          </svg>
-          Meeting
-        </Link>
-      </div> */}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" exact to="/">
-          <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png"/>
+          <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
         <button
           class="navbar-toggler"
@@ -68,10 +26,14 @@ const Navigation = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <Link exact to="/" className="nav-link">Home</Link>
+              <Link exact to="/" className="nav-link">
+                Home
+              </Link>
             </li>
             <li class="nav-item">
-              <Link exact to="/" className="nav-link">About us</Link>
+              <Link exact to="/" className="nav-link">
+                About us
+              </Link>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -104,8 +66,24 @@ const Navigation = () => {
               </div>
             </li>
             <li class="nav-item">
-              <Link exact to="/login" className="nav-link">Login</Link>
+              <Link exact to="/login" className="nav-link">
+                Login
+              </Link>
             </li>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
           </ul>
         </div>
       </nav>
