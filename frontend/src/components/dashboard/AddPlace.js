@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import axios from "axios";
-import { useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
   Form,
   Button,
@@ -17,7 +17,7 @@ export default function AddPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
-  const history = useHistory()
+  const history = useHistory();
   const newPlace = (e) => {
     e.preventDefault();
     axios
@@ -39,9 +39,9 @@ export default function AddPlace() {
       });
   };
 
-  const home = () =>{
-    history.push("/dashboard")
-  }
+  const home = () => {
+    history.push("/dashboard");
+  };
   return (
     <>
       <div className="formAddPlace">
@@ -52,7 +52,8 @@ export default function AddPlace() {
               as="textarea"
               placeholder="PLace Name here"
               onChange={(e) => {
-                 setName(e.target.value )}}
+                setName(e.target.value);
+              }}
             />
           </Form.Group>
 
@@ -62,8 +63,8 @@ export default function AddPlace() {
               as="textarea"
               placeholder="description here"
               onChange={(e) => {
-                 setDescription(e.target.value)
-               }}
+                setDescription(e.target.value);
+              }}
             />
           </Form.Group>
 
@@ -77,7 +78,7 @@ export default function AddPlace() {
               }}
             />
           </Form.Group>
-          
+
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>capacity</Form.Label>
             <Form.Control
@@ -88,7 +89,6 @@ export default function AddPlace() {
               }}
             />
           </Form.Group>
-
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>city</Form.Label>
@@ -126,7 +126,7 @@ export default function AddPlace() {
             Submit
           </Button>
           <Button variant="primary" onClick={home}>
-           Home
+            Home
           </Button>
         </Form>
       </div>
