@@ -16,7 +16,7 @@ import Index from "./components/home/index";
 import { useSelector } from "react-redux";
 import Place from "./components/place";
 import Favorite from "./components/favorite";
-import Profile from "./components/profile/Profile";
+import Profile from "./components/profile/index";
 import Booking from "./components/booking/index";
 const App = () => {
   const token = useSelector((state) => {
@@ -44,7 +44,7 @@ const App = () => {
           <Switch>
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/home" component={Index} />
+            <Route exact path="/" component={Index} />
             <Route path="/weddings" component={Weddings} />
             <Route path="/birthDayParty" component={BirthDayParty} />
             <Route path="/funerals" component={Funerals} />
