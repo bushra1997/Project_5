@@ -49,6 +49,25 @@ export default function Place() {
       });
   }, []);
   
+  useEffect(() => {
+    
+    axios
+    .post("http://localhost:5000/favorite/check", { place_id, user_id})
+    .then((result) => {
+      console.log("IIID",id);
+      console.log("This is DATAAAAa",result.data[0].place_id===id);
+      if (result.data[0].place_id===id) {
+        setAdded(false)
+      }
+      else{
+        setAdded(true)
+      }
+    })
+
+    .catch((err) => {
+      console.log(err);
+    });
+  }, [])
 
   const addToFavorite = () => {
     axios

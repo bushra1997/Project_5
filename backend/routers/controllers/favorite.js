@@ -34,12 +34,13 @@ const DeleteFavorate = (req, res) => {
 };
 
 const checkFavorite = (req,res) => {
+  console.log(req.body);
   const { place_id, user_id } = req.body;
   const query = `SELECT * FROM favorite WHERE place_id =? AND user_id =?`;
   const data = [place_id, user_id];
   db.query(query, data, (err, result) => {
     if (err) throw err;
-    res.status(404).json(result);
+    res.status(200).json(result);
   });
 };
 
