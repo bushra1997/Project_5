@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const history = useHistory();
@@ -78,6 +79,11 @@ export default function Login() {
                 }}
               />
             </div>
+            <Link className="signIn text-center" exact to="/register">
+              Dosn't have account?
+              <br />
+              Sign up Now
+            </Link>
           </form>
           <div className="btn-submit">
             <button

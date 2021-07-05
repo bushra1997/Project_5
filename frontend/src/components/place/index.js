@@ -3,10 +3,9 @@ import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { setToken } from "./../../reducers/login/index";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
 import "./place.css";
+import Rating from "./Raiting"
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 export default function Place() {
@@ -19,8 +18,9 @@ export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
   const [user_id, setUser_id] = useState("");
-  const [rating_id, setRating_id] = useState("1");
+  const [rating_id, setRating_id] = useState("2");
   const [added, setAdded] = useState(false);
+  const history = useHistory()
 
   const token = useSelector((state) => {
     return {
@@ -40,11 +40,34 @@ export default function Place() {
         setCapacity(result.data[0].capacity);
         setCity(result.data[0].city);
         setAddress(result.data[0].address);
+        
+        console.log("this is the token =>",token);
+        
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
+  
+  useEffect(() => {
+    
+    axios
+    .post("http://localhost:5000/favorite/check", { place_id, user_id})
+    .then((result) => {
+      console.log("IIID",id);
+      console.log("This is DATAAAAa",result.data[0].place_id===id);
+      if (result.data[0].place_id===id) {
+        setAdded(false)
+      }
+      else{
+        setAdded(true)
+      }
+    })
+
+    .catch((err) => {
+      console.log(err);
+    });
+  }, [])
 
   const addToFavorite = () => {
     axios
@@ -73,6 +96,10 @@ export default function Place() {
       });
   };
 
+  const booking = () =>{
+    history.push(`/booking/${id}`)
+  }
+
   return (
     <div className="main-place">
       <div className="place-holder">
@@ -94,6 +121,9 @@ export default function Place() {
             <Card.Text>
               <h6>Address: {address}</h6>{" "}
             </Card.Text>
+            <div>
+              <Rating/>
+            <button onClick={booking}>Book</button>
             {!added ? (
               <AiOutlineHeart
                 className="icon-heart"
@@ -101,6 +131,8 @@ export default function Place() {
                 id="add-favorite"
                 size={40}
                 color="red"
+                
+                en    
                 onClick={addToFavorite}
               />
             ) : (
@@ -109,9 +141,11 @@ export default function Place() {
                 id="delete-fav"
                 size={40}
                 color="red"
+                en
                 onClick={deleteFavorite}
               />
             )}
+            </div>
           </Card.Body>
         </Card>
       </div>

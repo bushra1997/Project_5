@@ -4,30 +4,6 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fd9;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  color: black;
-}
-d .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.card-text:last-child {
-  border: 1px solid black;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: larger;
-  font-weight: bolder;
 }
 
-.card-p {
-  border: 1px solid black;
-}
-
-.list-group-item {
-  color: black;
-  background-color: #fd9;
-}

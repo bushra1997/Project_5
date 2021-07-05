@@ -3,11 +3,20 @@ import { Collapse, Navbar, NavbarBrand, Nav, NavItem } from "reactstrap";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
-import { useDispatch } from "react-redux";
-import { setTokenout } from "./../../reducers/signout/signout";
+import { useDispatch, useSelector } from "react-redux";
+import { setOut } from "../../reducers/login/index";
 
-const NavBar = (props) => {
+const NavBar = () => {
   const dispatch = useDispatch();
+  const token = useSelector((state) => {
+    return {
+      token: state.token.token,
+      user: state.token.user,
+    };
+  });
+
+  const exist = token.token;
+
   const [collapsed, setCollapsed] = useState(true);
 
   const NavIcon = () => {
@@ -19,9 +28,9 @@ const NavBar = (props) => {
   };
 
   const signOut = () => {
-    dispatch(setTokenout({ token: "", user: {} }));
+    dispatch(setOut({ token: "", user: {} }));
     localStorage.setItem("token", "");
-    localStorage.setItem("role", "");
+    localStorage.setItem("role", {});
   };
 
   return (
@@ -43,19 +52,22 @@ const NavBar = (props) => {
                   Home
                 </Link>
               </NavItem>
-              <NavItem>
-                <Link exact to="/login">
-                  Login
-                </Link>
-              </NavItem>
+              {!exist ? (
+                <NavItem>
+                  <Link exact to="/login">
+                    Login
+                  </Link>
+                </NavItem>
+              ) : (
+                <NavItem>
+                  <Link onClick={signOut} exact to="/login">
+                    Signout
+                  </Link>
+                </NavItem>
+              )}
               <NavItem>
                 <Link exact to="/profile">
                   Profile
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link onClick={signOut} exact to="/login">
-                  Signout
                 </Link>
               </NavItem>
             </Nav>

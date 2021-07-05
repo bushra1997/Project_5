@@ -10,6 +10,21 @@ const createNewRating = (req, res) => {
     res.json(result);
   });
 };
+
+
+const getRating = (req, res) => {
+  const { place_id, user_id } = req.body;
+
+  const query = `SELECT * FROM project_5.rating WHERE place_id =? AND user_id =?;`;
+  const data = [place_id, user_id];
+  connection.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+};
+
+
 module.exports = {
   createNewRating,
+  getRating,
 };

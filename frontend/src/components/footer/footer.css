@@ -1,11 +1,19 @@
-.footer.page-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  margin-top: 20rem !important;
+footer{
+    background-color: #FFF6F6;
+    padding: 1.5%;
+    color: #444;
 }
-
-.blue {
-  background-color: burlywood !important;
+.navbar-brand img{
+    width: 160px;
+    margin: auto;
+}
+ul li {
+    display: inline-block;
+    margin:0.75rem;
+}
+ul li a i {
+    font-size: 1.5rem;
+}
+ul li span{
+    margin-left: 0.3rem;
 }

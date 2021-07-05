@@ -1,0 +1,18 @@
+.favorite-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 39px;
+    grid-row-gap: 67px;
+    justify-items: center;
+    margin-top: 74px;
+
+}
+
+.favorate-card{
+
+    width: 71%;
+    height: 292px;
+    border: 1px solid black;
+    
+}

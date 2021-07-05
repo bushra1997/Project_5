@@ -25,6 +25,7 @@ const ShowPlaces = ({ places }) => {
 
   const showPlaces = () => {
     return places.map((place) => (
+  
       <Link to={`/places/${place.type}/${place.place_id}`}>
         <div key={place.id}>
           <ShowCard place={place} />

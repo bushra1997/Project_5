@@ -1,5 +1,6 @@
 import axios from "axios";
 import { React, useState } from "react";
+import { useHistory} from "react-router-dom";
 import {
   Form,
   Button,
@@ -17,6 +18,7 @@ export default function EditPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
+  const history = useHistory()
   const search = (e) => {
     e.preventDefault();
     axios
@@ -74,6 +76,9 @@ export default function EditPlace() {
         console.log(err);
       });
   };
+  const home = () =>{
+    history.push("/dashboard")
+  }
 
   return (
     <div className="main-div">
@@ -180,6 +185,9 @@ export default function EditPlace() {
       <Button variant="primary" onClick={Delete}>
         Delete
       </Button>
+      <Button variant="primary" onClick={home}>
+           Home
+          </Button>
     </div>
   );
 }
