@@ -29,12 +29,11 @@ const Profile = () => {
       });
   }, []);
 
-  return(
+  return (
     <>
-  <div>{firstName}</div>
-  </>
-  )
-
+      <div>{firstName}</div>
+    </>
+  );
 };
 
 export default Profile;
