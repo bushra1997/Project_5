@@ -66,14 +66,12 @@ const Navigation = () => {
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <Link exact to="/" className="nav-link">Home</Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Login
-              </a>
+              <Link exact to="/" className="nav-link">About us</Link>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -105,18 +103,10 @@ const Navigation = () => {
                 </Link>
               </div>
             </li>
+            <li class="nav-item">
+              <Link exact to="/login" className="nav-link">Login</Link>
+            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </nav>
     </>
