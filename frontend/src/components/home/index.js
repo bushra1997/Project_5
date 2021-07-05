@@ -178,7 +178,7 @@ export default function Index() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-success">
+                  <a href="#" class="btn">
                     Show more
                   </a>
                 </div>
@@ -193,7 +193,7 @@ export default function Index() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-success">
+                  <a href="#" class="btn">
                     Show more
                   </a>
                 </div>
@@ -201,14 +201,18 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-                <img src="" class="card-img-top" alt="" />
+                <img
+                  src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  class="card-img-top"
+                  alt=""
+                />
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-success">
+                  <a href="#" class="btn">
                     Show more
                   </a>
                 </div>
