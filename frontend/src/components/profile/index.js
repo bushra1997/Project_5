@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import {  Link } from "react-router-dom";
 
 const Profile = () => {
   const [firstName, setFirstName] = useState("");
@@ -32,6 +33,13 @@ const Profile = () => {
   return (
     <>
       <div>{firstName}</div>
+      <div>{country}</div>
+      <div>{email}</div>
+      <div>
+        <Link exact to="/favorite">
+          My favorite
+        </Link>
+      </div>
     </>
   );
 };
@@ -40,10 +48,6 @@ export default Profile;
 
 // export default function Profile() {
 //     return (
-//         <div>
-//           <Link exact to="/favorite">
-//                   My favorite
-//                 </Link>
-//         </div>
+//
 //     )
 // }
