@@ -19,6 +19,59 @@ export default function Index() {
   return (
     <>
       <section>
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleFade"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleFade"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      <section>
         <div className="container">
           <h1>How Occasion can help</h1>
           <div className="row">
@@ -30,14 +83,20 @@ export default function Index() {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <h4><i class="fas fa-user-plus"></i><span>Turn more website visits into bookings</span></h4>
+                  <h4>
+                    <i class="fas fa-user-plus"></i>
+                    <span>Turn more website visits into bookings</span>
+                  </h4>
                   <p>
                     Your new calendar is so irresistible it turns your website
                     into a booking machine.
                   </p>
                 </li>
                 <li class="list-group-item">
-                  <h4><i class="fas fa-wallet"></i><span>Get bookings directly from Facebook and Google</span></h4>
+                  <h4>
+                    <i class="fas fa-wallet"></i>
+                    <span>Get bookings directly from Facebook and Google</span>
+                  </h4>
                   <p>
                     Your events automatically show up on Facebook and Google so
                     even more customers can find you.
@@ -45,7 +104,10 @@ export default function Index() {
                 </li>
                 <li class="list-group-item">
                   <h4>
-                  <i class="fas fa-mail-bulk"></i><span>Drive more repeat bookings with built-in marketing tools</span>
+                    <i class="fas fa-mail-bulk"></i>
+                    <span>
+                      Drive more repeat bookings with built-in marketing tools
+                    </span>
                   </h4>
                   <p>
                     Automated emails and other marketing tools make customers
@@ -53,7 +115,10 @@ export default function Index() {
                   </p>
                 </li>
                 <li class="list-group-item">
-                  <h4><i class="fas fa-clock"></i><span>Cut down your time spent on admin</span></h4>
+                  <h4>
+                    <i class="fas fa-clock"></i>
+                    <span>Cut down your time spent on admin</span>
+                  </h4>
                   <p>
                     Spend less time on the phone or with clunky tools and more
                     time with your growing customer base.
@@ -115,6 +180,9 @@ export default function Index() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+
       </section>
     </>
   );
