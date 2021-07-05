@@ -18,7 +18,7 @@ export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
   const [user_id, setUser_id] = useState("");
-  const [rating_id, setRating_id] = useState("1");
+  const [rating_id, setRating_id] = useState("2");
   const [added, setAdded] = useState(false);
   const history = useHistory()
 
