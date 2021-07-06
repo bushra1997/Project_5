@@ -6,13 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import "./login.css";
 import { Link } from "react-router-dom";
-import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-} from "react-bootstrap";
 
 export default function Login() {
   const history = useHistory();
@@ -86,13 +79,13 @@ export default function Login() {
                 }}
               />
             </div>
-            
+
             <div className="signIn">
-            <Link className="signIn text-center" exact to="/register">
-              Dosn't have account?
-              <br />
-              Sign up Now
-            </Link>
+              <Link className="signIn text-center" exact to="/register">
+                Dosn't have account?
+                <br />
+                Sign up Now
+              </Link>
             </div>
           </form>
           <div className="btn-submit">
