@@ -7,29 +7,42 @@
   background-clip: border-box;
 }
 .showPlaces_ {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    /* min-width: 24%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* min-width: 24%;
     width: 30%; */
-    word-wrap: break-word;
-    /* background-clip: border-box; */
+  word-wrap: break-word;
+  /* background-clip: border-box; */
 }
 .bodyShowPlaces {
   font-size: 15px;
- 
 }
-.description {
-  border: none;
-  font-size: 10px;
-}
+/* .description {
+  font-family: -webkit-body;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #DF5E5E;
+} */
 .card-title {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   font-family: "Bona Nova", serif;
   color: #791515;
 }
 .group {
   font-size: 16px;
-  color: #791513;
+  color: #df5e6a;
+  margin-left: 15px;
 }
-
+.card-text:last-child {
+  border: 0px;
+  font-family: -webkit-body;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #df5e5e;
+}
+.list-group-item {
+  border: none;
+  margin: 0;
+  padding: 1.5%;
+}
