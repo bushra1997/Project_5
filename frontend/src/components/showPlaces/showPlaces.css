@@ -33,13 +33,20 @@
 .group {
   font-size: 16px;
   color: #1B1A17;
-  margin-left: 15px;
+  margin-left: 7px;
 }
-.card-text:last-child {
+/* .card-text:last-child {
   border: 0px;
   font-family: -webkit-body;
   font-size: 15px;
   font-weight: bolder;
+  color: #1B1A17;
+} */
+.card-text:last-child {
+  border: 0px;
+  /* font-family: none; */
+  font-size: 15px;
+  font-weight: 500;
   color: #1B1A17;
 }
 .list-group-item {
