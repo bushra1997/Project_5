@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: #E98580;
+  border-color: #e98580;
 }
 
 .form-center {
@@ -22,7 +22,7 @@
   background: white;
   width: 300px;
   height: 400px;
-  border: 1px solid #E98580;
+  border: 1px solid #e98580;
   box-shadow: 0px 0px 9px 0px;
 }
 
@@ -39,8 +39,9 @@
 #btn {
   width: 119px;
 }
-.form-control.is-valid, .was-validated .form-control:valid {
-  border-color: #E98580;
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #e98580;
 }
 .signIn {
   margin-left: 32px;
@@ -49,9 +50,11 @@ a.signIn.text-center {
   margin-left: 0px;
 }
 a {
-  color: #E98580;
+  color: #e98580;
   text-decoration: none;
   background-color: transparent;
 }
-
-
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  border: 2px solid #fef7fe;
+}
