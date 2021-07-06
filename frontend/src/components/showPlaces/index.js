@@ -7,7 +7,8 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 const ShowPlaces = ({ places }) => {
   const ShowCard = ({ place }) => {
     return (
-      <div className="showPlaces_">
+      <div className="row">
+      <div className="showPlaces_" >
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={place.img} />
         <div className="bodyShowPlaces">
@@ -28,6 +29,7 @@ const ShowPlaces = ({ places }) => {
         </div>
       </Card>
       </div>
+      </div>
     );
   };
 
@@ -35,7 +37,7 @@ const ShowPlaces = ({ places }) => {
     return places.map((place) => (
   
       <Link to={`/places/${place.type}/${place.place_id}`}>
-        <div key={place.id}>
+        <div key={place.id} className="place-card">
           <ShowCard place={place} />
         </div>
       </Link>
