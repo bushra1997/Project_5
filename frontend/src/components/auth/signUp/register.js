@@ -35,42 +35,42 @@ export default function Register() {
   return (
     <>
       <div className="register-con">
-        <input
+        <input className=""
           type="text"
           placeholder="First name here"
           onChange={(e) => {
             setFirstName(e.target.value);
           }}
         />
-        <input
+        <input className=""
           type="text"
           placeholder="Last name here"
           onChange={(e) => {
             setLastName(e.target.value);
           }}
         />
-        <input
+        <input className=""
           type="text"
           placeholder="Age here"
           onChange={(e) => {
             setAge(e.target.value);
           }}
         />
-        <input
+        <input className=""
           type="text"
           placeholder="Country here"
           onChange={(e) => {
             setCountry(e.target.value);
           }}
         />
-        <input
+        <input className=""
           type="text"
           placeholder="Email here"
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
-        <input
+        <input className=""
           type="text"
           placeholder="Password here"
           onChange={(e) => {
@@ -78,7 +78,7 @@ export default function Register() {
           }}
         />
         <button className="btn"onClick={newUsers}>Sign Up</button>
-        <p>Do you have an account ?</p>
+        <p className="card-text">Do you have an account ?</p>
         {error ? <div>Some Thing Wrong Try Again!</div> : null}
       </div>
     </>
