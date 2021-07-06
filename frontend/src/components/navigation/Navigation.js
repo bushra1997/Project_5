@@ -4,7 +4,6 @@ import NavBar from "./NavbarPage";
 import { Route, Link, useHistory } from "react-router-dom";
 import Search from "./../search/search" 
 const Navigation = () => {
-  const [search, setSearch] = useState("")
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
@@ -22,17 +21,11 @@ const Navigation = () => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+        <Search/>
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <Link exact to="/" className="nav-link">
                 Home
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link exact to="/" className="nav-link">
-                About us
               </Link>
             </li>
             <li class="nav-item dropdown">
@@ -66,13 +59,31 @@ const Navigation = () => {
               </div>
             </li>
             <li class="nav-item">
+              <Link exact to="/" className="nav-link">
+                About us
+              </Link>
+            </li>
+          </ul>
+        <li class="nav-item dropdown">
+<a
+  class="nav-link dropdown-toggle"
+  href="#"
+  id="navbarDropdown"
+  role="button"
+  data-toggle="dropdown"
+  aria-haspopup="true"
+  aria-expanded="false"
+>
+  my info
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li class="nav-item">
               <Link exact to="/login" className="nav-link">
                 Login
               </Link>
             </li>
-            <Search/>
-          </ul>
-        </div>
+</div>
+            </li>
       </nav>
     </>
   );
