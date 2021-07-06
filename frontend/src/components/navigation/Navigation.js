@@ -23,8 +23,7 @@ const Navigation = () => {
     localStorage.setItem("role", {});
   };
   
-
-  console.log(token.user);
+// will get user image and put it under img tag to show user image
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
