@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import "./register.css";
 export default function Register() {
   const history = useHistory();
   const [firstName, setFirstName] = useState("");
@@ -33,7 +34,7 @@ export default function Register() {
   };
   return (
     <>
-      <div>
+      <div className="register-con">
         <input
           type="text"
           placeholder="First name here"
