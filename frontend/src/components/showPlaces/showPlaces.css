@@ -52,7 +52,7 @@
 .list-group-item {
   border: none;
   margin: 0;
-  padding: 1.5%;
+  padding: 1.5% !important;
 }
 a:hover{
   text-decoration: none;
