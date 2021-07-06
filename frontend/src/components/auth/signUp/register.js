@@ -39,7 +39,7 @@ export default function Register() {
           <div className="container">
             <form>
               <div className="form-group">
-                <label for="first-name">First Name</label>
+                <label for="first-name"><span><i class="fas fa-star-of-life"></i></span>First Name</label>
                 <input
                   className="form-control"
                   id="first-name"
