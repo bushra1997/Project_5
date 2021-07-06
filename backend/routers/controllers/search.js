@@ -1,10 +1,8 @@
 const connection = require("../../db/db");
 const createSearch = (req, res) => {
   const {name} = req.params;
-  const query = `SELECT * FROM place WHERE (name=? AND ) OR ()`;
-  const data = [name];
-  connection.query(query, data, (err, result) => {
-      console.log("result :",result);
+  const query = `SELECT * FROM place WHERE name=?`;
+  connection.query(query, name, (err, result) => {
     if (err) throw err;
     res.json(result);
   });
