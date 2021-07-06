@@ -1,4 +1,21 @@
-.this-menu{
-    position: absolute;
-    left:-77px;
+.nav-item .nav-link:hover {
+  color: #791515;
+}
+.dropdown-menu {
+  /* margin-top: -10px; */
+  border: transparent;
+  background-color: #791515;
+}
+.dropdown-menu .dropdown-item {
+  color: #fff;
+}
+.dropdown-menu .dropdown-item {
+  background-color: transparent;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #fff;
+  color: #791515;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

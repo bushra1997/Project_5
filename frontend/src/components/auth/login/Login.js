@@ -47,8 +47,9 @@ export default function Login() {
 
   return (
     <>
-      <div className="container1">
+      <div className="container container1">
         <div className="form-center">
+          <div className="container" >
           <form>
             <div className="field">
               <label className="lable" for="validationServer01">
@@ -70,7 +71,7 @@ export default function Login() {
                 Password
               </label>
               <input
-                type="passowrd"
+                type="password"
                 class={`${loginError}`}
                 id="validationServer02"
                 placeholder="Password"
@@ -79,18 +80,20 @@ export default function Login() {
                 }}
               />
             </div>
-            <Link className="signIn text-center" exact to="/register">
-              Dosn't have account?
-              <br />
-              Sign up Now
-            </Link>
+            <div className="signIn">
+              <Link className="signIn text-center" exact to="/register">
+                Don't have an account?
+                <br />
+                Sign up Now
+              </Link>
+            </div>
           </form>
-          <div className="btn-submit">
-            <button
+          <button
               id="btn"
               type="submit"
               className="btn btn-primary"
               onClick={submit}
+              style={{margin:"25px auto"}}
             >
               {" "}
               Login

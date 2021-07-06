@@ -18,84 +18,68 @@ export default function Index() {
   }, []);
   return (
     <>
-      <section>
-        <div
-          id="carouselExampleFade"
-          class="carousel slide carousel-fade"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active drk">
-              <img
-                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block "
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active drk">
+            <img
+              src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
         </div>
-      </section>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleFade"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleFade"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
       <section>
         <div className="container">
           <h1 className="text-center">How Occasion can help</h1>
@@ -165,13 +149,15 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section>
+      <section style={{ backgroundColor: "#FBF7F0" }}>
         <div className="container">
           <h1 className="text-center">Highlights</h1>
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
-                <img src="" class="card-img-top" alt="" />
+                <div>
+                  <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -184,9 +170,11 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
-                <img src="" class="card-img-top" alt="" />
+                <div>
+                  <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -199,13 +187,17 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
-                <img
-                  src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  class="card-img-top"
-                  alt=""
-                />
+                <div>
+                  {" "}
+                  <img
+                    src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    class="card-img-top"
+                    alt=""
+                  />
+                </div>
+
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -221,14 +213,38 @@ export default function Index() {
           </div>
         </div>
       </section>
-      {/* <section>
+      <section className="text-center">
         <div className="container">
           <h1>Companies that trust Occasion to attract more bookings</h1>
           <div className="row">
-            
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/bees-small.png"
+                    alt=""
+                    width="120px"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/chop-small.png"
+                    alt=""
+                    width="130px"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/jump-small.png"
+                    alt=""
+                    width="130px"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
