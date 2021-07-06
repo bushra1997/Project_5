@@ -6,4 +6,13 @@
   word-wrap: break-word;
   background-clip: border-box;
 }
+.showPlaces_ {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 24%;
+    width: 30%; */
+    word-wrap: break-word;
+    /* background-clip: border-box; */
+}
 

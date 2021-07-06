@@ -7,6 +7,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 const ShowPlaces = ({ places }) => {
   const ShowCard = ({ place }) => {
     return (
+      <div className="showPlaces_">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={place.img} />
         <Card.Body>
@@ -20,6 +21,7 @@ const ShowPlaces = ({ places }) => {
           <ListGroupItem>availability: {place.availability}</ListGroupItem>
         </ListGroup>
       </Card>
+      </div>
     );
   };
 
