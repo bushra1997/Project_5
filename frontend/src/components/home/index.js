@@ -164,13 +164,13 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section>
+      <section style={{backgroundColor:"#FBF7F0"}}>
         <div className="container">
           <h1 className="text-center">Highlights</h1>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-                <img src="" class="card-img-top" alt="" />
+                <div><img src="" class="card-img-top" alt="" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -185,7 +185,7 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-                <img src="" class="card-img-top" alt="" />
+              <div><img src="" class="card-img-top" alt="" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -200,11 +200,12 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-                <img
+              <div> <img
                   src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   class="card-img-top"
                   alt=""
-                />
+                /></div>
+               
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -220,14 +221,38 @@ export default function Index() {
           </div>
         </div>
       </section>
-      {/* <section>
+      <section className="text-center">
         <div className="container">
           <h1>Companies that trust Occasion to attract more bookings</h1>
           <div className="row">
-            
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/bees-small.png"
+                    alt=""
+                    width="120px"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/chop-small.png"
+                    alt=""
+                    width="130px"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.getoccasion.com/wp-content/uploads/2019/10/jump-small.png"
+                    alt=""
+                    width="130px"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
