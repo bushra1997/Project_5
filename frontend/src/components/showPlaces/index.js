@@ -10,10 +10,12 @@ const ShowPlaces = ({ places }) => {
       <div className="showPlaces_">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={place.img} />
+        <div className="bodyShowPlaces">
         <Card.Body>
           <Card.Title>{place.name}</Card.Title>
           <Card.Text>{place.description}</Card.Text>
         </Card.Body>
+        </div>
         <ListGroup className="list-group-flush">
           <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
           <ListGroupItem>city: {place.city}</ListGroupItem>
