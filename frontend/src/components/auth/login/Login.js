@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { setToken } from "../../../reducers/login/index";
-import {setImage} from "../../../reducers/Profile/index"
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +13,7 @@ export default function Login() {
   const [loginError1, setLoginError1] = useState("form-control is-valid");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [img, setImg] = useState("")
+  const [role, setRole] = useState("");
   const dispatch = useDispatch();
   const submit = () => {
     axios
@@ -24,21 +23,6 @@ export default function Login() {
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
           );
-          axios.post("http://localhost:5000/user/pics",({user_id:result.data.user.id}))
-    .then((res)=>{
-      if(res.data.length<=1){
-        setImg(res.data[(res.data.length)].user_image)
-      }else{
-
-        setImg(res.data[(res.data.length)-1].user_image)
-      }
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-          dispatch(
-            setImage(img)
-          )
           localStorage.setItem("token", result.data.token);
           localStorage.setItem("role", result.data.user.role_type);
           if (result.data.user.role_type === "Admin") {
@@ -95,14 +79,11 @@ export default function Login() {
                 }}
               />
             </div>
-
-            <div className="signIn">
-              <Link className="signIn text-center" exact to="/register">
-                Dosn't have account?
-                <br />
-                Sign up Now
-              </Link>
-            </div>
+            <Link className="signIn text-center" exact to="/register">
+              Dosn't have account?
+              <br />
+              Sign up Now
+            </Link>
           </form>
           <div className="btn-submit">
             <button
