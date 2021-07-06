@@ -101,13 +101,13 @@ export default function Place() {
   }
 
   return (
-    <div className="main-place">
-      <div className="place-holder">
+    <div className="container">
+      <div className="form-center">
         <Card style={{ width: "41rem" }}>
           <Card.Img variant="top" src={image} />
           <Card.Body>
             <Card.Title>
-              <h2>{name}</h2>
+              <h2 className="text-center">{name}</h2>
             </Card.Title>
             <Card.Text>
               <h6>{description}</h6>
