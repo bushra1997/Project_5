@@ -72,14 +72,14 @@ export default function Register() {
           }}
         />
         <input className="input"
-          type="text"
+          type="password"
           placeholder="Password here"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
         <button className="btn"onClick={newUsers}>Sign Up</button>
-        <p className="">Do you have an account ?</p>
+        {/* <p className="">Do you have an account ?</p> */}
         {error ? <div>Some Thing Wrong Try Again!</div> : null}
         </div>
       </div>
