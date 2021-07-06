@@ -13,15 +13,19 @@ const ShowPlaces = ({ places }) => {
         <div className="bodyShowPlaces">
         <Card.Body>
           <Card.Title>{place.name}</Card.Title>
+          <div className="description">
           <Card.Text>{place.description}</Card.Text>
+          </div>
         </Card.Body>
         </div>
+        <div className="group">
         <ListGroup className="list-group-flush">
           <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
           <ListGroupItem>city: {place.city}</ListGroupItem>
           <ListGroupItem>address: {place.address}</ListGroupItem>
           <ListGroupItem>availability: {place.availability}</ListGroupItem>
         </ListGroup>
+        </div>
       </Card>
       </div>
     );
