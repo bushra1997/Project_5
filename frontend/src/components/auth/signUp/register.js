@@ -35,7 +35,7 @@ export default function Register() {
   return (
     <>
       <div className="register-con">
-        <div className="form-center">
+        <div className="register-center">
         <input className=""
           type="text"
           placeholder="First name here"
