@@ -56,7 +56,12 @@ export default function Register() {
                 />
               </div>
               <div className="form-group">
-                <label for="last-name">Last Name</label>
+                <label for="last-name">
+                  Last Name
+                  <span>
+                    <i class="fas fa-star-of-life"></i>
+                  </span>
+                </label>
                 <input
                   className="form-control"
                   id="last-name"
@@ -68,7 +73,12 @@ export default function Register() {
                 />
               </div>
               <div className="form-group">
-                <label for="age">Age</label>
+                <label for="age">
+                  Age
+                  <span>
+                    <i class="fas fa-star-of-life"></i>
+                  </span>
+                </label>
                 <input
                   className="form-control"
                   id="age"
@@ -80,7 +90,12 @@ export default function Register() {
                 />
               </div>
               <div className="form-group">
-                <label for="country">Country</label>
+                <label for="country">
+                  Country
+                  <span>
+                    <i class="fas fa-star-of-life"></i>
+                  </span>
+                </label>
                 <input
                   className="form-control"
                   id="country"
@@ -92,7 +107,12 @@ export default function Register() {
                 />
               </div>
               <div className="form-group">
-                <label for="email">Email</label>
+                <label for="email">
+                  Email
+                  <span>
+                    <i class="fas fa-star-of-life"></i>
+                  </span>
+                </label>
                 <input
                   className="form-control"
                   type="text"
@@ -103,7 +123,12 @@ export default function Register() {
                 />
               </div>
               <div className="form-group">
-                <label for="password">Password</label>
+                <label for="password">
+                  Password
+                  <span>
+                    <i class="fas fa-star-of-life"></i>
+                  </span>
+                </label>
                 <input
                   className="form-control"
                   id="password"
