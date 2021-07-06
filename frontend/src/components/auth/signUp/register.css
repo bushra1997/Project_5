@@ -13,3 +13,9 @@
   height: 400px;
   box-shadow: 0px 0px 9px 0px;
 }
+.input {
+  FONT-WEIGHT: 100;
+  justify-content: center;
+  display: flex;
+  margin: 10px auto;
+}

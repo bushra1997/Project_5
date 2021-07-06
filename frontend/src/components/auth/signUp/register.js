@@ -36,42 +36,42 @@ export default function Register() {
     <>
       <div className="register-con">
         <div className="register-center">
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="First name here"
           onChange={(e) => {
             setFirstName(e.target.value);
           }}
         />
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="Last name here"
           onChange={(e) => {
             setLastName(e.target.value);
           }}
         />
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="Age here"
           onChange={(e) => {
             setAge(e.target.value);
           }}
         />
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="Country here"
           onChange={(e) => {
             setCountry(e.target.value);
           }}
         />
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="Email here"
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
-        <input className=""
+        <input className="input"
           type="text"
           placeholder="Password here"
           onChange={(e) => {
