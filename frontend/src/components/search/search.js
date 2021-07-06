@@ -5,6 +5,7 @@ import axios from "axios";
      
         const search_icon=(e)=>{
 e.preventDefault();
+//const map1=search.map()
 axios
   .get(`http://localhost:5000/search/${search}`)
   .then((result) => {
