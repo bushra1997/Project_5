@@ -5,24 +5,23 @@
 }
 
 .container1 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-color: #e98580;
+  margin-bottom: 45px;
 }
 
 .form-center {
   margin-top: 10rem;
   background: white;
-  width: 300px;
-  height: 400px;
+  width: 450px;
+  height: auto;
   border: 1px solid #e98580;
-  box-shadow: 0px 0px 9px 0px;
+  border-radius: 1.5%;
+  padding: 2.5%;
+  box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
 }
 
 .btn-submit {
@@ -52,6 +51,10 @@ a {
   color: #e98580;
   text-decoration: none;
   background-color: transparent;
+}
+a:hover{
+  text-decoration: none;
+  color: #444;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
