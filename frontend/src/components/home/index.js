@@ -153,7 +153,7 @@ export default function Index() {
         <div className="container">
           <h1 className="text-center">Highlights</h1>
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
                 <div>
                   <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
@@ -170,7 +170,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
                 <div>
                   <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
@@ -187,7 +187,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
               <div class="card">
                 <div>
                   {" "}
