@@ -35,6 +35,7 @@ export default function Register() {
   return (
     <>
       <div className="register-con">
+        <div className="form-center">
         <input className=""
           type="text"
           placeholder="First name here"
@@ -78,8 +79,9 @@ export default function Register() {
           }}
         />
         <button className="btn"onClick={newUsers}>Sign Up</button>
-        <p className="card-text">Do you have an account ?</p>
+        <p className="">Do you have an account ?</p>
         {error ? <div>Some Thing Wrong Try Again!</div> : null}
+        </div>
       </div>
     </>
   );
