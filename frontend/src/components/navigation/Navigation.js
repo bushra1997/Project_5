@@ -64,7 +64,7 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" style={{listStyle:"none"}}>
 <a
   class="nav-link dropdown-toggle"
   href="#"
@@ -74,12 +74,20 @@ const Navigation = () => {
   aria-haspopup="true"
   aria-expanded="false"
 >
-  my info
+<span> 
+            <img id="ctl00_XXX" src="https://static.wixstatic.com/media/065e6b_dd1a8624bd5b40c9848aeec671ed811b.png/v1/fit/w_936%2Ch_733%2Cal_c/file.png" style={{borderRadius:"50%" ,height:"50px",width:"50px"}} />
+        </span>
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 <li class="nav-item">
               <Link exact to="/login" className="nav-link">
                 Login
+              </Link>
+            </li>
+
+<li class="nav-item">
+              <Link exact to="/login" className="nav-link">
+                My Profile
               </Link>
             </li>
 </div>
