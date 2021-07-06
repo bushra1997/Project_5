@@ -48,6 +48,10 @@
 a.signIn.text-center {
   margin-left: 0px;
 }
-
+a {
+  color: #E98580;
+  text-decoration: none;
+  background-color: transparent;
+}
 
 
