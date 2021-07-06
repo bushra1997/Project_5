@@ -90,6 +90,7 @@ const getAllPlacesImg = (req, res) => {
   });
 };
 
+
 module.exports = {
   CreateNewPlace,
   getAllPlaces,
