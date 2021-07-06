@@ -34,53 +34,88 @@ export default function Register() {
   };
   return (
     <>
-      <div className="register-con">
-        <div className="register-center">
-        <input className="input"
-          type="text"
-          placeholder="First name here"
-          onChange={(e) => {
-            setFirstName(e.target.value);
-          }}
-        />
-        <input className="input"
-          type="text"
-          placeholder="Last name here"
-          onChange={(e) => {
-            setLastName(e.target.value);
-          }}
-        />
-        <input className="input"
-          type="text"
-          placeholder="Age here"
-          onChange={(e) => {
-            setAge(e.target.value);
-          }}
-        />
-        <input className="input"
-          type="text"
-          placeholder="Country here"
-          onChange={(e) => {
-            setCountry(e.target.value);
-          }}
-        />
-        <input className="input"
-          type="text"
-          placeholder="Email here"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-        <input className="input"
-          type="password"
-          placeholder="Password here"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-        <button className="btn"onClick={newUsers}>Sign Up</button>
-        {/* <p className="">Do you have an account ?</p> */}
-        {error ? <div>Some Thing Wrong Try Again!</div> : null}
+      <div className="container container1">
+        <div className="form-center">
+          <div className="container">
+            <form>
+              <div className="form-group">
+                <label for="first-name">First Name</label>
+                <input
+                  className="form-control"
+                  id="first-name"
+                  type="text"
+                  placeholder="First name here"
+                  onChange={(e) => {
+                    setFirstName(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="form-group">
+                <label for="last-name">Last Name</label>
+                <input
+                  className="form-control"
+                  id="last-name"
+                  type="text"
+                  placeholder="Last name here"
+                  onChange={(e) => {
+                    setLastName(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="form-group">
+                <label for="age">Age</label>
+                <input
+                  className="form-control"
+                  id="age"
+                  type="text"
+                  placeholder="Age here"
+                  onChange={(e) => {
+                    setAge(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="form-group">
+                <label for="country">Country</label>
+                <input
+                  className="form-control"
+                  id="country"
+                  type="text"
+                  placeholder="Country here"
+                  onChange={(e) => {
+                    setCountry(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="form-group">
+                <label for="email">Email</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Email here"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="form-group">
+                <label for="password">Password</label>
+                <input
+                  className="form-control"
+                  id="password"
+                  type="password"
+                  placeholder="Password here"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+              </div>
+            </form>
+
+            <button className="btn" onClick={newUsers}>
+              Sign Up
+            </button>
+            {error ? <div>Some Thing Wrong Try Again!</div> : null}
+          </div>
         </div>
       </div>
     </>

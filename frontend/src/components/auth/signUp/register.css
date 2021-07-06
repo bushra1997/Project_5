@@ -11,11 +11,14 @@
   margin-top: 10rem;
   width: 500px;
   height: 400px;
-  box-shadow: 0px 0px 9px 0px;
+  box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
   padding-top: 2%;
 }
+.form-control{
+  border-color: #e98580;
+  gap: 10px;
+}
 .input {
-  FONT-WEIGHT: 100;
   justify-content: center;
   display: flex;
   margin: 10px auto;

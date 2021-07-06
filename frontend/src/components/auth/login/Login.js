@@ -49,6 +49,7 @@ export default function Login() {
     <>
       <div className="container container1">
         <div className="form-center">
+          <div className="container">
           <form>
             <div className="field">
               <label className="lable" for="validationServer01">
@@ -98,6 +99,7 @@ export default function Login() {
               {" "}
               Login
             </button>
+          </div>
         </div>
       </div>
     </>
