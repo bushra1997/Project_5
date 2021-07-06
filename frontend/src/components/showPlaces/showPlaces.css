@@ -27,11 +27,12 @@
 .card-title {
   margin-bottom: 0.75rem;
   font-family: "Bona Nova", serif;
-  color: #791515;
+  color: black;
+  font-weight: bolder;
 }
 .group {
   font-size: 16px;
-  color: #df5e6a;
+  color: #1B1A17;
   margin-left: 15px;
 }
 .card-text:last-child {
@@ -39,10 +40,13 @@
   font-family: -webkit-body;
   font-size: 15px;
   font-weight: bolder;
-  color: #df5e5e;
+  color: #1B1A17;
 }
 .list-group-item {
   border: none;
   margin: 0;
   padding: 1.5%;
+}
+a:hover{
+  text-decoration: none;
 }
