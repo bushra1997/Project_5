@@ -2,6 +2,10 @@ footer{
     background-color: #FFF6F6;
     padding: 1.5%;
     color: #444;
+    /* bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0; */
 }
 .navbar-brand img{
     width: 160px;

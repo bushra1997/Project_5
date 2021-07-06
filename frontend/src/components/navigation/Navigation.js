@@ -40,8 +40,12 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style={{color:"#000"}}></i>
+          </span>
         </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <Search />
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -84,8 +88,7 @@ const Navigation = () => {
               About us
             </Link>
           </li>
-        </ul>
-       {exist?( <li class="nav-item dropdown" style={{ listStyle: "none" }}>
+          {exist?( <li class="nav-item dropdown" style={{ listStyle: "none" }}>
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -107,10 +110,9 @@ const Navigation = () => {
             <p style={{borderBottom:"1px solid black",justifyContent:"space-around"}}>Signed in as<br/><span style={{fontWeight:"bold"}}>{`${token.user.firstName} ${token.user.lastName}` }</span></p>
             <li class="nav-item">
               <Link onClick={signOut} exact to="/login" className="nav-link">
-                logout
+                Logout
               </Link>
             </li>
-
             <li class="nav-item">
               <Link exact to="/profile" className="nav-link">
                 My Profile
@@ -128,6 +130,9 @@ const Navigation = () => {
                 Login
               </Link>
             </li>)}
+        </ul>
+        </div>
+       
       </nav>
     </>
   );

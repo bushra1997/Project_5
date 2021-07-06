@@ -18,84 +18,83 @@ export default function Index() {
   }, []);
   return (
     <>
-      <section>
-        <div
-          id="carouselExampleFade"
-          class="carousel slide carousel-fade"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active drk">
-              <img
-                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                class="d-block "
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-
-            <div class="carousel-item drk">
-              <img
-                src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                class="d-block"
-                alt="..."
-              />
-            </div>
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active drk">
+            <img
+              src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              class="d-block "
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+
+          <div class="carousel-item drk">
+            <img
+              src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              class="d-block"
+              alt="..."
+            />
+          </div>
         </div>
-      </section>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleFade"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleFade"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
       <section>
         <div className="container">
           <h1 className="text-center">How Occasion can help</h1>
