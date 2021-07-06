@@ -2,6 +2,7 @@ import React, { useState, useEffect ,Component} from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ImgUpload from "./imgUpload";
 
 const Profile = () => {
   const [firstName, setFirstName] = useState("");
@@ -9,6 +10,7 @@ const Profile = () => {
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
+  const [img, setImg] = useState("");
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -33,7 +35,17 @@ const Profile = () => {
       });
   }, []);
 
-  
+  useEffect(() => {
+    
+    axios.post("http://localhost:5000/user/pics",({user_id:token.user.id}))
+    .then((result)=>{
+
+      setImg(result.data[(result.data.length)-1].user_image)
+      console.log(result.data.length);
+      console.log(result.data.length);
+    })
+
+  }, [])
 
  
   return (
@@ -48,8 +60,13 @@ const Profile = () => {
           My favorite
         </Link>
       </div>
+    <ImgUpload/>
    
-  
+    <div
+          style={{ width: "400px", height: "400px", border: "1px solid black" }}
+        >
+          <img src={img}></img>
+        </div>
     </>
   );
 };

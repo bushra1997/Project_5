@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState} from "react";
 import { useSelector } from "react-redux";
 import {
   Form,
@@ -24,9 +24,9 @@ export default function ImgUpload() {
     e.preventDefault();
     console.log(value[0]);
     const objectURL = URL.createObjectURL(value[0]);
-    setMyurl(objectURL);
+     setMyurl(objectURL);
     console.log("MY URL", myurl);
-    axios.post("http://localhost:5000/user/image",({user_id:token.user.id,user_image:myurl}))
+    axios.post("http://localhost:5000/user/image",({user_id:token.user.id,user_image:objectURL}))
     .then((result)=>{
         console.log(result.data);
     })
@@ -48,11 +48,7 @@ export default function ImgUpload() {
           }}
         />
         <button onClick={fileUploadHandler}>upload</button>
-        <div
-          style={{ width: "400px", height: "400px", border: "1px solid black" }}
-        >
-          <img src={myurl}></img>
-        </div>
+        
       </Form>
     </div>
   );
