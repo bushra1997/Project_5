@@ -102,25 +102,27 @@ export default function Place() {
 
   return (
     <div className="container">
-      <div className="form-center">
+      <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12"></div>
+        <div className="col-lg-6 col-md-6 col-sm-12"></div>
         <Card style={{ width: "41rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>
+          <Card.Img variant="top" className="image" src={image} />
+          {/* <Card.Body> */}
+            {/* <Card.Title> */}
               <h2 className="text-center">{name}</h2>
-            </Card.Title>
-            <Card.Text>
+            {/* </Card.Title> */}
+            {/* <Card.Text> */}
               <h6>{description}</h6>
-            </Card.Text>
-            <Card.Text>
+            {/* </Card.Text> */}
+            {/* <Card.Text> */}
               <h6>Capacity: {capasity}</h6>{" "}
-            </Card.Text>
-            <Card.Text>
+            {/* </Card.Text> */}
+            {/* <Card.Text> */}
               <h6>City: {city}</h6>{" "}
-            </Card.Text>
-            <Card.Text>
+            {/* </Card.Text> */}
+            {/* <Card.Text> */}
               <h6>Address: {address}</h6>{" "}
-            </Card.Text>
+            {/* </Card.Text> */}
             <div>
               <Rating/>
             <button onClick={booking}>Book</button>
@@ -146,7 +148,7 @@ export default function Place() {
               />
             )}
             </div>
-          </Card.Body>
+          {/* </Card.Body> */}
         </Card>
       </div>
       <div className="buttons-holder"></div>
