@@ -156,7 +156,7 @@ export default function Index() {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
                 <div>
-                  <img src="" class="card-img-top" alt="" />
+                  <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -173,7 +173,7 @@ export default function Index() {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
                 <div>
-                  <img src="" class="card-img-top" alt="" />
+                  <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
