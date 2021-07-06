@@ -19,5 +19,5 @@ const initialState = {
     };
   };
   
-  export default image;
+  export default profilePictuer;
   
