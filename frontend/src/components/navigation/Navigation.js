@@ -24,7 +24,7 @@ const Navigation = () => {
   };
   
 
-
+  console.log(token.user);
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
@@ -103,7 +103,8 @@ const Navigation = () => {
               />
             </span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu this-menu" aria-labelledby="navbarDropdown" style={{margin:"auto",justifyContent:"space-around",borderRadius:"10px"}} >
+            <p style={{borderBottom:"1px solid black",justifyContent:"space-around"}}>Signed in as<br/><span style={{fontWeight:"bold"}}>{`${token.user.firstName} ${token.user.lastName}` }</span></p>
             <li class="nav-item">
               <Link onClick={signOut} exact to="/login" className="nav-link">
                 logout
