@@ -77,9 +77,8 @@ export default function Register() {
             setPassword(e.target.value);
           }}
         />
-        <button onClick={newUsers}>Sign Up</button>
+        <button className="btn"onClick={newUsers}>Sign Up</button>
         <p>Do you have an account ?</p>
-
         {error ? <div>Some Thing Wrong Try Again!</div> : null}
       </div>
     </>
