@@ -19,6 +19,7 @@
   width: 450px;
   height: auto;
   border: 1px solid #e98580;
+  border-radius: 1.5%;
   padding: 2.5%;
   box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
 }
