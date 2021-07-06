@@ -26,50 +26,35 @@ export default function Index() {
         <div class="carousel-inner">
           <div class="carousel-item active drk">
             <img
-              src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item drk">
             <img
-              src="https://images.pexels.com/photos/175765/pexels-photo-175765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item drk">
             <img
-              src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item drk">
             <img
-              src="https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block "
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item drk">
-            <img
-              src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item drk">
             <img
-              src="https://images.pexels.com/photos/3747434/pexels-photo-3747434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              class="d-block"
-              alt="..."
-            />
-          </div>
-
-          <div class="carousel-item drk">
-            <img
-              src="https://images.pexels.com/photos/3184180/pexels-photo-3184180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
@@ -164,13 +149,15 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section style={{backgroundColor:"#FBF7F0"}}>
+      <section style={{ backgroundColor: "#FBF7F0" }}>
         <div className="container">
           <h1 className="text-center">Highlights</h1>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-                <div><img src="" class="card-img-top" alt="" /></div>
+                <div>
+                  <img src="" class="card-img-top" alt="" />
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -185,7 +172,9 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-              <div><img src="" class="card-img-top" alt="" /></div>
+                <div>
+                  <img src="" class="card-img-top" alt="" />
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
@@ -200,12 +189,15 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div class="card">
-              <div> <img
-                  src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  class="card-img-top"
-                  alt=""
-                /></div>
-               
+                <div>
+                  {" "}
+                  <img
+                    src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    class="card-img-top"
+                    alt=""
+                  />
+                </div>
+
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">
