@@ -35,14 +35,21 @@ const Profile = () => {
   }, []);
 
   const [value, setValue] = useState("");
+  const [myurl, setMyurl] = useState("");
+
 
   
 
  const fileUploadHandler=(e)=>{
   e.preventDefault();
   console.log(value[0]);
+  const objectURL = URL.createObjectURL(value[0])
+  setMyurl(objectURL)
+  console.log("MY URL",myurl);
 
  };
+
+ 
   return (
     <>
       <div>{firstName}</div>
@@ -60,9 +67,10 @@ const Profile = () => {
 <Form action="/action_page.php">
   <input type="file" id="myFile" name="filename" onChange={(e)=>{
     setValue(e.target.files)
+    
   }}/>
   <button onClick={fileUploadHandler}>upload</button>
-  <div style={{width:"400px",height:"400px",border:"1px solid black"}}></div>
+  <div style={{width:"400px",height:"400px",border:"1px solid black"}}><img src={myurl}></img></div>
   </Form>
   
     </>
