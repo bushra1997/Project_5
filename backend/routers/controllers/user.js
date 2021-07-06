@@ -33,4 +33,28 @@ const CreateNewUser = async (req, res) => {
   }
 };
 
-module.exports = { CreateNewUser };
+const AddUserImage=(req,res)=>{
+
+  const { user_id, user_image } = req.body;
+
+  const query = `INSERT INTO userimage(user_id,user_image )VALUES(?,?)`;
+  const data = [user_id, user_image];
+  db.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json("Sucsses");
+  });
+
+}
+const GetUserImage=(req,res)=>{
+
+  const {user_id} = req.body;
+
+  const query = `SELECT * FROM userimage WHERE user_id =?`;
+  db.query(query, user_id, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+
+}
+
+module.exports = { CreateNewUser,AddUserImage,GetUserImage };

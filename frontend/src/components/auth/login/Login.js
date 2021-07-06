@@ -80,7 +80,6 @@ export default function Login() {
                 }}
               />
             </div>
-
             <div className="signIn">
               <Link className="signIn text-center" exact to="/register">
                 Don't have an account?

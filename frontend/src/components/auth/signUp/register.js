@@ -25,12 +25,22 @@ export default function Register() {
       })
       .then((result) => {
         if (result.data) {
+        
+          // axios.post("http://localhost:5000/user/image",({user_id:result.data.insertId,user_image:"https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg"}))
+          // .then((result)=>{
+          //     console.log(result.data);
+          // })
+          // .catch((err)=>{
+          //     console.log(err);
+          // })
+
           history.push("./login");
         }
       })
       .catch((err) => {
         console.log(err);
       });
+      
   };
   return (
     <>

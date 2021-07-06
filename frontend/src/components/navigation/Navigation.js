@@ -22,9 +22,6 @@ const Navigation = () => {
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
-  
-
-  console.log(token.user);
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
