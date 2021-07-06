@@ -3,7 +3,7 @@ const userRouter = express.Router();
 const bodyParser = require("body-parser");
 const { check, validationResult } = require("express-validator");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-const { CreateNewUser,AddUserImage } = require("../controllers/user");
+const { CreateNewUser,AddUserImage,GetUserImage } = require("../controllers/user");
 userRouter.post(
   "/",
   urlencodedParser,
@@ -16,4 +16,5 @@ userRouter.post(
   CreateNewUser
 );
 userRouter.post("/image",AddUserImage);
+userRouter.post("/pics",GetUserImage);
 module.exports = userRouter;

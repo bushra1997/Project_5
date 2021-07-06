@@ -45,5 +45,16 @@ const AddUserImage=(req,res)=>{
   });
 
 }
+const GetUserImage=(req,res)=>{
 
-module.exports = { CreateNewUser,AddUserImage };
+  const {user_id} = req.body;
+
+  const query = `SELECT * FROM userimage WHERE user_id =?`;
+  db.query(query, user_id, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+
+}
+
+module.exports = { CreateNewUser,AddUserImage,GetUserImage };
