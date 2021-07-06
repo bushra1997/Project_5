@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./navigation.css";
-import NavBar from "./NavbarPage";
 import { Route, Link, useHistory } from "react-router-dom";
-import Search from "./../search/search" 
+import Search from "./../search/search" ;
+import { useSelector } from "react-redux";
+
 const Navigation = () => {
+  const [islogged, setIslogged] = useState(false)
+  const token = useSelector((state) => {
+    return {
+      token: state.token.token,
+      user: state.token.user,
+    };
+  });
+  if (token) {
+    setIslogged(true)
+  } else {
+    setIslogged(false)
+  }
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
@@ -65,6 +78,7 @@ const Navigation = () => {
             </li>
           </ul>
         <li class="nav-item dropdown" style={{listStyle:"none"}}>
+
 <a
   class="nav-link dropdown-toggle"
   href="#"
@@ -75,7 +89,7 @@ const Navigation = () => {
   aria-expanded="false"
 >
 <span> 
-            <img id="ctl00_XXX" src="https://static.wixstatic.com/media/065e6b_dd1a8624bd5b40c9848aeec671ed811b.png/v1/fit/w_936%2Ch_733%2Cal_c/file.png" style={{borderRadius:"50%" ,height:"50px",width:"50px"}} />
+            <img className="style-scope yt-img-shadow"  src="https://static.wixstatic.com/media/065e6b_dd1a8624bd5b40c9848aeec671ed811b.png/v1/fit/w_936%2Ch_733%2Cal_c/file.png" style={{borderRadius:"50%" ,height:"32px",width:"32px"}} />
         </span>
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -86,7 +100,7 @@ const Navigation = () => {
             </li>
 
 <li class="nav-item">
-              <Link exact to="/login" className="nav-link">
+              <Link exact to="/profile" className="nav-link">
                 My Profile
               </Link>
             </li>
