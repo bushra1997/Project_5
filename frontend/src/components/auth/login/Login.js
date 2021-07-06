@@ -94,7 +94,7 @@ export default function Login() {
               type="submit"
               className="btn btn-primary"
               onClick={submit}
-              style={{marginTop:"25px"}}
+              style={{margin:"25px auto"}}
             >
               {" "}
               Login
