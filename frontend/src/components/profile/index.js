@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,Component} from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 const Profile = () => {
   const [firstName, setFirstName] = useState("");
@@ -33,6 +34,15 @@ const Profile = () => {
       });
   }, []);
 
+  const [value, setValue] = useState("");
+
+  
+
+ const fileUploadHandler=(e)=>{
+  e.preventDefault();
+  console.log(value[0]);
+
+ };
   return (
     <>
       <div>{firstName}</div>
@@ -45,6 +55,16 @@ const Profile = () => {
           My favorite
         </Link>
       </div>
+      <p>Click on the "Choose File" button to upload a file:</p>
+
+<Form action="/action_page.php">
+  <input type="file" id="myFile" name="filename" onChange={(e)=>{
+    setValue(e.target.files)
+  }}/>
+  <button onClick={fileUploadHandler}>upload</button>
+  <div style={{width:"400px",height:"400px",border:"1px solid black"}}></div>
+  </Form>
+  
     </>
   );
 };
