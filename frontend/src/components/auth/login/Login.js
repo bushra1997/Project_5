@@ -92,7 +92,7 @@ export default function Login() {
             <button
               id="btn"
               type="submit"
-              className="btn btn-primary"
+              className="btn btn"
               onClick={submit}
             >
               {" "}
