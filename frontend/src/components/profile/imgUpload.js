@@ -1,5 +1,6 @@
 import {React,useState} from "react";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { setImage } from "../../reducers/Profile";
 import {
   Form,
   Button,
@@ -10,6 +11,7 @@ import {
 import axios from "axios";
 
 export default function ImgUpload() {
+  const dispatch = useDispatch();
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -28,7 +30,9 @@ export default function ImgUpload() {
     console.log("MY URL", myurl);
     axios.post("http://localhost:5000/user/image",({user_id:token.user.id,user_image:objectURL}))
     .then((result)=>{
-        console.log(result.data);
+        dispatch(
+            setImage(objectURL)
+          );
     })
     .catch((err)=>{
         console.log(err);

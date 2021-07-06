@@ -5,7 +5,7 @@ const initialState = {
   const profilePictuer = (state = initialState, { type, payload }) => {
     switch (type) {
       case "SET_IMAGE":
-        return { image: payload.image };
+        return { image: payload.image};
   
       default:
         return state;

@@ -14,6 +14,16 @@ const Navigation = () => {
     };
   });
   
+  const user_image = useSelector((state)=>{
+
+    return {
+      image : state.image
+    }
+  })
+
+  console.log("REEEEEEEEEEEEEEEEE",user_image.image);
+
+  
   const exist =token.token;
     
     
