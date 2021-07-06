@@ -141,7 +141,7 @@ export default function Register() {
               </div>
             </form>
 
-            <button className="btn" onClick={newUsers}>
+            <button className="btn" onClick={newUsers} style={{margin:"auto"}}>
               Sign Up
             </button>
             {error ? <div>Some Thing Wrong Try Again!</div> : null}
