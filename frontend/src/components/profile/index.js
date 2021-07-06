@@ -35,17 +35,17 @@ const Profile = () => {
       });
   }, []);
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    axios.post("http://localhost:5000/user/pics",({user_id:token.user.id}))
-    .then((result)=>{
+  //   axios.post("http://localhost:5000/user/pics",({user_id:token.user.id}))
+  //   .then((result)=>{
 
-      setImg(result.data[(result.data.length)-1].user_image)
-      console.log(result.data.length);
-      console.log(result.data.length);
-    })
+  //     setImg(result.data[(result.data.length)-1].user_image)
+  //     console.log(result.data.length);
+  //     console.log(result.data.length);
+  //   })
 
-  }, [])
+  // }, [])
 
  
   return (
@@ -60,13 +60,6 @@ const Profile = () => {
           My favorite
         </Link>
       </div>
-    <ImgUpload/>
-   
-    <div
-          style={{ width: "400px", height: "400px", border: "1px solid black" }}
-        >
-          <img src={img}></img>
-        </div>
     </>
   );
 };
