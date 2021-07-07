@@ -71,7 +71,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Img</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="Img Here"
               onChange={(e) => {
                 setImg(e.target.value);
@@ -82,7 +82,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Capacity</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="capacity here"
               onChange={(e) => {
                 setCapacity(e.target.value);
@@ -93,7 +93,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">City</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="City Here"
               onChange={(e) => {
                 setCity(e.target.value);
@@ -104,7 +104,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Address</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="address here"
               onChange={(e) => {
                 setAddress(e.target.value);
@@ -115,7 +115,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Availability</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="Availability Here"
               onChange={(e) => {
                 setAvailability(e.target.value);
@@ -123,7 +123,7 @@ export default function AddPlace() {
             />
           </Form.Group>
           <div className="click">
-          <Button variant="primary" type="submit">
+          <Button variant="primary"  onClick={newPlace}>
             Submit
           </Button>
           <Button variant="primary" onClick={home}>
