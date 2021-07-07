@@ -15,7 +15,7 @@ const ShowPlaces = ({ places }) => {
           <div className="card-body">
             <h5 class="card-title">{place.name}</h5>
             <ul class="list-group">
-              <li class="list-group-item card-text"><i class="fas fa-align-center"></i>{place.description}</li>
+              <li class="list-group-item card-text"><i class="fas fa-comment-alt"></i>{place.description}</li>
               <li class="list-group-item card-text">
                 <i class="fas fa-users"></i>
                 {place.capacity}
