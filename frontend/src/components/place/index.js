@@ -113,6 +113,7 @@ export default function Place() {
               <li class="list-group-item">Capacity: {capasity}</li>
               <li class="list-group-item">City: {city}</li>
               <li class="list-group-item">Address: {address}</li>
+              
             </ul>
           </div>
         </div>

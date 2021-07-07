@@ -18,7 +18,7 @@ import Place from "./components/place";
 import Favorite from "./components/favorite";
 import Profile from "./components/profile/index";
 import Booking from "./components/booking/index";
-import Search from "./components/search/search";
+import SearchResult from "./components/search/SearchResult"
 const App = () => {
   const token = useSelector((state) => {
     return {
@@ -42,7 +42,6 @@ const App = () => {
       ) : (
         <div>
           <Navigation />
-          <Search/>
           <Switch>
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
@@ -56,7 +55,7 @@ const App = () => {
             <Route  path="/profile" component={Profile}/>
             <Route path="/favorite" component={Favorite} />
             <Route path="/booking/:id" component={Booking} />
-            {/* <Route path="/search" component={Search} /> */}
+            <Route path="/search-result?=!21231" component={SearchResult} />
           </Switch>
           <Footer />
         </div>

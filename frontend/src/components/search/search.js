@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+
 export default function Search() {
+  const history = useHistory();
   const [search, setSearch] = useState("");
 
-  const search_icon = (e) => {
-    e.preventDefault();
-    //const map1=search.map()
-    axios
-      .get(`http://localhost:5000/search/${search}`)
-      .then((result) => {
-        console.log("result :", result.data[0]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
+  const searchEvent =(e) => {
+    e.preventDefault();
+          history.push(`/search/${search}`)
+  }
   return (
     <form class="form-inline my-2 my-lg-0">
       <input
@@ -27,7 +22,7 @@ export default function Search() {
           setSearch(e.target.value);
         }}
       />
-      <button class="btn my-2 my-sm-0" onClick={search_icon}>
+      <button class="btn my-2 my-sm-0" onClick={searchEvent}>
         Search
       </button>
     </form>
