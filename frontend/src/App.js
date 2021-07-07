@@ -18,7 +18,7 @@ import Place from "./components/place";
 import Favorite from "./components/favorite";
 import Profile from "./components/profile/index";
 import Booking from "./components/booking/index";
-import Search from "./components/search/search";
+
 const App = () => {
   const token = useSelector((state) => {
     return {
@@ -40,9 +40,8 @@ const App = () => {
           />
         </Switch>
       ) : (
-        <div>
+        <>
           <Navigation />
-          <Search/>
           <Switch>
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
@@ -59,7 +58,7 @@ const App = () => {
             {/* <Route path="/search" component={Search} /> */}
           </Switch>
           <Footer />
-        </div>
+        </>
       )}
     </>
   );

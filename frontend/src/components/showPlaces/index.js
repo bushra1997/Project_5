@@ -8,19 +8,17 @@ const ShowPlaces = ({ places }) => {
   const ShowCard = ({ place }) => {
     return (
       <>
-        <div className="col-lg-4 col-md-6 col-sm-12">
-          <div className="card">
-            <div>
-              <img src={place.img} class="card-img-top" alt="" />
-            </div>
-            <div className="card-body">
-              <h5 class="card-title">{place.name}</h5>
-              <p class="card-text">{place.description}</p>
-              <p class="card-text">{place.capacity}</p>
-              <p class="card-text">{place.city}</p>
-              <p class="card-text">{place.address}</p>
-              <p class="card-text">{place.availability}</p>
-            </div>
+        <div className="card">
+          <div>
+            <img src={place.img} class="card-img-top" alt="" />
+          </div>
+          <div className="card-body">
+            <h5 class="card-title">{place.name}</h5>
+            <p class="card-text">{place.description}</p>
+            <p class="card-text">{place.capacity}</p>
+            <p class="card-text">{place.city}</p>
+            <p class="card-text">{place.address}</p>
+            <p class="card-text">{place.availability}</p>
           </div>
         </div>
       </>
@@ -29,11 +27,13 @@ const ShowPlaces = ({ places }) => {
 
   const showPlaces = () => {
     return places.map((place) => (
-      <Link to={`/places/${place.type}/${place.place_id}`}>
-        <div key={place.id} className="place-card">
-          <ShowCard place={place} />
-        </div>
-      </Link>
+      <div className="col-lg-4 col-md-6 col-sm-12">
+        <Link to={`/places/${place.type}/${place.place_id}`}>
+          <div key={place.id} className="place-card">
+            <ShowCard place={place} />
+          </div>
+        </Link>
+      </div>
     ));
   };
 
