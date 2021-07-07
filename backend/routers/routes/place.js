@@ -10,6 +10,6 @@ placeRouter.delete("/places/:id",deletePlaceById);
 placeRouter.get("/places/:id",getPlaceById);
 placeRouter.get("/places/type/:type",getPlaceByType);
 placeRouter.get("/images/:type",getPlaceByTypeImg);
-placeRouter.get("/searched/:name",getAllPlacesByName);
+placeRouter.get("/place/name/:name",getAllPlacesByName);
 
 module.exports = placeRouter;

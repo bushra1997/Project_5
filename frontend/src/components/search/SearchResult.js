@@ -9,7 +9,7 @@ export default function SearchResult() {
 
     useEffect(() => {
      
-        axios.get(`http://localhost:5000/searched/${name}`)
+        axios.get(`http://localhost:5000/place/name/${name}`)
         .then((result)=>{
             console.log(result.data);
         })
