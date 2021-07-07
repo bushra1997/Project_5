@@ -85,10 +85,10 @@ export default function EditPlace() {
       <div className="search">
         <Form onSubmit={search}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Enter number</Form.Label>
+            <Form.Label className="name_label">Enter Number</Form.Label>
             <Form.Control
-              as="textarea"
-              placeholder="input number id"
+              as="text"
+              placeholder="Input Number Id"
               onChange={(e) => {
                 setNumber(e.target.value);
               }}
@@ -102,9 +102,9 @@ export default function EditPlace() {
       <div className="place-info">
         <Form onSubmit={update}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Name</Form.Label>
+            <Form.Label className="name_label">Name</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -113,7 +113,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Description</Form.Label>
+            <Form.Label className="name_label">Description</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={description}
@@ -124,9 +124,9 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Img</Form.Label>
+            <Form.Label className="name_label">Img</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={img}
               onChange={(e) => {
                 setImg(e.target.value);
@@ -135,9 +135,9 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>City</Form.Label>
+            <Form.Label className="name_label">City</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -146,9 +146,9 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Address</Form.Label>
+            <Form.Label className="name_label">Address</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={address}
               onChange={(e) => {
                 setAddress(e.target.value);
@@ -156,9 +156,9 @@ export default function EditPlace() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Availability</Form.Label>
+            <Form.Label className="name_label">Availability</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={availability}
               onChange={(e) => {
                 setAvailability(e.target.value);
@@ -167,27 +167,29 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Capacity</Form.Label>
+            <Form.Label className="name_label">Capacity</Form.Label>
             <Form.Control
-              as="textarea"
+              as="text"
               placeholder={capacity}
               onChange={(e) => {
                 setCapacity(e.target.value);
               }}
             />
           </Form.Group>
+          <div className="clickEdit">
       <Button variant="primary" type="submit">
         Update
       </Button>
-        </Form>
-      </div>
-
       <Button variant="primary" onClick={Delete}>
         Delete
       </Button>
       <Button variant="primary" onClick={home}>
            Home
           </Button>
+          </div>
+        </Form>
+      </div>
+
     </div>
   );
 }
