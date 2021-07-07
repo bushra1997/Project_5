@@ -27,3 +27,7 @@
 .name_label{
     margin-left: 10px;
 }
+.click{
+    justify-content: space-between;
+    flex-direction: column; 
+}

@@ -122,12 +122,14 @@ export default function AddPlace() {
               }}
             />
           </Form.Group>
+          <div className="click">
           <Button variant="primary" type="submit">
             Submit
           </Button>
           <Button variant="primary" onClick={home}>
             Home
           </Button>
+        </div>
         </Form>
       </div>
     </>
