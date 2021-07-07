@@ -107,64 +107,16 @@ export default function Place() {
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="container">
-            <p className="text-center">{name}</p>
-          </div>
-          <div className="container">
-            <p className="text-center">{description}</p>
-          </div>
-          <div className="container">
-            <p className="text-center">Capacity: {capasity}</p>
-          </div>
-          <div className="container">
-            <p className="text-center">City: {city}</p>
-          </div>
-          <div className="container">
-            <p className="text-center">Address: {address}</p>
+            <ul class="list-group">
+              <li class="list-group-item">Name: {name}</li>
+              <li class="list-group-item">Description:{description}</li>
+              <li class="list-group-item">Capacity: {capasity}</li>
+              <li class="list-group-item">City: {city}</li>
+              <li class="list-group-item">Address: {address}</li>
+            </ul>
           </div>
         </div>
-        {/* <Card style={{ width: "41rem" }}> */}
-        {/* <Card.Img variant="top" className="image" src={image} /> */}
-        {/* <Card.Body> */}
-        {/* <Card.Title> */}
-        {/* <h2 className="text-center">{name}</h2> */}
-        {/* </Card.Title> */}
-        {/* <Card.Text> */}
-        {/* <h6>{description}</h6> */}
-        {/* </Card.Text> */}
-        {/* <Card.Text> */}
-        {/* <h6>Capacity: {capasity}</h6> </Card.Text> */}
-        {/* <Card.Text> */}
-        {/* <h6>City: {city}</h6> </Card.Text> */}
-        {/* <Card.Text> */}
-        {/* <h6>Address: {address}</h6> </Card.Text> */}
-        <div>
-          <Rating />
-          <button onClick={booking}>Book</button>
-          {!added ? (
-            <AiOutlineHeart
-              className="icon-heart"
-              icon="heart"
-              id="add-favorite"
-              size={40}
-              color="red"
-              en
-              onClick={addToFavorite}
-            />
-          ) : (
-            <AiFillHeart
-              icon="heart"
-              id="delete-fav"
-              size={40}
-              color="red"
-              en
-              onClick={deleteFavorite}
-            />
-          )}
-        </div>
-        {/* </Card.Body> */}
-        {/* </Card> */}
       </div>
-      <div className="buttons-holder"></div>
     </div>
   );
 }
