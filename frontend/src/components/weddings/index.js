@@ -16,7 +16,7 @@ const Weddings = () => {
         if (result.status == 200) {
           setPlaces(result.data);
         }
-      })
+      }) 
       .catch((err) => {
         console.log(err);
       });

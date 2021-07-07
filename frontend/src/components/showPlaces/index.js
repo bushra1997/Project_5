@@ -30,7 +30,7 @@ const ShowPlaces = ({ places }) => {
   const showPlaces = () => {
     return places.map((place) => (
       <Link to={`/places/${place.type}/${place.place_id}`}>
-        <div key={place.id}>
+        <div key={place.id} className="place-card">
           <ShowCard place={place} />
         </div>
       </Link>

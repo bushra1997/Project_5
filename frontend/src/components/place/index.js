@@ -5,7 +5,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./place.css";
-import Rating from "./Raiting"
+import Rating from "./Raiting";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 export default function Place() {
@@ -20,7 +20,7 @@ export default function Place() {
   const [user_id, setUser_id] = useState("");
   const [rating_id, setRating_id] = useState("2");
   const [added, setAdded] = useState(false);
-  const history = useHistory()
+  const history = useHistory();
 
   const token = useSelector((state) => {
     return {
@@ -40,34 +40,31 @@ export default function Place() {
         setCapacity(result.data[0].capacity);
         setCity(result.data[0].city);
         setAddress(result.data[0].address);
-        
-        console.log("this is the token =>",token);
-        
+
+        console.log("this is the token =>", token);
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
-  
-  useEffect(() => {
-    
-    axios
-    .post("http://localhost:5000/favorite/check", { place_id, user_id})
-    .then((result) => {
-      console.log("IIID",id);
-      console.log("This is DATAAAAa",result.data[0].place_id===id);
-      if (result.data[0].place_id===id) {
-        setAdded(false)
-      }
-      else{
-        setAdded(true)
-      }
-    })
 
-    .catch((err) => {
-      console.log(err);
-    });
-  }, [])
+  useEffect(() => {
+    axios
+      .post("http://localhost:5000/favorite/check", { place_id, user_id })
+      .then((result) => {
+        console.log("IIID", id);
+        console.log("This is DATAAAAa", result.data[0].place_id === id);
+        if (result.data[0].place_id === id) {
+          setAdded(false);
+        } else {
+          setAdded(true);
+        }
+      })
+
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const addToFavorite = () => {
     axios
@@ -96,60 +93,30 @@ export default function Place() {
       });
   };
 
-  const booking = () =>{
-    history.push(`/booking/${id}`)
-  }
+  const booking = () => {
+    history.push(`/booking/${id}`);
+  };
 
   return (
-    <div className="main-place">
-      <div className="place-holder">
-        <Card style={{ width: "41rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>
-              <h2>{name}</h2>
-            </Card.Title>
-            <Card.Text>
-              <h6>{description}</h6>
-            </Card.Text>
-            <Card.Text>
-              <h6>Capacity: {capasity}</h6>{" "}
-            </Card.Text>
-            <Card.Text>
-              <h6>City: {city}</h6>{" "}
-            </Card.Text>
-            <Card.Text>
-              <h6>Address: {address}</h6>{" "}
-            </Card.Text>
-            <div>
-              <Rating/>
-            <button onClick={booking}>Book</button>
-            {!added ? (
-              <AiOutlineHeart
-                className="icon-heart"
-                icon="heart"
-                id="add-favorite"
-                size={40}
-                color="red"
-                
-                en    
-                onClick={addToFavorite}
-              />
-            ) : (
-              <AiFillHeart
-                icon="heart"
-                id="delete-fav"
-                size={40}
-                color="red"
-                en
-                onClick={deleteFavorite}
-              />
-            )}
-            </div>
-          </Card.Body>
-        </Card>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="image">
+            <img style={{ width: "80%" }} src={image} />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="container">
+            <ul class="list-group">
+              <li class="list-group-item">Name: {name}</li>
+              <li class="list-group-item">Description:{description}</li>
+              <li class="list-group-item">Capacity: {capasity}</li>
+              <li class="list-group-item">City: {city}</li>
+              <li class="list-group-item">Address: {address}</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="buttons-holder"></div>
     </div>
   );
 }
