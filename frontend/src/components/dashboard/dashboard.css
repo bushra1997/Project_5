@@ -35,7 +35,7 @@
 }
 .main-div {
     margin-top: 4rem;
-    width: 50%;
+    width: 29%;
     height: 341px;
     padding-top: 61px;
     margin: auto;
@@ -49,5 +49,5 @@
     margin: auto;
     display: flex;
     gap: 18%;
-    margin-left: 21%;
+    margin-left:9%;
 }
