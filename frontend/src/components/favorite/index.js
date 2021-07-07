@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import ShowPlaces from "../showPlaces";
 import "./favorite.css";
 
+
 export default function Favorite() {
-  const [favorateCard, setFavorateCard] = useState("");
+  const [favorateCard, setFavorateCard] = useState([]);
+  
+
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -17,6 +21,7 @@ export default function Favorite() {
       .get(`http://localhost:5000/favorite/${token.user.id}`)
       .then((result) => {
         setFavorateCard(result.data);
+        console.log(result.data,"iiiiiiiiiiiiii");
       })
       .catch((err) => {
         console.log(err.message);
@@ -24,38 +29,11 @@ export default function Favorite() {
   }, []);
 
   return (
-    <div className="favorite-container">
-      {favorateCard &&
-        favorateCard.map((place, i) => {
-          return (
-            <>
-              <div className="container">
-                <div key={i} className="favorate-card">
-                  <img src={place.img} style={{ width: "100%" }}></img>
-                </div>
-                <div className="card-body">
-                  <h5 class="card-title">{place.name}</h5>
-                </div>
-                <ul class="list-group">
-                  <li class="list-group-item card-text" className="description">
-                    <i class="fas fa-comment-alt"></i>
-                    {place.description}
-                  </li>
-                  <div className="address">
-                    <li class="list-group-item card-text">
-                      <i class="fas fa-users"></i>
-                      {place.capacity}
-                    </li>
-                    <li class="list-group-item card-text">
-                      <i class="fas fa-map-pin"></i>
-                      {place.address}
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </>
-          );
-        })}
-    </div>
+    <>
+      <div className="weddingsPlace">
+        <ShowPlaces places={favorateCard} />
+      </div>
+    </>
+    
   );
 }
