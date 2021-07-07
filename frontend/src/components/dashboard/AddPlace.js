@@ -47,7 +47,7 @@ export default function AddPlace() {
       <div className="formAddPlace">
         <Form onSubmit={newPlace}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Place Name</Form.Label>
+            <Form.Label className="name_label">Place Name</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="PLace Name here"
@@ -58,7 +58,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>description</Form.Label>
+            <Form.Label className="name_label">description</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="description here"
@@ -69,7 +69,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>img</Form.Label>
+            <Form.Label className="name_label">img</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="img here"
@@ -80,7 +80,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>capacity</Form.Label>
+            <Form.Label className="name_label">capacity</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="capacity here"
@@ -91,7 +91,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>city</Form.Label>
+            <Form.Label className="name_label">city</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="city here"
@@ -102,7 +102,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>address</Form.Label>
+            <Form.Label className="name_label">address</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="address here"
@@ -113,7 +113,7 @@ export default function AddPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>availability</Form.Label>
+            <Form.Label className="name_label">availability</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="availability here"
