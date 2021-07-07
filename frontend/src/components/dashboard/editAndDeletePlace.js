@@ -176,18 +176,20 @@ export default function EditPlace() {
               }}
             />
           </Form.Group>
+          <div className="clickEdit">
       <Button variant="primary" type="submit">
         Update
       </Button>
-        </Form>
-      </div>
-
       <Button variant="primary" onClick={Delete}>
         Delete
       </Button>
       <Button variant="primary" onClick={home}>
            Home
           </Button>
+          </div>
+        </Form>
+      </div>
+
     </div>
   );
 }
