@@ -1,6 +1,8 @@
 .card-title {
   font-size: 22px;
   font-family: "Bona Nova", serif;
+  color: black;
+
 }
 .list-group {
   display: flex;
