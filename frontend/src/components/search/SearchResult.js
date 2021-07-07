@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from "react";
 import {Link, useParams, useHistory } from "react-router-dom";
-import ShowPlaces from "../sh";
+import ShowPlaces from "../showPlaces/index";
 
 
 export default function SearchResult() {
@@ -22,18 +22,9 @@ export default function SearchResult() {
         
     }, [])
 
-    const showResults = () => {
-        return res.map((e,i) => (
-          <Link to={`/places/${e.type}/${e.place_id}`}>
-            <div key={e.id} className="place-card">
-              <ShowCard e={e} />
-            </div>
-          </Link>
-        ));
-      };
-
     return (
-       
-        <div>{showResults}</div>
+        <div className="container">
+        <div className="row"><ShowPlaces places={res} /></div>
+        </div>
     )
 }
