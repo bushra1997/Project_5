@@ -85,7 +85,7 @@ export default function EditPlace() {
       <div className="search">
         <Form onSubmit={search}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Enter number</Form.Label>
+            <Form.Label className="name_label">Enter number</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="input number id"
@@ -102,7 +102,7 @@ export default function EditPlace() {
       <div className="place-info">
         <Form onSubmit={update}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Name</Form.Label>
+            <Form.Label className="name_label">Name</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={name}
@@ -113,7 +113,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Description</Form.Label>
+            <Form.Label className="name_label">Description</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={description}
@@ -124,7 +124,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Img</Form.Label>
+            <Form.Label className="name_label">Img</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={img}
@@ -135,7 +135,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>City</Form.Label>
+            <Form.Label className="name_label">City</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={city}
@@ -146,7 +146,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Address</Form.Label>
+            <Form.Label className="name_label">Address</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={address}
@@ -156,7 +156,7 @@ export default function EditPlace() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Availability</Form.Label>
+            <Form.Label className="name_label">Availability</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={availability}
@@ -167,7 +167,7 @@ export default function EditPlace() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Capacity</Form.Label>
+            <Form.Label className="name_label">Capacity</Form.Label>
             <Form.Control
               as="textarea"
               placeholder={capacity}
