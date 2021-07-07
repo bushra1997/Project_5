@@ -9,7 +9,7 @@ export default function Search() {
 
   const searchEvent =(e) => {
     e.preventDefault();
-          history.push(`/search/${search}`)
+          history.push(`/place/name/${search}`)
   }
   return (
     <form class="form-inline my-2 my-lg-0">

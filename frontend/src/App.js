@@ -55,7 +55,7 @@ const App = () => {
             <Route  path="/profile" component={Profile}/>
             <Route path="/favorite" component={Favorite} />
             <Route path="/booking/:id" component={Booking} />
-            <Route path="/place/name/:name" component={SearchResult} />
+            <Route exact path="/place/name/:name" component={SearchResult} />
           </Switch>
           <Footer />
         </div>
