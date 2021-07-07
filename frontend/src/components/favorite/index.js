@@ -24,14 +24,36 @@ export default function Favorite() {
   
   console.log("aaaaaaaaaaaaa",favorateCard);
   return (
+   
     
     <div className="favorite-container">
     {favorateCard
-    &&favorateCard.map((e,i)=>{
+    &&favorateCard.map((place,i)=>{
       return (
         <>
-         <div key={i} className="favorate-card"><img src={e.img} style={{width:"100%"}}></img></div>
-
+        {console.log(favorateCard,"oooo")}
+         <div className="container">
+         <div key={i} className="favorate-card"><img src={place.img} style={{width:"100%"}}></img></div>
+         <div className="card-body">
+         <h5 class="card-title">{place.name}</h5>
+         </div>
+         <ul class="list-group">
+              <li class="list-group-item card-text" className="description">
+                <i class="fas fa-comment-alt"></i>
+                {place.description}
+              </li>
+              <div className="address">
+                <li class="list-group-item card-text">
+                  <i class="fas fa-users"></i>
+                  {place.capacity}
+                </li>
+                <li class="list-group-item card-text">
+                  <i class="fas fa-map-pin"></i>
+                  {place.address}
+                </li>
+              </div>
+            </ul>
+         </div>
         </>
         )
       })}
