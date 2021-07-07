@@ -39,6 +39,12 @@ const Profile = () => {
       });
   }, []);
 
+  const editProfile = () =>{
+
+    //here will add an axios router to update any user requested info
+
+  }
+
   // useEffect(() => {
     
   //   axios.post("http://localhost:5000/user/pics",({user_id:token.user.id}))
@@ -86,7 +92,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" onClick={editProfile}/>
                     </div>
                 </div>
                 <div class="row">
