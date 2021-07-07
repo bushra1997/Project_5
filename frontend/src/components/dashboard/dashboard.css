@@ -29,5 +29,5 @@
 }
 .click{
     justify-content: space-between;
-    flex-direction: column; 
+    flex-direction: row; 
 }
