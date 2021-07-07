@@ -6,5 +6,7 @@
     padding-top: 2%;
     margin: auto;
     justify-content: space-between;
-    margin-top: 90px
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
 }
