@@ -23,7 +23,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-white bg-white">
         <Link className="navbar-brand" exact to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
