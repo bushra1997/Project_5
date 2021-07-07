@@ -116,6 +116,31 @@ export default function Place() {
               
             </ul>
           </div>
+          <div>
+              <Rating/>
+            <button onClick={booking}>Book</button>
+            {!added ? (
+              <AiOutlineHeart
+                className="icon-heart"
+                icon="heart"
+                id="add-favorite"
+                size={40}
+                color="red"
+                
+                en    
+                onClick={addToFavorite}
+              />
+            ) : (
+              <AiFillHeart
+                icon="heart"
+                id="delete-fav"
+                size={40}
+                color="red"
+                en
+                onClick={deleteFavorite}
+              />
+            )}
+            </div>
         </div>
       </div>
     </div>
