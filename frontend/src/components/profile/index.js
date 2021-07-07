@@ -13,6 +13,7 @@ const Profile = () => {
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
   const [img, setImg] = useState("");
+  const [userid, setUserid] = useState("");
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -30,6 +31,7 @@ const Profile = () => {
           setCountry(token.user.country);
           setEmail(token.user.email);
           setAge(token.user.age);
+          setUserid(token.user.id)
         }
       })
       .catch((err) => {
@@ -110,7 +112,7 @@ const Profile = () => {
                                                 <label>User Id</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
+                                                <p>{`${firstName}-${userid}`}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -118,7 +120,7 @@ const Profile = () => {
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
+                                                <p>{`${firstName} ${lastName}`}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -126,27 +128,27 @@ const Profile = () => {
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p>{email}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Phone</label>
+                                                <label>Age</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>123 456 7890</p>
+                                                <p>{age}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Profession</label>
+                                                <label>Country</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{country}</p>
                                             </div>
                                         </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style={{display:"none"}}>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Experience</label>
