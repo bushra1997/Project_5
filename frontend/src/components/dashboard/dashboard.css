@@ -13,11 +13,11 @@
 }
 .formAddPlace {
     margin-top: 4rem;
-    width: 50%;
+    width: 32%;
     height: 341px;
     padding-top: 61px;
     margin: auto;
-    margin-top: 90px;
+    margin-top: -23px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -29,8 +29,9 @@
 .click {
     margin: auto;
     display: flex;
-    gap: 18%;
-    margin-left: 34%;
+    grid-gap: 18%;
+    gap: 2%;
+    margin-left: 33%;
 }
 .main-div {
     margin-top: 4rem;
