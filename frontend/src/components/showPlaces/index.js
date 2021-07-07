@@ -24,19 +24,6 @@ const ShowPlaces = ({ places }) => {
           </div>
         </div>
       </>
-      // <Card style={{ width: "18rem" }}>
-      //   <Card.Img variant="top" src={place.img} />
-      //   <Card.Body>
-      //     <Card.Title>{place.name}</Card.Title>
-      //     <Card.Text>{place.description}</Card.Text>
-      //   </Card.Body>
-      //   <ListGroup className="list-group-flush">
-      //     <ListGroupItem>capacity: {place.capacity}</ListGroupItem>
-      //     <ListGroupItem>city: {place.city}</ListGroupItem>
-      //     <ListGroupItem>address: {place.address}</ListGroupItem>
-      //     <ListGroupItem>availability: {place.availability}</ListGroupItem>
-      //   </ListGroup>
-      // </Card>
     );
   };
 
