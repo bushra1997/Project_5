@@ -103,10 +103,17 @@ export default function Place() {
   return (
     <div className="container">
       <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="image">
+                <img
+                  style={{ width: "80%" }}
+                  src={image}
+                />
+              </div>
+        </div>
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <Card style={{ width: "41rem" }}>
-          <Card.Img variant="top" className="image" src={image} />
+        {/* <Card style={{ width: "41rem" }}> */}
+          {/* <Card.Img variant="top" className="image" src={image} /> */}
           {/* <Card.Body> */}
             {/* <Card.Title> */}
               <h2 className="text-center">{name}</h2>
@@ -149,7 +156,7 @@ export default function Place() {
             )}
             </div>
           {/* </Card.Body> */}
-        </Card>
+        {/* </Card> */}
       </div>
       <div className="buttons-holder"></div>
     </div>
