@@ -5,10 +5,8 @@ import { useSelector } from "react-redux";
 import ShowPlaces from "../showPlaces";
 import "./favorite.css";
 
-
 export default function Favorite() {
   const [favorateCard, setFavorateCard] = useState([]);
-  
 
   const token = useSelector((state) => {
     return {
@@ -21,7 +19,7 @@ export default function Favorite() {
       .get(`http://localhost:5000/favorite/${token.user.id}`)
       .then((result) => {
         setFavorateCard(result.data);
-        console.log(result.data,"iiiiiiiiiiiiii");
+        console.log(result.data, "iiiiiiiiiiiiii");
       })
       .catch((err) => {
         console.log(err.message);
@@ -34,6 +32,5 @@ export default function Favorite() {
         <ShowPlaces places={favorateCard} />
       </div>
     </>
-    
   );
 }
