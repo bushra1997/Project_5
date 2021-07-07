@@ -49,7 +49,7 @@ export default function AddPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Place Name</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="PLace Name Here"
               onChange={(e) => {
                 setName(e.target.value);
