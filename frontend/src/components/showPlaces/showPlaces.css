@@ -1,23 +1,22 @@
 .card-title {
-    
-    font-size: 22px;
-    font-family: "Bona Nova", serif;
+  font-size: 22px;
+  font-family: "Bona Nova", serif;
 }
 .list-group {
-    display: flex;
-    margin-bottom: 0px;
-    margin-left: -17px;
-    border-radius: .25rem;
-    font-size: 17px;
-    color: black;
+  display: flex;
+  margin-bottom: 0px;
+  margin-left: -17px;
+  border-radius: 0.25rem;
+  font-size: 17px;
+  color: black;
 }
 ::before {
-    color: #4F0E0B;
-    margin-right: 11px;
+  color: #4f0e0b;
+  margin-right: 11px;
 }
 .description {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 .address {
-    margin-top: 18px;
+  margin-top: 18px;
 }
