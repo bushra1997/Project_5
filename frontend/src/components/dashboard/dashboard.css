@@ -29,7 +29,7 @@
 }
 .click {
     margin: auto;
-    justify-content: space-between;
-    flex-direction: row;
     display: flex;
+    gap: 18%;
+    margin-left: 29%;
 }
