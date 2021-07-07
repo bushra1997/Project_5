@@ -57,7 +57,7 @@ const Profile = () => {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <img src="https://static.wixstatic.com/media/065e6b_dd1a8624bd5b40c9848aeec671ed811b.png/v1/fit/w_936%2Ch_733%2Cal_c/file.png" alt="profile-avatar "/>
                             <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
@@ -67,12 +67,12 @@ const Profile = () => {
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        {`${firstName} ${lastName}`}
                                     </h5>
-                                    <h6>
+                                    <h6 style={{display:"none"}}>
                                         Web Developer and Designer
                                     </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <p class="proile-rating" style={{display:"none"}}>RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -89,7 +89,7 @@ const Profile = () => {
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-work">
+                        <div class="profile-work" style={{display:"none"}}>
                             <p>WORK LINK</p>
                             <a href="">Website Link</a><br/>
                             <a href="">Bootsnipp Profile</a><br/>
