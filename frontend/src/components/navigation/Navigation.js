@@ -121,12 +121,13 @@ const Navigation = () => {
                     style={{
                       borderBottom: "1px solid black",
                       justifyContent: "space-around",
+                      color:"white"
                     }}
                   >
                     Signed in as
                     <br />
                     <span
-                      style={{ fontWeight: "bold" }}
+                      style={{ fontWeight: "bold",color:"white" }}
                     >{`${token.user.firstName} ${token.user.lastName}`}</span>
                   </p>
                   <li class="nav-item">
@@ -135,24 +136,25 @@ const Navigation = () => {
                       exact
                       to="/login"
                       className="nav-link"
+                      style={{color:"#fff"}}
                     >
                       Logout
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link exact to="/profile" className="nav-link">
+                    <Link exact to="/profile" className="nav-link" style={{color:"#fff"}}>
                       My Profile
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link exact to="/favorite" className="nav-link">
+                    <Link exact to="/favorite" className="nav-link" style={{color:"#fff"}}>
                       My favorite
                     </Link>
                   </li>
                 </div>
               </li>
             ) : (
-              <li class="nav-item" style={{ listStyle: "none" }}>
+              <li class="nav-item" style={{ listStyle: "none" }} style={{color:"#fff"}}>
                 <Link exact to="/login" className="nav-link">
                   Login
                 </Link>
