@@ -111,7 +111,13 @@ export default function Place() {
                 />
               </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12"></div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="container">
+                    <p className="text-center">
+                    {name}
+                    </p>
+                  </div>
+        </div>
         {/* <Card style={{ width: "41rem" }}> */}
           {/* <Card.Img variant="top" className="image" src={image} /> */}
           {/* <Card.Body> */}
