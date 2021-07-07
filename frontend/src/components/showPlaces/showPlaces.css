@@ -1,60 +1,23 @@
-.card {
-  position: relative;
-  display: table-row;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-clip: border-box;
-}
-.showPlaces_ {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  word-wrap: break-word;
-}
-.bodyShowPlaces {
-  font-size: 15px;
-}
-/* .description {
-  font-family: -webkit-body;
-  font-size: 15px;
-  font-weight: bolder;
-  color: #DF5E5E;
-} */
 .card-title {
-  margin-bottom: 0.75rem;
+  font-size: 22px;
   font-family: "Bona Nova", serif;
   color: black;
-  font-weight: bolder;
 }
-.group {
-  font-size: 16px;
-  color: #1b1a17;
-  margin-left: 16px;
+.list-group {
+  display: flex;
+  margin-bottom: 0px;
+  margin-left: -17px;
+  border-radius: 0.25rem;
+  font-size: 17px;
+  color: black;
 }
-/* .card-text:last-child {
-  border: 0px;
-  font-family: -webkit-body;
-  font-size: 15px;
-  font-weight: bolder;
-  color: #1B1A17;
-} */
-.card-text:last-child {
-  border: 0px;
-  /* font-family: none; */
-  font-size: 15px;
-  font-weight: 500;
-  color: #1b1a17;
+::before {
+  color: #4f0e0b;
+  margin-right: 11px;
 }
-.list-group-item {
-  border: none;
-  margin: 0;
-  padding: 1.5% !important;
+.description {
+  margin-top: 4px;
 }
-a:hover {
-  text-decoration: none;
-}
-.place-card {
-  margin-top: 90px;
+.address {
+  margin-top: 18px;
 }

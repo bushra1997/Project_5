@@ -55,7 +55,7 @@ p {
 .card {
   box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
   overflow: hidden;
-  border-radius: 5%;
+  height: 100%;
 }
 #card{
   margin: 25px 0px;
@@ -75,4 +75,8 @@ p {
 }
 .card div{
   overflow: hidden;
+}
+
+.weddingsPlace {
+    padding: 3.5%;
 }

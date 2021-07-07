@@ -40,7 +40,7 @@ const App = () => {
           />
         </Switch>
       ) : (
-        <div>
+        <>
           <Navigation />
           <Switch>
             <Route exact path="/register" component={Register} />
@@ -58,7 +58,7 @@ const App = () => {
             <Route exact path="/place/name/:name" component={SearchResult} />
           </Switch>
           <Footer />
-        </div>
+        </>
       )}
     </>
   );

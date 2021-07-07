@@ -1,0 +1,53 @@
+.dMain {
+    margin-top: 4rem;
+    width: 50%;
+    height: 341px;
+    box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
+    padding-top: 61px;
+    margin: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.formAddPlace {
+    margin-top: 4rem;
+    width: 27%;
+    height: 341px;
+    padding-top: 61px;
+    margin: auto;
+    margin-top: -23px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.name_label{
+    margin-left: 10px;
+}
+.click {
+    margin: auto;
+    display: flex;
+    grid-gap: 18%;
+    gap: 2%;
+    margin-left: 33%;
+}
+.main-div {
+    margin-top: 4rem;
+    width: 29%;
+    height: 341px;
+    padding-top: 61px;
+    margin: auto;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.clickEdit {
+    margin: auto;
+    display: flex;
+    gap: 18%;
+    margin-left:9%;
+}
