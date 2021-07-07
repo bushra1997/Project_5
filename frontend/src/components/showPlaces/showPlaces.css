@@ -32,7 +32,7 @@
 }
 .group {
   font-size: 16px;
-  color: #1B1A17;
+  color: #1b1a17;
   margin-left: 16px;
 }
 /* .card-text:last-child {
@@ -47,14 +47,14 @@
   /* font-family: none; */
   font-size: 15px;
   font-weight: 500;
-  color: #1B1A17;
+  color: #1b1a17;
 }
 .list-group-item {
   border: none;
   margin: 0;
   padding: 1.5% !important;
 }
-a:hover{
+a:hover {
   text-decoration: none;
 }
 .place-card {
