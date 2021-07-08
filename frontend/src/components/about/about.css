@@ -1,0 +1,20 @@
+p.paragraphAbout {
+    font-size: 21px;
+    font-family: "Bona Nova", serif;
+    color: #835151;
+    /* justify-content: center;
+    align-items: center; */
+    width: 37%;
+    margin-left: 32%;
+}
+p.paragraphAbout {
+    font-size: 21px;
+    font-family: "Bona Nova", serif;
+    color: #835151;
+    align-items: center;
+}
+img.imgAbout {
+    /* width: 63%; */
+    padding-left: 21%;
+    margin-top: 4%;
+}
