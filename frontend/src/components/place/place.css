@@ -10,6 +10,7 @@
 }
 .font-weight-bolder{
     color: rgb(143, 23, 23);
+    font-size: 25px;
 }
 .list-group-item {
     padding: 8px;
