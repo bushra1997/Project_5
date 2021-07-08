@@ -28,7 +28,7 @@ export default function Login() {
           if (result.data.user.role_type === "Admin") {
             history.push("/dashboard");
           } else {
-            history.push("/home");
+            history.push("/");
           }
         }
       })
