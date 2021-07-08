@@ -1,6 +1,6 @@
-.image{
-width: 80%;
-margin-top: 80px;
-display: flex;
-  justify-content: center;
+.image {
+    width: 100%;
+    margin-top: 19px;
+    display: flex;
+    height: 90%;
 }
