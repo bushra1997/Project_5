@@ -10,3 +10,8 @@
     flex-direction: column;
     padding-bottom: 50px;
 }
+.paragraph {
+    margin-left: 46%;
+    font-size: 130%;
+    font-weight: 700;
+}

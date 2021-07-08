@@ -125,10 +125,10 @@ const Booking = () => {
         </div>
       ) : (
         <div>
-          <p>ALL IS GOOD</p>
-          {/* <button onClick={Back}>Back to HomePage</button> */}
+          <p className="paragraph">ALL IS GOOD</p>
+         
           <Button variant="primary" onClick={Back}>
-          Back to HomePage
+          Back to Home Page
             </Button>
         </div>
       )}
