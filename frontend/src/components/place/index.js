@@ -108,11 +108,11 @@ export default function Place() {
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="container">
             <ul class="list-group">
-              <li class="list-group-item">Name: {name}</li>
-              <li class="list-group-item">Description:{description}</li>
-              <li class="list-group-item">Capacity: {capasity}</li>
-              <li class="list-group-item">City: {city}</li>
-              <li class="list-group-item">Address: {address}</li>
+              <li class="list-group-item"> {name}</li>
+              <li class="list-group-item">{description}</li>
+              <li class="list-group-item"> {capasity}</li>
+              <li class="list-group-item"> {city}</li>
+              <li class="list-group-item"> {address}</li>
             </ul>
           </div>
         </div>
