@@ -2,13 +2,13 @@ import axios from "axios";
 import { React, useState } from "react";
 import { useHistory} from "react-router-dom";
 import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-} from "react-bootstrap";
-// import Popup from "./popup"
+      Form,
+      Button,
+      FormGroup,
+      FormControl,
+      ControlLabel,
+    } from "react-bootstrap";
+    import Modal from 'react-bootstrap/Modal'
 import Popup from "./popup"
 import "./dashboard.css";
 export default function EditPlace() {
@@ -21,6 +21,8 @@ export default function EditPlace() {
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
   const [popup, setPopup] = useState(false)
+  const [smShow, setSmShow] = useState(false);
+
   const history = useHistory()
   const search = (e) => {
     e.preventDefault();
@@ -103,12 +105,20 @@ export default function EditPlace() {
 
   const Delete = (e) => {
     e.preventDefault();
-    setPopup(true);
     
-      axios
-      .delete(`http://localhost:5000/places/${number}`)
-      .then((result) => {
-      })
+    axios
+    .delete(`http://localhost:5000/places/${number}`)
+    .then((result) => {
+      setSmShow(true);
+          setNumber("")
+          setName("")
+          setDescription("")
+          setImg("")
+          setCity("")
+          setAddress("")
+          setAvailability("")
+          setCapacity("")
+    })
      
     
     .catch((err)=>{
@@ -234,7 +244,20 @@ export default function EditPlace() {
         </Form>
       </div>
 
-      {popup?<Popup/>:null}
+      {!popup?<Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+      <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Successfully Deleted
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{`Place with the ID of ${number} has been Delete Succssfully`}</Modal.Body>
+        </Modal>
+      :null}
 
     </div>
   );
