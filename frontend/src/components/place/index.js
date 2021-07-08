@@ -8,6 +8,13 @@ import "./place.css";
 import Rating from "./Raiting";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
+import {
+  Form,
+  Button,
+  FormGroup,
+  FormControl,
+  ControlLabel,
+} from "react-bootstrap";
 export default function Place() {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -118,7 +125,10 @@ export default function Place() {
           </div>
           <div>
               <Rating/>
-            <button onClick={booking}>Book</button>
+            {/* <button onClick={booking}>Book</button> */}
+            <Button variant="primary" onClick={booking}>
+            Book
+            </Button>
             {!added ? (
               <AiOutlineHeart
                 className="icon-heart"
