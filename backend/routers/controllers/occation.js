@@ -11,7 +11,7 @@ const CreateNewOccation = (req, res) => {
 };
 
 const DeleteFromOccasions = (req,res) =>{
-const place_id=req.body;
+const place_id=req.body.place_id;
 const query =`DELETE FROM occasions WHERE place_id =?`;
 connection.query(query,place_id,(err,result) => {
 

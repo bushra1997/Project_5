@@ -59,8 +59,10 @@ export default function EditPlace() {
   };
   const Delete = (e) => {
     e.preventDefault();
-    
-    axios
+    axios.post(`http://localhost:5000/occassion/delete$`,{placeid:number})
+    .then((result)=>{
+
+      axios
       .delete(`http://localhost:5000/places/${number}`, {
         name,
         description,
@@ -71,11 +73,15 @@ export default function EditPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(result.data);
+        
       })
       .catch((err) => {
-        console.log(err);
       });
+    })
+    .catch((err)=>{
+
+    })
+    
   };
   const home = () =>{
     history.push("/dashboard")

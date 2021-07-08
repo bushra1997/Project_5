@@ -32,7 +32,7 @@ app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
 app.use(placeRouter);
-app.use("/occation", occationRouter);
+app.use("/occassion", occationRouter);
 app.use("/search",searchRouter);
 
 //app routers
