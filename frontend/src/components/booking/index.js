@@ -111,7 +111,7 @@ const Booking = () => {
 
               <Form.Control
                 type="text"
-                placeholder="your phone number here"
+                placeholder="Your Phone Number Here"
                 onChange={(e) => {
                   setPhoneNumber(e.target.value);
                 }}
@@ -119,7 +119,7 @@ const Booking = () => {
             </Form.Group>
 
             <Button variant="primary" onClick={booked}>
-              confirmation
+              Confirmation
             </Button>
           </Form>
         </div>
