@@ -9,6 +9,19 @@ const CreateNewOccation = (req, res) => {
     res.json(result);
   });
 };
+
+const DeleteFromOccasions = (req,res) =>{
+const place_id=req.body;
+const query =`DELETE FROM occasions WHERE place_id =?`;
+connection.query(query,place_id,(err,result) => {
+
+  if(err) throw err;
+  res.json(result)
+});
+
+
+};
 module.exports = {
   CreateNewOccation,
+  DeleteFromOccasions,
 };

@@ -59,6 +59,7 @@ export default function EditPlace() {
   };
   const Delete = (e) => {
     e.preventDefault();
+    
     axios
       .delete(`http://localhost:5000/places/${number}`, {
         name,
@@ -132,6 +133,7 @@ export default function EditPlace() {
                 setImg(e.target.value);
               }}
             />
+            <img src={img} style={{width:"220px",height:"100px",borderRadius:"10px",marginTop:"20px"}}></img>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
