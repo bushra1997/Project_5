@@ -102,7 +102,7 @@ export default function Place() {
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="image">
-            <img style={{ width: "80%" }} src={image} />
+            <img style={{ borderRadius: "10px" }} src={image} />
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
@@ -113,34 +113,8 @@ export default function Place() {
               <li class="list-group-item">Capacity: {capasity}</li>
               <li class="list-group-item">City: {city}</li>
               <li class="list-group-item">Address: {address}</li>
-              
             </ul>
           </div>
-          <div>
-              <Rating/>
-            <button onClick={booking}>Book</button>
-            {!added ? (
-              <AiOutlineHeart
-                className="icon-heart"
-                icon="heart"
-                id="add-favorite"
-                size={40}
-                color="red"
-                
-                en    
-                onClick={addToFavorite}
-              />
-            ) : (
-              <AiFillHeart
-                icon="heart"
-                id="delete-fav"
-                size={40}
-                color="red"
-                en
-                onClick={deleteFavorite}
-              />
-            )}
-            </div>
         </div>
       </div>
     </div>
