@@ -113,7 +113,7 @@ export default function Place() {
               <li class="list-group-item"><i class="fas fa-users"></i> {capasity}</li>
               <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
             </ul>
-            <div className = "center">
+            <div className = "rating-fav">
         <Rating />
         {!added ? (
             <AiOutlineHeart
@@ -121,7 +121,7 @@ export default function Place() {
               icon="heart"
               id="add-favorite"
               size={40}
-              color="red"
+              color="#cf6262"
               en
               onClick={addToFavorite}
             />

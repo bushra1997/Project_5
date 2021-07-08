@@ -14,3 +14,9 @@
 .list-group-item {
     padding: 8px;
 }
+.rating-fav{
+        display: flex;
+        gap: 211px;
+        margin-right: 13px;
+    
+}
