@@ -8,6 +8,8 @@ import {
   FormControl,
   ControlLabel,
 } from "react-bootstrap";
+// import Popup from "./popup"
+import Popup from "./popup"
 import "./dashboard.css";
 export default function EditPlace() {
   const [number, setNumber] = useState("");
@@ -18,6 +20,7 @@ export default function EditPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
+  const [popup, setPopup] = useState(false)
   const history = useHistory()
   const search = (e) => {
     e.preventDefault();
@@ -57,27 +60,57 @@ export default function EditPlace() {
         console.log(err);
       });
   };
+
+  const Occasions = () =>{
+    
+    axios.delete(`http://localhost:5000/occasions/delete/ocassions/${number}`)
+    .then((res)=>{
+      console.log(res.data);
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
+  }
+
+  const favorite = () =>{
+    axios.delete(`http://localhost:5000/occasions/delete/favorite/${number}`)
+    .then((res)=>{
+      console.log(res.data);
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
+  }
+
+  const rating = () =>{
+    axios.delete(`http://localhost:5000/occasions/delete/rating/${number}`)
+    .then((res)=>{
+      console.log(res.data);
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
+  }
+
+
+  const deleteAll=(e)=>{
+    e.preventDefault();
+    Occasions();
+    setTimeout(favorite,100)
+    setTimeout(rating,200)
+
+  }
+
   const Delete = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:5000/occassion/delete$`,{placeid:number})
-    .then((result)=>{
-
+    setPopup(true);
+    
       axios
-      .delete(`http://localhost:5000/places/${number}`, {
-        name,
-        description,
-        img,
-        city,
-        address,
-        availability,
-        capacity,
-      })
+      .delete(`http://localhost:5000/places/${number}`)
       .then((result) => {
-        
       })
-      .catch((err) => {
-      });
-    })
+     
+    
     .catch((err)=>{
 
     })
@@ -103,6 +136,9 @@ export default function EditPlace() {
           </Form.Group>
           <Button variant="primary" type="submit">
             Find
+          </Button>
+          <Button variant="primary" type="submit" onClick={deleteAll}>
+            continue
           </Button>
         </Form>
       </div>
@@ -197,6 +233,8 @@ export default function EditPlace() {
           </div>
         </Form>
       </div>
+
+      {popup?<Popup/>:null}
 
     </div>
   );

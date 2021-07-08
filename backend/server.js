@@ -32,9 +32,8 @@ app.use("/user", userRouter);
 app.use("/rating", ratingRouter);
 app.use("/login", loginRouter);
 app.use(placeRouter);
-app.use("/occassion", occationRouter);
+app.use("/occasions", occationRouter);
 app.use("/search",searchRouter);
-
 //app routers
 
 const PORT = process.env.PORT || 5000;
