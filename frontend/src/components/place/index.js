@@ -99,7 +99,7 @@ export default function Place() {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row" style={{ padding: "2.5% 0%" }}>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="image">
             <img style={{ borderRadius: "10px" }} src={image} />
