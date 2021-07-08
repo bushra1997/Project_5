@@ -1,0 +1,12 @@
+.fromBook{
+    margin-top: 4rem;
+    width: 27%;
+    height: 341px;
+    padding-top: 61px;
+    margin: auto;
+    margin-top: -23px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
