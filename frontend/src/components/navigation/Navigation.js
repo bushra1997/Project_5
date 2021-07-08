@@ -80,7 +80,7 @@ const Navigation = () => {
               </div>
             </li>
             <li class="nav-item">
-              <Link exact to="/" className="nav-link">
+              <Link exact to="/about" className="nav-link">
                 About us
               </Link>
             </li>
