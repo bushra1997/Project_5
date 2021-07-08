@@ -113,8 +113,8 @@ export default function Place() {
               <li class="list-group-item"><i class="fas fa-users"></i> {capasity}</li>
               <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
             </ul>
+            <div className = "center">
         <Rating />
-        <button className="btn" onClick={booking}>Book</button>
         {!added ? (
             <AiOutlineHeart
               className="icon-heart"
@@ -135,6 +135,8 @@ export default function Place() {
               onClick={deleteFavorite}
             />
           )} 
+          </div>
+          <button className="btn" onClick={booking}>Book</button>
           </div>
         </div>
       </div>
