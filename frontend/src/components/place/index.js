@@ -113,9 +113,12 @@ export default function Place() {
               <li class="list-group-item"><i class="fas fa-users"></i> {capasity}</li>
               <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
             </ul>
+        <Rating />
+        <button onClick={booking}>Book</button>
           </div>
         </div>
       </div>
     </div>
+    
   );
 }
