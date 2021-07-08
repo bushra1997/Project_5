@@ -87,7 +87,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Enter Number</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder="Input Number Id"
               onChange={(e) => {
                 setNumber(e.target.value);
@@ -104,7 +104,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Name</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -126,7 +126,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Img</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={img}
               onChange={(e) => {
                 setImg(e.target.value);
@@ -137,7 +137,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">City</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -148,7 +148,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Address</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={address}
               onChange={(e) => {
                 setAddress(e.target.value);
@@ -158,7 +158,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Availability</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={availability}
               onChange={(e) => {
                 setAvailability(e.target.value);
@@ -169,7 +169,7 @@ export default function EditPlace() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="name_label">Capacity</Form.Label>
             <Form.Control
-              as="text"
+              as="input"
               placeholder={capacity}
               onChange={(e) => {
                 setCapacity(e.target.value);
