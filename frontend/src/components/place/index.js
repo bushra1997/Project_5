@@ -125,9 +125,11 @@ export default function Place() {
           </div>
           <div>
               <Rating/>
-            <Button variant="primary" onClick={booking}>
+              <div className="bookButton">
+            <Button  variant="primary" onClick={booking} >
             Book
             </Button>
+            </div>
             {!added ? (
               <AiOutlineHeart
                 className="icon-heart"
