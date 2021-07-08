@@ -125,7 +125,6 @@ export default function Place() {
           </div>
           <div>
               <Rating/>
-            {/* <button onClick={booking}>Book</button> */}
             <Button variant="primary" onClick={booking}>
             Book
             </Button>
