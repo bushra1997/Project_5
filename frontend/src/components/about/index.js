@@ -5,7 +5,12 @@ import "./about.css";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 const About = () => {
-  return <div>abouur</div>;
+  return <div className="container">
+    <div>
+      <img src="https://www.arabiaweddings.com/sites/default/files/styles/400x400/public/companies/images/2017/09/al_hamra_palace_halls.jpg?itok=xcRw9e3N"></img>
+    </div>
+    
+  </div>
 };
 
 export default About;
