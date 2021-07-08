@@ -1,11 +1,10 @@
 .image {
     width: 100%;
-    margin-top: 19px;
+    margin-top: 30px;
     display: flex;
-    height: 90%;
+    height: 65%;
     vertical-align: top;
 }
 .list-group{
-    vertical-align: top;
-      
+    vertical-align: top;  
 }
