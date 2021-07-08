@@ -18,3 +18,8 @@ img.imgAbout {
     padding-left: 21%;
     margin-top: 4%;
 }
+img.rounded.mx-auto.d-block {
+    width: 40%;
+    
+    margin-top: 3%;
+}
