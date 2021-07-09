@@ -21,6 +21,8 @@ export default function AddPlace() {
   const history = useHistory();
   const [popup2, setPopup2] = useState(false);
   const [smShow, setSmShow] = useState(false);
+  const [place_id, setPlace_id] = useState("");
+  const [type, setType] = useState("");
 
   const newPlace = (e) => {
     e.preventDefault();
@@ -38,6 +40,7 @@ export default function AddPlace() {
         console.log(result.data);
         setPopup2(true);
         setSmShow(true);
+        setPlace_id(result.data.insertId)
       })
       .catch((err) => {
         console.log(err.message);
@@ -52,8 +55,39 @@ export default function AddPlace() {
   const home = () => {
     history.push("/dashboard");
   };
+ 
   return (
     <>
+    <div className="add-forms-container">
+      <div className="formAddPlace">
+      <Form onSubmit={newPlace}>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label className="name_label">Place id</Form.Label>
+            <Form.Control
+              as="input"
+              placeholder="PLace Name Here"
+              value={place_id}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label className="name_label">Occasion Type</Form.Label>
+            <Form.Control
+              as="input"
+              placeholder="Description Here"
+              onChange={(e) => {
+                setType(e.target.value);
+              }}
+            />
+          </Form.Group>
+          <div className="click">
+          <Button variant="primary"  onClick={addOccasions}>
+            Add
+          </Button>
+        </div>
+        </Form>
+      </div>
+      {/* ///////////////////////////////////////////////////////////////////////////////// */}
       <div className="formAddPlace">
         <Form onSubmit={newPlace}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -136,9 +170,6 @@ export default function AddPlace() {
           <Button variant="primary"  onClick={newPlace}>
             Submit
           </Button>
-          <Button variant="primary"  onClick={addOccasions}>
-            Add
-          </Button>
           <Button variant="primary" onClick={home}>
             Home
           </Button>
@@ -159,6 +190,7 @@ export default function AddPlace() {
         <Modal.Body>{`Place  has been Added Succssfully`}</Modal.Body>
         </Modal>
       ):(null)}
+      </div>
     </>
   );
 }
