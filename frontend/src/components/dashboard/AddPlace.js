@@ -22,7 +22,7 @@ export default function AddPlace() {
   const [popup2, setPopup2] = useState(false);
   const [smShow, setSmShow] = useState(false);
   const [place_id, setPlace_id] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("birthDayParty");
 
   const newPlace = (e) => {
     e.preventDefault();
@@ -49,6 +49,13 @@ export default function AddPlace() {
 
   const addOccasions = (e) => {
     e.preventDefault();
+    axios.post("http://localhost:5000/occasions",{place_id,type})
+    .then((result)=>{
+      console.log(result);
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
   };
 
   const home = () => {
@@ -73,7 +80,7 @@ export default function AddPlace() {
               <Form.Label className="name_label">Place id</Form.Label>
               <Form.Control
                 as="input"
-                placeholder="PLace Name Here"
+                placeholder="PLace ID Here"
                 value={place_id}
               />
             </Form.Group>
