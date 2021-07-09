@@ -18,6 +18,9 @@ export default function AddPlace() {
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
   const history = useHistory();
+  const [popup2, setPopup2] = useState(false);
+  const [Smshow, setSmShow] = useState(false);
+
   const newPlace = (e) => {
     e.preventDefault();
     axios
@@ -31,8 +34,9 @@ export default function AddPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(name);
         console.log(result.data);
+        setPopup2(true);
+        setSmShow(true);
       })
       .catch((err) => {
         console.log(err.message);
@@ -132,6 +136,20 @@ export default function AddPlace() {
         </div>
         </Form>
       </div>
+      {popup?(<Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+      <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Place has been added
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{`Place  has been Added Succssfully`}</Modal.Body>
+        </Modal>
+      ):(null)}
     </>
   );
 }
