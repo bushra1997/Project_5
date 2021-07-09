@@ -1,7 +1,22 @@
-.image{
-width: 80%;
-margin-top: 80px;
+.image {
+    width: 100%;
+    margin-top: 11px;
+    display: flex;
+    height: 70%;
+    vertical-align: top;
 }
-.bookButton {
-    margin-right: 80%;
+.list-group{
+    vertical-align: top;  
+}
+.font-weight-bolder{
+    color: rgb(143, 23, 23);
+    font-size: 25px;
+}
+.list-group-item {
+    padding: 8px;
+}
+.rating-fav{
+        display: flex;
+        gap: 200px;
+        margin-right: 13px;
 }

@@ -106,22 +106,44 @@ export default function Place() {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row" style={{ padding: "2.5% 0%" }}>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="image">
-            <img style={{ width: "80%" }} src={image} />
+            <img style={{ borderRadius: "10px" }} src={image} />
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="container">
             <ul class="list-group">
-              <li class="list-group-item">Name: {name}</li>
-              <li class="list-group-item">Description:{description}</li>
-              <li class="list-group-item">Capacity: {capasity}</li>
-              <li class="list-group-item">City: {city}</li>
-              <li class="list-group-item">Address: {address}</li>
-              
+              <div className="font-weight-bolder"><li class="list-group-item"> {name}</li></div> 
+              <li class="list-group-item"><i class="fas fa-comment-alt"></i>{description}</li>
+              <li class="list-group-item"><i class="fas fa-users"></i> {capasity}</li>
+              <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
             </ul>
+            <div className = "rating-fav">
+        <Rating />
+        {!added ? (
+            <AiOutlineHeart
+              className="icon-heart"
+              icon="heart"
+              id="add-favorite"
+              size={40}
+              color="#cf6262"
+              en
+              onClick={addToFavorite}
+            />
+          ) : (
+            <AiFillHeart
+              icon="heart"
+              id="delete-fav"
+              size={40}
+              color="red"
+              en
+              onClick={deleteFavorite}
+            />
+          )} 
+          </div>
+          <button className="btn" onClick={booking}>Book</button>
           </div>
           <div>
               <Rating/>
@@ -155,5 +177,6 @@ export default function Place() {
         </div>
       </div>
     </div>
+    
   );
 }
