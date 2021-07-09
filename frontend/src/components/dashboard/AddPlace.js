@@ -42,31 +42,24 @@ export default function AddPlace() {
         setSmShow(true);
         setPlace_id(result.data.insertId);
       })
-      .catch((err) => {
-        console.log(err.message);
-      });
+      .catch((err) => {});
   };
 
   const addOccasions = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/occasions",{place_id,type})
-    .then((result)=>{
-      console.log(result);
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
+    axios
+      .post("http://localhost:5000/occasions", { place_id, type })
+      .then((result) => {})
+      .catch((err) => {});
   };
 
   const home = () => {
     history.push("/dashboard");
   };
-  const handleSelect = (e) =>{
-    
-    const {name, value} = e.target;
-    console.log('select option', name, value)
-    setType(value)
-  }
+  const handleSelect = (e) => {
+    const { name, value } = e.target;
+    setType(value);
+  };
 
   return (
     <>
@@ -85,7 +78,11 @@ export default function AddPlace() {
               />
             </Form.Group>
 
-            <select onChange={handleSelect} class="form-select" aria-label="Default select example">
+            <select
+              onChange={handleSelect}
+              class="form-select"
+              aria-label="Default select example"
+            >
               <option value="birthDayParty">Birth Day Party</option>
               <option value="weddings">Weddings</option>
               <option value="meeting">Meeting</option>
