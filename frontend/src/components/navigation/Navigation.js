@@ -80,7 +80,7 @@ const Navigation = () => {
               </div>
             </li>
             <li class="nav-item">
-              <Link exact to="/" className="nav-link">
+              <Link exact to="/about" className="nav-link">
                 About us
               </Link>
             </li>
@@ -121,13 +121,13 @@ const Navigation = () => {
                     style={{
                       borderBottom: "1px solid black",
                       justifyContent: "space-around",
-                      color:"white"
+                      color: "white",
                     }}
                   >
                     Signed in as
                     <br />
                     <span
-                      style={{ fontWeight: "bold",color:"white" }}
+                      style={{ fontWeight: "bold", color: "white" }}
                     >{`${token.user.firstName} ${token.user.lastName}`}</span>
                   </p>
                   <li class="nav-item">
@@ -136,25 +136,39 @@ const Navigation = () => {
                       exact
                       to="/login"
                       className="nav-link"
-                      style={{color:"#fff"}}
+                      style={{ color: "#fff" }}
                     >
                       Logout
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link exact to="/profile" className="nav-link" style={{color:"#fff"}}>
+                    <Link
+                      exact
+                      to="/profile"
+                      className="nav-link"
+                      style={{ color: "#fff" }}
+                    >
                       My Profile
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link exact to="/favorite" className="nav-link" style={{color:"#fff"}}>
+                    <Link
+                      exact
+                      to="/favorite"
+                      className="nav-link"
+                      style={{ color: "#fff" }}
+                    >
                       My favorite
                     </Link>
                   </li>
                 </div>
               </li>
             ) : (
-              <li class="nav-item" style={{ listStyle: "none" }} style={{color:"#fff"}}>
+              <li
+                class="nav-item"
+                style={{ listStyle: "none" }}
+                style={{ color: "#fff" }}
+              >
                 <Link exact to="/login" className="nav-link">
                   Login
                 </Link>

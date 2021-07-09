@@ -1,6 +1,6 @@
 import axios from "axios";
 import { React, useState } from "react";
-import { useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
   Form,
   Button,
@@ -8,6 +8,7 @@ import {
   FormControl,
   ControlLabel,
 } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
 import "./dashboard.css";
 export default function EditPlace() {
   const [number, setNumber] = useState("");
@@ -18,13 +19,16 @@ export default function EditPlace() {
   const [address, setAddress] = useState("");
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
-  const history = useHistory()
+  const [popup, setPopup] = useState(false);
+  const [popup1, setPopup1] = useState(false);
+  const [smShow, setSmShow] = useState(false);
+
+  const history = useHistory();
   const search = (e) => {
     e.preventDefault();
     axios
       .get(`http://localhost:5000/places/${number}`)
       .then((result) => {
-          console.log(result.data[0]);
         setName(result.data[0].name);
         setDescription(result.data[0].description);
         setImg(result.data[0].img);
@@ -33,9 +37,7 @@ export default function EditPlace() {
         setAvailability(result.data[0].availability);
         setCapacity(result.data[0].capacity);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   };
   const update = (e) => {
     e.preventDefault();
@@ -50,35 +52,65 @@ export default function EditPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(name);
         console.log(result.data);
+        setSmShow(true);
+        setPopup1(true);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   };
+
+  const Occasions = () => {
+    axios
+      .delete(`http://localhost:5000/occasions/delete/ocassions/${number}`)
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
+  const favorite = () => {
+    axios
+      .delete(`http://localhost:5000/occasions/delete/favorite/${number}`)
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
+  const rating = () => {
+    axios
+      .delete(`http://localhost:5000/occasions/delete/rating/${number}`)
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
+  const deleteAll = (e) => {
+    e.preventDefault();
+    Occasions();
+    setTimeout(favorite, 100);
+    setTimeout(rating, 200);
+  };
+
   const Delete = (e) => {
     e.preventDefault();
+
+    setSmShow(true);
+    setPopup(true);
     axios
-      .delete(`http://localhost:5000/places/${number}`, {
-        name,
-        description,
-        img,
-        city,
-        address,
-        availability,
-        capacity,
-      })
+      .delete(`http://localhost:5000/places/${number}`)
       .then((result) => {
         console.log(result.data);
+        setNumber("");
+        setName("");
+        setDescription("");
+        setImg("");
+        setCity("");
+        setAddress("");
+        setAvailability("");
+        setCapacity("");
       })
-      .catch((err) => {
-        console.log(err);
-      });
+
+      .catch((err) => {});
   };
-  const home = () =>{
-    history.push("/dashboard")
-  }
+  const home = () => {
+    history.push("/dashboard");
+  };
 
   return (
     <div className="main-div">
@@ -96,6 +128,9 @@ export default function EditPlace() {
           </Form.Group>
           <Button variant="primary" type="submit">
             Find
+          </Button>
+          <Button variant="primary" type="submit" onClick={deleteAll}>
+            continue
           </Button>
         </Form>
       </div>
@@ -132,6 +167,15 @@ export default function EditPlace() {
                 setImg(e.target.value);
               }}
             />
+            <img
+              src={img}
+              style={{
+                width: "220px",
+                height: "100px",
+                borderRadius: "10px",
+                marginTop: "20px",
+              }}
+            ></img>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -177,19 +221,50 @@ export default function EditPlace() {
             />
           </Form.Group>
           <div className="clickEdit">
-      <Button variant="primary" type="submit">
-        Update
-      </Button>
-      <Button variant="primary" onClick={Delete}>
-        Delete
-      </Button>
-      <Button variant="primary" onClick={home}>
-           Home
-          </Button>
+            <Button variant="primary" onClick={update}>
+              Update
+            </Button>
+            <Button variant="primary" onClick={Delete}>
+              Delete
+            </Button>
+            <Button variant="primary" onClick={home}>
+              Home
+            </Button>
           </div>
         </Form>
       </div>
 
+      {popup ? (
+        <Modal
+          size="sm"
+          show={smShow}
+          onHide={() => setSmShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+              Successfully Deleted
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{`Place with the ID of ${number} has been Delete Succssfully`}</Modal.Body>
+        </Modal>
+      ) : null}
+
+      {popup1 ? (
+        <Modal
+          size="sm"
+          show={smShow}
+          onHide={() => setSmShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+              Successfully Updated
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{`Place with the ID of ${number} has been Updated Succssfully`}</Modal.Body>
+        </Modal>
+      ) : null}
     </div>
   );
 }

@@ -33,9 +33,8 @@ const updatePlaceById = (req, res) => {
 
 const deletePlaceById = (req, res) => {
   const id = req.params.id;
-  const query = `DELETE FROM place 
-    WHERE id =${id} `;
-  connection.query(query, id, (err, result) => {
+  const query = `DELETE FROM place WHERE id =${id}`;
+  connection.query(query,(err, result) => {
     if (err) throw err;
     res.json(result);
   });

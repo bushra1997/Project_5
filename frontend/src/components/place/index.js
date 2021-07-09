@@ -8,6 +8,13 @@ import "./place.css";
 import Rating from "./Raiting";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
+import {
+  Form,
+  Button,
+  FormGroup,
+  FormControl,
+  ControlLabel,
+} from "react-bootstrap";
 export default function Place() {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -138,6 +145,35 @@ export default function Place() {
           </div>
           <button className="btn" onClick={booking}>Book</button>
           </div>
+          <div>
+              <Rating/>
+              <div className="bookButton">
+            <Button  variant="primary" onClick={booking} >
+            Book
+            </Button>
+            </div>
+            {!added ? (
+              <AiOutlineHeart
+                className="icon-heart"
+                icon="heart"
+                id="add-favorite"
+                size={40}
+                color="red"
+                
+                en    
+                onClick={addToFavorite}
+              />
+            ) : (
+              <AiFillHeart
+                icon="heart"
+                id="delete-fav"
+                size={40}
+                color="red"
+                en
+                onClick={deleteFavorite}
+              />
+            )}
+            </div>
         </div>
       </div>
     </div>
