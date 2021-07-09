@@ -9,7 +9,6 @@ import {
       ControlLabel,
     } from "react-bootstrap";
     import Modal from 'react-bootstrap/Modal'
-import Popup from "./popup"
 import "./dashboard.css";
 export default function EditPlace() {
   const [number, setNumber] = useState("");

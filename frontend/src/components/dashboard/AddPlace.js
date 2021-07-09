@@ -8,6 +8,7 @@ import {
   FormControl,
   ControlLabel,
 } from "react-bootstrap";
+import Modal from 'react-bootstrap/Modal'
 import "./dashboard.css";
 export default function AddPlace() {
   const [name, setName] = useState("");
@@ -19,7 +20,7 @@ export default function AddPlace() {
   const [capacity, setCapacity] = useState("");
   const history = useHistory();
   const [popup2, setPopup2] = useState(false);
-  const [Smshow, setSmShow] = useState(false);
+  const [smShow, setSmShow] = useState(false);
 
   const newPlace = (e) => {
     e.preventDefault();
@@ -42,6 +43,11 @@ export default function AddPlace() {
         console.log(err.message);
       });
   };
+
+  const addOccasions = (e) =>{
+    e.preventDefault();
+
+  }
 
   const home = () => {
     history.push("/dashboard");
@@ -130,13 +136,16 @@ export default function AddPlace() {
           <Button variant="primary"  onClick={newPlace}>
             Submit
           </Button>
+          <Button variant="primary"  onClick={addOccasions}>
+            Add
+          </Button>
           <Button variant="primary" onClick={home}>
             Home
           </Button>
         </div>
         </Form>
       </div>
-      {popup?(<Modal
+      {popup2?(<Modal
         size="sm"
         show={smShow}
         onHide={() => setSmShow(false)}
