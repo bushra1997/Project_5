@@ -19,6 +19,20 @@ export default function Dashboard() {
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
+  // useEffect(() => {
+    // check the local storge for the token
+    // if the token exist then 
+    // the user is logged in no need to show the login component
+    // ----------------
+    // profile
+    // get the token from the local storage 
+    // send get request to get user data
+    // set them in the state and render them.
+
+    // -------------------
+    // cards
+    // get the token from the local storage
+  // }, []) // on refresh component did mount
 
   return (
     <>

@@ -54,6 +54,12 @@ export default function AddPlace() {
   const home = () => {
     history.push("/dashboard");
   };
+  const handleSelect = (e) =>{
+    
+    const {name, value} = e.target;
+    console.log('select option', name, value)
+    setType(value)
+  }
 
   return (
     <>
@@ -72,7 +78,7 @@ export default function AddPlace() {
               />
             </Form.Group>
 
-            <select class="form-select" aria-label="Default select example">
+            <select onChange={handleSelect} class="form-select" aria-label="Default select example">
               <option value="birthDayParty">Birth Day Party</option>
               <option value="weddings">Weddings</option>
               <option value="meeting">Meeting</option>

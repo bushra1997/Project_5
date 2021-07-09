@@ -1,7 +1,7 @@
 import React, { useState, useEffect ,Component} from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ImgUpload from "./imgUpload";
 import profile from './profile.css'
 
@@ -14,6 +14,7 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [img, setImg] = useState("");
   const [userid, setUserid] = useState("");
+  const history = useHistory();
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -22,21 +23,18 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/places/${token.user.id}`)
-      .then((result) => {
-        if (result.status == 200) {
-          setFirstName(token.user.firstName);
-          setLastName(token.user.lastName);
-          setCountry(token.user.country);
-          setEmail(token.user.email);
-          setAge(token.user.age);
-          setUserid(token.user.id)
-        }
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    // let token2 = localStorage.getItem('token')
+    // if (token2){
+        // let userData = jwt.verify(token2, "1234");
+        setFirstName(token.user.firstName);
+        setLastName(token.user.lastName);
+        setCountry(token.user.country);
+        setEmail(token.user.email);
+        setAge(token.user.age);
+        setUserid(token.user.id)
+    // }else{
+    //     history.push('/')
+    // }
   }, []);
 
   const editProfile = () =>{
