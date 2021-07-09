@@ -21,6 +21,7 @@ export default function EditPlace() {
   const [availability, setAvailability] = useState("");
   const [capacity, setCapacity] = useState("");
   const [popup, setPopup] = useState(false)
+  const [popup1, setPopup1] = useState(false)
   const [smShow, setSmShow] = useState(false);
 
   const history = useHistory()
@@ -55,8 +56,9 @@ export default function EditPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(name);
         console.log(result.data);
+        setSmShow(true);
+        setPopup1(true)
       })
       .catch((err) => {
         console.log(err);
@@ -233,7 +235,7 @@ export default function EditPlace() {
             />
           </Form.Group>
           <div className="clickEdit">
-      <Button variant="primary" type="submit">
+      <Button variant="primary"  onClick={update}>
         Update
       </Button>
       <Button variant="primary" onClick={Delete}>
@@ -246,7 +248,7 @@ export default function EditPlace() {
         </Form>
       </div>
 
-      {popup?<Modal
+      {popup?(<Modal
         size="sm"
         show={smShow}
         onHide={() => setSmShow(false)}
@@ -259,7 +261,22 @@ export default function EditPlace() {
         </Modal.Header>
         <Modal.Body>{`Place with the ID of ${number} has been Delete Succssfully`}</Modal.Body>
         </Modal>
-      :null}
+      ):(null)}
+
+      {popup1?(<Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+      <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Successfully Updated
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{`Place with the ID of ${number} has been Updated Succssfully`}</Modal.Body>
+        </Modal>
+      ):(null)}
 
     </div>
   );
