@@ -51,9 +51,11 @@
   flex-direction: column;
   padding-bottom: 50px;
 }
+
 .clickEdit {
   margin: auto;
   display: flex;
   gap: 18%;
   margin-left: 9%;
 }
+
