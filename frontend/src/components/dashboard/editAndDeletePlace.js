@@ -106,10 +106,12 @@ export default function EditPlace() {
   const Delete = (e) => {
     e.preventDefault();
     
+    setSmShow(true);
+    setPopup(true)
     axios
     .delete(`http://localhost:5000/places/${number}`)
     .then((result) => {
-      setSmShow(true);
+      console.log(result.data);
           setNumber("")
           setName("")
           setDescription("")
@@ -244,7 +246,7 @@ export default function EditPlace() {
         </Form>
       </div>
 
-      {!popup?<Modal
+      {popup?<Modal
         size="sm"
         show={smShow}
         onHide={() => setSmShow(false)}
