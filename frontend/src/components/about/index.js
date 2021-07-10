@@ -20,7 +20,7 @@ const About = () => {
           <p className="paragraphAbout-center">We care about comfort, credibility and customer opinion</p>
           <li className="li_about">What we do ?</li>
           <p className="paragraphAbout-center">Facilitating the customer to find the right place according to his desire</p>
-          <li>How we do it ?</li>
+          <li className="li_about">How we do it ?</li>
           <p className="paragraphAbout-center">Through the link between the client and the places of events, they are linked through us through the user and communication with the owner of the place</p>
         </ul>
       </div>
