@@ -11,7 +11,9 @@
 }
 .dropdown-menu .dropdown-item {
   background-color: transparent;
+  color: white;
 }
+
 .dropdown-menu .dropdown-item:hover {
   background-color: #791515;
   color: black;
@@ -33,9 +35,10 @@
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #791515;
+  background-color: #DF5E5E;
   background-clip: padding-box;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: .25rem;
 }
+
 

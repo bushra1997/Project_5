@@ -122,7 +122,7 @@ const Navigation = () => {
                       borderBottom: "1px solid black",
                       justifyContent: "space-around",
                       color: "white",
-                    }}
+                    }} className="userData"
                   >
                     Signed in as
                     <br />
