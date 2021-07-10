@@ -1,5 +1,5 @@
 .nav-item .nav-link:hover {
-  color: #791515!important;
+  color: #791515 !important;
 }
 .dropdown-menu {
   /* margin-top: -10px; */
@@ -29,16 +29,26 @@
   display: none;
   float: left;
   min-width: 10rem;
-  padding: .5rem 0;
-  margin: .125rem 0 0;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #DF5E5E;
+  background-color: #df5e5e;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: .25rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
 }
-
-
+p.userData {
+  margin-left: 11px;
+}
+p.signed {
+  color: white;
+  margin-bottom: -24px;
+  margin-left: 3px;
+}
+a.nav-link {
+  color: #c73a3a;
+  margin-top: -17px;
+}

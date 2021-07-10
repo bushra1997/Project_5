@@ -124,12 +124,15 @@ const Navigation = () => {
                       color: "white",
                     }} className="userData"
                   >
+                    <p className="signed">
                     Signed in as
+                    </p>
                     <br />
                     <span
                       style={{ fontWeight: "bold", color: "white" }}
                     >{`${token.user.firstName} ${token.user.lastName}`}</span>
                   </p>
+                  <div className="user">
                   <li class="nav-item">
                     <Link
                       onClick={signOut}
@@ -161,6 +164,7 @@ const Navigation = () => {
                       My favorite
                     </Link>
                   </li>
+                  </div>
                 </div>
               </li>
             ) : (
