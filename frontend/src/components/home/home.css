@@ -2,17 +2,16 @@
   max-height: 70vh;
 }
 .carousel-item img {
-  margin: 5px;
   width: 100%;
 }
 .carousel .carousel-inner .drk::after {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 7px;
+  bottom: 7px;
+  left: 7px;
+  right: 7px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -22,7 +21,6 @@ section {
 .image {
   display: flex;
   justify-content: center;
-  
 }
 
 h1,
