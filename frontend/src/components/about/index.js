@@ -10,7 +10,7 @@ const About = () => {
       <div>
         <h1>About Us:</h1>
         <ul>
-          <li>What is occasion website ?</li>
+          <li className="li_about">What is occasion website ?</li>
           <p className="paragraphAbout-center">
             Our website distinguished by providing you with service and
             providing opportunities to get what you want from the luxury, to

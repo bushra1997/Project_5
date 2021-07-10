@@ -29,9 +29,8 @@ p.paragraphAbout-center {
   margin-left: 1%;
   margin-top: 12px;
 }
-
-.h1 {
-  font-style: italic;
-  margin-bottom: 0.5%;
-  margin-left: 2%;
+.li_about {
+  font-size: 16px;
+  font-weight: 700;
+  color: #cf6262;
 }
