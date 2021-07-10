@@ -1,5 +1,5 @@
 .carousel-inner {
-  max-height: 98vh;
+  max-height: 75vh;
 }
 .carousel-item img {
   margin: 5px;
@@ -13,7 +13,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: 
 }
 
 section {
