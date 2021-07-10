@@ -44,9 +44,6 @@ p {
   font-size: 35px;
   color: #cf6262;
 }
-::before{
-  color: #cf6262;
-}
 .btn {
   background-color: #cf6262;
   color: #fff;

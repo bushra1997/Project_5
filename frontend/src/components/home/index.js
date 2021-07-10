@@ -63,7 +63,6 @@ export default function Index() {
               alt="..."
               style={{ height: "70vh" }}
             />
-            
           </div>
         </div>
         <a
@@ -109,10 +108,10 @@ export default function Index() {
               <ul className="list-group">
                 <li className="list-group-item">
                   <span className="fa-li">
-                    <i className="fas fa-user-plus"></i>
+                  <i class="fas fa-globe-americas"></i>
                   </span>
                   <div className="container">
-                    <h4>Turn more website visits into bookings</h4>
+                    <h4>Expand the base of places that you can reach</h4>
                     <p>
                       Your new calendar is so irresistible it turns your website
                       into a booking machine.
@@ -227,8 +226,8 @@ export default function Index() {
                 <div className="card-body">
                   <h5 className="card-title">Al Anoud International Halls</h5>
                   <p className="card-text">
-                  Amman
-Gardens - between Al Kalha Restaurant and Al Tazaj Restaurant
+                    Amman Gardens - between Al Kalha Restaurant and Al Tazaj
+                    Restaurant
                   </p>
                   <a
                     href="http://localhost:3000/places/birthDayParty/7"
