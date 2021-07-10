@@ -197,8 +197,7 @@ export default function Index() {
                 <div className="card-body">
                   <h5 className="card-title">Ugarit Hall</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  Sweileh - Princess Raya Bint Al Hussein Street.
                   </p>
                   <a href="#" className="btn">
                     Show more
