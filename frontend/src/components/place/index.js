@@ -8,13 +8,6 @@ import "./place.css";
 import Rating from "./Raiting";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
-import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-} from "react-bootstrap";
 export default function Place() {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -27,6 +20,7 @@ export default function Place() {
   const [user_id, setUser_id] = useState("");
   const [rating_id, setRating_id] = useState("2");
   const [added, setAdded] = useState(false);
+  const [found, setFound] = useState(false);
   const history = useHistory();
 
   const token = useSelector((state) => {
@@ -36,6 +30,11 @@ export default function Place() {
     };
   });
   useEffect(() => {
+    if(token.token){
+      setFound(true)
+    }else{
+      setFound(false)
+    }
     setUser_id(token.user.id);
     setPlace_id(id);
     axios
@@ -101,7 +100,13 @@ export default function Place() {
   };
 
   const booking = () => {
-    history.push(`/booking/${id}`);
+    if(found){
+
+      history.push(`/booking/${id}`);
+    }else{
+      history.push('/login')
+    }
+
   };
 
   return (
@@ -109,45 +114,61 @@ export default function Place() {
       <div className="row" style={{ padding: "2.5% 0%" }}>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="image">
-            <img style={{ borderRadius: "10px",width:"440px" }} src={image} alt="..." />
-            <Rating className="rating"/>
+            <img
+              style={{ borderRadius: "10px", width: "440px" }}
+              src={image}
+              alt="..."
+            />
+            {found?<Rating className="rating" />:null}
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="container">
             <ul class="list-group">
-              <div className="font-weight-bolder"><li class="list-group-item"> {name}</li></div> 
-              <li class="list-group-item"><i class="fas fa-comment-alt"></i>{description}</li>
-              <li class="list-group-item"><i class="fas fa-users"></i> {capasity}</li>
-              <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
+              <div className="font-weight-bolder">
+                <li class="list-group-item"> {name}</li>
+              </div>
+              <li class="list-group-item">
+                <i class="fas fa-comment-alt"></i>
+                {description}
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-users"></i> {capasity}
+              </li>
+              <li class="list-group-item">
+                {" "}
+                <i class="fas fa-map-pin"></i>
+                {address}
+              </li>
             </ul>
-            <div className = "rating-fav">
-        {!added ? (
-            <AiOutlineHeart
-              className="icon-heart"
-              icon="heart"
-              id="add-favorite"
-              size={40}
-              color="#cf6262"
-              en
-              onClick={addToFavorite}
-            />
-          ) : (
-            <AiFillHeart
-              icon="heart"
-              id="delete-fav"
-              size={40}
-              color="red"
-              en
-              onClick={deleteFavorite}
-            />
-          )} 
-          </div>
-          <button className="btn" onClick={booking}>Book</button>
+           {found? <div className="rating-fav">
+              {!added ? (
+                <AiOutlineHeart
+                  className="icon-heart"
+                  icon="heart"
+                  id="add-favorite"
+                  size={40}
+                  color="#cf6262"
+                  en
+                  onClick={addToFavorite}
+                />
+              ) : (
+                <AiFillHeart
+                  icon="heart"
+                  id="delete-fav"
+                  size={40}
+                  color="red"
+                  en
+                  onClick={deleteFavorite}
+                />
+              )}
+            </div>:null}
+            <button className="btn" onClick={booking}>
+              Book
+            </button>
           </div>
         </div>
       </div>
     </div>
-    
   );
 }
