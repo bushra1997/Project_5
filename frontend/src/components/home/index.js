@@ -177,9 +177,13 @@ export default function Index() {
                 <div className="card-body">
                   <h5 className="card-title">Al-Hussam Halls For Events</h5>
                   <p className="card-text">
-                  Al-Muqablain - Radio and Television Street - behind the wholesale markets.
+                    Al-Muqablain - Radio and Television Street - behind the
+                    wholesale markets.
                   </p>
-                  <a href="http://localhost:3000/places/weddings/2" className="btn">
+                  <a
+                    href="http://localhost:3000/places/weddings/2"
+                    className="btn"
+                  >
                     Show more
                   </a>
                 </div>
@@ -197,9 +201,12 @@ export default function Index() {
                 <div className="card-body">
                   <h5 className="card-title">Ugarit Hall</h5>
                   <p className="card-text">
-                  Sweileh - Princess Raya Bint Al Hussein Street.
+                    Sweileh - Princess Raya Bint Al Hussein Street.
                   </p>
-                  <a href="http://localhost:3000/places/meeting/6" className="btn">
+                  <a
+                    href="http://localhost:3000/places/meeting/6"
+                    className="btn"
+                  >
                     Show more
                   </a>
                 </div>
@@ -217,12 +224,15 @@ export default function Index() {
                 </div>
 
                 <div className="card-body">
-                  <h5 className="card-title">
-Al Anoud International Halls</h5>
+                  <h5 className="card-title">Al Anoud International Halls</h5>
                   <p className="card-text">
-                  Jordan - Irbid - Al-Yasmeen suburb.
+                  Amman
+Gardens - between Al Kalha Restaurant and Al Tazaj Restaurant
                   </p>
-                  <a href="http://localhost:3000/places/birthDayParty/7" className="btn">
+                  <a
+                    href="http://localhost:3000/places/birthDayParty/7"
+                    className="btn"
+                  >
                     Show more
                   </a>
                 </div>
