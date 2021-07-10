@@ -222,7 +222,7 @@ Al Anoud International Halls</h5>
                   <p className="card-text">
                   Jordan - Irbid - Al-Yasmeen suburb.
                   </p>
-                  <a href="#" className="btn">
+                  <a href="http://localhost:3000/places/birthDayParty/7" className="btn">
                     Show more
                   </a>
                 </div>
