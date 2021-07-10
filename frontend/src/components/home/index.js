@@ -179,7 +179,7 @@ export default function Index() {
                   <p className="card-text">
                   Al-Muqablain - Radio and Television Street - behind the wholesale markets.
                   </p>
-                  <a href="#" className="btn">
+                  <a href="http://localhost:3000/places/weddings/2" className="btn">
                     Show more
                   </a>
                 </div>
@@ -195,7 +195,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
+                  <h5 className="card-title">Ugarit Hall</h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
