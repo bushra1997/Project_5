@@ -189,7 +189,7 @@ export default function Index() {
               <div className="card">
                 <div>
                   <img
-                    src="https://s7d2.scene7.com/is/image/ritzcarlton/rcs_johnringling_rm_v1?$XlargeViewport100pct$"
+                    src="https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     class="card-img-top"
                     alt=""
                   />
