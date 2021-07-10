@@ -108,13 +108,12 @@ export default function Index() {
               <ul className="list-group">
                 <li className="list-group-item">
                   <span className="fa-li">
-                  <i class="fas fa-globe-americas"></i>
+                  <i className="fas fa-globe-americas"></i>
                   </span>
                   <div className="container">
                     <h4>Expand the base of places that you can reach</h4>
                     <p>
-                      Your new calendar is so irresistible it turns your website
-                      into a booking machine.
+                    Your way to reach a lot of places that you were unable to see easily, by using our app it becomes possible.
                     </p>
                   </div>
                 </li>
