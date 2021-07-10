@@ -17,7 +17,7 @@ const About = () => {
             provide is through inclusive activities and services.
           </p>
           <li>What matters to we ?</li>
-          <p>We care about comfort, credibility and customer opinion</p>
+          <p className="paragraphAbout-center">We care about comfort, credibility and customer opinion</p>
           <li>What we do ?</li>
           <p>Facilitating the customer to find the right place according to his desire</p>
           <li>How we do it ?</li>
