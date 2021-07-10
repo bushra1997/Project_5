@@ -177,7 +177,7 @@ export default function Index() {
                 <div className="card-body">
                   <h5 className="card-title">Al-Hussam Halls For Events</h5>
                   <p className="card-text">
-                  Jordan - Amman - Al-Hurriya Street.
+                  Al-Muqablain - Radio and Television Street - behind the wholesale markets.
                   </p>
                   <a href="#" className="btn">
                     Show more
