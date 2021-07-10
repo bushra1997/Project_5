@@ -137,8 +137,7 @@ export default function Index() {
                     Direct connection with places owners.
                     </h4>
                     <p>
-                      Automated emails and other marketing tools make customers
-                      come back for more without you having to lift a finger.
+                    You will get direct access to our places owners database, for more info and details.
                     </p>
                   </div>
                 </li>
@@ -147,10 +146,9 @@ export default function Index() {
                     <i className="fas fa-clock"></i>
                   </span>
                   <div className="container">
-                    <h4>Cut down your time spent on admin</h4>
+                    <h4>Cut down your time spent on physical searching.</h4>
                     <p>
-                      Spend less time on the phone or with clunky tools and more
-                      time with your growing customer base.
+                    Spend less time searching for a place for your occasions, stop doing it like old school, Find all you need in one place.
                     </p>
                   </div>
                 </li>
