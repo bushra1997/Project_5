@@ -32,16 +32,16 @@ const About = () => {
 
         </div>
         <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Alaa saleh</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Noof mohammed</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Asma Alenazi</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Bushra </span>
       </div>
       </div>
       </div>
