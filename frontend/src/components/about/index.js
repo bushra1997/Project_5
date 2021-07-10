@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="container">
       <div>
-        <h1> An About Us:</h1>
+        <h1>About Us:</h1>
         <ul>
           <li>What is occasion website ?</li>
           <p className="paragraphAbout-center">
