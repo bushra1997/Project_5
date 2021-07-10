@@ -26,15 +26,14 @@ const About = () => {
         </ul>
       </div>
       <div className="ourTeam">
-        <h2>Our team</h2>
+        {/* <h2>Our team</h2> */}
         <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
 
         </div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+        <div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      </div>
       </div>
       </div>
     </div>
