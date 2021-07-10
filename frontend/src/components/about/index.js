@@ -34,6 +34,15 @@ const About = () => {
         <div>
       <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
       </div>
+      <div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      </div>
+      <div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      </div>
+      <div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      </div>
       </div>
       </div>
     </div>
