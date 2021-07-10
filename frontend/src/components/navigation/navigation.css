@@ -1,4 +1,5 @@
 .nav-item .nav-link:hover {
+  background-color: #d49a9a;
   color: #791515 !important;
 }
 .dropdown-menu {
@@ -15,8 +16,8 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: #791515;
-  color: black;
+  background-color: #d49a9a;
+  color: #791515;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -40,6 +41,7 @@
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+  
 }
 p.userData {
   margin-left: 11px;
