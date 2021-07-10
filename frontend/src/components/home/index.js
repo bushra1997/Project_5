@@ -199,7 +199,7 @@ export default function Index() {
                   <p className="card-text">
                   Sweileh - Princess Raya Bint Al Hussein Street.
                   </p>
-                  <a href="#" className="btn">
+                  <a href="http://localhost:3000/places/meeting/6" className="btn">
                     Show more
                   </a>
                 </div>
