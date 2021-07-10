@@ -169,16 +169,15 @@ export default function Index() {
               <div className="card">
                 <div>
                   <img
-                    src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="https://images.pexels.com/photos/57980/pexels-photo-57980.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     class="card-img-top"
                     alt=""
                   />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Venice Halls For Celebrations</h5>
+                  <h5 className="card-title">Al-Hussam Halls For Events</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  Jordan - Amman - Al-Hurriya Street.
                   </p>
                   <a href="#" className="btn">
                     Show more
