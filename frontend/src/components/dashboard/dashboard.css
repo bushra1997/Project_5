@@ -16,6 +16,7 @@
   justify-content: space-between;
   flex-direction: column;
   padding-bottom: 50px;
+  background-color: #FAE9BB;
 }
 .formAddPlace {
   margin-top: 4rem;
@@ -55,7 +56,10 @@
 .clickEdit {
   margin: auto;
   display: flex;
-  gap: 18%;
-  margin-left: 9%;
+  gap: 0%;
+  margin-left: 6px;
+}
+.modify {
+  display: flex;
 }
 

@@ -7,6 +7,7 @@ import { setOut } from "../../reducers/login/index";
 
 const Navigation = () => {
   const dispatch = useDispatch();
+  const [role, setRole] = useState(false);
   const token = useSelector((state) => {
     return {
       token: state.token.token,
