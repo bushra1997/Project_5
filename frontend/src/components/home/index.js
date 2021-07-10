@@ -111,7 +111,7 @@ export default function Index() {
                   <i className="fas fa-globe-americas"></i>
                   </span>
                   <div className="container">
-                    <h4>Expand the base of places that you can reach</h4>
+                    <h4>Expand the base of places that you can reach.</h4>
                     <p>
                     Your way to reach a lot of places that you were unable to see easily, by using our app it becomes possible.
                     </p>
@@ -119,23 +119,22 @@ export default function Index() {
                 </li>
                 <li className="list-group-item">
                   <span className="fa-li">
-                    <i className="fas fa-wallet"></i>
+                  <i className="fas fa-hand-holding-usd"></i>
                   </span>
                   <div className="container">
-                    <h4>Get bookings directly from Facebook and Google</h4>
+                    <h4>Take a tour while you are at home.</h4>
                     <p>
-                      Your events automatically show up on Facebook and Google
-                      so even more customers can find you.
+                    Get access to more than 200 places with different occasions around the world, with the best prices and match your needs.
                     </p>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <span className="fa-li">
-                    <i className="fas fa-mail-bulk"></i>
+                  <i className="fas fa-users"></i>
                   </span>
                   <div className="container">
                     <h4>
-                      Drive more repeat bookings with built-in marketing tools
+                    Direct connection with places owners.
                     </h4>
                     <p>
                       Automated emails and other marketing tools make customers
