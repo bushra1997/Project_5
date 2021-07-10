@@ -98,10 +98,9 @@ export default function Index() {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="image">
                 <img
-                  style={{ width: "80%" }}
+                  style={{ width: "80%", borderRadius: "8px" }}
                   src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt=""
-                  style={{ borderRadius: "8px" }}
                 />
               </div>
             </div>
@@ -176,7 +175,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
+                  <h5 className="card-title">Venice Halls For Celebrations</h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
