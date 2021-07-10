@@ -20,63 +20,63 @@ export default function Index() {
     <>
       <div
         id="carouselExampleFade"
-        class="carousel slide carousel-fade"
+        className="carousel slide carousel-fade"
         data-ride="carousel"
       >
-        <div class="carousel-inner">
-          <div class="carousel-item active drk">
+        <div className="carousel-inner">
+          <div className="carousel-item active drk">
             <img
               src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
             />
           </div>
-          <div class="carousel-item drk">
+          <div className="carousel-item drk">
             <img
               src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block"
+              className="d-block"
               alt="..."
             />
           </div>
-          <div class="carousel-item drk">
+          <div className="carousel-item drk">
             <img
               src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block"
+              className="d-block"
               alt="..."
             />
           </div>
-          <div class="carousel-item drk">
+          <div className="carousel-item drk">
             <img
               src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block"
+              className="d-block"
               alt="..."
             />
           </div>
-          <div class="carousel-item drk">
+          <div className="carousel-item drk">
             <img
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block"
+              className="d-block"
               alt="..."
             />
           </div>
         </div>
         <a
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           href="#carouselExampleFade"
           role="button"
           data-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
         </a>
         <a
-          class="carousel-control-next"
+          className="carousel-control-next"
           href="#carouselExampleFade"
           role="button"
           data-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
         </a>
       </div>
 
@@ -88,15 +88,15 @@ export default function Index() {
               <div className="image">
                 <img
                   style={{ width: "80%" }}
-                  src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""
                 />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12">
-              <ul class="list-group">
-                <li class="list-group-item">
+              <ul className="list-group">
+                <li className="list-group-item">
                   <span className="fa-li">
-                    <i class="fas fa-user-plus"></i>
+                    <i className="fas fa-user-plus"></i>
                   </span>
                   <div className="container">
                     <h4>Turn more website visits into bookings</h4>
@@ -106,9 +106,9 @@ export default function Index() {
                     </p>
                   </div>
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <span className="fa-li">
-                    <i class="fas fa-wallet"></i>
+                    <i className="fas fa-wallet"></i>
                   </span>
                   <div className="container">
                     <h4>Get bookings directly from Facebook and Google</h4>
@@ -118,9 +118,9 @@ export default function Index() {
                     </p>
                   </div>
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <span className="fa-li">
-                    <i class="fas fa-mail-bulk"></i>
+                    <i className="fas fa-mail-bulk"></i>
                   </span>
                   <div className="container">
                     <h4>
@@ -132,9 +132,9 @@ export default function Index() {
                     </p>
                   </div>
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <span className="fa-li">
-                    <i class="fas fa-clock"></i>
+                    <i className="fas fa-clock"></i>
                   </span>
                   <div className="container">
                     <h4>Cut down your time spent on admin</h4>
@@ -154,57 +154,57 @@ export default function Index() {
           <h1 className="text-center">Highlights</h1>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
-              <div class="card">
+              <div className="card">
                 <div>
                   <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn">
+                  <a href="#" className="btn">
                     Show more
                   </a>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
-              <div class="card">
+              <div className="card">
                 <div>
                   <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn">
+                  <a href="#" className="btn">
                     Show more
                   </a>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
-              <div class="card">
+              <div className="card">
                 <div>
                   {" "}
                   <img
                     src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    class="card-img-top"
+                    className="card-img-top"
                     alt=""
                   />
                 </div>
 
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn">
+                  <a href="#" className="btn">
                     Show more
                   </a>
                 </div>
@@ -217,23 +217,23 @@ export default function Index() {
         <div className="container">
           <h1>Companies that trust Occasion to attract more bookings</h1>
           <div className="row">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div className="swiper-container">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
                   <img
                     src="https://www.getoccasion.com/wp-content/uploads/2019/10/bees-small.png"
                     alt=""
                     width="120px"
                   />
                 </div>
-                <div class="swiper-slide">
+                <div className="swiper-slide">
                   <img
                     src="https://www.getoccasion.com/wp-content/uploads/2019/10/chop-small.png"
                     alt=""
                     width="130px"
                   />
                 </div>
-                <div class="swiper-slide">
+                <div className="swiper-slide">
                   <img
                     src="https://www.getoccasion.com/wp-content/uploads/2019/10/jump-small.png"
                     alt=""

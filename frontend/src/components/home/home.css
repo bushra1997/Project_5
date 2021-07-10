@@ -2,6 +2,7 @@
   max-height: 98vh;
 }
 .carousel-item img {
+  margin: 5px;
   width: 100%;
 }
 .carousel .carousel-inner .drk::after {
