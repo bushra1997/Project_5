@@ -61,7 +61,7 @@ const Navigation = () => {
               >
                 Occasions
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style={{borderRadius: "px"}}>
                 <Link to="/weddings" className="dropdown-item">
                   Wedding
                 </Link>
@@ -119,7 +119,7 @@ const Navigation = () => {
                 >
                   <p
                     style={{
-                      borderBottom: "1px solid black",
+                      borderBottom: "1px solid ",
                       justifyContent: "space-around",
                       color: "white",
                     }} className="userData"
@@ -132,7 +132,6 @@ const Navigation = () => {
                       style={{ fontWeight: "bold", color: "white" }}
                     >{`${token.user.firstName} ${token.user.lastName}`}</span>
                   </p>
-                  <div className="user">
                   <li class="nav-item">
                     <Link
                       onClick={signOut}
@@ -164,7 +163,6 @@ const Navigation = () => {
                       My favorite
                     </Link>
                   </li>
-                  </div>
                 </div>
               </li>
             ) : (

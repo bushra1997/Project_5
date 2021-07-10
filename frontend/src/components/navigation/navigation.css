@@ -21,6 +21,7 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -35,7 +36,7 @@
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #df5e5e;
+  background-color: #e07d7d;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -46,9 +47,11 @@ p.userData {
 p.signed {
   color: white;
   margin-bottom: -24px;
-  margin-left: 3px;
+  margin-left: 4px;
 }
 a.nav-link {
   color: #c73a3a;
   margin-top: -17px;
+  
 }
+/* #df5e5e */
