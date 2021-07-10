@@ -19,7 +19,7 @@ export default function Dashboard() {
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
-  
+
   return (
     <>
       <div className="dMain">

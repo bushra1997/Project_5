@@ -24,7 +24,6 @@ export default function AddPlace() {
   const [place_id, setPlace_id] = useState("");
   const [type, setType] = useState("birthDayParty");
   const [disabledev, setDisabledev] = useState(true);
-  const [valueInput, setValueInput] = useState("");
 
   const newPlace = (e) => {
     setName("");
