@@ -30,3 +30,13 @@ p.paragraphAbout-center {
   font-weight: 700;
   color: #cf6262;
 }
+
+.aboutUs{
+  display: flex;
+  flex-direction: row;
+}
+.ourTeam{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}

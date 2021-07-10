@@ -7,8 +7,9 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 const About = () => {
   return (
     <div className="container">
-      <div>
-        <h1>About Us:</h1>
+      <div className="aboutUs">
+      <div className="div_about">
+        <h2>About Us:</h2>
         <ul>
           <li className="li_about">What is occasion website ?</li>
           <p className="paragraphAbout-center">
@@ -23,6 +24,18 @@ const About = () => {
           <li className="li_about">How we do it ?</li>
           <p className="paragraphAbout-center">Through the link between the client and the places of events, they are linked through us through the user and communication with the owner of the place</p>
         </ul>
+      </div>
+      <div className="ourTeam">
+        <h2>Our team</h2>
+        <div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+
+        </div>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"50%"}}></img><span>Jadallah Zaitoon</span>
+      </div>
       </div>
     </div>
   );
