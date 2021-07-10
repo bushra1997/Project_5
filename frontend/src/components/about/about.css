@@ -46,5 +46,6 @@ p.paragraphAbout-center {
   width: 50%;
   display: flex;
   flex-direction: row;
-  gap: 10%;
+  gap: 6%;
+  margin-top: 5%;
 }
