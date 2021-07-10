@@ -41,7 +41,6 @@
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  
 }
 p.userData {
   margin-left: 11px;
@@ -54,6 +53,5 @@ p.signed {
 a.nav-link {
   color: #c73a3a;
   margin-top: -17px;
-  
 }
 /* #df5e5e */
