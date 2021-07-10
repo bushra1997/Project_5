@@ -220,7 +220,7 @@ export default function Index() {
                   <h5 className="card-title">
 Al Anoud International Halls</h5>
                   <p className="card-text">
-                    
+                  Jordan - Irbid - Al-Yasmeen suburb.
                   </p>
                   <a href="#" className="btn">
                     Show more
