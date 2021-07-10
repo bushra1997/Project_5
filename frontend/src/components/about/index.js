@@ -5,17 +5,27 @@ import "./about.css";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 const About = () => {
-  return <div className="container">
-    <div >
-      <img src="https://www.arabiaweddings.com/sites/default/files/styles/max750/public/tips/2016/01/amman_outdoor_venues.jpg?itok=x8aybcyp" className="rounded mx-auto d-block"></img>
+  return (
+    <div className="container">
+      <div>
+        <h1> An About Us:</h1>
+        <ul>
+          <li>What is occasion website ?</li>
+          <p className="paragraphAbout-center">
+            Our website distinguished by providing you with service and
+            providing opportunities to get what you want from the luxury, to
+            provide is through inclusive activities and services.
+          </p>
+          <li>What matters to we ?</li>
+          <p>We care about comfort, credibility and customer opinion</p>
+          <li>What we do ?</li>
+          <p>Facilitating the customer to find the right place according to his desire</p>
+          <li>How we do it ?</li>
+          <p>Through the link between the client and the places of events, they are linked through us through the user and communication with the owner of the place</p>
+        </ul>
+      </div>
     </div>
-    <div >
-      <p className="paragraphAbout-center" >Our website distinguished by providing you with service and providing opportunities to get what you want from the luxury, to provide is through inclusive activities and services. 
-</p>
-    </div>
-
-
-  </div>
+  );
 };
 
 export default About;
