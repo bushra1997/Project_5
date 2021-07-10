@@ -16,7 +16,7 @@ const About = () => {
             providing opportunities to get what you want from the luxury, to
             provide is through inclusive activities and services.
           </p>
-          <li>What matters to we ?</li>
+          <li className="li_about">What matters to we ?</li>
           <p className="paragraphAbout-center">We care about comfort, credibility and customer opinion</p>
           <li>What we do ?</li>
           <p className="paragraphAbout-center">Facilitating the customer to find the right place according to his desire</p>
