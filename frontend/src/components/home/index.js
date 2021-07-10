@@ -29,7 +29,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
               alt="..."
-              style={{height:"65vh"}}
+              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
@@ -37,7 +37,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{height:"65vh"}}
+              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
@@ -45,7 +45,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{height:"65vh"}}
+              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
@@ -53,7 +53,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{height:"65vh"}}
+              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
@@ -61,7 +61,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{height:"70vh"}}
+              style={{ height: "70vh" }}
             />
           </div>
         </div>
@@ -71,7 +71,10 @@ export default function Index() {
           role="button"
           data-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
           <span className="sr-only">Previous</span>
         </a>
         <a
@@ -80,7 +83,10 @@ export default function Index() {
           role="button"
           data-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
           <span className="sr-only">Next</span>
         </a>
       </div>
@@ -93,7 +99,9 @@ export default function Index() {
               <div className="image">
                 <img
                   style={{ width: "80%" }}
-                  src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""
+                  src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                  style={{ borderRadius: "8px" }}
                 />
               </div>
             </div>
@@ -158,10 +166,14 @@ export default function Index() {
         <div className="container">
           <h1 className="text-center">Highlights</h1>
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
+            <div className="col-lg-4 col-md-6 col-sm-12" id="card">
               <div className="card">
                 <div>
-                  <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
+                  <img
+                    src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    class="card-img-top"
+                    alt=""
+                  />
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
@@ -175,10 +187,14 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
+            <div className="col-lg-4 col-md-6 col-sm-12" id="card">
               <div className="card">
                 <div>
-                  <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="" />
+                  <img
+                    src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    class="card-img-top"
+                    alt=""
+                  />
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
@@ -192,7 +208,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12" id='card'>
+            <div className="col-lg-4 col-md-6 col-sm-12" id="card">
               <div className="card">
                 <div>
                   {" "}
