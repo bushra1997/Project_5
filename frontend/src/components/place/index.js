@@ -109,7 +109,8 @@ export default function Place() {
       <div className="row" style={{ padding: "2.5% 0%" }}>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="image">
-            <img style={{ borderRadius: "10px" }} src={image} alt="..." />
+            <img style={{ borderRadius: "10px",width:"440px" }} src={image} alt="..." />
+            <Rating className="rating"/>
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
@@ -121,7 +122,6 @@ export default function Place() {
               <li class="list-group-item">  <i class="fas fa-map-pin"></i>{address}</li>
             </ul>
             <div className = "rating-fav">
-        <Rating />
         {!added ? (
             <AiOutlineHeart
               className="icon-heart"
