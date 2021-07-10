@@ -1,5 +1,6 @@
 .carousel-inner {
   max-height: 70vh;
+  padding: 6px;
 }
 .carousel-item img {
   width: 100%;
@@ -8,10 +9,10 @@
   content: "";
   display: block;
   position: absolute;
-  top: 7px;
-  bottom: 7px;
-  left: 7px;
-  right: 7px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 section {
