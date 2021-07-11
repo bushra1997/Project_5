@@ -23,8 +23,17 @@ export default function AddPlace() {
   const [smShow, setSmShow] = useState(false);
   const [place_id, setPlace_id] = useState("");
   const [type, setType] = useState("birthDayParty");
+  const [disabledev, setDisabledev] = useState(true);
 
   const newPlace = (e) => {
+    setName("");
+    setDescription("");
+    setImg("");
+    setCapacity("");
+    setCity("");
+    setAddress("");
+    setAvailability("");
+
     e.preventDefault();
     axios
       .post("http://localhost:5000/places", {
@@ -41,6 +50,7 @@ export default function AddPlace() {
         setPopup2(true);
         setSmShow(true);
         setPlace_id(result.data.insertId);
+        setDisabledev(false);
       })
       .catch((err) => {});
   };
@@ -49,7 +59,9 @@ export default function AddPlace() {
     e.preventDefault();
     axios
       .post("http://localhost:5000/occasions", { place_id, type })
-      .then((result) => {})
+      .then((result) => {
+        setDisabledev(true);
+      })
       .catch((err) => {});
   };
 
@@ -64,6 +76,122 @@ export default function AddPlace() {
   return (
     <>
       <div className="add-forms-container">
+        <div className="formAddPlace">
+          <Form onSubmit={newPlace}>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Place Name</Form.Label>
+              <Form.Control
+                as="input"
+                value={name}
+                placeholder="PLace Name Here"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Description</Form.Label>
+              <Form.Control
+                as="textarea"
+                value={description}
+                placeholder="Description Here"
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Img</Form.Label>
+              <Form.Control
+                as="input"
+                value={img}
+                placeholder="Img Here"
+                onChange={(e) => {
+                  setImg(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Capacity</Form.Label>
+              <Form.Control
+                as="input"
+                value={capacity}
+                placeholder="capacity here"
+                onChange={(e) => {
+                  setCapacity(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">City</Form.Label>
+              <Form.Control
+                as="input"
+                value={city}
+                placeholder="City Here"
+                onChange={(e) => {
+                  setCity(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Address</Form.Label>
+              <Form.Control
+                as="input"
+                value={address}
+                placeholder="address here"
+                onChange={(e) => {
+                  setAddress(e.target.value);
+                }}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label className="name_label">Availability</Form.Label>
+              <Form.Control
+                as="input"
+                value={availability}
+                placeholder="Availability Here"
+                onChange={(e) => {
+                  setAvailability(e.target.value);
+                }}
+              />
+            </Form.Group>
+            <div className="click">
+              <Button variant="primary" onClick={newPlace}>
+                Submit
+              </Button>
+              <Button variant="primary" onClick={home}>
+                Home
+              </Button>
+            </div>
+          </Form>
+        </div>
         <div className="formAddPlace">
           <Form onSubmit={newPlace}>
             <Form.Group
@@ -90,118 +218,12 @@ export default function AddPlace() {
               <option value="funerals">Funerals</option>
             </select>
             <div className="click">
-              <Button variant="primary" onClick={addOccasions}>
+              <Button
+                variant="primary"
+                onClick={addOccasions}
+                disabled={disabledev}
+              >
                 Add
-              </Button>
-            </div>
-          </Form>
-        </div>
-        {/* ///////////////////////////////////////////////////////////////////////////////// */}
-        <div className="formAddPlace">
-          <Form onSubmit={newPlace}>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Place Name</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="PLace Name Here"
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Description</Form.Label>
-              <Form.Control
-                as="textarea"
-                placeholder="Description Here"
-                onChange={(e) => {
-                  setDescription(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Img</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="Img Here"
-                onChange={(e) => {
-                  setImg(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Capacity</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="capacity here"
-                onChange={(e) => {
-                  setCapacity(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">City</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="City Here"
-                onChange={(e) => {
-                  setCity(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Address</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="address here"
-                onChange={(e) => {
-                  setAddress(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="name_label">Availability</Form.Label>
-              <Form.Control
-                as="input"
-                placeholder="Availability Here"
-                onChange={(e) => {
-                  setAvailability(e.target.value);
-                }}
-              />
-            </Form.Group>
-            <div className="click">
-              <Button variant="primary" onClick={newPlace}>
-                Submit
-              </Button>
-              <Button variant="primary" onClick={home}>
-                Home
               </Button>
             </div>
           </Form>

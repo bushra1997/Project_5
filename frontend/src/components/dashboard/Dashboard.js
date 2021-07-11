@@ -19,13 +19,19 @@ export default function Dashboard() {
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
   };
+
   return (
     <>
       <div className="dMain">
         <button
           type="button"
           class="btn btn-primary btn-lg"
-          style={{width:"200px",margin:"auto",top:"150px",bottom:"150px"}}
+          style={{
+            width: "200px",
+            margin: "auto",
+            top: "150px",
+            bottom: "150px",
+          }}
           onClick={addPlace}
         >
           Add
@@ -33,7 +39,12 @@ export default function Dashboard() {
         <button
           type="button"
           class="btn btn-primary btn-lg"
-          style={{width:"200px",margin:"auto",top:"150px",bottom:"150px"}}
+          style={{
+            width: "200px",
+            margin: "auto",
+            top: "150px",
+            bottom: "150px",
+          }}
           onClick={editAndDeletePlace}
         >
           Modify/Delete
@@ -41,7 +52,12 @@ export default function Dashboard() {
         <button
           type="button"
           class="btn btn-primary btn-lg"
-          style={{width:"200px",margin:"auto",top:"150px",bottom:"150px"}}
+          style={{
+            width: "200px",
+            margin: "auto",
+            top: "150px",
+            bottom: "150px",
+          }}
           onClick={signOut}
         >
           signOut

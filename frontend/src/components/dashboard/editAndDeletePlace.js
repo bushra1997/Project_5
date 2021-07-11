@@ -126,12 +126,14 @@ export default function EditPlace() {
               }}
             />
           </Form.Group>
+          <div className="modify">
           <Button variant="primary" type="submit">
             Find
           </Button>
           <Button variant="primary" type="submit" onClick={deleteAll}>
             continue
           </Button>
+          </div>
         </Form>
       </div>
       <div className="place-info">
