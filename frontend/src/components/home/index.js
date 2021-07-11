@@ -37,7 +37,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{ height: "65vh" }}
+              
             />
           </div>
           <div className="carousel-item drk">
