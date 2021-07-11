@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import { Route, Switch } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 import Weddings from "./components/weddings/index";
@@ -13,20 +13,36 @@ import AddPlace from "./components/dashboard/AddPlace";
 import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace";
 import Footer from "./components/footer";
 import Index from "./components/home/index";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import Place from "./components/place";
+import { setToken } from "./reducers/login/index";
 import Favorite from "./components/favorite";
 import Profile from "./components/profile/index";
 import Booking from "./components/booking/index";
 import SearchResult from "./components/search/SearchResult";
 import About from "./components/about/index";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+
+    if (localStorage.getItem("token")) {
+      dispatch(
+     setToken(JSON.parse(localStorage.getItem("token")))
+
+      )
+    }
+
+   
+    
+  }, []);
   const token = useSelector((state) => {
     return {
       token: state.token.token,
       user: state.token.user,
     };
   });
+
+
 
   return (
     <>

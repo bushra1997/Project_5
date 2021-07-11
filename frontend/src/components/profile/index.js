@@ -7,35 +7,16 @@ import profile from './profile.css'
 
 
 const Profile = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState("");
-  const [country, setCountry] = useState("");
-  const [email, setEmail] = useState("");
-  const [img, setImg] = useState("");
-  const [userid, setUserid] = useState("");
-  const history = useHistory();
-  const token = useSelector((state) => {
-    return {
-      token: state.token.token,
-      user: state.token.user,
-    };
-  });
-
-  useEffect(() => {
-    // let token2 = localStorage.getItem('token')
-    // if (token2){
-        // let userData = jwt.verify(token2, "1234");
-        setFirstName(token.user.firstName);
-        setLastName(token.user.lastName);
-        setCountry(token.user.country);
-        setEmail(token.user.email);
-        setAge(token.user.age);
-        setUserid(token.user.id)
-    // }else{
-    //     history.push('/')
-    // }
-  }, []);
+    const token = useSelector((state) => {
+      return {
+        token: state.token.token,
+        user: state.token.user,
+      };
+    });
+  
+ 
+  
+  
 
   const editProfile = () =>{
 
@@ -43,17 +24,7 @@ const Profile = () => {
 
   }
 
-  // useEffect(() => {
-    
-  //   axios.post("http://localhost:5000/user/pics",({user_id:token.user.id}))
-  //   .then((result)=>{
 
-  //     setImg(result.data[(result.data.length)-1].user_image)
-  //     console.log(result.data.length);
-  //     console.log(result.data.length);
-  //   })
-
-  // }, [])
 
  
   return (
@@ -73,7 +44,7 @@ const Profile = () => {
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        {`${firstName} ${lastName}`}
+                                        {`${token.user.firstName} ${token.user.lastName}`}
                                     </h5>
                                     <h6 style={{display:"none"}}>
                                         Web Developer and Designer
@@ -116,7 +87,7 @@ const Profile = () => {
                                                 <label>User Id</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{`${firstName}-${userid}`}</p>
+                                                <p>{`${token.user.firstName}-${token.user.id}`}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -124,7 +95,7 @@ const Profile = () => {
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{`${firstName} ${lastName}`}</p>
+                                                <p>{`${token.user.firstName} ${token.user.lastName}`}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -132,7 +103,7 @@ const Profile = () => {
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{email}</p>
+                                                <p>{token.user.email}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -140,7 +111,7 @@ const Profile = () => {
                                                 <label>Age</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{age}</p>
+                                                <p>{token.user.age}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -148,7 +119,7 @@ const Profile = () => {
                                                 <label>Country</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{country}</p>
+                                                <p>{token.user.country}</p>
                                             </div>
                                         </div>
                             </div>
