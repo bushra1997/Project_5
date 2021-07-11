@@ -16,7 +16,7 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-  /* background-color: #d49a9a; */
+  background-color: #d49a9a;
   color: #791515;
 }
 .dropdown:hover .dropdown-menu {
