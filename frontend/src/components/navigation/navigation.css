@@ -4,8 +4,11 @@
 }
 .dropdown-menu {
   border: transparent;
-  background-color: #e07d7d;
+  /* background-color: #e07d7d; */
+  background-color: #cf6262;
   color: #212529;
+  float: left;
+
 }
 .dropdown-menu .dropdown-item {
   color: #212529;
@@ -28,7 +31,6 @@
   top: 100%;
   left: -75px;
   display: none;
-  float: left;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
 
