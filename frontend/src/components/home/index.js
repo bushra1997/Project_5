@@ -44,8 +44,7 @@ export default function Index() {
             <img
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
-              alt="..."
-              style={{ height: "65vh" }}
+              alt="..."              
             />
           </div>
           <div className="carousel-item drk">
