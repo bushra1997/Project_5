@@ -40,6 +40,7 @@ export default function EditPlace() {
       .catch((err) => {});
   };
   const update = (e) => {
+    setNumber("");
     e.preventDefault();
     axios
       .put(`http://localhost:5000/places/${number}`, {
@@ -88,7 +89,7 @@ export default function EditPlace() {
   };
 
   const Delete = (e) => {
-    e.preventDefault();
+    setNumber("");
 
     setSmShow(true);
     setPopup(true);
@@ -120,6 +121,7 @@ export default function EditPlace() {
             <Form.Label className="name_label">Enter Number</Form.Label>
             <Form.Control
               as="input"
+              value={number}
               placeholder="Input Number Id"
               onChange={(e) => {
                 setNumber(e.target.value);
@@ -127,12 +129,12 @@ export default function EditPlace() {
             />
           </Form.Group>
           <div className="modify">
-          <Button variant="primary" type="submit">
-            Find
-          </Button>
-          <Button variant="primary" type="submit" onClick={deleteAll}>
-            continue
-          </Button>
+            <Button variant="primary" type="submit">
+              Find
+            </Button>
+            <Button variant="primary" type="submit" onClick={deleteAll}>
+              continue
+            </Button>
           </div>
         </Form>
       </div>
