@@ -27,10 +27,7 @@ section {
   border-radius: 10px
 } */
 /* @media (min-width: 992px) {
-  .imageO img {
-    width: 80%;
-    border-radius: 10px;
-  }
+
 } */
 @media (min-width: 1200px) {
   .imageO img {
@@ -40,7 +37,16 @@ section {
 }
 
 @media (max-width: 1199.98px) {
-
+  .imageO img {
+    width: 80%;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .imageO img {
+    width: 100%;
+    border-radius: 10px;
+  }
 }
 h1,
 h4 {
