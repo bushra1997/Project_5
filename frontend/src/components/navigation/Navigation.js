@@ -114,7 +114,7 @@ const Navigation = () => {
                   </span>
                 </a>
                 <div
-                  class="dropdown-menu this-menu"
+                  class="dropdown-menu this-menu dropdown-menu-right"
                   aria-labelledby="navbarDropdown"
                   style={{
                     margin: "auto",
