@@ -93,7 +93,7 @@ export default function Index() {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="imageO">
                 <img
-                  style={{ width: "60%", borderRadius: "8px" }}
+                  style={{  borderRadius: "8px" }}
                   src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt=""
                 />
