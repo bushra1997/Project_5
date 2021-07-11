@@ -63,7 +63,7 @@ const Navigation = () => {
                 Occasions
               </a>
               <div
-                class="dropdown-menu dropdown-menu-right text-right"
+                class="dropdown-menu dropdown-menu-right text-left"
                 aria-labelledby="navbarDropdown"
                 style={{ borderRadius: "px" }}
               >
