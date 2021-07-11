@@ -32,5 +32,6 @@ p.signed {
   margin-left: 4px;
 }
 a.nav-link {
+  font-weight: 600;
   color: #c73a3a;
 }
