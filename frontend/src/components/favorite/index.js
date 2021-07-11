@@ -17,7 +17,8 @@ export default function Favorite() {
       user: state.token.user,
     };
   });
-
+  
+  useEffect(() => {
     axios
       .get(`http://localhost:5000/favorite/${token.user.id}`)
       .then((result) => {
@@ -27,7 +28,7 @@ export default function Favorite() {
         console.log(err.message);
       });
  
-
+    }, []);
   return (
     <>
       <div className="weddingsPlace">
