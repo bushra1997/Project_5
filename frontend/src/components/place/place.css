@@ -1,9 +1,9 @@
+
 .image {
     width: 100%;
     margin-top: 11px;
-    display: flex;
+    display: block;
     height: 70%;
-    vertical-align: top;
 }
 .list-group{
     vertical-align: top;  
@@ -19,4 +19,10 @@
         display: flex;
         gap: 200px;
         margin-right: 13px;
+}
+.rating {
+    justify-content: center;
+    /* margin: auto; */
+    margin-left: 125px;
+    margin-top: 15px;
 }
