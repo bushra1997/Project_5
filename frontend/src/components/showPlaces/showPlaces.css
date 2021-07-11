@@ -1,23 +1,50 @@
-.card-title {
-  font-size: 22px;
-  font-family: "Bona Nova", serif;
+.card-img-top {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  font-weight: bolder;
+  text-align: justify;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.card:hover .image {
+  opacity: 0.5;
+}
+
+.card:hover .middle {
+  opacity: 5;
+}
+
+.text {
+
   color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  
 }
-.list-group {
-  display: flex;
-  margin-bottom: 0px;
-  margin-left: -17px;
-  border-radius: 0.25rem;
-  font-size: 17px;
-  color: black;
-}
-::before {
-  color: #4f0e0b;
-  margin-right: 11px;
-}
-.description {
-  margin-top: 4px;
-}
-.address {
-  margin-top: 18px;
-}
+
+
+
+
+/* <div className="card">
+<img src={place.img} class="image" alt="" />
+<div class="middle">
+  <div class="text">John Doe</div>
+</div>
+</div> */

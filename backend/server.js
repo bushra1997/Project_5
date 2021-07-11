@@ -22,7 +22,7 @@ const ratingRouter = require("./routers/routes/rating");
 const loginRouter = require("./routers/routes/login");
 const placeRouter = require("./routers/routes/place");
 const occationRouter = require("./routers/routes/occation");
-const searchRouter=require("./routers/routes/search")
+const searchRouter=require("./routers/routes/search");
 
 // router middleware
 app.use("/role", roleRouter);

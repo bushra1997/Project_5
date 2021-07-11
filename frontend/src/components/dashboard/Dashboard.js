@@ -18,6 +18,8 @@ export default function Dashboard() {
     dispatch(setOut({ token: "", user: {} }));
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
+    history.push("./login");
+
   };
 
   return (
