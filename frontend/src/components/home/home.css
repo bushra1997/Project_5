@@ -27,18 +27,19 @@ section {
   border-radius: 10px
 } */
 @media (min-width: 992px) {
-  .imageO img{
+  .imageO img {
     width: 80%;
-    border-radius: 10px
+    border-radius: 10px;
   }
 }
-@media (min-width: 1200px) {
-  .imageO img{
+/* @media (min-width: 1200px) {
+} */
+@media (max-width: 1199.98px) {
+  .imageO img {
     width: 60%;
-    border-radius: 10px
+    border-radius: 10px;
   }
 }
-
 h1,
 h4 {
   font-family: "Bona Nova", serif;
@@ -64,7 +65,7 @@ p {
   background-color: #cf6262;
   color: #fff;
 }
-.btn:hover{
+.btn:hover {
   color: #cf6262;
   background-color: #fff;
   font-weight: 600;
@@ -74,10 +75,11 @@ p {
   overflow: hidden;
   height: 100%;
 }
-#card{
+#card {
   margin: 25px 0px;
 }
-.card-body p, h5{
+.card-body p,
+h5 {
   color: #444;
 }
 .swiper-container {
@@ -90,10 +92,10 @@ p {
 .card-img-top:hover {
   transform: scale(1.1) rotate(-5deg);
 }
-.card div{
+.card div {
   overflow: hidden;
 }
 
 .weddingsPlace {
-    padding: 3.5%;
+  padding: 3.5%;
 }
