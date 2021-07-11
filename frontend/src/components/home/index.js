@@ -61,7 +61,7 @@ export default function Index() {
               src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{ height: "70vh" }}
+              
             />
           </div>
         </div>
