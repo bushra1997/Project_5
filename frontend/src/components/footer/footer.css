@@ -1,23 +1,24 @@
-footer{
-    background-color: #FBF7F0;
-    padding: 1.5%;
-    color: #444;
-    /* bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0; */
+footer {
+  background-color: #fbf7f0;
+  padding: 1.5%;
+  color: #444;
+  bottom: 0;
+  position: sticky !important;
+
+  /* right: 0;
+    left: 0;  */
 }
-.navbar-brand img{
-    width: 160px;
-    margin: auto;
+.navbar-brand img {
+  width: 160px;
+  margin: auto;
 }
 ul li {
-    display: inline-block;
-    margin:0.75rem;
+  display: inline-block;
+  margin: 0.75rem;
 }
 ul li a i {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
-ul li span{
-    margin-left: 0.3rem;
+ul li span {
+  margin-left: 0.3rem;
 }

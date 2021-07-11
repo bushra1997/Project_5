@@ -54,4 +54,10 @@ a.nav-link {
   color: #c73a3a;
   margin-top: -17px;
 }
-/* #df5e5e */
+.add-forms-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  background-color: antiquewhite;
+}

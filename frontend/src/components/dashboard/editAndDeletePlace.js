@@ -114,6 +114,7 @@ export default function EditPlace() {
   };
 
   return (
+    <div className="cccccc">
     <div className="main-div">
       <div className="search">
         <Form onSubmit={search}>
@@ -269,6 +270,7 @@ export default function EditPlace() {
           <Modal.Body>{`Place with the ID of ${number} has been Updated Succssfully`}</Modal.Body>
         </Modal>
       ) : null}
+    </div>
     </div>
   );
 }
