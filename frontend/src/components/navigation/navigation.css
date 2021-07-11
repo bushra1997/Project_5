@@ -22,7 +22,7 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-
+/* 
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -37,11 +37,11 @@
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #e07d7d;
+  
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-}
+} */
 p.userData {
   margin-left: 11px;
 }
