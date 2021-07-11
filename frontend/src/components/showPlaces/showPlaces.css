@@ -16,6 +16,7 @@
   font-weight: bolder;
   text-align: justify;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -23,7 +24,7 @@
 }
 
 .card:hover .image {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .card:hover .middle {
@@ -35,6 +36,7 @@
   color: black;
   font-size: 16px;
   padding: 16px 32px;
+  
 }
 
 

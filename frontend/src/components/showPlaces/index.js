@@ -9,7 +9,7 @@ const ShowPlaces = ({ places }) => {
         <div className="card">
           <img src={place.img} class="card-img-top image" alt="" />
           <div class="middle">
-            <div class="text">{place.name}</div>
+            <div class="text">More details</div>
           </div>
         </div>
       </>
