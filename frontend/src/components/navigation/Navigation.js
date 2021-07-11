@@ -65,7 +65,6 @@ const Navigation = () => {
               <div
                 class="dropdown-menu dropdown-menu-right text-left"
                 aria-labelledby="navbarDropdown"
-                style={{ borderRadius: "px" }}
               >
                 <Link to="/weddings" className="dropdown-item">
                   Wedding
