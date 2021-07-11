@@ -42,16 +42,7 @@ section {
     border-radius: 10px;
   }
 }
-/* @media (max-width: 991.98px) {
-  .imageO {
-    display: flex;
-    justify-content: left;
-  }
-  .imageO img {
-    width: 100%;
-    border-radius: 10px;
-  }
-} */
+
 h1,
 h4 {
   font-family: "Bona Nova", serif;
