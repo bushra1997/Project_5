@@ -24,10 +24,7 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-/* 
-.dropdown-menu {
-  
-} */
+
 p.userData {
   margin-left: 11px;
 }
