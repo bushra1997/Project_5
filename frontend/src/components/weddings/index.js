@@ -15,6 +15,7 @@ const Weddings = () => {
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);
+          console.log(result.data);
         }
       }) 
       .catch((err) => {

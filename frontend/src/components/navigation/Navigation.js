@@ -62,7 +62,11 @@ const Navigation = () => {
               >
                 Occasions
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown"
+                style={{ borderRadius: "px" }}
+              >
                 <Link to="/weddings" className="dropdown-item">
                   Wedding
                 </Link>
@@ -120,12 +124,13 @@ const Navigation = () => {
                 >
                   <p
                     style={{
-                      borderBottom: "1px solid black",
+                      borderBottom: "1px solid ",
                       justifyContent: "space-around",
                       color: "white",
                     }}
+                    className="userData"
                   >
-                    Signed in as
+                    <p className="signed">Signed in as</p>
                     <br />
                     <span
                       style={{ fontWeight: "bold", color: "white" }}

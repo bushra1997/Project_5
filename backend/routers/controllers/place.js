@@ -92,7 +92,11 @@ const getAllPlacesImg = (req, res) => {
 const getAllPlacesByName = (req, res) => {
   const name = req.params.name;
   const query = `SELECT *
-    FROM place WHERE name LIKE ?`;
+  FROM place 
+  INNER JOIN occasions
+  ON  place.id = occasions.place_id
+  WHERE name LIKE ?;
+  `;
  const nameSearched = [`%${name}%`]
   connection.query(query,nameSearched, (err, result) => {
     if (err) throw err;
@@ -100,6 +104,7 @@ const getAllPlacesByName = (req, res) => {
     console.log(result);
   });
 };
+
 
 
 

@@ -13,15 +13,17 @@ export default function SearchResult() {
      
         axios.get(`http://localhost:5000/place/name/${name}`)
         .then((result)=>{
-            console.log(result.data);
             setRes(result.data)
+            console.log("akakkakakaka",result.data);
+            console.log("oooooooooooooooooooo",res[0]);
+
         })
         .catch((err)=>{
             console.log(err);
         })
         
     }, [])
-
+    
     return (
         <div className="container">
         <div className="row"><ShowPlaces places={res} /></div>
