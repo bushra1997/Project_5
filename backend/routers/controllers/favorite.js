@@ -6,7 +6,7 @@ const allFavorite = (req, res) => {
   FROM place 
   INNER JOIN favorite
   ON  place.id = favorite.place_id
-  WHERE user_id =(?);`;
+  WHERE user_id =(?)`;
   db.query(query,user_id,(err, result) => {
     if (err) throw err;
     res.json(result);
