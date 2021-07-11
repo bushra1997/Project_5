@@ -5,6 +5,7 @@
 .dropdown-menu {
   border: transparent;
   background-color: #e07d7d;
+  color: #212529;
 }
 .dropdown-menu .dropdown-item {
   color: #212529;
@@ -33,9 +34,9 @@
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  
   text-align: left;
-  list-style: none;
+
   
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
