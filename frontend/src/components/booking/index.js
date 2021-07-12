@@ -65,9 +65,7 @@ const Booking = () => {
               <ul class="list-group">
                 <li class="list-group-item">{place.name}</li>
                 <li class="list-group-item">{place.city}</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
+                <li class="list-group-item">{place.address}</li>
               </ul>
             </div>
           </div>
