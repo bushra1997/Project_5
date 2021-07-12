@@ -93,13 +93,13 @@ const Booking = () => {
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="input2" class="sr-only">
-                    Password
+                    Phone Number
                   </label>
                   <input
                     type="text"
                     class="form-control"
                     id="input2"
-                    placeholder="Password"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">
