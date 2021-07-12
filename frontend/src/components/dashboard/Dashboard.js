@@ -62,7 +62,7 @@ export default function Dashboard() {
           }}
           onClick={signOut}
         >
-          signOut
+          Sign Out
         </button>
       </div>
     </>
