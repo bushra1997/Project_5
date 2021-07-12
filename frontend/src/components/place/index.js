@@ -18,11 +18,9 @@ export default function Place() {
   const { id } = useParams();
   const [place_id, setPlace_id] = useState("");
   const [user_id, setUser_id] = useState("");
-  const [rating_id, setRating_id] = useState("2");
   const [added, setAdded] = useState(false);
   const [found, setFound] = useState(false);
   const history = useHistory();
-
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -30,10 +28,10 @@ export default function Place() {
     };
   });
   useEffect(() => {
-    if(token.token){
-      setFound(true)
-    }else{
-      setFound(false)
+    if (token.token) {
+      setFound(true);
+    } else {
+      setFound(false);
     }
     setUser_id(token.user.id);
     setPlace_id(id);
@@ -46,8 +44,6 @@ export default function Place() {
         setCapacity(result.data[0].capacity);
         setCity(result.data[0].city);
         setAddress(result.data[0].address);
-
-        console.log("this is the token =>", token);
       })
       .catch((err) => {
         console.log(err.message);
@@ -55,12 +51,14 @@ export default function Place() {
   }, []);
 
   useEffect(() => {
+    let user_id = token.user.id;
+    let place_id = id;
     axios
-      .post("http://localhost:5000/favorite/check", { place_id, user_id })
+      .post("http://localhost:5000/check", { place_id, user_id })
       .then((result) => {
         console.log("IIID", id);
         console.log("This is DATAAAAa", result.data[0].place_id === id);
-        if (result.data[0].place_id === id) {
+        if (!result.data[0].place_id === id) {
           setAdded(false);
         } else {
           setAdded(true);
@@ -74,7 +72,7 @@ export default function Place() {
 
   const addToFavorite = () => {
     axios
-      .post("http://localhost:5000/favorite", { place_id, user_id, rating_id })
+      .post("http://localhost:5000/favorite", { place_id, user_id})
       .then((result) => {
         console.log(result);
         setAdded(true);
@@ -100,13 +98,11 @@ export default function Place() {
   };
 
   const booking = () => {
-    if(found){
-
+    if (found) {
       history.push(`/booking/${id}`);
-    }else{
-      history.push('/login')
+    } else {
+      history.push("/login");
     }
-
   };
 
   return (
@@ -119,7 +115,7 @@ export default function Place() {
               src={image}
               alt="..."
             />
-            {found?<Rating className="rating" />:null}
+            {found ? <Rating className="rating" /> : null}
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
@@ -141,28 +137,30 @@ export default function Place() {
                 {address}
               </li>
             </ul>
-           {found? <div className="rating-fav">
-              {!added ? (
-                <AiOutlineHeart
-                  className="icon-heart"
-                  icon="heart"
-                  id="add-favorite"
-                  size={40}
-                  color="#cf6262"
-                  en
-                  onClick={addToFavorite}
-                />
-              ) : (
-                <AiFillHeart
-                  icon="heart"
-                  id="delete-fav"
-                  size={40}
-                  color="red"
-                  en
-                  onClick={deleteFavorite}
-                />
-              )}
-            </div>:null}
+            {found ? (
+              <div className="rating-fav">
+                {!added ? (
+                  <AiOutlineHeart
+                    className="icon-heart"
+                    icon="heart"
+                    id="add-favorite"
+                    size={40}
+                    color="#cf6262"
+                    en
+                    onClick={addToFavorite}
+                  />
+                ) : (
+                  <AiFillHeart
+                    icon="heart"
+                    id="delete-fav"
+                    size={40}
+                    color="red"
+                    en
+                    onClick={deleteFavorite}
+                  />
+                )}
+              </div>
+            ) : null}
             <button className="btn" onClick={booking}>
               Book
             </button>

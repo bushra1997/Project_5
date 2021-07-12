@@ -56,8 +56,6 @@ CREATE TABLE favorite (
     FOREIGN KEY (place_id) REFERENCES place(id),
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id),
-    rating_id INT,
-    FOREIGN KEY (rating_id) REFERENCES rating(id),
     is_deleted TINYINT DEFAULT 0,
     PRIMARY KEY (id)
 );

@@ -14,9 +14,9 @@ const allFavorite = (req, res) => {
 };
 
 const CreateNewFavorate = (req, res) => {
-  const { place_id, user_id, rating_id } = req.body;
-  const query = `INSERT INTO favorite (place_id,user_id,rating_id) VALUES (?,?,?)`;
-  const data = [place_id, user_id, rating_id];
+  const { place_id, user_id } = req.body;
+  const query = `INSERT INTO favorite (place_id,user_id) VALUES (?,?)`;
+  const data = [place_id, user_id];
   db.query(query, data, (err, result) => {
     if (err) throw err;
     res.json(result);
@@ -34,7 +34,6 @@ const DeleteFavorate = (req, res) => {
 };
 
 const checkFavorite = (req,res) => {
-  console.log(req.body);
   const { place_id, user_id } = req.body;
   const query = `SELECT * FROM favorite WHERE place_id =? AND user_id =?`;
   const data = [place_id, user_id];
