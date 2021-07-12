@@ -10,6 +10,7 @@ import {
   ControlLabel,
 } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import Cleave from 'cleave.js/react';
 import "./booking.css";
 
 const Booking = () => {
