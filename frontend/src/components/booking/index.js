@@ -90,7 +90,7 @@ const Booking = () => {
                     placeholder="Phone Number"
                   />
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">
+                <button type="submit" class="btn btn-primary mb-2" style={{margin="0"}}>
                   Confirm Booking
                 </button>
               </form>
