@@ -10,6 +10,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap4": "0.0.1-security",
     "cleave": "^1.0.2",
+    "cleave.js": "^1.6.0",
     "dotenv": "^10.0.0",
     "hamburger-react": "^2.4.1",
     "jsonwebtoken": "^8.5.1",
