@@ -103,7 +103,7 @@ const Booking = () => {
                   />
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">
-                  Confirm identity
+                  Confirm Booking
                 </button>
               </form>
             </div>
