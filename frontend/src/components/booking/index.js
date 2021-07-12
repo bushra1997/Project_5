@@ -79,18 +79,6 @@ const Booking = () => {
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12">
               <form class="form-inline">
-                <div class="form-group mb-2">
-                  <label for="static" class="sr-only">
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    readonly
-                    class="form-control-plaintext"
-                    id="static"
-                    value="Phone Number"
-                  />
-                </div>
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="input2" class="sr-only">
                     Phone Number
