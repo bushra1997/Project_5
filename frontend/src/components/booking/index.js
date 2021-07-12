@@ -77,7 +77,8 @@ const Booking = () => {
                 <li class="list-group-item">{email}</li>
               </ul>
             </div>
-            <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+            <div className="col-lg-12 col-md-12 col-sm-12">
+              <div class="container">
               <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="input2" class="sr-only">
@@ -94,6 +95,7 @@ const Booking = () => {
                   Confirm Booking
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
