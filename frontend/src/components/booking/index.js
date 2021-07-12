@@ -118,14 +118,6 @@ const Booking = () => {
           </div>
         </div>
       ) : (
-        // <div className="formBook">
-        //   <Form onSubmit={Booking}>
-        //     <Form.Group
-        //       className="mb-3"
-        //       controlId="exampleForm.ControlTextarea1"
-        //     >
-        //       <Form.Label>{place.name}</Form.Label>
-        //     </Form.Group>
 
         //     <Form.Group
         //       className="mb-3"
