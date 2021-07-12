@@ -79,22 +79,26 @@ const Booking = () => {
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div class="container">
-              <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="input2" class="sr-only">
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="input2"
-                    placeholder="Phone Number"
-                  />
-                </div>
-                <button type="submit" class="btn btn-primary mb-2" style={{margin:"0"}}>
-                  Confirm Booking
-                </button>
-              </form>
+                <form class="form-inline">
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="input2" class="sr-only">
+                      Phone Number
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="input2"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary mb-2"
+                    style={{ margin: "0" }}
+                  >
+                    Confirm Booking
+                  </button>
+                </form>
               </div>
             </div>
           </div>
