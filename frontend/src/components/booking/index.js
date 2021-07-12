@@ -77,7 +77,7 @@ const Booking = () => {
                 <li class="list-group-item">{email}</li>
               </ul>
             </div>
-            <div className="col-lg-12 col-md-12 col-sm-12">
+            <div className="col-lg-12 col-md-12 col-sm-12 text-center">
               <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="input2" class="sr-only">
@@ -90,7 +90,7 @@ const Booking = () => {
                     placeholder="Phone Number"
                   />
                 </div>
-                <button type="submit" class="btn btn-primary mb-2" style={{margin="0"}}>
+                <button type="submit" class="btn btn-primary mb-2" style={{margin:"0"}}>
                   Confirm Booking
                 </button>
               </form>
