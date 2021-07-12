@@ -77,6 +77,7 @@ const Booking = () => {
                 <li class="list-group-item">{email}</li>
               </ul>
             </div>
+            <div className></div>
           </div>
         </div>
       ) : (
