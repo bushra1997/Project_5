@@ -192,7 +192,7 @@ export default function AddPlace() {
             </div>
           </Form>
         </div>
-        <div className="formAddPlace">
+        <div className="formAddPlace" id="idInput">
           <Form onSubmit={newPlace}>
             <Form.Group
               className="mb-3"
