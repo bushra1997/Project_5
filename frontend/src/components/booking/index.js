@@ -64,7 +64,7 @@ const Booking = () => {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <h1 className="text-center">Place information</h1>
               <ul class="list-group">
-                <li class="list-group-item bold-text">Bushra{place.name}</li>
+                <li class="list-group-item bold-text">{place.name}</li>
                 <li class="list-group-item bold-text">{place.city}</li>
                 <li class="list-group-item bold-text">{place.address}</li>
               </ul>
