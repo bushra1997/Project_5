@@ -80,14 +80,14 @@ const Booking = () => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <form class="form-inline">
                 <div class="form-group mb-2">
-                  <label for="staticEmail2" class="sr-only">
-                    Email
+                  <label for="static" class="sr-only">
+                    Phone Number
                   </label>
                   <input
                     type="text"
                     readonly
                     class="form-control-plaintext"
-                    id="staticEmail2"
+                    id="static"
                     value="email@example.com"
                   />
                 </div>
