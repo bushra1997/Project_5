@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import AverageRating from "../place/index"
+
 import "./showPlaces.css";
 
 const ShowPlaces = ({ places }) => {
+  
   const ShowCard = ({ place }) => {
     return (
       <>
@@ -26,10 +29,13 @@ const ShowPlaces = ({ places }) => {
     ));
   };
 
+  
+
   return (
     <>
       <div className="container">
         <div className="row">{showPlaces()}</div>
+        {/* <averageRating /> */}
       </div>
     </>
   );
