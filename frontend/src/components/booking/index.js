@@ -91,6 +91,9 @@ const Booking = () => {
                     class="form-control"
                     id="input2"
                     placeholder="Phone Number"
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
                   />
                 </div>
                 <button
