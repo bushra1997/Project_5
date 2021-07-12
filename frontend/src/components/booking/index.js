@@ -118,28 +118,6 @@ const Booking = () => {
           </div>
         </div>
       ) : (
-
-
-        //     <Form.Group
-        //       className="mb-3"
-        //       controlId="exampleForm.ControlTextarea1"
-        //     >
-        //       <Form.Label>Phone Number</Form.Label>
-
-        //       <Form.Control
-        //         type="text"
-        //         placeholder="Your Phone Number Here"
-        //         onChange={(e) => {
-        //           setPhoneNumber(e.target.value);
-        //         }}
-        //       />
-        //     </Form.Group>
-
-        //     <Button variant="primary" onClick={booked}>
-        //       Confirmation
-        //     </Button>
-        //   </Form>
-        // </div>
         <div>
           <p className="paragraph">ALL IS GOOD</p>
 
