@@ -105,12 +105,12 @@ const Booking = () => {
                   Confirm Booking
                 </button>
                 <button
-                  
+                  type="button"
                   class="btn btn-primary mb-2"
-                  style={{ margin: "0px 7px" }}
-                  onSubmit={booked}
+                  style={{ margin: "0px 0px" }}
+                  onClick={booked}
                 >
-                  Confirm Booking
+                  Cancel
                 </button>
               </form>
             </div>
