@@ -107,8 +107,8 @@ const Booking = () => {
                 <button
                   type="button"
                   class="btn btn-primary mb-2"
-                  style={{ margin: "0px 0px" }}
-                  onClick={booked}
+                  style={{ margin: "0px 0px", backgroundColor:"#fff"}}
+                  onClick={Back}
                 >
                   Cancel
                 </button>
