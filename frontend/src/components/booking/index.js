@@ -79,7 +79,7 @@ const Booking = () => {
             </div>
             <div
               className="col-lg-12 col-md-12 col-sm-12"
-              style={{ display: "flex", alignItems: "center" , justifyContent:"center"}}
+              style={{ display: "flex",justifyContent:"center"}}
             >
               <form class="form-inline" >
                 <div class="form-group mx-sm-3 mb-2">
