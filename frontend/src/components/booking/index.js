@@ -59,7 +59,7 @@ const Booking = () => {
   return (
     <>
       {!done ? (
-        <div className="container text-center">
+        <div className="container text-center p-5">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <h1 className="text-center">Place information</h1>
@@ -72,7 +72,7 @@ const Booking = () => {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <h1 className="text-center">User information</h1>
               <ul class="list-group">
-                <li class="list-group-item bold-text">{firstName}</li>
+                <li class="list-group-item bold-text">Fathi{firstName}</li>
                 <li class="list-group-item bold-text">{country}</li>
                 <li class="list-group-item bold-text">{email}</li>
               </ul>
