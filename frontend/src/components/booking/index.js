@@ -88,7 +88,7 @@ const Booking = () => {
                     readonly
                     class="form-control-plaintext"
                     id="static"
-                    value="email@example.com"
+                    value="Phone Number"
                   />
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
