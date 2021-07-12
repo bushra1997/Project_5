@@ -33,15 +33,12 @@ p.paragraphAbout-center {
 
 .aboutUs{
   display: flex;
+  font-family: "Bona Nova", serif;
+  color:#791515;
   flex-direction: row;
   margin-left: -13%;
 }
-/* .ourTeam{
-  width: 50%;
-  display: flex;
-  flex-direction:row;
-  
-} */
+
 
 .ourTeam {
   width: 50%;
