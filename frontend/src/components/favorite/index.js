@@ -3,12 +3,11 @@ import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector,useDispatch } from "react-redux";
 import ShowPlaces from "../showPlaces";
-import "./favorite.css";
+// import "./favorite.css";
 
 
 
 export default function Favorite() {
-  const dispatch = useDispatch();
   const [favorateCard, setFavorateCard] = useState([]);
 
   const token = useSelector((state) => {

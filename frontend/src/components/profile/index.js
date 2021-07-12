@@ -1,12 +1,14 @@
 import React, { useState, useEffect ,Component} from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
-import ImgUpload from "./imgUpload";
-import profile from './profile.css'
+import profile from './profile.css';
+import ShowPlaces from "../showPlaces";
+
 
 
 const Profile = () => {
+  const [favorateCard, setFavorateCard] = useState([]);
+
     const token = useSelector((state) => {
       return {
         token: state.token.token,
@@ -15,7 +17,14 @@ const Profile = () => {
     });
   
  
-  
+    axios
+    .get(`http://localhost:5000/favorite/${token.user.id}`)
+    .then((result) => {
+      setFavorateCard(result.data);
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
   
 
   const editProfile = () =>{
@@ -55,7 +64,7 @@ const Profile = () => {
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Favorite</a>
                                 </li>
                             </ul>
                         </div>
@@ -123,53 +132,10 @@ const Profile = () => {
                                             </div>
                                         </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style={{display:"none"}}>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Experience</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Hourly Rate</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>10$/hr</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>230</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
-                                    </div>
-                                </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" >
+                                        
+                            <ShowPlaces places={favorateCard} />
+                                
                             </div>
                         </div>
                     </div>
