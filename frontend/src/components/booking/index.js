@@ -82,15 +82,15 @@ const Booking = () => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
+                <div class="form-group mb-2">
                   <label for="input2" class="sr-only">
-                    Phone Number
+                    Please Enter Your Phone Number
                   </label>
                   <input
                     type="text"
                     class="form-control"
                     id="input2"
-                    placeholder="Phone Number"
+                    placeholder="Please Enter Your Phone Number"
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
                     }}
@@ -99,7 +99,7 @@ const Booking = () => {
                 <button
                   type="submit"
                   class="btn btn-primary mb-2"
-                  style={{ margin: "0" }}
+                  style={{ margin: "0px 7px" }}
                 >
                   Confirm Booking
                 </button>
