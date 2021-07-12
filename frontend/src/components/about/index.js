@@ -28,20 +28,20 @@ const About = () => {
       <div className="ourTeam">
         {/* <h2>Our team</h2> */}
         <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Jadallah Zaitoon</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span className="spanAbout">Jadallah Zaitoon</span>
 
         </div>
         <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Alaa saleh</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01S85B45LP-f16042c6a4e1-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span className="spanAbout">Alaa Saleh</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Noof mohammed</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SF2FHJ1L-086bb01ffbff-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span className="spanAbout">Noof Mohammed</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Asma Alenazi</span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SF2FEHCN-61ce08be1efd-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span className="spanAbout">Asma Alenazi</span>
       </div>
       <div>
-      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SN4F5LBU-668f5b110892-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span>Bushra </span>
+      <img src="https://ca.slack-edge.com/T01SDTUV9NJ-U01SF2FJFEJ-33bb3f636cac-512" style={{width:"200px",height:"150px",borderRadius:"5%"}}></img><span className="spanAbout">Bushra Kharma</span>
       </div>
       </div>
       </div>
