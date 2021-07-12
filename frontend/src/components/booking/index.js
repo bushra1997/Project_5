@@ -84,13 +84,13 @@ const Booking = () => {
             >
               <form class="form-inline">
                 <div class="form-group mb-2">
-                  <label for="input2" class="sr-only">
+                  <label for="inputPhone" class="sr-only">
                     Please Enter Your Phone Number
                   </label>
                   <input
                     type="text"
                     class="form-control"
-                    id="input2"
+                    id="inputPhone"
                     placeholder="Please Enter Your Phone Number"
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
