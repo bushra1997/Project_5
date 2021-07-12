@@ -88,6 +88,12 @@
     </script>
     <script src="cleave.min.js"></script>
     <script src="cleave-phone.{country}.js"></script>
-    
+  <script>
+    var cleave = new Cleave('.input-phone', {
+    phone: true,
+    phoneRegionCode: '{country}'
+});
+
+  </script>    
   </body>
 </html>

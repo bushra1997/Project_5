@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import {
@@ -57,6 +57,10 @@ const Booking = () => {
   const Back = () => {
     history.push("/home");
   };
+  var cleave = new Cleave(".input-phone", {
+    phone: true,
+    phoneRegionCode: "{country}",
+  });
 
   return (
     <>
@@ -109,7 +113,12 @@ const Booking = () => {
                 <button
                   type="button"
                   class="btn btn-primary mb-2"
-                  style={{ margin: "0px 0px", backgroundColor:"#fff", color:"#cf6262", fontWeight:"600"}}
+                  style={{
+                    margin: "0px 0px",
+                    backgroundColor: "#fff",
+                    color: "#cf6262",
+                    fontWeight: "600",
+                  }}
                   onClick={Back}
                 >
                   Cancel
