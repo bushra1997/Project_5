@@ -93,7 +93,7 @@ const Navigation = () => {
             {token.user.role_type === "Admin" ? (
               <li class="nav-item">
                 <Link exact to="/dashboard" className="nav-link">
-                  dashboard
+                  Dashboard
                 </Link>
               </li>
             ) : null}
