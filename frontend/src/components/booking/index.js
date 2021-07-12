@@ -79,9 +79,9 @@ const Booking = () => {
             </div>
             <div
               className="col-lg-12 col-md-12 col-sm-12"
-              style={{ display: "flex",justifyContent:"center"}}
+              style={{ display: "flex", justifyContent: "center" }}
             >
-              <form class="form-inline" >
+              <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="input2" class="sr-only">
                     Phone Number
