@@ -8,6 +8,7 @@ import { setOut } from "../../reducers/login/index";
 const Navigation = () => {
   const dispatch = useDispatch();
   const [role, setRole] = useState(false);
+
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -88,6 +89,14 @@ const Navigation = () => {
                 About us
               </Link>
             </li>
+            {token.user.role_type === "Admin" ? (
+              <li class="nav-item">
+                <Link exact to="/dashboard" className="nav-link">
+                  Dashboard
+                </Link>
+              </li>
+            ) : null}
+
             {exist ? (
               <li class="nav-item dropdown" style={{ listStyle: "none" }}>
                 <a

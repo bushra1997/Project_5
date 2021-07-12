@@ -1,4 +1,4 @@
-import {React,useEffect} from "react";
+import { React, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 import Weddings from "./components/weddings/index";
@@ -13,7 +13,7 @@ import AddPlace from "./components/dashboard/AddPlace";
 import EditAndDeletePlace from "./components/dashboard/editAndDeletePlace";
 import Footer from "./components/footer";
 import Index from "./components/home/index";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Place from "./components/place";
 import { setToken } from "./reducers/login/index";
 import Favorite from "./components/favorite";
@@ -24,16 +24,9 @@ import About from "./components/about/index";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-
     if (localStorage.getItem("token")) {
-      dispatch(
-     setToken(JSON.parse(localStorage.getItem("token")))
-
-      )
+      dispatch(setToken(JSON.parse(localStorage.getItem("token"))));
     }
-
-   
-    
   }, []);
   const token = useSelector((state) => {
     return {
@@ -42,10 +35,9 @@ const App = () => {
     };
   });
 
-
-
   return (
     <>
+      <Navigation />
       {token.user.role_type === "Admin" ? (
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
@@ -56,28 +48,26 @@ const App = () => {
             component={EditAndDeletePlace}
           />
         </Switch>
-      ) : (
-        <>
-          <Navigation />
-          <Switch>
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/" component={Index} />
-            <Route path="/weddings" component={Weddings} />
-            <Route path="/birthDayParty" component={BirthDayParty} />
-            <Route path="/funerals" component={Funerals} />
-            <Route path="/dinnerParty" component={DinnerParty} />
-            <Route path="/meeting" component={Meeting} />
-            <Route path="/places/:placetype/:id" component={Place} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/favorite" component={Favorite} />
-            <Route path="/booking/:id" component={Booking} />
-            <Route exact path="/place/name/:name" component={SearchResult} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-          <Footer />
-        </>
-      )}
+      ) : null}
+      <>
+        <Switch>
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Index} />
+          <Route path="/weddings" component={Weddings} />
+          <Route path="/birthDayParty" component={BirthDayParty} />
+          <Route path="/funerals" component={Funerals} />
+          <Route path="/dinnerParty" component={DinnerParty} />
+          <Route path="/meeting" component={Meeting} />
+          <Route path="/places/:placetype/:id" component={Place} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/favorite" component={Favorite} />
+          <Route path="/booking/:id" component={Booking} />
+          <Route exact path="/place/name/:name" component={SearchResult} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+        <Footer />
+      </>
     </>
   );
 };
