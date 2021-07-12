@@ -63,7 +63,7 @@ const Booking = () => {
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <ul class="list-group">
-                <li class="list-group-item">An item</li>
+                <li class="list-group-item">{place.name}</li>
                 <li class="list-group-item">A second item</li>
                 <li class="list-group-item">A third item</li>
                 <li class="list-group-item">A fourth item</li>
