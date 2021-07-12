@@ -55,7 +55,7 @@ const Booking = () => {
   };
 
   const Back = () => {
-    history.push("/home");
+    history.push("/");
   };
 
 
