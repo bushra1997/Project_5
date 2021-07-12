@@ -124,13 +124,6 @@ const Booking = () => {
         //       className="mb-3"
         //       controlId="exampleForm.ControlTextarea1"
         //     >
-        //       <Form.Label>{email}</Form.Label>
-        //     </Form.Group>
-
-        //     <Form.Group
-        //       className="mb-3"
-        //       controlId="exampleForm.ControlTextarea1"
-        //     >
         //       <Form.Label>Phone Number</Form.Label>
 
         //       <Form.Control
