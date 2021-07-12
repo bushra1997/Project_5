@@ -59,70 +59,71 @@ const Booking = () => {
   return (
     <>
       {!done ? (
-        <div className="formBook">
-          <Form onSubmit={Booking}>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{place.name}</Form.Label>
-            </Form.Group>
+        <div className="container"></div>
+        // <div className="formBook">
+        //   <Form onSubmit={Booking}>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{place.name}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{place.city}</Form.Label>
-            </Form.Group>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{place.city}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{place.address}</Form.Label>
-            </Form.Group>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{place.address}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{firstName}</Form.Label>
-            </Form.Group>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{firstName}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{country}</Form.Label>
-            </Form.Group>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{country}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{email}</Form.Label>
-            </Form.Group>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>{email}</Form.Label>
+        //     </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Phone Number</Form.Label>
+        //     <Form.Group
+        //       className="mb-3"
+        //       controlId="exampleForm.ControlTextarea1"
+        //     >
+        //       <Form.Label>Phone Number</Form.Label>
 
-              <Form.Control
-                type="text"
-                placeholder="Your Phone Number Here"
-                onChange={(e) => {
-                  setPhoneNumber(e.target.value);
-                }}
-              />
-            </Form.Group>
+        //       <Form.Control
+        //         type="text"
+        //         placeholder="Your Phone Number Here"
+        //         onChange={(e) => {
+        //           setPhoneNumber(e.target.value);
+        //         }}
+        //       />
+        //     </Form.Group>
 
-            <Button variant="primary" onClick={booked}>
-              Confirmation
-            </Button>
-          </Form>
-        </div>
+        //     <Button variant="primary" onClick={booked}>
+        //       Confirmation
+        //     </Button>
+        //   </Form>
+        // </div>
       ) : (
         <div>
           <p className="paragraph">ALL IS GOOD</p>
