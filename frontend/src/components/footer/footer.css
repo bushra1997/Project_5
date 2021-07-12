@@ -1,8 +1,8 @@
-footer {
-  background-color: #fbf7f0;
-  padding: 1.5%;
-  color: #444;
-  
+footer{
+    background-color: #FBF7F0;
+    padding: 1.5%;
+    color: #444;
+
 }
 .navbar-brand img {
   width: 160px;
@@ -18,3 +18,10 @@ ul li a i {
 ul li span {
   margin-left: 0.3rem;
 }
+ul li span{
+    margin-left: 0.3rem;
+}
+ul li a i:hover {
+    cursor: pointer;
+}
+

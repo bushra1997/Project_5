@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ReactDOM from "react-dom";
 import { useHistory, useParams } from "react-router-dom";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import {
@@ -10,6 +11,7 @@ import {
   ControlLabel,
 } from "react-bootstrap";
 import { useSelector } from "react-redux";
+// import Cleave from 'cleave.js/react';
 import "./booking.css";
 
 const Booking = () => {
@@ -56,80 +58,79 @@ const Booking = () => {
     history.push("/home");
   };
 
+
   return (
     <>
       {!done ? (
-        <div className="formBook">
-          <Form onSubmit={Booking}>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
+        <div className="container text-center p-5">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <h1 className="text-center">Place information</h1>
+              <ul class="list-group">
+                <li class="list-group-item bold-text">{place.name}</li>
+                <li class="list-group-item bold-text">{place.city}</li>
+                <li class="list-group-item bold-text">{place.address}</li>
+              </ul>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <h1 className="text-center">User information</h1>
+              <ul class="list-group">
+                <li class="list-group-item bold-text">{firstName}</li>
+                <li class="list-group-item bold-text">{country}</li>
+                <li class="list-group-item bold-text">{email}</li>
+              </ul>
+            </div>
+            <div
+              className="col-lg-12 col-md-12 col-sm-12"
+              style={{ display: "flex", justifyContent: "center" }}
             >
-              <Form.Label>{place.name}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{place.city}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{place.address}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{firstName}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{country}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>{email}</Form.Label>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Phone Number</Form.Label>
-
-              <Form.Control
-                type="text"
-                placeholder="Your Phone Number Here"
-                onChange={(e) => {
-                  setPhoneNumber(e.target.value);
-                }}
-              />
-            </Form.Group>
-
-            <Button variant="primary" onClick={booked}>
-              Confirmation
-            </Button>
-          </Form>
+              <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label for="input-phone" class="sr-only">
+                    Please Enter Your Phone Number
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control input-phone"
+                    id="input-phone"
+                    placeholder="Please Enter Your Phone Number"
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-2"
+                  style={{ margin: "0px 7px" }}
+                  onSubmit={booked}
+                >
+                  Confirm Booking
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary mb-2"
+                  style={{
+                    margin: "0px 0px",
+                    backgroundColor: "#fff",
+                    color: "#cf6262",
+                    fontWeight: "600",
+                  }}
+                  onClick={Back}
+                >
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       ) : (
         <div>
           <p className="paragraph">ALL IS GOOD</p>
-         
+
           <Button variant="primary" onClick={Back}>
-          Back to Home Page
-            </Button>
+            Back to Home Page
+          </Button>
         </div>
       )}
     </>

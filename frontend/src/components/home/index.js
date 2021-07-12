@@ -28,8 +28,7 @@ export default function Index() {
             <img
               src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
-              alt="..."
-              style={{ height: "65vh" }}
+              alt="..."              
             />
           </div>
           <div className="carousel-item drk">
@@ -37,15 +36,13 @@ export default function Index() {
               src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
             <img
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
-              alt="..."
-              style={{ height: "65vh" }}
+              alt="..."              
             />
           </div>
           <div className="carousel-item drk">
@@ -53,7 +50,6 @@ export default function Index() {
               src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{ height: "65vh" }}
             />
           </div>
           <div className="carousel-item drk">
@@ -61,7 +57,6 @@ export default function Index() {
               src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
               alt="..."
-              style={{ height: "70vh" }}
             />
           </div>
         </div>
@@ -96,9 +91,9 @@ export default function Index() {
           <h1 className="text-center">How Occasion can help</h1>
           <div className="row" style={{ padding: "2.5% 0%" }}>
             <div className="col-lg-6 col-md-6 col-sm-12">
-              <div className="image">
+              <div className="imageO">
                 <img
-                  style={{ width: "80%", borderRadius: "8px" }}
+                  style={{   }}
                   src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt=""
                 />

@@ -22,7 +22,7 @@ export default function Search() {
           setSearch(e.target.value);
         }}
       />
-      <button class="btn my-2 my-sm-0" onClick={searchEvent}>
+      <button class="btn my-2 my-sm-0" onClick={searchEvent} style={{margin:"0px"}}>
         Search
       </button>
     </form>

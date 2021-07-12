@@ -64,9 +64,8 @@ const Navigation = () => {
                 Occasions
               </a>
               <div
-                class="dropdown-menu"
+                class="dropdown-menu dropdown-menu-right text-left"
                 aria-labelledby="navbarDropdown"
-                style={{ borderRadius: "px" }}
               >
                 <Link to="/weddings" className="dropdown-item">
                   Wedding
@@ -123,7 +122,7 @@ const Navigation = () => {
                   </span>
                 </a>
                 <div
-                  class="dropdown-menu this-menu"
+                  class="dropdown-menu this-menu dropdown-menu-right"
                   aria-labelledby="navbarDropdown"
                   style={{
                     margin: "auto",
