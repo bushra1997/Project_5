@@ -93,7 +93,7 @@ const Booking = () => {
                     type="text"
                     class="form-control input-phone"
                     id="input-phone"
-                    placeholder="Please Enter Your Phone"
+                    placeholder="Enter Your Phone Number"
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
                     }}
