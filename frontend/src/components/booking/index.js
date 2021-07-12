@@ -59,7 +59,11 @@ const Booking = () => {
   return (
     <>
       {!done ? (
-        <div className="container"></div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12"></div>
+          </div>
+        </div>
         // <div className="formBook">
         //   <Form onSubmit={Booking}>
         //     <Form.Group
