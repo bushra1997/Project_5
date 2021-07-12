@@ -74,7 +74,7 @@ const Booking = () => {
               <ul class="list-group">
                 <li class="list-group-item">{firstName}</li>
                 <li class="list-group-item">{country}</li>
-                <li class="list-group-item">{place.address}</li>
+                <li class="list-group-item">{email}</li>
               </ul>
             </div>
           </div>
