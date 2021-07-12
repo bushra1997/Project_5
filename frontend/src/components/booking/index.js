@@ -57,10 +57,7 @@ const Booking = () => {
   const Back = () => {
     history.push("/home");
   };
-  var cleave = new Cleave(".input-phone", {
-    phone: true,
-    phoneRegionCode: "{country}",
-  });
+
 
   return (
     <>
