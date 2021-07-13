@@ -33,7 +33,10 @@ export default function Index() {
       <img src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..."/>
+      <img src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.furneauxlodge.co.nz/media/u30njmm1/furneaux-waterfront-wedding.jpg?center=0.697690120557852,0.48&mode=crop&width=1900&heightratio=0.296875&rnd=132622840494170000&bgcolor=fff" class="d-block w-100" alt="..."/>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
