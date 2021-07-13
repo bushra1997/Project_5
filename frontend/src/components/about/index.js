@@ -11,7 +11,7 @@ const About = () => {
         <div className="row">
           <div className="col-lg-8 col-md-8 col-sm-12">
             <div className="div_about">
-              <h2>About Us:</h2>
+              <h1>About Us:</h1>
               <ul>
                 <li className="li_about">What is occasion website ?</li>
                 <p className="paragraphAbout-center">
