@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+#backgroundImage{
+  background-image: url("https://images.pexels.com/photos/4041251/pexels-photo-4041251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
 .container1 {
   width: 100%;
   display: flex;
@@ -23,6 +25,7 @@
   border-radius: 1.5%;
   padding: 2.5%;
   box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
+  opacity: 0.9;
 }
 
 .btn-submit {
