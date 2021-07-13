@@ -8,9 +8,10 @@
 .list-group{
     vertical-align: top;  
 }
-.font-weight-bolder{
+.font-weight-bolder {
     color: rgb(143, 23, 23);
     font-size: 25px;
+    font-family: "Bona Nova", serif;
 }
 .list-group-item {
     padding: 8px;
@@ -22,7 +23,8 @@
 }
 .rating {
     justify-content: center;
-    /* margin: auto; */
     margin-left: 125px;
     margin-top: 15px;
 }
+
+

@@ -161,7 +161,7 @@ export default function Place() {
                 )}
               </div>
             ) : null}
-            <button className="btn" onClick={booking}>
+            <button className="btn btn-primary btn-lg btn-block" onClick={booking}>
               Book
             </button>
           </div>
