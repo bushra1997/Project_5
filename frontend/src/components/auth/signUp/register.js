@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "./register.css";
+import Modal from "react-bootstrap/Modal";
 export default function Register() {
   const history = useHistory();
   const [firstName, setFirstName] = useState("");
@@ -12,7 +13,14 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [role_type, setRole_type] = useState("User");
   const [error, setError] = useState(false);
+  const [wrongEmail, setWrongEmail] = useState(false)
+  const [smShow, setSmShow] = useState(false);
+  const [wrongPassword, setWrongPassword] = useState(false)
+
   const newUsers = () => {
+    if(firstName&&lastName&&age&&country&&email&&password){
+      console.log("valid first name")
+    
     axios
       .post("http://localhost:5000/user", {
         firstName,
@@ -24,22 +32,23 @@ export default function Register() {
         role_type,
       })
       .then((result) => {
-        // if (!result.data) {
-        //  history.push("./login");
-        //   setError(true)
-        // }else{
-        //   setError(false)
-        // }
-        if (!result.data.errors) {
+        if(result.data[0].msg==="wrongEmail"){
+          setWrongEmail(true)
+          setSmShow(true)
+        }
+         if(result.data[0].msg==="weakPassword"){
+          setWrongPassword(true)
+          setSmShow(true)
+        }
+        if(result.status=="200"){
+
           history.push("/login");
-        } else {
-          setError(true);
-          console.log(result.data.errors);
         }
       })
       .catch((err) => {
         console.log(err);
       });
+    }
   };
   return (
     <>
@@ -60,7 +69,7 @@ export default function Register() {
                     id="first-name"
                     type="text"
                     placeholder="First name here"
-                    required
+                    required ="true"
                     onChange={(e) => {
                       setFirstName(e.target.value);
                     }}
@@ -94,7 +103,7 @@ export default function Register() {
                   <input
                     className="form-control"
                     id="age"
-                    type="text"
+                    type="number"
                     placeholder="Age here"
                     required
                     onChange={(e) => {
@@ -130,8 +139,7 @@ export default function Register() {
                   <input
                     className="form-control"
                     type="text"
-                    placeholder="Email here"
-                    required
+                    placeholder="Example@something.com"
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
@@ -164,11 +172,38 @@ export default function Register() {
               >
                 Sign Up
               </button>
-              {error ? <div>Some Thing Wrong Try Again!</div> : null}
+              {error ? <div>{alert[0].msg}</div> : null}
             </div>
           </div>
         </div>
+        {wrongEmail?<Modal
+          size="sm"
+          show={smShow}
+          onHide={() => setSmShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+              Wrong Email
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>wrong Email! E-mail should be like : Example@Gmail.com</Modal.Body>
+        </Modal>:null}
+          {wrongPassword?<Modal
+          size="sm"
+          show={smShow}
+          onHide={() => setSmShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+              Wrong Password
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Weak password!! please Enter a stronger one</Modal.Body>
+        </Modal>:null}
       </section>
+      
     </>
   );
 }

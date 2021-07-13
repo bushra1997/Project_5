@@ -8,8 +8,8 @@ userRouter.post(
   "/",
   urlencodedParser,
   [
-    check("email", "Email is not valid").exists().isEmail().normalizeEmail(),
-    check("password", "Please enter a strong Password")
+    check("email", "wrongEmail").exists().isEmail().normalizeEmail(),
+    check("password", "weakPassword")
       .exists()
       .isLength({ min: 8, max: 15 }),
   ],

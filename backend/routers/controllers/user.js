@@ -6,6 +6,7 @@ const CreateNewUser = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const alert = errors.array();
+    console.log(alert[0].msg,"SSSSSSSSSSSSSSSSS");
     res.json(alert);
   } else {
     let salt = 10;
@@ -24,11 +25,12 @@ const CreateNewUser = async (req, res) => {
       role_type,
     ];
     db.query(query, data, (err, result) => {
+      console.log('oooooooooooooooooo',result);
       if (err) {
         res.status(400).json(err);
         return;
       }
-      res.status(201).json(result);
+      res.status(200).json(result);
     });
   }
 };
