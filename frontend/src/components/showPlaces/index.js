@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import Rating from "../place/Raiting";
 
 import "./showPlaces.css";
 

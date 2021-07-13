@@ -14,7 +14,9 @@
   border-color: #e98580;
 }
 
+
 .form-center {
+  opacity: 0.9;
   margin: 2.5rem auto;
   background: white;
   width: 450px;

@@ -1,8 +1,10 @@
-footer{
-    background-color: #FBF7F0;
-    padding: 1.5%;
-    color: #444;
-
+footer {
+  background-color: #FBF7F0;
+  padding: 1.5%;
+  color: #444;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
 }
 .navbar-brand img {
   width: 160px;

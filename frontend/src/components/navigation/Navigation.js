@@ -5,6 +5,7 @@ import Search from "./../search/search";
 import { useDispatch, useSelector } from "react-redux";
 import { setOut } from "../../reducers/login/index";
 
+
 const Navigation = () => {
   const dispatch = useDispatch();
   const [role, setRole] = useState(false);
@@ -15,6 +16,15 @@ const Navigation = () => {
       user: state.token.user,
     };
   });
+  const image =useSelector((state)=>{
+
+    return{
+      image:state.profilePictuer.image
+    }
+
+  })
+
+  console.log("IMAGE IN NAVIGATION",image.image);
 
   const exist = token.token;
 
@@ -25,7 +35,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-white bg-white">
+      <nav class="navbar navbar-expand-lg navbar-white " style={{backgroundColor:"#FBF7F0"}}>
         <Link className="navbar-brand" exact to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
@@ -111,13 +121,13 @@ const Navigation = () => {
                   <span>
                     <img
                       className="style-scope yt-img-shadow"
-                      src="https://static.wixstatic.com/media/065e6b_dd1a8624bd5b40c9848aeec671ed811b.png/v1/fit/w_936%2Ch_733%2Cal_c/file.png"
+                      src={image.image}
                       style={{
                         borderRadius: "50%",
                         height: "32px",
                         width: "32px",
                       }}
-                      alt="Avatar image"
+                      alt={`${token.user.firstName} ${token.user.lastName}`}
                     />
                   </span>
                 </a>
