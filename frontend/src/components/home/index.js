@@ -60,19 +60,7 @@ export default function Index() {
             />
           </div>
         </div>
-        
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleFade"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
+
       </div>
 
       <section>
