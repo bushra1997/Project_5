@@ -49,7 +49,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="container container1">
+      <div className="container container1"> 
         <div className="form-center">
           <div className="container" >
           <form>
