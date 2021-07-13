@@ -28,7 +28,7 @@ export default function Index() {
             <img
               src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               class="d-block"
-              alt="..."              
+              alt="..."
             />
           </div>
           <div className="carousel-item drk">
@@ -42,7 +42,7 @@ export default function Index() {
             <img
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               className="d-block"
-              alt="..."              
+              alt="..."
             />
           </div>
           <div className="carousel-item drk">
@@ -60,30 +60,6 @@ export default function Index() {
             />
           </div>
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselExampleFade"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleFade"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
       </div>
 
       <section>
@@ -93,7 +69,7 @@ export default function Index() {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="imageO">
                 <img
-                  style={{   }}
+                  style={{}}
                   src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt=""
                 />
@@ -103,36 +79,38 @@ export default function Index() {
               <ul className="list-group">
                 <li className="list-group-item">
                   <span className="fa-li">
-                  <i className="fas fa-globe-americas"></i>
+                    <i className="fas fa-globe-americas"></i>
                   </span>
                   <div className="container">
                     <h4>Expand the base of places that you can reach.</h4>
                     <p>
-                    Your way to reach a lot of places that you were unable to see easily, by using our app it becomes possible.
+                      Your way to reach a lot of places that you were unable to
+                      see easily, by using our app it becomes possible.
                     </p>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <span className="fa-li">
-                  <i className="fas fa-hand-holding-usd"></i>
+                    <i className="fas fa-hand-holding-usd"></i>
                   </span>
                   <div className="container">
                     <h4>Take a tour while you are at home.</h4>
                     <p>
-                    Get access to more than 200 places with different occasions around the world, with the best prices and match your needs.
+                      Get access to more than 200 places with different
+                      occasions around the world, with the best prices and match
+                      your needs.
                     </p>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <span className="fa-li">
-                  <i className="fas fa-users"></i>
+                    <i className="fas fa-users"></i>
                   </span>
                   <div className="container">
-                    <h4>
-                    Direct connection with places owners.
-                    </h4>
+                    <h4>Direct connection with places owners.</h4>
                     <p>
-                    You will get direct access to our places owners database, for more info and details.
+                      You will get direct access to our places owners database,
+                      for more info and details.
                     </p>
                   </div>
                 </li>
@@ -143,7 +121,9 @@ export default function Index() {
                   <div className="container">
                     <h4>Cut down your time spent on physical searching.</h4>
                     <p>
-                    Spend less time searching for a place for your occasions, stop doing it like old school, Find all you need in one place.
+                      Spend less time searching for a place for your occasions,
+                      stop doing it like old school, Find all you need in one
+                      place.
                     </p>
                   </div>
                 </li>
@@ -161,7 +141,6 @@ export default function Index() {
                 <div>
                   <img
                     src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-
                     class="card-img-top"
                     alt=""
                   />
@@ -205,7 +184,6 @@ export default function Index() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12" id="card">
-
               <div className="card">
                 <div>
                   {" "}

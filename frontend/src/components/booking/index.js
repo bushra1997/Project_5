@@ -55,7 +55,7 @@ const Booking = () => {
   };
 
   const Back = () => {
-    history.push("/home");
+    history.push("/");
   };
 
 
@@ -81,7 +81,7 @@ const Booking = () => {
               </ul>
             </div>
             <div
-              className="col-lg-12 col-md-12 col-sm-12"
+              className="col-lg-12 col-md-12 col-sm-12 mt-2"
               style={{ display: "flex", justifyContent: "center" }}
             >
               <form class="form-inline">
@@ -93,7 +93,7 @@ const Booking = () => {
                     type="text"
                     class="form-control input-phone"
                     id="input-phone"
-                    placeholder="Please Enter Your Phone Number"
+                    placeholder="Enter Your Phone Number"
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
                     }}
