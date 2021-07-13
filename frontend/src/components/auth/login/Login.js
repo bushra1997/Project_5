@@ -49,60 +49,62 @@ export default function Login() {
 
   return (
     <>
-      <div className="container container1">
-        <div className="form-center">
-          <div className="container" >
-          <form>
-            <div className="field">
-              <label className="lable" for="validationServer01">
-                Email address
-              </label>
-              <input
-                type="email"
-                class={`${loginError1}`}
-                id="validationServer01"
-                placeholder="Email address"
-                onChange={(e) => {
-                  setEmail(e.target.value.toLowerCase());
-                }}
-              />
+      <section style={{padding:"0%"}} id ="backgroundImage">
+        <div className="container container1">
+          <div className="form-center">
+            <div className="container">
+              <form>
+                <div className="field">
+                  <label className="lable" for="validationServer01">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    class={`${loginError1}`}
+                    id="validationServer01"
+                    placeholder="Email address"
+                    onChange={(e) => {
+                      setEmail(e.target.value.toLowerCase());
+                    }}
+                  />
+                </div>
+                {!loginError ? <div className={`${loginError}`}></div> : ""}
+                <div className="field">
+                  <label className="lable" for="validationServer02">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    class={`${loginError}`}
+                    id="validationServer02"
+                    placeholder="Password"
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
+                </div>
+                <div className="signIn">
+                  <Link className="signIn text-center" exact to="/register">
+                    Don't have an account?
+                    <br />
+                    Sign up Now
+                  </Link>
+                </div>
+              </form>
+              <button
+                id="btn"
+                type="submit"
+                className="btn btn"
+                onClick={submit}
+                style={{ margin: "25px auto" }}
+              >
+                {" "}
+                Login
+              </button>
             </div>
-            {!loginError ? <div className={`${loginError}`}></div> : ""}
-            <div className="field">
-              <label className="lable" for="validationServer02">
-                Password
-              </label>
-              <input
-                type="password"
-                class={`${loginError}`}
-                id="validationServer02"
-                placeholder="Password"
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-            </div>
-            <div className="signIn">
-              <Link className="signIn text-center" exact to="/register">
-                Don't have an account?
-                <br />
-                Sign up Now
-              </Link>
-            </div>
-          </form>
-          <button
-              id="btn"
-              type="submit"
-              className="btn btn"
-              onClick={submit}
-              style={{margin:"25px auto"}}
-            >
-              {" "}
-              Login
-            </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
