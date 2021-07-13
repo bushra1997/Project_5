@@ -23,7 +23,7 @@ img.rounded.mx-auto.d-block {
 p.paragraphAbout-center {
   width: 40%;
   margin-left: 1%;
-  margin-top: 0px
+  margin-top: -13px;
 }
 .li_about {
   font-size: 18px;
