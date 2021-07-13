@@ -5,18 +5,12 @@
   width: 100%;
 }
 .dMain {
-  margin-top: 4rem;
-  width: 50%;
-  height: 341px;
-  box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 20%), 0 5px 14px 0 rgb(0 0 0 / 19%);
-  padding-top: 61px;
   margin: auto;
-  margin-top: 90px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-bottom: 50px;
-  background-color: #FAE9BB;
+  padding: 5%;
+  gap: 15px;
 }
 .formAddPlace {
   margin-top: 4rem;

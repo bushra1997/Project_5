@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import "./showPlaces.css";
 
 const ShowPlaces = ({ places }) => {
+  
   const ShowCard = ({ place }) => {
     return (
       <>
@@ -25,6 +27,8 @@ const ShowPlaces = ({ places }) => {
       </div>
     ));
   };
+
+  
 
   return (
     <>

@@ -19,51 +19,52 @@ export default function Dashboard() {
     localStorage.setItem("token", "");
     localStorage.setItem("role", {});
     history.push("./login");
-
   };
 
   return (
     <>
-      <div className="dMain">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg"
-          style={{
-            width: "200px",
-            margin: "auto",
-            top: "150px",
-            bottom: "150px",
-          }}
-          onClick={addPlace}
-        >
-          Add
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg"
-          style={{
-            width: "200px",
-            margin: "auto",
-            top: "150px",
-            bottom: "150px",
-          }}
-          onClick={editAndDeletePlace}
-        >
-          Modify/Delete
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg"
-          style={{
-            width: "200px",
-            margin: "auto",
-            top: "150px",
-            bottom: "150px",
-          }}
-          onClick={signOut}
-        >
-          Sign Out
-        </button>
+      <div className="container">
+        <div className="dMain">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            style={{
+              width: "200px",
+              margin: "auto",
+              top: "150px",
+              bottom: "150px",
+            }}
+            onClick={addPlace}
+          >
+            Add
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            style={{
+              width: "200px",
+              margin: "auto",
+              top: "150px",
+              bottom: "150px",
+            }}
+            onClick={editAndDeletePlace}
+          >
+            Modify/Delete
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            style={{
+              width: "200px",
+              margin: "auto",
+              top: "150px",
+              bottom: "150px",
+            }}
+            onClick={signOut}
+          >
+            Sign Out
+          </button>
+        </div>
       </div>
     </>
   );

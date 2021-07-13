@@ -23,8 +23,37 @@ const getRating = (req, res) => {
   });
 };
 
+// SELECT 
+//     AVG(buyprice) 'Average Price'
+// FROM
+//     products;
+// const averageRating = (req, res) => {
+//   const { place_id } = req.params;
+//   console.log({place_id}, req.params);
+
+//   const query = `SELECT AVG(rate) AS 'Average_rating' FROM rating WHERE place_id =? ;`;
+//   const data = [place_id];
+//   connection.query(query, data, (err, result) => {
+//     if (err) throw err;
+//     res.json(result);
+//   });
+// };
+
+const averageRating = (req, res) => {
+  const { place_id } = req.params;
+  console.log({place_id}, req.params);
+
+  const query = `SELECT AVG(rate) AS 'Average_rating' FROM rating WHERE place_id =? ;`;
+  const data = [place_id];
+  connection.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+};
+
 
 module.exports = {
   createNewRating,
   getRating,
+  averageRating
 };

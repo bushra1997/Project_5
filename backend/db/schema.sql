@@ -87,3 +87,13 @@ CREATE TABLE slider (
     is_deleted TINYINT DEFAULT 0,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE averageRating (
+    id INT AUTO_INCREMENT NOT NULL,
+    place_id INT,
+    FOREIGN KEY (place_id) REFERENCES place(id),
+    rating_id INT,
+    FOREIGN KEY (rating_id) REFERENCES rating(id),
+    is_deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id)
+);
