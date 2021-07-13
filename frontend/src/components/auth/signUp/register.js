@@ -24,16 +24,17 @@ export default function Register() {
         role_type,
       })
       .then((result) => {
-        if (result.data) {
-          // axios.post("http://localhost:5000/user/image",({user_id:result.data.insertId,user_image:"https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg"}))
-          // .then((result)=>{
-          //     console.log(result.data);
-          // })
-          // .catch((err)=>{
-          //     console.log(err);
-          // })
-
-          history.push("./login");
+        // if (!result.data) {
+        //  history.push("./login");
+        //   setError(true)
+        // }else{
+        //   setError(false)
+        // }
+        if (!result.data.errors) {
+          history.push("/login");
+        } else {
+          setError(true);
+          console.log(result.data.errors);
         }
       })
       .catch((err) => {
@@ -59,6 +60,7 @@ export default function Register() {
                     id="first-name"
                     type="text"
                     placeholder="First name here"
+                    required
                     onChange={(e) => {
                       setFirstName(e.target.value);
                     }}
@@ -76,6 +78,7 @@ export default function Register() {
                     id="last-name"
                     type="text"
                     placeholder="Last name here"
+                    required
                     onChange={(e) => {
                       setLastName(e.target.value);
                     }}
@@ -93,6 +96,7 @@ export default function Register() {
                     id="age"
                     type="text"
                     placeholder="Age here"
+                    required
                     onChange={(e) => {
                       setAge(e.target.value);
                     }}
@@ -110,6 +114,7 @@ export default function Register() {
                     id="country"
                     type="text"
                     placeholder="Country here"
+                    required
                     onChange={(e) => {
                       setCountry(e.target.value);
                     }}
@@ -126,6 +131,7 @@ export default function Register() {
                     className="form-control"
                     type="text"
                     placeholder="Email here"
+                    required
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
@@ -143,6 +149,7 @@ export default function Register() {
                     id="password"
                     type="password"
                     placeholder="Password here"
+                    required
                     onChange={(e) => {
                       setPassword(e.target.value);
                     }}
