@@ -7,6 +7,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 const About = () => {
   return (
     <div className="container">
+      <div className></div>
       <div className="aboutUs">
       <div className="div_about">
         <h2>About Us:</h2>
