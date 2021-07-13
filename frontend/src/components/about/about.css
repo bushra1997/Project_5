@@ -38,7 +38,10 @@ p.paragraphAbout-center {
   flex-direction: row;
   margin-left: -13%;
 }
-
+.div_about {
+  margin: auto;
+  margin-bottom: -77px;
+}
 
 .ourTeam {
   width: 50%;
