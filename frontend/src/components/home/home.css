@@ -1,3 +1,6 @@
+.carousel{
+  margin-top: 2%;
+}
 .carousel-inner {
   max-height: 65vh;
   padding: 0% 5%;
