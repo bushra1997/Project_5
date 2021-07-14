@@ -3,17 +3,16 @@ import { setToken } from "../../../reducers/login/index";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./login.css";
 import { Link } from "react-router-dom";
 
 export default function Login() {
   const history = useHistory();
-  const [loginError, setLoginError] = useState("form-control is-valid");
-  const [loginError1, setLoginError1] = useState("form-control is-valid");
+  const [loginErrorPass, setLoginErrorPass] = useState("form-control");
+  const [loginErrorEmail, setloginErrorEmail] = useState("form-control");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
   const dispatch = useDispatch();
   const submit = () => {
     axios
@@ -35,21 +34,19 @@ export default function Login() {
         }
       })
       .catch((err) => {
-        console.log("error =====>", err.message);
-        console.log("the email dosnt exist" === err.response.data);
-        if ("the email dosnt exist" !== err.response.data) {
-          setLoginError1("form-control is-valid");
-          setLoginError("form-control is-invalid");
+        if ("the email dosnt exist" === err.response.data) {
+          setloginErrorEmail("form-control is-invalid");
+          setLoginErrorPass("form-control is-valid");
         } else {
-          setLoginError1("form-control is-invalid");
-          setLoginError("form-control is-invalid");
+          setloginErrorEmail("form-control is-valid");
+          setLoginErrorPass("form-control is-invalid");
         }
       });
   };
 
   return (
     <>
-      <section style={{padding:"0%"}} id ="backgroundImage">
+      <section style={{ padding: "0%" }} id="backgroundImage">
         <div className="container container1">
           <div className="form-center">
             <div className="container">
@@ -60,7 +57,7 @@ export default function Login() {
                   </label>
                   <input
                     type="email"
-                    class={`${loginError1}`}
+                    className={`${loginErrorEmail}`}
                     id="validationServer01"
                     placeholder="Email address"
                     onChange={(e) => {
@@ -68,14 +65,14 @@ export default function Login() {
                     }}
                   />
                 </div>
-                {!loginError ? <div className={`${loginError}`}></div> : ""}
+                {/* {!loginErrorPass ? <div className={`${loginErrorPass}`}></div> : ""} */}
                 <div className="field">
                   <label className="lable" for="validationServer02">
                     Password
                   </label>
                   <input
                     type="password"
-                    class={`${loginError}`}
+                    className={`${loginErrorPass}`}
                     id="validationServer02"
                     placeholder="Password"
                     onChange={(e) => {

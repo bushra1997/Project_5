@@ -41,10 +41,10 @@
 #btn {
   width: 119px;
 }
-.form-control.is-valid,
+/* .form-control.is-valid,
 .was-validated .form-control:valid {
   border-color: #e98580;
-}
+} */
 .signIn {
   margin-left: 32px;
 }
