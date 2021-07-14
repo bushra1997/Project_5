@@ -13,48 +13,46 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [role_type, setRole_type] = useState("User");
   const [error, setError] = useState(false);
-  const [wrongEmail, setWrongEmail] = useState(false)
+  const [wrongEmail, setWrongEmail] = useState(false);
   const [smShow, setSmShow] = useState(false);
-  const [wrongPassword, setWrongPassword] = useState(false)
+  const [wrongPassword, setWrongPassword] = useState(false);
 
   const newUsers = () => {
-    if(firstName&&lastName&&age&&country&&email&&password){
-      console.log("valid first name")
-    
-    axios
-      .post("http://localhost:5000/user", {
-        firstName,
-        lastName,
-        age,
-        country,
-        email,
-        password,
-        role_type,
-      })
-      .then((result) => {
-        if(email){
-          setWrongEmail(true)
-          setSmShow(true)
-        }
-         if(password.length<8){
-          setWrongPassword(true)
-          setSmShow(true)
-        }else{
-          history.push("/login");
-        }
-      
-      console.log(result.data,"ddddddddddddddddddd"); // history.push("/login");
-        
-      })
-    
-      .catch((err) => {
-        console.log(err);
-      });
+    if (firstName && lastName && age && country && email && password) {
+      console.log("valid first name");
+
+      axios
+        .post("http://localhost:5000/user", {
+          firstName,
+          lastName,
+          age,
+          country,
+          email,
+          password,
+          role_type,
+        })
+        .then((result) => {
+          if (!email.includes("@") && !email.includes(".com")) {
+            setWrongEmail(true);
+            setSmShow(true);
+          } else {
+            if (password.length < 8) {
+              setWrongPassword(true);
+              setSmShow(true);
+            } else {
+              history.push("/login");
+            }
+          }
+        })
+
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
   return (
     <>
-      <section style={{padding:"0%"}} id="backgroundImage">
+      <section style={{ padding: "0%" }} id="backgroundImage">
         <div className="container container1">
           <div className="form-center">
             <div className="container">
@@ -71,7 +69,7 @@ export default function Register() {
                     id="first-name"
                     type="text"
                     placeholder="First name here"
-                    required ="true"
+                    required="true"
                     onChange={(e) => {
                       setFirstName(e.target.value);
                     }}
@@ -178,34 +176,39 @@ export default function Register() {
             </div>
           </div>
         </div>
-        {wrongEmail?<Modal
-          size="sm"
-          show={smShow}
-          onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">
-              Wrong Email
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>wrong Email! E-mail should be like : Example@Gmail.com</Modal.Body>
-        </Modal>:null}
-          {wrongPassword?<Modal
-          size="sm"
-          show={smShow}
-          onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">
-              Wrong Password
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Weak password!! please Enter a stronger one</Modal.Body>
-        </Modal>:null}
+        {wrongEmail ? (
+          <Modal
+            size="sm"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-modal-sizes-title-sm">
+                Wrong Email
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              wrong Email! E-mail should be like : Example@Gmail.com
+            </Modal.Body>
+          </Modal>
+        ) : null}
+        {wrongPassword ? (
+          <Modal
+            size="sm"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-modal-sizes-title-sm">
+                Wrong Password
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Weak password!! please Enter a stronger one</Modal.Body>
+          </Modal>
+        ) : null}
       </section>
-      
     </>
   );
 }

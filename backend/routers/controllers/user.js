@@ -6,7 +6,7 @@ const CreateNewUser = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const alert = errors.array();
-    console.log(alert[0].msg,"SSSSSSSSSSSSSSSSS");
+    console.log(alert[0].msg, "SSSSSSSSSSSSSSSSS");
     res.json(alert);
   } else {
     let salt = 10;
@@ -25,18 +25,13 @@ const CreateNewUser = async (req, res) => {
       role_type,
     ];
     db.query(query, data, (err, result) => {
-      console.log('oooooooooooooooooo',result);
-      if (err) throw err
-      //   res.status(400).json(err);
-      //   return;
-      // }
+      if (err) throw err;
       res.status(201).json(result);
     });
   }
 };
 
-const AddUserImage=(req,res)=>{
-
+const AddUserImage = (req, res) => {
   const { user_id, user_image } = req.body;
 
   const query = `INSERT INTO userimage(user_id,user_image )VALUES(?,?)`;
@@ -45,18 +40,15 @@ const AddUserImage=(req,res)=>{
     if (err) throw err;
     res.json("Sucsses");
   });
-
-}
-const GetUserImage=(req,res)=>{
-
-  const {user_id} = req.body;
+};
+const GetUserImage = (req, res) => {
+  const { user_id } = req.body;
 
   const query = `SELECT * FROM userimage WHERE user_id =?`;
   db.query(query, user_id, (err, result) => {
     if (err) throw err;
     res.json(result);
   });
+};
 
-}
-
-module.exports = { CreateNewUser,AddUserImage,GetUserImage };
+module.exports = { CreateNewUser, AddUserImage, GetUserImage };
