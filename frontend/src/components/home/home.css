@@ -22,13 +22,7 @@ section {
   display: flex;
   justify-content: center;
 }
-/* .imageO img{
-  width: 80%;
-  border-radius: 10px
-} */
-/* @media (min-width: 992px) {
 
-} */
 @media (min-width: 1200px) {
   .imageO img {
     width: 60%;
