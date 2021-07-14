@@ -25,32 +25,29 @@ export default function Dashboard() {
     <>
       <div className="container">
         <div className="row">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={addPlace}
-          >
-            Add
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={editAndDeletePlace}
-          >
-            Modify/Delete
-          </button>
+          <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="btn-group-vertical">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onClick={addPlace}
+              >
+                Add a Place
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onClick={editAndDeletePlace}
+              >
+                Update | Delete
+              </button>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="imageO">
+              <img src="https://images.pexels.com/photos/4993206/pexels-photo-4993206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+            </div>
+          </div>
         </div>
       </div>
     </>
