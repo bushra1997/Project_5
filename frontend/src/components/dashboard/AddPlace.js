@@ -218,24 +218,31 @@ export default function AddPlace() {
 
                 <select
                   onChange={handleSelect}
-                  class="form-select"
+                  class="custom-select"
                   aria-label="Default select example"
+                  style={{ border: "#cf6262 1px solid" }}
                 >
-                  <option value="birthDayParty">Birth Day Party</option>
+                  <option value="birthDayParty">Birthday Party</option>
                   <option value="weddings">Weddings</option>
                   <option value="meeting">Meeting</option>
                   <option value="dinnerParty">Dinner Party</option>
                   <option value="funerals">Funerals</option>
                 </select>
-                <div className="click">
-                  <Button
-                    variant="primary"
-                    onClick={addOccasions}
-                    disabled={disabledev}
-                  >
-                    Add
-                  </Button>
-                </div>
+
+                <Button
+                  variant="primary"
+                  onClick={addOccasions}
+                  disabled={disabledev}
+                  style={{
+                    backgroundColor: "#cf6262",
+                    color: "#fff",
+                    fontWeight: "600",
+                    marginTop: "1%",
+                    border: "1px solid #fef7fe",
+                  }}
+                >
+                  Add
+                </Button>
               </Form>
             </div>
             {popup2 ? (
