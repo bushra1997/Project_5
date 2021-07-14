@@ -46,7 +46,7 @@ export default function Login() {
 
   return (
     <>
-      <section style={{padding:"0%"}} id ="backgroundImage">
+      <section style={{ padding: "0%" }} id="backgroundImage">
         <div className="container container1">
           <div className="form-center">
             <div className="container">
