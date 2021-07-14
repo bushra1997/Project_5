@@ -28,11 +28,7 @@
   margin-left: 10px;
 }
 .click {
-  margin: auto;
   display: flex;
-  grid-gap: 18%;
-  gap: 2%;
-  margin-left: 33%;
 }
 .main-div {
   margin-top: 4rem;
