@@ -26,11 +26,11 @@ const CreateNewUser = async (req, res) => {
     ];
     db.query(query, data, (err, result) => {
       console.log('oooooooooooooooooo',result);
-      if (err) {
-        res.status(400).json(err);
-        return;
-      }
-      res.status(200).json(result);
+      if (err) throw err
+      //   res.status(400).json(err);
+      //   return;
+      // }
+      res.status(201).json(result);
     });
   }
 };

@@ -32,19 +32,21 @@ export default function Register() {
         role_type,
       })
       .then((result) => {
-        if(result.data[0].msg==="wrongEmail"){
+        if(email){
           setWrongEmail(true)
           setSmShow(true)
         }
-         if(result.data[0].msg==="weakPassword"){
+         if(password.length<8){
           setWrongPassword(true)
           setSmShow(true)
-        }
-        if(result.status=="200"){
-
+        }else{
           history.push("/login");
         }
+      
+      console.log(result.data,"ddddddddddddddddddd"); // history.push("/login");
+        
       })
+    
       .catch((err) => {
         console.log(err);
       });
