@@ -24,7 +24,7 @@ export default function Dashboard() {
   return (
     <>
       <div className="container">
-        <div className="dMain">
+        <div className="row">
           <button
             type="button"
             class="btn btn-primary btn-lg"
@@ -50,19 +50,6 @@ export default function Dashboard() {
             onClick={editAndDeletePlace}
           >
             Modify/Delete
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={signOut}
-          >
-            Sign Out
           </button>
         </div>
       </div>
