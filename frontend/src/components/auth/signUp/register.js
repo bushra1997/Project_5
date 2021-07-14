@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "./register.css";
+import Modal from "react-bootstrap/Modal";
 export default function Register() {
   const history = useHistory();
   const [firstName, setFirstName] = useState("");
@@ -12,37 +13,46 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [role_type, setRole_type] = useState("User");
   const [error, setError] = useState(false);
-  const newUsers = () => {
-    axios
-      .post("http://localhost:5000/user", {
-        firstName,
-        lastName,
-        age,
-        country,
-        email,
-        password,
-        role_type,
-      })
-      .then((result) => {
-        if (result.data) {
-          // axios.post("http://localhost:5000/user/image",({user_id:result.data.insertId,user_image:"https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg"}))
-          // .then((result)=>{
-          //     console.log(result.data);
-          // })
-          // .catch((err)=>{
-          //     console.log(err);
-          // })
+  const [wrongEmail, setWrongEmail] = useState(false);
+  const [smShow, setSmShow] = useState(false);
+  const [wrongPassword, setWrongPassword] = useState(false);
 
-          history.push("./login");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const newUsers = () => {
+    if (firstName && lastName && age && country && email && password) {
+      console.log("valid first name");
+
+      axios
+        .post("http://localhost:5000/user", {
+          firstName,
+          lastName,
+          age,
+          country,
+          email,
+          password,
+          role_type,
+        })
+        .then((result) => {
+          if (!email.includes("@") && !email.includes(".com")) {
+            setWrongEmail(true);
+            setSmShow(true);
+          } else {
+            if (password.length < 8) {
+              setWrongPassword(true);
+              setSmShow(true);
+            } else {
+              history.push("/login");
+            }
+          }
+        })
+
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
   return (
     <>
-      <section style={{padding:"0%"}} id="backgroundImage">
+      <section style={{ padding: "0%" }} id="backgroundImage">
         <div className="container container1">
           <div className="form-center">
             <div className="container">
@@ -59,6 +69,7 @@ export default function Register() {
                     id="first-name"
                     type="text"
                     placeholder="First name here"
+                    required="true"
                     onChange={(e) => {
                       setFirstName(e.target.value);
                     }}
@@ -76,6 +87,7 @@ export default function Register() {
                     id="last-name"
                     type="text"
                     placeholder="Last name here"
+                    required
                     onChange={(e) => {
                       setLastName(e.target.value);
                     }}
@@ -91,8 +103,9 @@ export default function Register() {
                   <input
                     className="form-control"
                     id="age"
-                    type="text"
+                    type="number"
                     placeholder="Age here"
+                    required
                     onChange={(e) => {
                       setAge(e.target.value);
                     }}
@@ -110,6 +123,7 @@ export default function Register() {
                     id="country"
                     type="text"
                     placeholder="Country here"
+                    required
                     onChange={(e) => {
                       setCountry(e.target.value);
                     }}
@@ -125,7 +139,7 @@ export default function Register() {
                   <input
                     className="form-control"
                     type="text"
-                    placeholder="Email here"
+                    placeholder="Example@something.com"
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
@@ -143,6 +157,7 @@ export default function Register() {
                     id="password"
                     type="password"
                     placeholder="Password here"
+                    required
                     onChange={(e) => {
                       setPassword(e.target.value);
                     }}
@@ -157,10 +172,42 @@ export default function Register() {
               >
                 Sign Up
               </button>
-              {error ? <div>Some Thing Wrong Try Again!</div> : null}
+              {error ? <div>{alert[0].msg}</div> : null}
             </div>
           </div>
         </div>
+        {wrongEmail ? (
+          <Modal
+            size="sm"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-modal-sizes-title-sm">
+                Wrong Email
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              wrong Email! E-mail should be like : Example@Gmail.com
+            </Modal.Body>
+          </Modal>
+        ) : null}
+        {wrongPassword ? (
+          <Modal
+            size="sm"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-modal-sizes-title-sm">
+                Wrong Password
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Weak password!! please Enter a stronger one</Modal.Body>
+          </Modal>
+        ) : null}
       </section>
     </>
   );
