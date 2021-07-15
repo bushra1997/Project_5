@@ -20,9 +20,9 @@ const ShowPlaces = ({ places }) => {
 
   const showPlaces = () => {
     return places.map((place) => (
-      <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+      <div className="col-lg-4 col-md-6 col-sm-12 mb-5" key={place.id}>
         <Link to={`/places/${place.type}/${place.place_id}`}>
-          <ShowCard place={place} key={place.id} />
+          <ShowCard place={place} />
         </Link>
       </div>
     ));
