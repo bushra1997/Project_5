@@ -4,19 +4,18 @@
   width: 100%;
   height: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
-
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   font-weight: bolder;
   text-align: justify;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -32,19 +31,7 @@
 }
 
 .text {
-
-  color:#a54141;
+  color: #a54141;
   font-size: 16px;
   padding: 16px 32px;
-  
 }
-
-
-
-
-/* <div className="card">
-<img src={place.img} class="image" alt="" />
-<div class="middle">
-  <div class="text">John Doe</div>
-</div>
-</div> */

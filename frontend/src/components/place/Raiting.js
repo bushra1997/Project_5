@@ -13,7 +13,7 @@ export default function Rating() {
   });
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
-  const {id}=useParams();
+  const { id } = useParams();
   return (
     <div>
       <div className="rating">
@@ -32,8 +32,8 @@ export default function Rating() {
                     .post(
                       `http://localhost:5000/rating`,
                       {
-                        place_id:id,
-                        user_id:token.user.id,
+                        place_id: id,
+                        user_id: token.user.id,
                         rate: ratingValue,
                       },
                       {
@@ -42,9 +42,7 @@ export default function Rating() {
                         },
                       }
                     )
-                    .then((result) => {
-                      
-                    })
+                    .then((result) => {})
                     .catch((err) => {
                       console.log(err);
                     });
@@ -69,4 +67,3 @@ export default function Rating() {
     </div>
   );
 }
-

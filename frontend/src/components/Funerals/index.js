@@ -8,19 +8,12 @@ import ShowPlaces from "../showPlaces/index";
 const Funerals = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
-  const { id } = useParams();
-
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/places/type/funerals`)
-      .then((result) => {
-        if (result.status == 200) {
-          setPlaces(result.data);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    axios.get(`http://localhost:5000/places/type/funerals`).then((result) => {
+      if (result.status == 200) {
+        setPlaces(result.data);
+      }
+    });
   }, []);
 
   return (

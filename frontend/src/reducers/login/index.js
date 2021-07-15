@@ -6,11 +6,10 @@ const initialState = {
 const token = (state = initialState, { type, payload }) => {
   switch (type) {
     case "SET_LOGING":
-      return { token: payload.token, user: payload.user};
+      return { token: payload.token, user: payload.user };
 
     case "SET_LOGOUT":
       return { token: payload.token, user: payload.user };
-
 
     default:
       return state;
@@ -30,6 +29,5 @@ export const setOut = (token) => {
     payload: token,
   };
 };
-
 
 export default token;

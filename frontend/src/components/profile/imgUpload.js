@@ -1,12 +1,6 @@
-import {React,useState} from "react";
+import { React, useState } from "react";
 import { useSelector } from "react-redux";
-import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-} from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import axios from "axios";
 
 export default function ImgUpload() {
@@ -22,17 +16,14 @@ export default function ImgUpload() {
 
   const fileUploadHandler = (e) => {
     e.preventDefault();
-    console.log(value[0]);
     const objectURL = URL.createObjectURL(value[0]);
-     setMyurl(objectURL);
-    console.log("MY URL", myurl);
-    axios.post("http://localhost:5000/user/image",({user_id:token.user.id,user_image:objectURL}))
-    .then((result)=>{
-        console.log(result.data);
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
+    setMyurl(objectURL);
+    axios
+      .post("http://localhost:5000/user/image", {
+        user_id: token.user.id,
+        user_image: objectURL,
+      })
+      .then((result) => {});
   };
   return (
     <div>
@@ -48,7 +39,6 @@ export default function ImgUpload() {
           }}
         />
         <button onClick={fileUploadHandler}>upload</button>
-        
       </Form>
     </div>
   );

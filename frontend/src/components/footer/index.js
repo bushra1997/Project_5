@@ -12,10 +12,6 @@ const FooterPage = () => {
                 <li>
                   <h5 className="title">Contact us</h5>
                 </li>
-                {/* <li>
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Street, Building 55, 6th Floor</span>
-                </li> */}
                 <li>
                   <i class="fas fa-phone-alt"></i>
                   <span>+962 (6)4321432</span>

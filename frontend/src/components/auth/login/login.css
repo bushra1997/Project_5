@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-#backgroundImage{
+#backgroundImage {
   background-image: url("https://images.pexels.com/photos/4041251/pexels-photo-4041251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 .container1 {
@@ -13,7 +13,6 @@
   align-items: center;
   border-color: #e98580;
 }
-
 
 .form-center {
   opacity: 0.9;
@@ -41,10 +40,6 @@
 #btn {
   width: 119px;
 }
-/* .form-control.is-valid,
-.was-validated .form-control:valid {
-  border-color: #e98580;
-} */
 .signIn {
   margin-left: 32px;
 }
@@ -56,7 +51,7 @@ a {
   text-decoration: none;
   background-color: transparent;
 }
-a:hover{
+a:hover {
   text-decoration: none;
   color: #444;
 }

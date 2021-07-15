@@ -21,14 +21,10 @@ const login = async (req, res) => {
       const options = {
         expiresIn: "1d",
       };
-      res
-        .status(200)
-        .json({
-          token: jwt.sign(payload, process.env.SECRET, options),
-          message: "valid login",
-          user: result[0],
-        });
-
+      res.status(200).json({
+        token: jwt.sign(payload, process.env.SECRET, options),
+        user: result[0],
+      });
     } else {
       res.status(403).json("The password is not correct");
     }

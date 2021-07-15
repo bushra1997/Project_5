@@ -6,11 +6,10 @@ export default function Search() {
   const history = useHistory();
   const [search, setSearch] = useState("");
 
-
-  const searchEvent =(e) => {
+  const searchEvent = (e) => {
     e.preventDefault();
-          history.push(`/place/name/${search}`)
-  }
+    history.push(`/place/name/${search}`);
+  };
   return (
     <form class="form-inline my-2 my-lg-0">
       <input
@@ -22,7 +21,11 @@ export default function Search() {
           setSearch(e.target.value);
         }}
       />
-      <button class="btn my-2 my-sm-0" onClick={searchEvent} style={{margin:"0px"}}>
+      <button
+        class="btn my-2 my-sm-0"
+        onClick={searchEvent}
+        style={{ margin: "0px" }}
+      >
         Search
       </button>
     </form>

@@ -1,13 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import "./dashboard.css";
 export default function AddPlace() {
@@ -46,7 +40,7 @@ export default function AddPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(result.data);
+        let x = result.data;
         setPopup2(true);
         setSmShow(true);
         setPlace_id(result.data.insertId);

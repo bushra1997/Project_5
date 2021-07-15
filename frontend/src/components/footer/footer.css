@@ -1,5 +1,5 @@
 footer {
-  background-color: #FBF7F0;
+  background-color: #fbf7f0;
   padding: 1.5%;
   color: #444;
   bottom: 0;
@@ -20,10 +20,9 @@ ul li a i {
 ul li span {
   margin-left: 0.3rem;
 }
-ul li span{
-    margin-left: 0.3rem;
+ul li span {
+  margin-left: 0.3rem;
 }
 ul li a i:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
