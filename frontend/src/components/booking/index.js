@@ -26,7 +26,7 @@ const Booking = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/places/${id}`).then((result) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_SERVER}/places/${id}`).then((result) => {
       if (result.status == 200) {
         setPlace(result.data[0]);
         setFirstName(token.user.firstName);
