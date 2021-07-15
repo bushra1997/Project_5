@@ -114,163 +114,196 @@ export default function EditPlace() {
   };
 
   return (
-    <div className="cccccc">
-    <div className="main-div">
-      <div className="search">
-        <Form onSubmit={search}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Enter Number</Form.Label>
-            <Form.Control
-              as="input"
-              value={number}
-              placeholder="Input Number Id"
-              onChange={(e) => {
-                setNumber(e.target.value);
-              }}
-            />
-          </Form.Group>
-          <div className="modify">
-            <Button variant="primary" type="submit">
-              Find
-            </Button>
-            <Button variant="primary" type="submit" onClick={deleteAll}>
-              continue
-            </Button>
+    <section>
+      <div className="container">
+        <div className="main-div">
+          <div className="search">
+            <Form onSubmit={search}>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Control
+                  as="input"
+                  value={number}
+                  placeholder="Enter Place ID"
+                  onChange={(e) => {
+                    setNumber(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <div className="modify">
+                <Button variant="primary" type="submit">
+                  Find
+                </Button>
+                <Button variant="primary" type="submit" onClick={deleteAll}>
+                  Continue
+                </Button>
+              </div>
+            </Form>
           </div>
-        </Form>
-      </div>
-      <div className="place-info">
-        <Form onSubmit={update}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Name</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-            />
-          </Form.Group>
+          <div className="place-info">
+            <Form onSubmit={update}>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Title</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Description</Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder={description}
-              onChange={(e) => {
-                setDescription(e.target.value);
-              }}
-            />
-          </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  placeholder={description}
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Img</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={img}
-              onChange={(e) => {
-                setImg(e.target.value);
-              }}
-            />
-            <img
-              src={img}
-              style={{
-                width: "220px",
-                height: "100px",
-                borderRadius: "10px",
-                marginTop: "20px",
-              }}
-            ></img>
-          </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Image</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={img}
+                  onChange={(e) => {
+                    setImg(e.target.value);
+                  }}
+                />
+                <img
+                  src={img}
+                  style={{
+                    width: "220px",
+                    height: "100px",
+                    borderRadius: "10px",
+                    marginTop: "20px",
+                  }}
+                ></img>
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">City</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={city}
-              onChange={(e) => {
-                setCity(e.target.value);
-              }}
-            />
-          </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">City</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={city}
+                  onChange={(e) => {
+                    setCity(e.target.value);
+                  }}
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Address</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={address}
-              onChange={(e) => {
-                setAddress(e.target.value);
-              }}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Availability</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={availability}
-              onChange={(e) => {
-                setAvailability(e.target.value);
-              }}
-            />
-          </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Address</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={address}
+                  onChange={(e) => {
+                    setAddress(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Availability</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={availability}
+                  onChange={(e) => {
+                    setAvailability(e.target.value);
+                  }}
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="name_label">Capacity</Form.Label>
-            <Form.Control
-              as="input"
-              placeholder={capacity}
-              onChange={(e) => {
-                setCapacity(e.target.value);
-              }}
-            />
-          </Form.Group>
-          <div className="clickEdit">
-            <Button variant="primary" onClick={update}>
-              Update
-            </Button>
-            <Button variant="primary" onClick={Delete}>
-              Delete
-            </Button>
-            <Button variant="primary" onClick={home}>
-              Home
-            </Button>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="name_label">Capacity</Form.Label>
+                <Form.Control
+                  as="input"
+                  placeholder={capacity}
+                  onChange={(e) => {
+                    setCapacity(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <div className="clickEdit">
+                <Button variant="primary" onClick={update}>
+                  Update
+                </Button>
+                <Button variant="primary" onClick={Delete}>
+                  Delete
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={home}
+                  style={{
+                    backgroundColor: "#fff",
+                    color: "#cf6262",
+                    fontWeight: "600",
+                  }}
+                >
+                  Cancel
+                </Button>
+              </div>
+            </Form>
           </div>
-        </Form>
+
+          {popup ? (
+            <Modal
+              size="sm"
+              show={smShow}
+              onHide={() => setSmShow(false)}
+              aria-labelledby="example-modal-sizes-title-sm"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="example-modal-sizes-title-sm">
+                  Successfully Deleted
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>{`Place with the ID of ${number} has been Delete Succssfully`}</Modal.Body>
+            </Modal>
+          ) : null}
+
+          {popup1 ? (
+            <Modal
+              size="sm"
+              show={smShow}
+              onHide={() => setSmShow(false)}
+              aria-labelledby="example-modal-sizes-title-sm"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="example-modal-sizes-title-sm">
+                  Successfully Updated
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>{`Place with the ID of ${number} has been Updated Succssfully`}</Modal.Body>
+            </Modal>
+          ) : null}
+        </div>
       </div>
-
-      {popup ? (
-        <Modal
-          size="sm"
-          show={smShow}
-          onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">
-              Successfully Deleted
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{`Place with the ID of ${number} has been Delete Succssfully`}</Modal.Body>
-        </Modal>
-      ) : null}
-
-      {popup1 ? (
-        <Modal
-          size="sm"
-          show={smShow}
-          onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">
-              Successfully Updated
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{`Place with the ID of ${number} has been Updated Succssfully`}</Modal.Body>
-        </Modal>
-      ) : null}
-    </div>
-    </div>
+    </section>
   );
 }

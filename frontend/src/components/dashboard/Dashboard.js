@@ -23,49 +23,35 @@ export default function Dashboard() {
 
   return (
     <>
+    <section>
       <div className="container">
-        <div className="dMain">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={addPlace}
-          >
-            Add
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={editAndDeletePlace}
-          >
-            Modify/Delete
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-lg"
-            style={{
-              width: "200px",
-              margin: "auto",
-              top: "150px",
-              bottom: "150px",
-            }}
-            onClick={signOut}
-          >
-            Sign Out
-          </button>
+        <div className="row">
+          <div className="col-lg-4 col-md-4 col-sm-12">
+            <div className="btn-group-vertical">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onClick={addPlace}
+              >
+                Add a Place
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onClick={editAndDeletePlace}
+              >
+                Update | Delete
+              </button>
+            </div>
+          </div>
+          <div className="col-lg-8 col-md-8 col-sm-12">
+            
+              <img width="100%" src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+            
+          </div>
         </div>
       </div>
+      </section>
     </>
   );
 }
