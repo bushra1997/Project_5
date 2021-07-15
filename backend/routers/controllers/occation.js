@@ -9,36 +9,30 @@ const CreateNewOccation = (req, res) => {
   });
 };
 
-const DeleteFromOccasions = (req,res) =>{
-console.log("PPPPPPPPPPPPPPPPPPPP",req.body);
-const data=req.params.place_id
-const query =`DELETE FROM occasions WHERE place_id =?`;
-connection.query(query,data,(err,result) => {
+const DeleteFromOccasions = (req, res) => {
+  const data = req.params.place_id;
+  const query = `DELETE FROM occasions WHERE place_id =?`;
+  connection.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+};
+const DeleteFromFavorite = (req, res) => {
+  const data = req.params.place_id;
+  const query = `DELETE FROM favorite WHERE place_id =?`;
+  connection.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+};
 
-  if(err) throw err;
-  res.json(result)
-});
-}
-const DeleteFromFavorite = (req,res) =>{
-const data=req.params.place_id
-const query =`DELETE FROM favorite WHERE place_id =?`;
-connection.query(query,data,(err,result) => {
-
-  if(err) throw err;
-  res.json(result)
-});
-}
-
-const DeleteFromRating = (req,res) =>{
-const data=req.params.place_id
-const query =`DELETE FROM rating WHERE place_id =?`;
-connection.query(query,data,(err,result) => {
-
-  if(err) throw err;
-  res.json(result)
-});
-
-
+const DeleteFromRating = (req, res) => {
+  const data = req.params.place_id;
+  const query = `DELETE FROM rating WHERE place_id =?`;
+  connection.query(query, data, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
 };
 
 module.exports = {

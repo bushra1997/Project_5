@@ -34,7 +34,7 @@ const updatePlaceById = (req, res) => {
 const deletePlaceById = (req, res) => {
   const id = req.params.id;
   const query = `DELETE FROM place WHERE id =${id}`;
-  connection.query(query,(err, result) => {
+  connection.query(query, (err, result) => {
     if (err) throw err;
     res.json(result);
   });
@@ -85,7 +85,6 @@ const getAllPlacesImg = (req, res) => {
   connection.query(query, (err, result) => {
     if (err) throw err;
     res.json(result);
-    console.log(result);
   });
 };
 
@@ -97,17 +96,12 @@ const getAllPlacesByName = (req, res) => {
   ON  place.id = occasions.place_id
   WHERE name LIKE ?;
   `;
- const nameSearched = [`%${name}%`]
-  connection.query(query,nameSearched, (err, result) => {
+  const nameSearched = [`%${name}%`];
+  connection.query(query, nameSearched, (err, result) => {
     if (err) throw err;
     res.json(result);
-    console.log(result);
   });
 };
-
-
-
-
 
 module.exports = {
   CreateNewPlace,

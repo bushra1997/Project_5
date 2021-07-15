@@ -6,7 +6,6 @@ const CreateNewUser = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const alert = errors.array();
-    console.log(alert[0].msg, "SSSSSSSSSSSSSSSSS");
     res.json(alert);
   } else {
     let salt = 10;
@@ -30,7 +29,6 @@ const CreateNewUser = async (req, res) => {
     });
   }
 };
-
 const AddUserImage = (req, res) => {
   const { user_id, user_image } = req.body;
 

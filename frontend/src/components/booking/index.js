@@ -96,13 +96,11 @@ const Booking = () => {
                     Please Enter Your Phone Number
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     class="form-control input-phone"
                     id="input-phone"
-                    placeholder="Enter Your Phone Number"
-                    onChange={(e) => {
-                      setPhoneNumber(e.target.value);
-                    }}
+                    
+                    value={email}
                   />
                 </div>
                 <button
