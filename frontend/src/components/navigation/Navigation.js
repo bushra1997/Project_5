@@ -28,14 +28,14 @@ const Navigation = () => {
   return (
     <>
       <nav
-        class="navbar navbar-expand-lg navbar-white "
+        className="navbar navbar-expand-lg navbar-white "
         style={{ backgroundColor: "#FBF7F0" }}
       >
         <Link className="navbar-brand" exact to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -43,22 +43,22 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon">
-            <i class="fas fa-bars" style={{ color: "#000" }}></i>
+          <span className="navbar-toggler-icon">
+            <i className="fas fa-bars" style={{ color: "#000" }}></i>
           </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <Search />
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
               <Link exact to="/" className="nav-link">
                 Home
               </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -69,7 +69,7 @@ const Navigation = () => {
                 Occasions
               </a>
               <div
-                class="dropdown-menu dropdown-menu-right text-left"
+                className="dropdown-menu dropdown-menu-right text-left"
                 aria-labelledby="navbarDropdown"
               >
                 <Link to="/weddings" className="dropdown-item">
@@ -89,13 +89,13 @@ const Navigation = () => {
                 </Link>
               </div>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link exact to="/about" className="nav-link">
                 About us
               </Link>
             </li>
             {token.user.role_type === "Admin" ? (
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link exact to="/dashboard" className="nav-link">
                   Dashboard
                 </Link>
@@ -103,9 +103,9 @@ const Navigation = () => {
             ) : null}
 
             {exist ? (
-              <li class="nav-item dropdown" style={{ listStyle: "none" }}>
+              <li className="nav-item dropdown" style={{ listStyle: "none" }}>
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -127,7 +127,7 @@ const Navigation = () => {
                   </span>
                 </a>
                 <div
-                  class="dropdown-menu this-menu dropdown-menu-right"
+                  className="dropdown-menu this-menu dropdown-menu-right"
                   aria-labelledby="navbarDropdown"
                   style={{
                     margin: "auto",
@@ -149,7 +149,7 @@ const Navigation = () => {
                       style={{ fontWeight: "bold", color: "white" }}
                     >{`${token.user.firstName} ${token.user.lastName}`}</span>
                   </p>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <Link
                       onClick={signOut}
                       exact
@@ -160,7 +160,7 @@ const Navigation = () => {
                       Logout
                     </Link>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <Link
                       exact
                       to="/profile"
@@ -170,7 +170,7 @@ const Navigation = () => {
                       My Profile
                     </Link>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <Link
                       exact
                       to="/favorite"
@@ -184,7 +184,7 @@ const Navigation = () => {
               </li>
             ) : (
               <li
-                class="nav-item"
+                className="nav-item"
                 style={{ listStyle: "none" }}
                 style={{ color: "#fff" }}
               >

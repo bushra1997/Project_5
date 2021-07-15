@@ -61,17 +61,17 @@ const Profile = () => {
 
   return (
     <>
-      <div class="container emp-profile">
+      <div className="container emp-profile">
         <form method="post">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="profile-img">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="profile-img">
                 <img
                   src={avataUrl}
                   alt="profile-avatar "
                   style={{ height: "156px" }}
                 />
-                <div class="file btn btn-lg btn-primary">
+                <div className="file btn btn-lg btn-primary">
                   Change Photo
                   <input style={{ cursor: "pointer" }} onClick={ChooseAvatar} />
                   {avatar ? (
@@ -186,17 +186,17 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="profile-head">
+            <div className="col-md-6">
+              <div className="profile-head">
                 <h5>{`${token.user.firstName} ${token.user.lastName}`}</h5>
                 <h6 style={{ display: "none" }}>Web Developer and Designer</h6>
-                <p class="proile-rating" style={{ display: "none" }}>
+                <p className="proile-rating" style={{ display: "none" }}>
                   RANKINGS : <span>8/10</span>
                 </p>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
+                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                  <li className="nav-item">
                     <a
-                      class="nav-link active"
+                      className="nav-link active"
                       id="home-tab"
                       data-toggle="tab"
                       href="#home"
@@ -207,9 +207,9 @@ const Profile = () => {
                       About
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link"
+                      className="nav-link"
                       id="profile-tab"
                       data-toggle="tab"
                       href="#profile"
@@ -223,18 +223,18 @@ const Profile = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-2">
+            <div className="col-md-2">
               <input
-                class="profile-edit-btn"
+                className="profile-edit-btn"
                 name="btnAddMore"
                 value="Edit Profile"
                 onClick={editProfile}
               />
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="profile-work" style={{ display: "none" }}>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="profile-work" style={{ display: "none" }}>
                 <p>WORK LINK</p>
                 <a href="">Website Link</a>
                 <br />
@@ -254,57 +254,57 @@ const Profile = () => {
                 <br />
               </div>
             </div>
-            <div class="col-md-8">
-              <div class="tab-content profile-tab" id="myTabContent">
+            <div className="col-md-8">
+              <div className="tab-content profile-tab" id="myTabContent">
                 <div
-                  class="tab-pane fade show active"
+                  className="tab-pane fade show active"
                   id="home"
                   role="tabpanel"
                   aria-labelledby="home-tab"
                 >
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label>User Id</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p>{`${token.user.firstName}-${token.user.id}`}</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label>Name</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p>{`${token.user.firstName} ${token.user.lastName}`}</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label>Email</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p>{token.user.email}</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label>Age</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p>{token.user.age}</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label>Country</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p>{token.user.country}</p>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="tab-pane fade"
+                  className="tab-pane fade"
                   id="profile"
                   role="tabpanel"
                   aria-labelledby="profile-tab"

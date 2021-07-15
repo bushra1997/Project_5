@@ -30,14 +30,14 @@ export default function Dashboard() {
               <div className="btn-group-vertical">
                 <button
                   type="button"
-                  class="btn btn-primary btn-lg"
+                  className="btn btn-primary btn-lg"
                   onClick={addPlace}
                 >
                   Add a Place
                 </button>
                 <button
                   type="button"
-                  class="btn btn-primary btn-lg"
+                  className="btn btn-primary btn-lg"
                   onClick={editAndDeletePlace}
                 >
                   Update | Delete

@@ -55,7 +55,7 @@ export default function Register() {
                   <label className="lable" for="first-name">
                     First Name
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input
@@ -73,7 +73,7 @@ export default function Register() {
                   <label for="last-name">
                     Last Name
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input
@@ -91,7 +91,7 @@ export default function Register() {
                   <label for="age">
                     Age
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input
@@ -109,7 +109,7 @@ export default function Register() {
                   <label for="country">
                     Country
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input
@@ -127,7 +127,7 @@ export default function Register() {
                   <label for="email">
                     Email
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input
@@ -143,7 +143,7 @@ export default function Register() {
                   <label for="password">
                     Password
                     <span>
-                      <i class="fas fa-star-of-life"></i>
+                      <i className="fas fa-star-of-life"></i>
                     </span>
                   </label>
                   <input

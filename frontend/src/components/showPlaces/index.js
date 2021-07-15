@@ -9,9 +9,9 @@ const ShowPlaces = ({ places }) => {
     return (
       <>
         <div className="card">
-          <img src={place.img} class="card-img-top image" alt="" />
-          <div class="middle">
-            <div class="text">More Details</div>
+          <img src={place.img} className="card-img-top image" alt="" />
+          <div className="middle">
+            <div className="text">More Details</div>
           </div>
         </div>
       </>

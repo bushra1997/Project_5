@@ -212,7 +212,7 @@ export default function AddPlace() {
 
                 <select
                   onChange={handleSelect}
-                  class="custom-select"
+                  className="custom-select"
                   aria-label="Default select example"
                   style={{ border: "#cf6262 1px solid" }}
                 >
