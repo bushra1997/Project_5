@@ -1,4 +1,5 @@
 import { React, useEffect } from "react";
+require("dotenv").config();
 import { Route, Switch } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 import Weddings from "./components/weddings/index";

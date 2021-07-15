@@ -5,27 +5,19 @@ import Search from "./../search/search";
 import { useDispatch, useSelector } from "react-redux";
 import { setOut } from "../../reducers/login/index";
 
-
 const Navigation = () => {
   const dispatch = useDispatch();
-  const [role, setRole] = useState(false);
-
   const token = useSelector((state) => {
     return {
       token: state.token.token,
       user: state.token.user,
     };
   });
-  const image =useSelector((state)=>{
-
-    return{
-      image:state.profilePictuer.image
-    }
-
-  })
-
-  console.log("IMAGE IN NAVIGATION",image.image);
-
+  const image = useSelector((state) => {
+    return {
+      image: state.profilePictuer.image,
+    };
+  });
   const exist = token.token;
 
   const signOut = () => {
@@ -35,7 +27,10 @@ const Navigation = () => {
   };
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-white " style={{backgroundColor:"#FBF7F0"}}>
+      <nav
+        class="navbar navbar-expand-lg navbar-white "
+        style={{ backgroundColor: "#FBF7F0" }}
+      >
         <Link className="navbar-brand" exact to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>

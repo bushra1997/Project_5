@@ -22,10 +22,7 @@ export default function Login() {
           dispatch(
             setToken({ token: result.data.token, user: result.data.user })
           );
-          // localStorage.setItem("user", JSON.stringify(result.data.user));
           localStorage.setItem("token", JSON.stringify(result.data));
-          // localStorage.setItem("token", JSON.stringify(result.data.token));
-          // localStorage.setItem("role", result.data.user.role_type);
           if (result.data.user.role_type === "Admin") {
             history.push("/dashboard");
           } else {
@@ -65,7 +62,6 @@ export default function Login() {
                     }}
                   />
                 </div>
-                {/* {!loginErrorPass ? <div className={`${loginErrorPass}`}></div> : ""} */}
                 <div className="field">
                   <label className="lable" for="validationServer02">
                     Password

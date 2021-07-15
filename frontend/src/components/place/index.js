@@ -20,9 +20,9 @@ export default function Place() {
   const [user_id, setUser_id] = useState("");
   const [added, setAdded] = useState(false);
   const [found, setFound] = useState(false);
-  const [averageRate, setAverageRate] = useState("")
+  const [averageRate, setAverageRate] = useState("");
   const history = useHistory();
-  
+
   const token = useSelector((state) => {
     return {
       token: state.token.token,
@@ -72,24 +72,16 @@ export default function Place() {
       });
   }, []);
 
-
-
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
- 
 
-  
   useEffect(() => {
-    
     axios
       .get(`http://localhost:5000/rating/${id}`)
       .then((result) => {
-        console.log(id,"place_id");
-        console.log(result,"result");
-        console.log("ratuing",result.data[0]);
-        setAverageRate(result.data[0].Average_rating)
-        // if (result.status == 200) {
-        //   setPlaces(result.data);
-        // }
+        console.log(id, "place_id");
+        console.log(result, "result");
+        console.log("ratuing", result.data[0]);
+        setAverageRate(result.data[0].Average_rating);
       })
 
       .catch((err) => {
@@ -98,12 +90,9 @@ export default function Place() {
   }, []);
 
 
-
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   const addToFavorite = () => {
     axios
-      .post("http://localhost:5000/favorite", { place_id, user_id})
+      .post("http://localhost:5000/favorite", { place_id, user_id })
       .then((result) => {
         console.log(result);
         setAdded(true);
@@ -120,11 +109,8 @@ export default function Place() {
         place_id,
       })
       .then((result) => {
-        console.log(result);
+        let x = result;
         setAdded(false);
-      })
-      .catch((err) => {
-        console.log(err);
       });
   };
 
@@ -192,18 +178,18 @@ export default function Place() {
                 )}
               </div>
             ) : null}
-            <button className="btn btn-primary btn-lg btn-block" onClick={booking}>
+            <button
+              className="btn btn-primary btn-lg btn-block"
+              onClick={booking}
+            >
               Book
             </button>
-           
+
             {/* <div >{averageRating()}</div> */}
             <div>{averageRate}</div>
-              
-            </div>
-
           </div>
         </div>
       </div>
-   
+    </div>
   );
 }

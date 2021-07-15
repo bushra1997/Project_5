@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./../showPlaces/showPlaces.css";
 
@@ -39,14 +39,12 @@ const ShowPlaces = ({ places }) => {
 
   const showPlaces = () => {
     return places.map((place) => (
-      
       <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
         <Link to={`/places/${place.type}/${place.place_id}`}>
           <ShowCard place={place} key={place.id} />
         </Link>
       </div>
     ));
-   
   };
 
   return (

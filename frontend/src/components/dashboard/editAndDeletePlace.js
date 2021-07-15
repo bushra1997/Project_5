@@ -53,7 +53,7 @@ export default function EditPlace() {
         capacity,
       })
       .then((result) => {
-        console.log(result.data);
+        let x =result.data;
         setSmShow(true);
         setPopup1(true);
       })

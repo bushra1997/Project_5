@@ -28,16 +28,14 @@ p.paragraphAbout-center {
   font-size: 18px;
   font-weight: 700;
   color: #cf6262;
-
 }
 
-.aboutUs{
+.aboutUs {
   display: flex;
   font-family: "Bona Nova", serif;
-  color:#791515;
+  color: #791515;
   flex-direction: row;
 }
-
 
 .ourTeam {
   width: 50%;

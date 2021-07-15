@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import ShowPlaces from "../showPlaces";
-// import "./favorite.css";
-
-
 
 export default function Favorite() {
   const [favorateCard, setFavorateCard] = useState([]);
@@ -16,18 +13,14 @@ export default function Favorite() {
       user: state.token.user,
     };
   });
-  
+
   useEffect(() => {
     axios
       .get(`http://localhost:5000/favorite/${token.user.id}`)
       .then((result) => {
         setFavorateCard(result.data);
       })
-      .catch((err) => {
-        console.log(err.message);
-      });
- 
-    }, []);
+  }, []);
   return (
     <>
       <div className="weddingsPlace">

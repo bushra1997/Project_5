@@ -19,8 +19,6 @@ export default function Register() {
 
   const newUsers = () => {
     if (firstName && lastName && age && country && email && password) {
-      console.log("valid first name");
-
       axios
         .post("http://localhost:5000/user", {
           firstName,
@@ -43,10 +41,6 @@ export default function Register() {
               history.push("/login");
             }
           }
-        })
-
-        .catch((err) => {
-          console.log(err);
         });
     }
   };

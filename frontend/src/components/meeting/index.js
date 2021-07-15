@@ -13,9 +13,6 @@ const Meeting = () => {
           setPlaces(result.data);
         }
       })
-      .catch((err) => {
-        console.log(err);
-      });
   }, []);
 
   return (
