@@ -77,7 +77,7 @@ export default function Login() {
                   />
                 </div>
                 <div className="signIn">
-                  <Link className="signIn text-center" exact to="/register">
+                  <Link className="signIn text-center" to="/register">
                     Don't have an account?
                     <br />
                     Sign up Now

@@ -31,7 +31,7 @@ const Navigation = () => {
         className="navbar navbar-expand-lg navbar-white "
         style={{ backgroundColor: "#FBF7F0" }}
       >
-        <Link className="navbar-brand" exact to="/">
+        <Link className="navbar-brand" to="/">
           <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
         </Link>
         <button
@@ -52,7 +52,7 @@ const Navigation = () => {
           <Search />
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link exact to="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 Home
               </Link>
             </li>
@@ -90,13 +90,13 @@ const Navigation = () => {
               </div>
             </li>
             <li className="nav-item">
-              <Link exact to="/about" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About us
               </Link>
             </li>
             {token.user.role_type === "Admin" ? (
               <li className="nav-item">
-                <Link exact to="/dashboard" className="nav-link">
+                <Link to="/dashboard" className="nav-link">
                   Dashboard
                 </Link>
               </li>
@@ -135,6 +135,7 @@ const Navigation = () => {
                     borderRadius: "10px",
                   }}
                 >
+                  <p className="signed">Signed in as</p>
                   <p
                     style={{
                       borderBottom: "1px solid ",
@@ -143,7 +144,7 @@ const Navigation = () => {
                     }}
                     className="userData"
                   >
-                    <p className="signed">Signed in as</p>
+                    
                     <br />
                     <span
                       style={{ fontWeight: "bold", color: "white" }}
@@ -152,7 +153,6 @@ const Navigation = () => {
                   <li className="nav-item">
                     <Link
                       onClick={signOut}
-                      exact
                       to="/login"
                       className="nav-link"
                       style={{ color: "#fff" }}
@@ -162,7 +162,6 @@ const Navigation = () => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      exact
                       to="/profile"
                       className="nav-link"
                       style={{ color: "#fff" }}
@@ -172,7 +171,6 @@ const Navigation = () => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      exact
                       to="/favorite"
                       className="nav-link"
                       style={{ color: "#fff" }}
@@ -188,7 +186,7 @@ const Navigation = () => {
                 style={{ listStyle: "none" }}
                 style={{ color: "#fff" }}
               >
-                <Link exact to="/login" className="nav-link">
+                <Link to="/login" className="nav-link">
                   Login
                 </Link>
               </li>

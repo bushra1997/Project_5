@@ -28,7 +28,7 @@ const FooterPage = () => {
             style={{ display: "flex", alignItems: "center" }}
           >
             <div className="container">
-              <Link className="navbar-brand" exact to="/">
+              <Link className="navbar-brand" to="/">
                 <img src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png" />
               </Link>
               <p>
