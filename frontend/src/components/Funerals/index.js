@@ -8,11 +8,13 @@ const Funerals = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/funerals`).then((result) => {
-      if (result.status == 200) {
-        setPlaces(result.data);
-      }
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/funerals`)
+      .then((result) => {
+        if (result.status == 200) {
+          setPlaces(result.data);
+        }
+      });
   }, []);
 
   return (
