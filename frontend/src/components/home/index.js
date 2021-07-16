@@ -8,7 +8,7 @@ export default function Index() {
   const [images, setImages] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/places/img`)
+      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/img`)
       .then((result) => {
         if (result.status == 200) {
           setImages(result.data);

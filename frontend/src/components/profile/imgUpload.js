@@ -19,7 +19,7 @@ export default function ImgUpload() {
     const objectURL = URL.createObjectURL(value[0]);
     setMyurl(objectURL);
     axios
-      .post("http://localhost:5000/user/image", {
+      .post(`${process.env.REACT_APP_BACKEND_SERVER}/user/image`, {
         user_id: token.user.id,
         user_image: objectURL,
       })

@@ -30,7 +30,7 @@ export default function AddPlace() {
 
     e.preventDefault();
     axios
-      .post("http://localhost:5000/places", {
+      .post(`${process.env.REACT_APP_BACKEND_SERVER}/places`, {
         name,
         description,
         img,

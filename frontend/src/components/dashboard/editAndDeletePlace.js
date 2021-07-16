@@ -4,9 +4,6 @@ import { useHistory } from "react-router-dom";
 import {
   Form,
   Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
 } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import "./dashboard.css";
@@ -27,7 +24,7 @@ export default function EditPlace() {
   const search = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:5000/places/${number}`)
+      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`)
       .then((result) => {
         setName(result.data[0].name);
         setDescription(result.data[0].description);
@@ -43,7 +40,7 @@ export default function EditPlace() {
     setNumber("");
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/places/${number}`, {
+      .put(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`, {
         name,
         description,
         img,
@@ -53,7 +50,7 @@ export default function EditPlace() {
         capacity,
       })
       .then((result) => {
-        let x =result.data;
+        let x = result.data;
         setSmShow(true);
         setPopup1(true);
       })
@@ -62,21 +59,27 @@ export default function EditPlace() {
 
   const Occasions = () => {
     axios
-      .delete(`http://localhost:5000/occasions/delete/ocassions/${number}`)
+      .delete(
+        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/ocassions/${number}`
+      )
       .then((res) => {})
       .catch((err) => {});
   };
 
   const favorite = () => {
     axios
-      .delete(`http://localhost:5000/occasions/delete/favorite/${number}`)
+      .delete(
+        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/favorite/${number}`
+      )
       .then((res) => {})
       .catch((err) => {});
   };
 
   const rating = () => {
     axios
-      .delete(`http://localhost:5000/occasions/delete/rating/${number}`)
+      .delete(
+        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/rating/${number}`
+      )
       .then((res) => {})
       .catch((err) => {});
   };
@@ -94,7 +97,7 @@ export default function EditPlace() {
     setSmShow(true);
     setPopup(true);
     axios
-      .delete(`http://localhost:5000/places/${number}`)
+      .delete(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`)
       .then((result) => {
         console.log(result.data);
         setNumber("");

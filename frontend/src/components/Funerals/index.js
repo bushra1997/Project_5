@@ -9,7 +9,7 @@ const Funerals = () => {
   const history = useHistory();
   const [places, setPlaces] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/places/type/funerals`).then((result) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/funerals`).then((result) => {
       if (result.status == 200) {
         setPlaces(result.data);
       }

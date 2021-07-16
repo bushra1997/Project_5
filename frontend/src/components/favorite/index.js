@@ -16,7 +16,7 @@ export default function Favorite() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/favorite/${token.user.id}`)
+      .get(`${process.env.REACT_APP_BACKEND_SERVER}/favorite/${token.user.id}`)
       .then((result) => {
         setFavorateCard(result.data);
       })
