@@ -56,6 +56,6 @@ a:hover {
   color: #444;
 }
 .btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
+  
   border: 2px solid #fef7fe;
 }
