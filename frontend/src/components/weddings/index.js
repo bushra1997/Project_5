@@ -11,7 +11,7 @@ const Weddings = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/places/type/weddings`)
+      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/weddings`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

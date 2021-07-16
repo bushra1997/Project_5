@@ -20,70 +20,70 @@ export default function Index() {
     <>
       <div
         id="carouselFade"
-        class="carousel slide carousel-fade"
+        className="carousel slide carousel-fade"
         data-ride="carousel"
       >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <img
               src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://images.pexels.com/photos/1123254/pexels-photo-1123254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://images.pexels.com/photos/4992830/pexels-photo-4992830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              class="d-block"
+              className="d-block"
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://www.furneauxlodge.co.nz/media/u30njmm1/furneaux-waterfront-wedding.jpg?center=0.697690120557852,0.48&mode=crop&width=1900&heightratio=0.296875&rnd=132622840494170000&bgcolor=fff"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
           </div>
         </div>
         <a
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           href="#carouselFade"
           role="button"
           data-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
         </a>
         <a
-          class="carousel-control-next"
+          className="carousel-control-next"
           href="#carouselFade"
           role="button"
           data-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
         </a>
       </div>
       <section>
@@ -161,11 +161,11 @@ export default function Index() {
           <h1 className="text-center">Highlights</h1>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12" id="card">
-              <div class="card">
+              <div className="card">
                 <div>
                   <img
                     src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                    class="card-img-top"
+                    className="card-img-top"
                     alt=""
                   />
                 </div>
@@ -185,11 +185,11 @@ export default function Index() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12" id="card">
-              <div class="card">
+              <div className="card">
                 <div>
                   <img
                     src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                    class="card-img-top"
+                    className="card-img-top"
                     alt=""
                   />
                 </div>

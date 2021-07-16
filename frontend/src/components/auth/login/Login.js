@@ -16,7 +16,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const submit = () => {
     axios
-      .post("http://localhost:5000/login", { email, password })
+      .post(`${process.env.REACT_APP_BACKEND_SERVER}/login`, { email, password })
       .then((result) => {
         if (result.status == 200) {
           dispatch(
@@ -77,7 +77,7 @@ export default function Login() {
                   />
                 </div>
                 <div className="signIn">
-                  <Link className="signIn text-center" exact to="/register">
+                  <Link className="signIn text-center" to="/register">
                     Don't have an account?
                     <br />
                     Sign up Now

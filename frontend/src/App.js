@@ -21,6 +21,7 @@ import Profile from "./components/profile/index";
 import Booking from "./components/booking/index";
 import SearchResult from "./components/search/SearchResult";
 import About from "./components/about/index";
+require("dotenv").config()
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {

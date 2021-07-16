@@ -137,20 +137,20 @@ export default function Place() {
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="container">
-            <ul class="list-group">
+            <ul className="list-group">
               <div className="font-weight-bolder">
-                <li class="list-group-item"> {name}</li>
+                <li className="list-group-item"> {name}</li>
               </div>
-              <li class="list-group-item">
-                <i class="fas fa-comment-alt"></i>
+              <li className="list-group-item">
+                <i className="fas fa-comment-alt"></i>
                 {description}
               </li>
-              <li class="list-group-item">
-                <i class="fas fa-users"></i> {capasity}
+              <li className="list-group-item">
+                <i className="fas fa-users"></i> {capasity}
               </li>
-              <li class="list-group-item">
+              <li className="list-group-item">
                 {" "}
-                <i class="fas fa-map-pin"></i>
+                <i className="fas fa-map-pin"></i>
                 {address}
               </li>
             </ul>

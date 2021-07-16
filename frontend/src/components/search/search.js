@@ -11,9 +11,9 @@ export default function Search() {
     history.push(`/place/name/${search}`);
   };
   return (
-    <form class="form-inline my-2 my-lg-0">
+    <form className="form-inline my-2 my-lg-0">
       <input
-        class="form-control mr-sm-2"
+        className="form-control mr-sm-2"
         type="search"
         placeholder="Find a place"
         aria-label="Search"
@@ -22,7 +22,7 @@ export default function Search() {
         }}
       />
       <button
-        class="btn my-2 my-sm-0"
+        className="btn my-2 my-sm-0"
         onClick={searchEvent}
         style={{ margin: "0px" }}
       >

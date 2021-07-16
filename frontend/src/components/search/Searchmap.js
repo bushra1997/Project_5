@@ -10,23 +10,23 @@ const ShowPlaces = ({ places }) => {
       <>
         <div className="card">
           <div>
-            <img src={place.img} class="card-img-top" alt="" />
+            <img src={place.img} className="card-img-top" alt="" />
           </div>
           <div className="card-body">
-            <h5 class="card-title">{place.name}</h5>
+            <h5 className="card-title">{place.name}</h5>
 
-            <ul class="list-group">
-              <li class="list-group-item card-text" className="description">
-                <i class="fas fa-comment-alt"></i>
+            <ul className="list-group">
+              <li className="list-group-item card-text" className="description">
+                <i className="fas fa-comment-alt"></i>
                 {place.description}
               </li>
               <div className="address">
-                <li class="list-group-item card-text">
-                  <i class="fas fa-users"></i>
+                <li className="list-group-item card-text">
+                  <i className="fas fa-users"></i>
                   {place.capacity}
                 </li>
-                <li class="list-group-item card-text">
-                  <i class="fas fa-map-pin"></i>
+                <li className="list-group-item card-text">
+                  <i className="fas fa-map-pin"></i>
                   {place.address}
                 </li>
               </div>

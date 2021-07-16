@@ -52,7 +52,7 @@ export default function AddPlace() {
   const addOccasions = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/occasions", { place_id, type })
+      .post(`${process.env.REACT_APP_BACKEND_SERVER}/occasions`, { place_id, type })
       .then((result) => {
         setDisabledev(true);
       })
@@ -212,7 +212,7 @@ export default function AddPlace() {
 
                 <select
                   onChange={handleSelect}
-                  class="custom-select"
+                  className="custom-select"
                   aria-label="Default select example"
                   style={{ border: "#cf6262 1px solid" }}
                 >

@@ -26,7 +26,7 @@ const Booking = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/places/${id}`).then((result) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_SERVER}/places/${id}`).then((result) => {
       if (result.status == 200) {
         setPlace(result.data[0]);
         setFirstName(token.user.firstName);
@@ -56,38 +56,38 @@ const Booking = () => {
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12">
             <h1 className="text-center">Place information</h1>
-            <ul class="list-group">
-              <li class="list-group-item bold-text">{place.name}</li>
-              <li class="list-group-item bold-text">{place.city}</li>
-              <li class="list-group-item bold-text">{place.address}</li>
+            <ul className="list-group">
+              <li className="list-group-item bold-text">{place.name}</li>
+              <li className="list-group-item bold-text">{place.city}</li>
+              <li className="list-group-item bold-text">{place.address}</li>
             </ul>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12">
             <h1 className="text-center">User information</h1>
-            <ul class="list-group">
-              <li class="list-group-item bold-text">{firstName}</li>
-              <li class="list-group-item bold-text">{country}</li>
-              <li class="list-group-item bold-text">{email}</li>
+            <ul className="list-group">
+              <li className="list-group-item bold-text">{firstName}</li>
+              <li className="list-group-item bold-text">{country}</li>
+              <li className="list-group-item bold-text">{email}</li>
             </ul>
           </div>
           <div
             className="col-lg-12 col-md-12 col-sm-12 mt-2"
             style={{ display: "flex", justifyContent: "center" }}
           >
-            <form class="form-inline">
-              <div class="form-group mb-2">
-                <label for="input-phone" class="sr-only">
+            <form className="form-inline">
+              <div className="form-group mb-2">
+                <label for="input-phone" className="sr-only">
                   Please Enter Your Phone Number
                 </label>
                 <input
                   type="email"
-                  class="form-control input-phone"
+                  className="form-control input-phone"
                   id="input-phone"
                   value={email}
                 />
               </div>
               <button
-                class="btn btn-primary mb-2"
+                className="btn btn-primary mb-2"
                 style={{ margin: "0px 7px" }}
                 onClick={booked}
               >
@@ -95,7 +95,7 @@ const Booking = () => {
               </button>
               <button
                 type="button"
-                class="btn btn-primary mb-2"
+                className="btn btn-primary mb-2"
                 style={{
                   margin: "0px 0px",
                   backgroundColor: "#fff",
