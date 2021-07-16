@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./funerals.css";
 import ShowPlaces from "../showPlaces/index";
 
