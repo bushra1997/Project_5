@@ -14,12 +14,6 @@ export default function Dashboard() {
   const editAndDeletePlace = () => {
     history.push("./editAndDeletePlace");
   };
-  const signOut = () => {
-    dispatch(setOut({ token: "", user: {} }));
-    localStorage.setItem("token", "");
-    localStorage.setItem("role", {});
-    history.push("./login");
-  };
 
   return (
     <>
