@@ -18,15 +18,16 @@ export default function Dashboard() {
   return (
     <>
       <section>
-        <div className="container">
+        <div className="container paddingC">
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12">
-              <div className="btn-group-vertical">
+              <div className="btn-group-vertical"
+                style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"4.5rem"}}>
                 <button
                   type="button"
                   className="btn btn-primary btn-lg"
                   onClick={addPlace}
-                >
+                  >
                   Add a Place
                 </button>
                 <button
@@ -41,7 +42,7 @@ export default function Dashboard() {
             <div className="col-lg-8 col-md-8 col-sm-12">
               <img
                 width="100%"
-                src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                src="https://www.getoccasion.com/wp-content/uploads/2016/01/Occasion-Logo-Black_Web1.png"
               />
             </div>
           </div>
