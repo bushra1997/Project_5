@@ -6,7 +6,7 @@ app.use(express.json());
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+const path = require('path');
 //built-in middlewares
 app.use(express.json());
 
@@ -34,6 +34,7 @@ app.use("/login", loginRouter);
 app.use(placeRouter);
 app.use("/occasions", occationRouter);
 app.use("/search", searchRouter);
+app.use(express.static(path.resolve(__dirname, './client/build')));
 //app routers
 
 const PORT = process.env.PORT || 5000;
