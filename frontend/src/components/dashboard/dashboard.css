@@ -44,3 +44,10 @@
 .modify {
   display: flex;
 }
+
+.paddingC{
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 86px;
+}

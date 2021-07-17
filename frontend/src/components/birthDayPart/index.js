@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./birthDayPart.css";
 import ShowPlaces from "../showPlaces";
 const BirthDayParty = () => {
   const [places, setPlaces] = useState([]);
@@ -17,9 +16,9 @@ const BirthDayParty = () => {
 
   return (
     <>
-      <div className="funeralsPlace">
+      <div className="weddingsPlace">
         <ShowPlaces places={places} />
-      </div>{" "}
+      </div>
     </>
   );
 };
