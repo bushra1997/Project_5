@@ -12,7 +12,7 @@ const DinnerParty = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/dinnerParty`)
+      .get(`/places/type/dinnerParty`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

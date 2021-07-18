@@ -41,7 +41,7 @@ const Profile = () => {
   });
 
   axios
-    .get(`${process.env.REACT_APP_BACKEND_SERVER}/favorite/${token.user.id}`)
+    .get(`/favorite/${token.user.id}`)
     .then((result) => {
       setFavorateCard(result.data);
     });

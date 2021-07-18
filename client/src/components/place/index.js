@@ -38,7 +38,7 @@ export default function Place() {
     setUser_id(token.user.id);
     setPlace_id(id);
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/${id}`)
+      .get(`/places/${id}`)
       .then((result) => {
         setImage(result.data[0].img);
         setDescription(result.data[0].description);
@@ -56,7 +56,7 @@ export default function Place() {
     let user_id = token.user.id;
     let place_id = id;
     axios
-      .post(`${process.env.REACT_APP_BACKEND_SERVER}/check`, {
+      .post(`/check`, {
         place_id,
         user_id,
       })
@@ -75,7 +75,7 @@ export default function Place() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/rating/${id}`)
+      .get(`/rating/${id}`)
       .then((result) => {
         console.log(id, "place_id");
         console.log(result, "result");
@@ -90,7 +90,7 @@ export default function Place() {
 
   const addToFavorite = () => {
     axios
-      .post(`${process.env.REACT_APP_BACKEND_SERVER}/favorite`, {
+      .post(`/favorite`, {
         place_id,
         user_id,
       })
@@ -106,7 +106,7 @@ export default function Place() {
 
   const deleteFavorite = () => {
     axios
-      .delete(`${process.env.REACT_APP_BACKEND_SERVER}/favorite/${place_id}`, {
+      .delete(`/favorite/${place_id}`, {
         place_id,
       })
       .then((result) => {

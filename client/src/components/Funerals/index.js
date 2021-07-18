@@ -5,11 +5,12 @@ import "./funerals.css";
 import ShowPlaces from "../showPlaces/index";
 
 const Funerals = () => {
+  
   const history = useHistory();
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/funerals`)
+      .get(`/places/type/funerals`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

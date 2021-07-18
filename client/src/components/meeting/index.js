@@ -7,7 +7,7 @@ const Meeting = () => {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/meeting`)
+      .get(`/places/type/meeting`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

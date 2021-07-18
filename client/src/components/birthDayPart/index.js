@@ -6,7 +6,7 @@ const BirthDayParty = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/type/birthDayParty`)
+      .get(`/places/type/birthDayParty`)
       .then((result) => {
         if (result.status == 200) {
           setPlaces(result.data);

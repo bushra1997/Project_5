@@ -24,7 +24,7 @@ export default function EditPlace() {
   const search = (e) => {
     e.preventDefault();
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`)
+      .get(`/places/${number}`)
       .then((result) => {
         setName(result.data[0].name);
         setDescription(result.data[0].description);
@@ -40,7 +40,7 @@ export default function EditPlace() {
     setNumber("");
     e.preventDefault();
     axios
-      .put(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`, {
+      .put(`/places/${number}`, {
         name,
         description,
         img,
@@ -60,7 +60,7 @@ export default function EditPlace() {
   const Occasions = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/ocassions/${number}`
+        `/occasions/delete/ocassions/${number}`
       )
       .then((res) => {})
       .catch((err) => {});
@@ -69,7 +69,7 @@ export default function EditPlace() {
   const favorite = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/favorite/${number}`
+        `/occasions/delete/favorite/${number}`
       )
       .then((res) => {})
       .catch((err) => {});
@@ -78,7 +78,7 @@ export default function EditPlace() {
   const rating = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_BACKEND_SERVER}/occasions/delete/rating/${number}`
+        `/occasions/delete/rating/${number}`
       )
       .then((res) => {})
       .catch((err) => {});
@@ -97,7 +97,7 @@ export default function EditPlace() {
     setSmShow(true);
     setPopup(true);
     axios
-      .delete(`${process.env.REACT_APP_BACKEND_SERVER}/places/${number}`)
+      .delete(`/places/${number}`)
       .then((result) => {
         console.log(result.data);
         setNumber("");
