@@ -20,7 +20,7 @@ export default function Register() {
   const newUsers = () => {
     if (firstName && lastName && age && country && email && password) {
       axios
-        .post(`${process.env.REACT_APP_BACKEND_SERVER}/user`, {
+        .post(`/user`, {
           firstName,
           lastName,
           age,

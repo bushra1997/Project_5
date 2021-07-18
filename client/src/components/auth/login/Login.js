@@ -16,7 +16,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const submit = () => {
     axios
-      .post(`${process.env.REACT_APP_BACKEND_SERVER}/login`, { email, password })
+      .post(`/login`, { email, password })
       .then((result) => {
         if (result.status == 200) {
           dispatch(
