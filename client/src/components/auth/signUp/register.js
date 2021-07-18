@@ -11,7 +11,7 @@ export default function Register() {
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role_type, setRole_type] = useState("Admin");
+  const [role_type, setRole_type] = useState("User");
   const [error, setError] = useState(false);
   const [wrongEmail, setWrongEmail] = useState(false);
   const [smShow, setSmShow] = useState(false);
