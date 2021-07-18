@@ -30,7 +30,7 @@ export default function AddPlace() {
 
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BACKEND_SERVER}/places`, {
+      .post(`/places`, {
         name,
         description,
         img,
@@ -52,7 +52,7 @@ export default function AddPlace() {
   const addOccasions = (e) => {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BACKEND_SERVER}/occasions`, { place_id, type })
+      .post(`/occasions`, { place_id, type })
       .then((result) => {
         setDisabledev(true);
       })

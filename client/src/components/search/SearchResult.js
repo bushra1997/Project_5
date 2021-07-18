@@ -8,7 +8,7 @@ export default function SearchResult() {
   const { name } = useParams();
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_SERVER}/place/name/${name}`)
+      .get(`/place/name/${name}`)
       .then((result) => {
         setRes(result.data);
       })
