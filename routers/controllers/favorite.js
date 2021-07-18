@@ -1,4 +1,4 @@
-const db = require("../../db/db");
+const db = require("./../../db");
 
 const allFavorite = (req, res) => {
   const user_id = req.params.id;

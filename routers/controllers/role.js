@@ -1,4 +1,4 @@
-const db = require("./../../db/db");
+const db = require("./../../db");
 const createNewRole = (req, res) => {
   const role = req.body.role;
   const query = `INSERT INTO roles (role) VALUES (?)`;
