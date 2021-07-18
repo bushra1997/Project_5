@@ -1,4 +1,4 @@
-const connection = require("../../db/db");
+const connection = require("./../../db");
 
 const createNewRating = (req, res) => {
   const { place_id, user_id, rate } = req.body;

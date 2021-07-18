@@ -1,4 +1,4 @@
-const connection = require("../../db/db");
+const connection = require("./../../db");
 const createNewSlider = (req, res) => {
   const { img, place_id } = req.body;
   const query = `INSERT INTO slider(img,place_id)VALUES(?,?)`;

@@ -1,4 +1,4 @@
-const connection = require("../../db/db");
+const connection = require("./../../db");
 const CreateNewOccation = (req, res) => {
   const { place_id, type } = req.body;
   const query = `INSERT INTO occasions(place_id,type )VALUES(?,?)`;

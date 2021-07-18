@@ -1,4 +1,4 @@
-const connection = require("../../db/db");
+const connection = require("./../../db");
 
 const CreateNewPlace = (req, res) => {
   const { name, description, img, capacity, city, address, availability } =

@@ -1,4 +1,4 @@
-const connection = require("../../db/db");
+const connection = require("./../../db");
 const createSearch = (req, res) => {
   const { name } = req.params;
   const query = `SELECT * FROM place WHERE name=?`;
