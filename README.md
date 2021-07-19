@@ -1,12 +1,14 @@
 Our website distinguished by providing you with service and providing opportunities to get what you want from the luxury, to provide is through inclusive activities and services.
+
 📝 Table of Contents
 About
 Getting Started
 Usage
 Built Using
+
 🧐 About
 Our website distinguished by providing you with service and providing opportunities to get what you want from the luxury, to provide is through inclusive activities and services.
-What matters to we ?
+What matters to us ?
 We care about comfort, credibility and customer opinion
 What we do ?
 Facilitating the customer to find the right place according to his desire
